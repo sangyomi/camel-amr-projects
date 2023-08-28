@@ -9,8 +9,8 @@ void Map_In_Out::Map_Input(coordinate &start, coordinate &end,coordinate& mapsiz
 
     int row = 100;
     int col = 100;
-    start = std::make_pair(0, 0);
-    end = std::make_pair(99, 99); //information from sensing process
+//    start = std::make_pair(0, 2);
+//    end = std::make_pair(97, 99); //information from sensing process
     /* map size should be decided by sensing process */
 
     this->start = start;

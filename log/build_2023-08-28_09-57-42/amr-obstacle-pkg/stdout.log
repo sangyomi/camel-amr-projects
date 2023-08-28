@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target operate_dynamic_obstacle_node[0m
+[35m[1mConsolidate compiler generated dependencies of target spawn_dynamic_obstacle_node[0m
+[ 50%] Built target operate_dynamic_obstacle_node
+[100%] Built target spawn_dynamic_obstacle_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/operate_dynamic_obstacle_node
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/spawn_dynamic_obstacle_node
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/launch/dynamic_obstacle.launch.py
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.sh
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.dsv
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.sh
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.dsv
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.bash
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.sh
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.zsh
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.dsv
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.dsv
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/ament_index/resource_index/packages/amr-obstacle-pkg
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig.cmake
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig-version.cmake
+-- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.xml

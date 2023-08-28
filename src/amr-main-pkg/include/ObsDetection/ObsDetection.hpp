@@ -14,6 +14,7 @@ private:
         std::stack<coordinate> pos;
         int velocity;
         coordinate dir;
+        std::stack<int> step;
     };
     struct Robot_status{
         int grad;
@@ -26,23 +27,24 @@ private:
     Robot_status rs;
     int num_obs;
 
-    obs_info labeled_obs[1000];
+    obs_info labeled_obs[4];
     int labeling = 0;
-    std::stack<coordinate> detected_obs_loc;
+    std::stack<int> detected_obs_num;
     bool isObstacle(int i, int j,int map[][100]);
     void updateGradient();
     bool isObstacleInSlope(int i, int j);
-    void New_labeling(coordinate &obs_loc);
+    void New_labeling(coordinate &obs_loc, int &step);
+    void SaveObsTraj(coordinate new_obs, int &step);
+    coordinate GetObsNextPos(int &i, int &iter);
 
 public:
     void SetSensorRange(int SensorRange);
     void loadRobotStatus(coordinate pre, coordinate nex);
-    int isObstacleDetected(int map[][100],coordinate &mapsize);
-    coordinate GetDetectedObsLoc();
+    int isObstacleDetected(int map[][100],coordinate &mapsize,int &step);
+    int GetDetectedObsNum();
     void SetNumObstacle(int num_obs);
-    bool SetObsTraj(coordinate new_obs);
     int GetLabelData();
-    std::stack<coordinate> GetObsTraj(int i);
+    void CollisionDetection(std::stack<coordinate> AMR_Traj);
 
 private:
 };

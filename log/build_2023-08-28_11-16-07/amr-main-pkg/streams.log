@@ -1,0 +1,23 @@
+[0.017s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[0.032s] [35m[1mConsolidate compiler generated dependencies of target simulmain[0m
+[0.038s] [ 50%] Built target astar_lib
+[0.041s] [ 75%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[1.136s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In constructor ‘[01m[KParkingNode::ParkingNode()[m[K’:
+[1.136s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:9:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoordinate[m[K’ {aka ‘[01m[Kstruct std::pair<int, int>[m[K’} has no member named ‘[01m[Kpush[m[K’
+[1.136s]     9 |     mapsize.[01;31m[Kpush[m[K(std::make_pair(10,10));
+[1.136s]       |             [01;31m[K^~~~[m[K
+[1.136s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:10:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoordinate[m[K’ {aka ‘[01m[Kstruct std::pair<int, int>[m[K’} has no member named ‘[01m[Kpush[m[K’
+[1.136s]    10 |     start_point.[01;31m[Kpush[m[K(std::make_pair(1,1));
+[1.136s]       |                 [01;31m[K^~~~[m[K
+[1.136s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:11:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kcoordinate[m[K’ {aka ‘[01m[Kstruct std::pair<int, int>[m[K’} has no member named ‘[01m[Kpush[m[K’
+[1.136s]    11 |     end_point.[01;31m[Kpush[m[K(std::make_pair(1,1));
+[1.137s]       |               [01;31m[K^~~~[m[K
+[1.146s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.146s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:18:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.146s]    18 | sub_callback([01;35m[Kconst LaserScan::SharedPtr msg[m[K)
+[1.146s]       |              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[1.146s] 
+[2.158s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:76: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+[2.159s] make[1]: *** [CMakeFiles/Makefile2:87: CMakeFiles/simulmain.dir/all] Error 2
+[2.159s] make: *** [Makefile:146: all] Error 2
+[2.160s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6

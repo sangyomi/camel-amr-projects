@@ -1,0 +1,7 @@
+[31mCMake Error at /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake:50 (_install):
+  _install TARGETS given target "AMR_library" which does not exist.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/symlink_install/install.cmake:37 (ament_cmake_symlink_install_targets)
+  CMakeLists.txt:31 (install)
+
+[0m

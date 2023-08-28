@@ -28,26 +28,49 @@ find_package(nav_msgs REQUIRED)
 
 include_directories(include)
 
-add_library(AMR_library src/DynamicObstacle/DynamicObstacle.cpp src/ObsDetection/ObsDetection.cpp src/PathPlanning/Astar.cpp src/Visualize/Map_In_Out.cpp)
+add_library(astar_lib
+        src/astar/Astar.cpp
+)
 
-ament_export_targets(AMR_library HAS_LIBRARY_TARGET)
+add_library(visualize_lib
+        src/Visualize/Map_In_Out.cpp
+)
+
+add_library(dynamicObstacle_lib
+        src/DynamicObstacle/DynamicObstacle.cpp
+)
+
+add_library(obsDetection_lib
+        src/ObsDetection/ObsDetection.cpp
+)
+
+target_include_directories(astar_lib PUBLIC include)
+target_include_directories(visualize_lib PUBLIC include)
+target_include_directories(dynamicObstacle_lib PUBLIC include)
+target_include_directories(obsDetection_lib PUBLIC include)
+
+ament_target_dependencies(astar_lib rclcpp)
+ament_target_dependencies(visualize_lib rclcpp)
+ament_target_dependencies(dynamicObstacle_lib rclcpp)
+ament_target_dependencies(obsDetection_lib rclcpp)
 
 install(
-        DIRECTORY include/DynamicObstacle include/ObsDetection include/PathPlanning include/Visualize include/Variables
+        DIRECTORY include/
         DESTINATION include
 )
 
-install(
-        TARGETS AMR_library
-        EXPORT AMR_library
-        LIBRARY DESTINATION lib
+install(TARGETS
+        astar_lib
+        visualize_lib
+        dynamicObstacle_lib
+        obsDetection_lib
         ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib
         RUNTIME DESTINATION bin
-        INCLUDES DESTINATION include
 )
 
-
 add_executable(simulmain src/simulmain/simul_main.cpp)
+
 ament_target_dependencies(simulmain
         amr_msg_interfaces
         rclcpp
@@ -56,6 +79,7 @@ ament_target_dependencies(simulmain
         nav_msgs
 )
 
+target_link_libraries(simulmain astar_lib visualize_lib dynamicObstacle_lib obsDetection_lib)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

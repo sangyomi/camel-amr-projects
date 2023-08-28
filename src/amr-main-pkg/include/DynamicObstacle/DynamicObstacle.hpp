@@ -13,7 +13,13 @@ private:
     coordinate pos;
     coordinate dir;
     double velocity;
+
+    char type; /// obstale type : straight, inclined
+    int move_count = 0; /// variable just for inclined obstacle moving
+    int user_direction; /// command for obstacle direction select
+
     int move_iter; //for obstacle moving test
+
 
 public:
     void Initialize();
@@ -21,8 +27,9 @@ public:
     void UpdateObstacle(int map[][100], coordinate &mapsize);
 
 private:
-    coordinate GenerateRandomCoordinate();
-    coordinate GenerateRandomDirection();
+    void SetObsCoordinate();
+    void SetObsdirection();
+    coordinate Inclined_moving(coordinate &mapsize);
     int GenerateRandomDirectionComponent();
 };
 

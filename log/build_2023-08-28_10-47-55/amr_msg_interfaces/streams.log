@@ -1,0 +1,28 @@
+[0.031s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces -- -j6 -l6
+[0.040s] [33mCMake Warning (dev) at CMakeLists.txt:26:
+[0.040s]   Syntax Warning in cmake code at column 24
+[0.040s] 
+[0.040s]   Argument not separated from preceding token by whitespace.
+[0.040s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.041s] [0m
+[0.044s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.064s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.065s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.213s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.222s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[0.240s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.242s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.331s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.346s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.352s] [31mCMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[0.352s]   rosidl_generate_interfaces() the passed file ',' doesn't exist relative to
+[0.352s]   the CMAKE_CURRENT_SOURCE_DIR
+[0.352s]   '/home/sangjun/camel-amr-projects-V1/src/amr_msg_interfaces'
+[0.352s] Call Stack (most recent call first):
+[0.352s]   CMakeLists.txt:30 (rosidl_generate_interfaces)
+[0.352s] 
+[0.352s] [0m
+[0.352s] -- Configuring incomplete, errors occurred!
+[0.352s] See also "/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces/CMakeFiles/CMakeOutput.log".
+[0.355s] make: *** [Makefile:719: cmake_check_build_system] Error 1
+[0.356s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces' returned '2': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces -- -j6 -l6

@@ -25,11 +25,44 @@ bool ObsDetection::isObstacleInSlope(int i, int j){
     return (j < -1 / rs.grad * (i - rs.present_pos.first) + rs.present_pos.second);
 }
 
-void ObsDetection::New_labeling(coordinate &obs_loc) {
+void ObsDetection::New_labeling(coordinate &obs_loc, int &step) {
     labeled_obs[labeling].pos.push(obs_loc);
-    labeled_obs[labeling].velocity = 0;
-    labeled_obs[labeling].dir = obs_loc;
+    labeled_obs[labeling].step.push(step);
     labeling++;
+}
+
+void ObsDetection::SaveObsTraj(coordinate obs_loc, int &step) {
+    if (labeling == 0) {
+        detected_obs_num.push(labeling);
+        New_labeling(obs_loc, step);
+    } else {
+        bool check = false;
+        for (int i = 0; i < labeling; i++) {
+            coordinate old = labeled_obs[i].pos.top();
+            if (abs(obs_loc.first - old.first) <= 1 && abs(obs_loc.second - old.second) <= 1) {
+                detected_obs_num.push(i);
+                labeled_obs[i].pos.push(obs_loc);
+                labeled_obs[i].step.push(step);
+                labeled_obs[i].velocity = 1;
+                labeled_obs[i].dir.first = obs_loc.first - old.first;
+                labeled_obs[i].dir.second = obs_loc.second - old.second;
+                check = true;
+                break;
+            }
+
+        }
+        if (!check) {
+            detected_obs_num.push(labeling);
+            New_labeling(obs_loc, step);
+        }
+    }
+}
+
+coordinate ObsDetection::GetObsNextPos(int &i, int &iter) {
+    auto NextPos = labeled_obs[i].pos.top();
+    NextPos.first = NextPos.first + labeled_obs[i].dir.first*labeled_obs[i].velocity*iter;
+    NextPos.second = NextPos.second + labeled_obs[i].dir.second*labeled_obs[i].velocity*iter;
+    return NextPos;
 }
 
 /// Public Function
@@ -45,54 +78,60 @@ void ObsDetection::loadRobotStatus(coordinate pre, coordinate nex) {
     updateGradient();
 }
 
-int ObsDetection::isObstacleDetected(int map[][100], coordinate &mapsize) {
+int ObsDetection::isObstacleDetected(int map[][100], coordinate &mapsize, int &step) {
     int detect_count = 0;
     for (int i = rs.present_pos.first - rs.SensorRange; i <= rs.present_pos.first + rs.SensorRange; ++i) {
         for (int j = rs.present_pos.second - rs.SensorRange; j <= rs.present_pos.second + rs.SensorRange; ++j) {
-            if (MapFunction::isOutofRange(i,j,mapsize)) continue; /// detection area should be in the map,,,,
-            if(isObstacleInSlope(i, j) && (isObstacle(i, j, map) == 1)) {
+            if (MapFunction::isOutofRange(i, j, mapsize)) continue; /// detection area should be in the map,,,,
+            if (isObstacleInSlope(i, j) && (isObstacle(i, j, map) == 1)) {
                 detect_count++;
-                detected_obs_loc.push(std::make_pair(i,j));
+                SaveObsTraj(std::make_pair(i, j), step);
             }
         }
     }
     return detect_count;
 }
 
-coordinate ObsDetection::GetDetectedObsLoc() {
-    coordinate a = detected_obs_loc.top();
-    detected_obs_loc.pop();
-    return a;
+int ObsDetection::GetDetectedObsNum() {
+    int num = detected_obs_num.top();
+    detected_obs_num.pop();
+    return num;
 }
 void ObsDetection::SetNumObstacle(int num_obs){
     this->num_obs = num_obs;
 }
 
-bool ObsDetection::SetObsTraj(coordinate obs_loc) {
-    if(labeling == 0){
-        New_labeling(obs_loc);
-    }
-    else{
-        bool check = false;
-        for(int i = 0; i < labeling; i++){
-            coordinate old = labeled_obs[i].pos.top();
-            if(abs(obs_loc.first-old.first) <= 1 && abs(obs_loc.second-old.second) <= 1){
-                labeled_obs[i].pos.push(obs_loc);
-                check = true;
-                break;
-            }
-
-        }
-        if(!check)
-            New_labeling(obs_loc);
-    }
-
-    return true;
-}
-
-int ObsDetection::GetLabelData(){
+int ObsDetection::GetLabelData() {
     return labeling;
 }
-std::stack<coordinate> ObsDetection::GetObsTraj(int i){
-    return labeled_obs[i].pos;
+
+
+void ObsDetection::CollisionDetection(std::stack<coordinate> AMR_Traj){
+    auto SAVE_DATA = AMR_Traj;
+    while(!detected_obs_num.empty()){
+        int obsNum = GetDetectedObsNum();
+        for(int i = 1; i <= 5; i++){
+            auto obsPos = GetObsNextPos(obsNum,i);
+            auto amr_next_pos = AMR_Traj.top();
+
+            if(obsPos == amr_next_pos){
+                std::cout <<"Obstacle label " << obsNum << "가 " << i << "초 이후 충돌합니다!!\n";
+                std::cout << "Predicted Obstacle Trajectory: ";
+                for(int j = 1; j <= i; j++){
+                    auto obsFuturePos = GetObsNextPos(obsNum, j);
+                    std::cout << "("<< obsFuturePos.first << ", " << obsFuturePos.second << ")";
+                    if(j!=i) std::cout <<", ";
+                }
+                std::cout << "\nAMR Trajectory: ";
+                for(int j = 1; j <= i; j++){
+                    std::cout << "("<< SAVE_DATA.top().first << ", " << SAVE_DATA.top().second << ")";
+                    if(j!=i) std::cout <<", ";
+                    SAVE_DATA.pop();
+                }
+                std::cout << "\n";
+            }
+            AMR_Traj.pop();
+        }
+    }
 }
+//현재

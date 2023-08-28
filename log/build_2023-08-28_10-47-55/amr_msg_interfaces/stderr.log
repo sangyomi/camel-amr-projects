@@ -1,0 +1,15 @@
+[33mCMake Warning (dev) at CMakeLists.txt:26:
+  Syntax Warning in cmake code at column 24
+
+  Argument not separated from preceding token by whitespace.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[31mCMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+  rosidl_generate_interfaces() the passed file ',' doesn't exist relative to
+  the CMAKE_CURRENT_SOURCE_DIR
+  '/home/sangjun/camel-amr-projects-V1/src/amr_msg_interfaces'
+Call Stack (most recent call first):
+  CMakeLists.txt:30 (rosidl_generate_interfaces)
+
+[0m
+make: *** [Makefile:719: cmake_check_build_system] Error 1

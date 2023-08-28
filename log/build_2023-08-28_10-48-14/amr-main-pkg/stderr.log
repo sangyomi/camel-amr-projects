@@ -1,0 +1,23 @@
+In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/astar.cpp:4[m[K:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/astar.hpp:39:28:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kstd::stack<std::pair<int, int> > Astar_planning::traj[m[K’
+   39 |     std::stack<coordinate> [01;31m[Ktraj[m[K;
+      |                            [01;31m[K^~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/astar.hpp:33:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KTrajectory Astar_planning::traj[m[K’
+   33 |     Trajectory [01;36m[Ktraj[m[K;
+      |                [01;36m[K^~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/astar.cpp:[m[K In constructor ‘[01m[KAstar_planning::Astar_planning()[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/astar.cpp:12:24:[m[K [01;31m[Kerror: [m[K‘[01m[KParkingNode[m[K’ has not been declared
+   12 |             std::bind(&[01;31m[KParkingNode[m[K::sub_callback, this, std::placeholders::_1));
+      |                        [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/astar.cpp:[m[K In member function ‘[01m[Kvoid Astar_planning::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/astar.cpp:18:62:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   18 | void Astar_planning::sub_callback([01;35m[Kconst LaserScan::SharedPtr msg[m[K)
+      |                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:15:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   15 | void ParkingNode::sub_callback([01;35m[Kconst LaserScan::SharedPtr msg[m[K) {
+      |                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/astar/astar.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

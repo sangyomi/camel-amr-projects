@@ -1,0 +1,4 @@
+source;share/amr-gazebo-pkg/local_setup.bash
+source;share/amr-gazebo-pkg/local_setup.dsv
+source;share/amr-gazebo-pkg/local_setup.sh
+source;share/amr-gazebo-pkg/local_setup.zsh

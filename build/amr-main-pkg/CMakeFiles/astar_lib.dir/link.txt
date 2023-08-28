@@ -1,0 +1,2 @@
+/usr/bin/ar qc libastar_lib.a CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o
+/usr/bin/ranlib libastar_lib.a

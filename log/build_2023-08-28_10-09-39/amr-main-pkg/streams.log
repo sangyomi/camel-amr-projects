@@ -1,0 +1,20 @@
+[0.012s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[0.032s] [35m[1mConsolidate compiler generated dependencies of target simulmain[0m
+[0.043s] [ 50%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[1.156s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:15:57:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Ksub_callback[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+[1.156s]    15 | ParkingNode::sub_callback(const LaserScan::SharedPtr msg[01;31m[K)[m[K {
+[1.156s]       |                                                         [01;31m[K^[m[K
+[1.156s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:15:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’
+[1.156s]    15 | [01;31m[KParkingNode[m[K::sub_callback(const LaserScan::SharedPtr msg) {
+[1.156s]       | [01;31m[K^~~~~~~~~~~[m[K
+[1.156s] In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:4[m[K:
+[1.156s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/simulmain/simul_main.hpp:30:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’
+[1.156s]    30 |     void [01;36m[Ksub_callback[m[K(const LaserScan::SharedPtr msg);
+[1.156s]       |          [01;36m[K^~~~~~~~~~~~[m[K
+[1.156s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/simulmain/simul_main.hpp:24:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass ParkingNode[m[K’ defined here
+[1.156s]    24 | class [01;36m[KParkingNode[m[K : public rclcpp::Node {
+[1.157s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[2.165s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:76: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+[2.165s] make[1]: *** [CMakeFiles/Makefile2:85: CMakeFiles/simulmain.dir/all] Error 2
+[2.165s] make: *** [Makefile:146: all] Error 2
+[2.166s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
