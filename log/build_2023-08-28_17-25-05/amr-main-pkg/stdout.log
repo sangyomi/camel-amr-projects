@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target astar_lib[0m
+[ 20%] Built target dynamicObstacle_lib
+[ 40%] Built target obsDetection_lib
+[ 60%] Built target visualize_lib
+[ 70%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m

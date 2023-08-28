@@ -1,0 +1,104 @@
+[0.008s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': AMENT_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[0.027s] [35m[1mConsolidate compiler generated dependencies of target astar_lib[0m
+[0.029s] [ 20%] Built target dynamicObstacle_lib
+[0.032s] [ 40%] Built target obsDetection_lib
+[0.032s] [ 60%] Built target visualize_lib
+[0.034s] [ 70%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m
+[0.256s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:5:13:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K=[m[K’ token
+[0.257s]     5 | #define MAX [01;31m[K=[m[K 201;
+[0.257s]       |             [01;31m[K^[m[K
+[0.257s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:56:49:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KMAX[m[K’
+[0.257s]    56 | void Astar_planning::tracePath(Cell cellDetails[[01;36m[KMAX[m[K][MAX], Pair dst) {
+[0.257s]       |                                                 [01;36m[K^~~[m[K
+[0.257s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:5:18:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K;[m[K’ token
+[0.257s]     5 | #define MAX = 201[01;31m[K;[m[K
+[0.257s]       |                  [01;31m[K^[m[K
+[0.257s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:56:49:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KMAX[m[K’
+[0.257s]    56 | void Astar_planning::tracePath(Cell cellDetails[[01;36m[KMAX[m[K][MAX], Pair dst) {
+[0.257s]       |                                                 [01;36m[K^~~[m[K
+[0.257s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:5:18:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+[0.258s]     5 | #define MAX = 201[01;31m[K;[m[K
+[0.258s]       |                  [01;31m[K^[m[K
+[0.258s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:56:49:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KMAX[m[K’
+[0.258s]    56 | void Astar_planning::tracePath(Cell cellDetails[[01;36m[KMAX[m[K][MAX], Pair dst) {
+[0.258s]       |                                                 [01;36m[K^~~[m[K
+[0.258s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:56:31:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[0.258s]    56 | void Astar_planning::tracePath[01;36m[K([m[KCell cellDetails[MAX][MAX], Pair dst) {
+[0.258s]       |                               [01;36m[K^[m[K
+[0.258s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:56:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Astar_planning::tracePath(...)[m[K’
+[0.259s]    56 | void [01;31m[KAstar_planning[m[K::tracePath(Cell cellDetails[MAX][MAX], Pair dst) {
+[0.259s]       |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[0.259s] In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[0.259s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:41:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid Astar_planning::tracePath(Cell (*)[201], Pair)[m[K’
+[0.259s]    41 |     void [01;36m[KtracePath[m[K(Cell cellDetails[201][201], Pair dst);
+[0.259s]       |          [01;36m[K^~~~~~~~~[m[K
+[0.259s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:26:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Astar_planning[m[K’ defined here
+[0.259s]    26 | class [01;36m[KAstar_planning[m[K {
+[0.259s]       |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[0.259s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:56:52:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K][m[K’ token
+[0.259s]    56 | void Astar_planning::tracePath(Cell cellDetails[MAX[01;31m[K][m[K[MAX], Pair dst) {
+[0.259s]       |                                                    [01;31m[K^[m[K
+[0.260s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:56:57:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K][m[K’ token
+[0.260s]    56 | void Astar_planning::tracePath(Cell cellDetails[MAX][MAX[01;31m[K][m[K, Pair dst) {
+[0.260s]       |                                                         [01;31m[K^[m[K
+[0.260s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kbool Astar_planning::aStarSearch(std::vector<std::vector<int> >&, Pair, Pair)[m[K’:
+[0.260s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:5:13:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K=[m[K’ token
+[0.260s]     5 | #define MAX [01;31m[K=[m[K 201;
+[0.260s]       |             [01;31m[K^[m[K
+[0.260s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:81:21:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KMAX[m[K’
+[0.260s]    81 |     bool closedList[[01;36m[KMAX[m[K][MAX];
+[0.260s]       |                     [01;36m[K^~~[m[K
+[0.260s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:5:18:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K;[m[K’ token
+[0.261s]     5 | #define MAX = 201[01;31m[K;[m[K
+[0.261s]       |                  [01;31m[K^[m[K
+[0.261s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:81:21:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KMAX[m[K’
+[0.261s]    81 |     bool closedList[[01;36m[KMAX[m[K][MAX];
+[0.261s]       |                     [01;36m[K^~~[m[K
+[0.261s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:81:24:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K][m[K’ token
+[0.261s]    81 |     bool closedList[MAX[01;31m[K][m[K[MAX];
+[0.261s]       |                        [01;31m[K^[m[K
+[0.261s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:81:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K][m[K’ token
+[0.261s]    81 |     bool closedList[MAX][MAX[01;31m[K][m[K;
+[0.261s]       |                             [01;31m[K^[m[K
+[0.261s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:82:17:[m[K [01;31m[Kerror: [m[K‘[01m[KclosedList[m[K’ was not declared in this scope
+[0.262s]    82 |     std::memset([01;31m[KclosedList[m[K, false, sizeof(closedList));
+[0.262s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[0.262s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:5:13:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K=[m[K’ token
+[0.262s]     5 | #define MAX [01;31m[K=[m[K 201;
+[0.262s]       |             [01;31m[K^[m[K
+[0.262s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:84:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KMAX[m[K’
+[0.262s]    84 |     Cell cellDetails[[01;36m[KMAX[m[K][MAX];
+[0.262s]       |                      [01;36m[K^~~[m[K
+[0.262s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:5:18:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K;[m[K’ token
+[0.262s]     5 | #define MAX = 201[01;31m[K;[m[K
+[0.262s]       |                  [01;31m[K^[m[K
+[0.262s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:84:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KMAX[m[K’
+[0.263s]    84 |     Cell cellDetails[[01;36m[KMAX[m[K][MAX];
+[0.263s]       |                      [01;36m[K^~~[m[K
+[0.263s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:84:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K][m[K’ token
+[0.263s]    84 |     Cell cellDetails[MAX[01;31m[K][m[K[MAX];
+[0.263s]       |                         [01;31m[K^[m[K
+[0.263s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:84:30:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K][m[K’ token
+[0.263s]    84 |     Cell cellDetails[MAX][MAX[01;31m[K][m[K;
+[0.263s]       |                              [01;31m[K^[m[K
+[0.263s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:88:13:[m[K [01;31m[Kerror: [m[K‘[01m[KcellDetails[m[K’ was not declared in this scope
+[0.263s]    88 |             [01;31m[KcellDetails[m[K[i][j].f = cellDetails[i][j].g = cellDetails[i][j].h = INF;
+[0.263s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[0.263s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:95:5:[m[K [01;31m[Kerror: [m[K‘[01m[KcellDetails[m[K’ was not declared in this scope
+[0.264s]    95 |     [01;31m[KcellDetails[m[K[sy][sx].f = cellDetails[sy][sx].g = cellDetails[sy][sx].h = 0.0;
+[0.264s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[0.274s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kvoid Astar_planning::PrintMap()[m[K’:
+[0.274s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:180:26:[m[K [01;31m[Kerror: [m[K‘[01m[KClusteringMatrix[m[K’ was not declared in this scope
+[0.274s]   180 |             std::cout << [01;31m[KClusteringMatrix[m[K[i][j];
+[0.274s]       |                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[0.275s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kvoid Astar_planning::startAstar(int, int)[m[K’:
+[0.275s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:188:5:[m[K [01;31m[Kerror: [m[K‘[01m[KMapmatrix[m[K’ was not declared in this scope
+[0.275s]   188 |     [01;31m[KMapmatrix[m[K[Startx][Starty] = 2;
+[0.275s]       |     [01;31m[K^~~~~~~~~[m[K
+[0.276s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:189:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount[m[K’ was not declared in this scope
+[0.276s]   189 |     Mapmatrix[Destx[[01;31m[Kcount[m[K]][Desty[count]] = 3;
+[0.276s]       |                     [01;31m[K^~~~~[m[K
+[0.317s] make[2]: *** [CMakeFiles/astar_lib.dir/build.make:76: CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o] Error 1
+[0.317s] make[1]: *** [CMakeFiles/Makefile2:145: CMakeFiles/astar_lib.dir/all] Error 2
+[0.317s] make: *** [Makefile:146: all] Error 2
+[0.319s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '2': AMENT_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6

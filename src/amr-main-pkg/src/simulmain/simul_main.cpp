@@ -2,23 +2,19 @@
 // Created by sangjun on 23. 8. 24.
 //
 #include "simulmain/simul_main.hpp"
+#define PI 3.14159265
+
+const int dx1[4] = { 0, -1, 0, 1 };
+const int dy1[4] = { -1, 0, 1, 0 };
+
+const int dx2[4] = { 1, -1, -1, 1 };
+const int dy2[4] = { -1, -1, 1, 1 };
+
+const float direction[9] = {0,-1*PI*0.25,-1*PI*0.5,-1*PI*0.75,PI,PI*0.75,PI*0.5,PI*0.25,0};
 
 ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
-    start_point = std::make_pair(0,0);
-    end_point = std::make_pair(80,80);
-
     RCLCPP_INFO(get_logger(), "Parking Node Created");
-
-    for (int i = 0; i < num_obs; i++) {
-        obs[i].Initialize();
-        obs[i].ApplyToMap(map);
-    }
-    std::cout << std::endl;
-
-    pO_D = new ObsDetection;
-    pO_D->SetNumObstacle(num_obs);
-    pO_D->SetSensorRange(sensor_range);
 
     step = 0;
     count = 0;
@@ -35,65 +31,28 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
 void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 {
-    std::cout << int(xpos) << std::endl;
-    std::cout << int(ypos) << std::endl;
+    int xAstar = int((xpos+10)*5);
+    int yAstar = int((ypos+10)*5);
 
-    start_point = std::make_pair(int(xpos+10)*5,int(ypos+10)*5);
-    ASTAR = new Astar_planning;
-    MapIO.Map_Input(start_point, end_point, mapsize, map);
-
-    traj = ASTAR->Astar(start_point, end_point, mapsize, map);
-    delete ASTAR;
-    MapIO.printMap(map, traj);
-
-
-    if(step == 0)
+    if(abs(xAstar-ASTAR.Destx[count]) < 3 && abs(yAstar-ASTAR.Desty[count]) < 3)
     {
-        present_pos = traj.top();
-        traj.pop();
-        next_pos = traj.top();
-    }
-
-    for (int i = 0; i < num_obs; i++)
-        obs[i].UpdateObstacle(map, mapsize); // update each obstacle's path -> moving
-
-    pO_D->loadRobotStatus(present_pos, next_pos);
-    int *obs_count = new int;
-    *obs_count = pO_D->isObstacleDetected(map, mapsize, step);
-
-    if (*obs_count >= 1) {
-        std::cout << "ObsDetected!!!\n";
-        pO_D->CollisionDetection(traj);
-    }
-    delete obs_count;
-
-//    MapIO.printMap(map, traj);
-    sleep(1);
-
-    if(int(xpos)*5 == next_pos.first && int(ypos)*5 == next_pos.second)
-    {
-        map[present_pos.first][present_pos.second] = 0;
-        present_pos = next_pos;
-        map[present_pos.first][present_pos.second] = 5; //AMR should move at the end of obstacle detection
-
-        traj.pop();
-        step++;
+        ASTAR.Mapmatrix[ASTAR.Destx[count]][ASTAR.Desty[count]] = 0;
         count++;
-    }
-    else if(count == 1)
-    {
-        present_pos = traj.top();
-        traj.pop();
-        coordinate next_pos = traj.top();
-        count--;
+        if(count==3)
+        {
+            count-=3;
+        }
+        ASTAR.startAstar(xAstar, yAstar);
     }
     else
     {
-        //move
+        ASTAR.startAstar(xAstar, yAstar);
     }
 
-    std::cout << "heading : " << heading << std::endl;
+    control_star_position(star_position(int((xpos+10)*5), int((ypos+10)*5)));
 }
+
+
 
 void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
 {
@@ -109,9 +68,43 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
     ypos = msg->pose.pose.position.y;
 }
 
+int ParkingNode::star_position(int CurrentX, int CurrentY)
+{
+    std::cout << CurrentX << ", " << CurrentY << std::endl;
+    for (int i = 0 ; i < 4 ; ++i) {
+        if (ASTAR.zmap[CurrentX + dx1[i]][CurrentY + dy1[i]] == '*') {
+            return 2 * i + 2;
+        }
+        if (ASTAR.zmap[CurrentX + dx2[i]][CurrentY + dy2[i]] == '*') {
+            return 2 * i + 1;
+        }
+    }
+    return 0;
+}
+
+void ParkingNode::control_star_position(int dict)
+{
+    if (dict == 0)
+    {
+        std::cout << "++++++++++++++++++++++++++++++" << std::endl;
+        rclcpp::shutdown();
+    }
+    float value = direction[dict] - heading;
+    if (value > 3.14) {value = value - 2*PI;}
+    else if (value < -3.14) {value = value + 2*PI;}
+    float turn_offset = 0.7 * (value);
+    std::cout << "Turn_offset: " << turn_offset << std::endl;
+    if (abs(turn_offset) > 0.01) {
+        m_twist_msg.linear.x = 0.4;
+        m_twist_msg.angular.z = turn_offset;
+        m_pub->publish(m_twist_msg);
+    }
+}
+
+
 ParkingNode::~ParkingNode()
 {
-    delete pO_D;
+//    delete pO_D;
 }
 
 int main(int argc, char ** argv)

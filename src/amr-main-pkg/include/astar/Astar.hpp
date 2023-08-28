@@ -15,27 +15,38 @@
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
 
+using Pair = std::pair<int, int>;
+using pPair = std::pair<double, Pair>;
+
+struct Cell {
+    int parent_x, parent_y;
+    double f, g, h;
+};
+
 class Astar_planning {
 
-private:
-    int row;
-    int column;
-    coordinate start_point;
-    coordinate end_point;
-
+public:
+    int Destx[4];
+    int Desty[4];
+    double INF;
+    char zmap[101][101];
+    std::vector<std::vector<int>> Mapmatrix;
+    int ROW;
+    int COL;
+    int count;
+    int grid;
     std::stack<coordinate> traj;
 
-    struct cell_data {
-        float f, g, h;
-        coordinate parent_cell;
-    };
-    cell_data cell[100][100];
-public:
-    ///  global functions for  path planning  ///
-    cell_data Calculate_astar(int x, int y, int f, int x_p, int y_p);
-
-    std::stack<coordinate> Astar(coordinate &start_point, coordinate &end_point, coordinate &mapsize, int map[][100]);
-
+    Astar_planning();
+    bool isDestination(int row, int col, Pair dst);
+    bool isInRange(int row, int col);
+    bool isUnBlocked(std::vector<std::vector<int>>& map, int row, int col);
+    double GethValue(int row, int col, Pair dst);
+    void tracePath(Cell cellDetails[101][101], Pair dst);
+    bool aStarSearch(std::vector<std::vector<int>>& map, Pair src, Pair dst);
+    void PrintMap();
+    void startAstar(int Startx, int Starty);
+    ~Astar_planning();
 };
 
 #endif //SILJUN_ASTAR_HPP

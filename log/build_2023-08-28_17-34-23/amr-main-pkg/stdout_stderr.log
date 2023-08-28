@@ -1,0 +1,29 @@
+[35m[1mConsolidate compiler generated dependencies of target astar_lib[0m
+[ 20%] Built target visualize_lib
+[ 40%] Built target dynamicObstacle_lib
+[ 50%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m
+[ 70%] Built target obsDetection_lib
+[ 80%] [32m[1mLinking CXX static library libastar_lib.a[0m
+[ 80%] Built target astar_lib
+[35m[1mConsolidate compiler generated dependencies of target simulmain[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:37:33:[m[K [01;31m[Kerror: [m[K‘[01m[KAstar[m[K’ was not declared in this scope; did you mean ‘[01m[KxAstar[m[K’?
+   37 |     int xAstar = int((xpos+10)*([01;31m[KAstar[m[K.grid/20));
+      |                                 [01;31m[K^~~~~[m[K
+      |                                 [32m[KxAstar[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:42:25:[m[K [01;31m[Kerror: [m[K‘[01m[KDestx[m[K’ was not declared in this scope
+   42 |         Astar.Mapmatrix[[01;31m[KDestx[m[K[count]][Desty[count]] = 0;
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:42:39:[m[K [01;31m[Kerror: [m[K‘[01m[KDesty[m[K’ was not declared in this scope
+   42 |         Astar.Mapmatrix[Destx[count]][[01;31m[KDesty[m[K[count]] = 0;
+      |                                       [01;31m[K^~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:55:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrid[m[K’ was not declared in this scope
+   55 |     control_star_position(star_position(int((xpos+10)*([01;31m[Kgrid[m[K/20)), int((ypos+10)*(grid/20))));
+      |                                                        [01;31m[K^~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:35:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   35 | void ParkingNode::sub_callback([01;35m[Kconst LaserScan::SharedPtr msg[m[K)
+      |                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:76: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:174: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

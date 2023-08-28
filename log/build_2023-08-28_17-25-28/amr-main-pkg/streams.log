@@ -1,0 +1,21 @@
+[0.009s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': AMENT_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[0.026s] [35m[1mConsolidate compiler generated dependencies of target astar_lib[0m
+[0.030s] [ 20%] Built target visualize_lib
+[0.031s] [ 30%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m
+[0.033s] [ 50%] Built target dynamicObstacle_lib
+[0.033s] [ 70%] Built target obsDetection_lib
+[0.264s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kvoid Astar_planning::PrintMap()[m[K’:
+[0.265s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:180:26:[m[K [01;31m[Kerror: [m[K‘[01m[KClusteringMatrix[m[K’ was not declared in this scope
+[0.265s]   180 |             std::cout << [01;31m[KClusteringMatrix[m[K[i][j];
+[0.265s]       |                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[0.265s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kvoid Astar_planning::startAstar(int, int)[m[K’:
+[0.265s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:188:5:[m[K [01;31m[Kerror: [m[K‘[01m[KMapmatrix[m[K’ was not declared in this scope
+[0.266s]   188 |     [01;31m[KMapmatrix[m[K[Startx][Starty] = 2;
+[0.266s]       |     [01;31m[K^~~~~~~~~[m[K
+[0.266s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:189:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount[m[K’ was not declared in this scope
+[0.266s]   189 |     Mapmatrix[Destx[[01;31m[Kcount[m[K]][Desty[count]] = 3;
+[0.266s]       |                     [01;31m[K^~~~~[m[K
+[0.328s] make[2]: *** [CMakeFiles/astar_lib.dir/build.make:76: CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o] Error 1
+[0.328s] make[1]: *** [CMakeFiles/Makefile2:145: CMakeFiles/astar_lib.dir/all] Error 2
+[0.328s] make: *** [Makefile:146: all] Error 2
+[0.330s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '2': AMENT_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6

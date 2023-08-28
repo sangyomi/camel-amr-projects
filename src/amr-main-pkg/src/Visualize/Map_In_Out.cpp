@@ -48,19 +48,19 @@ void Map_In_Out::printMap(int map[][100],std::stack<coordinate> trajectory) {
     }
     map[start.first][start.second] = 2;
     map[end.first][end.second] = 3;
-
-    for (int i = r -1; i >= 0; i--) {
-        for (int j = 0; j < c; j++) {
-            if (map[i][j] == -1) {
-                std::cout << "*" << " ";
-                map[i][j] = 0;
-            }
-            else if(map[i][j] == 6) //obstacle's latest position
-                std::cout << "♣" << " ";
-            else std::cout << map[i][j] << " ";
-        }
-        std::cout << "\n";
-    }
+//
+//    for (int i = r -1; i >= 0; i--) {
+//        for (int j = 0; j < c; j++) {
+//            if (map[i][j] == -1) {
+//                std::cout << "*" << " ";
+////                map[i][j] = 0;
+//            }
+//            else if(map[i][j] == 6) //obstacle's latest position
+//                std::cout << "♣" << " ";
+//            else std::cout << map[i][j] << " ";
+//        }
+//        std::cout << "\n";
+//    }
 
     std::cout << std::endl;
     return;

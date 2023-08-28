@@ -40,6 +40,7 @@ private:
     rclcpp::Publisher<Twist>::SharedPtr m_pub;
     rclcpp::Subscription<LaserScan>::SharedPtr m_sub;
     rclcpp::Subscription<Odometry>::SharedPtr m_sub_odom;
+    Twist m_twist_msg;
 
     double heading;
     double xpos;
@@ -47,23 +48,26 @@ private:
     time_t timer;
     int MapCounter;
 
-    Astar_planning *ASTAR;
+    Astar_planning ASTAR;
     coordinate mapsize;
-    int map[100][100];
+    int map[200][200];
     coordinate start_point;
     coordinate end_point;
     std::stack<coordinate> traj;
-    Map_In_Out MapIO;
+//    Map_In_Out MapIO;
     DynamicObstacle obs[num_obs];
     coordinate present_pos;
     coordinate next_pos;
     ObsDetection *pO_D;
     int step;
     int count;
+
 public:
     ParkingNode();
     void sub_callback(const LaserScan::SharedPtr msg);
     void odom_callback(const Odometry::SharedPtr msg);
+    int star_position(int CurrentX, int CurrentY);
+    void control_star_position(int dict);
     ~ParkingNode();
 };
 

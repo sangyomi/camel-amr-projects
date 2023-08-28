@@ -1,0 +1,108 @@
+[0.136s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces -- -j6 -l6
+[0.894s] [  2%] Built target amr_msg_interfaces__cpp
+[1.047s] [ 12%] Built target amr_msg_interfaces__rosidl_generator_c
+[1.060s] [ 23%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_c
+[1.117s] [ 33%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.118s] [ 43%] Built target amr_msg_interfaces__rosidl_typesupport_cpp
+[1.196s] [ 53%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_cpp
+[1.226s] [ 64%] Built target amr_msg_interfaces__rosidl_typesupport_c
+[1.266s] [ 74%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_c
+[1.276s] [ 74%] Built target amr_msg_interfaces
+[1.299s] [ 76%] Built target amr_msg_interfaces__py
+[1.342s] [ 84%] Built target amr_msg_interfaces__python
+[1.363s] [ 89%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.365s] [ 94%] Built target amr_msg_interfaces__rosidl_typesupport_c__pyext
+[1.365s] [100%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.368s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces -- -j6 -l6
+[1.415s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces
+[1.418s] -- Install configuration: ""
+[1.452s] -- Execute custom install script
+[1.452s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/ament_index/resource_index/rosidl_interfaces/amr_msg_interfaces
+[1.453s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__functions.h
+[1.453s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__struct.h
+[1.453s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.h
+[1.454s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__functions.h
+[1.454s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__struct.h
+[1.454s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.h
+[1.454s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/grid_map_info.h
+[1.454s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.454s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/trajectory.h
+[1.455s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/library_path.sh
+[1.455s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/library_path.dsv
+[1.455s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_fastrtps_c.h
+[1.456s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+[1.456s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.466s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.466s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_fastrtps_cpp.hpp
+[1.467s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[1.467s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.467s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.468s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_introspection_c.h
+[1.468s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_introspection_c.h
+[1.468s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.469s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__builder.hpp
+[1.469s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__struct.hpp
+[1.469s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__traits.hpp
+[1.470s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.hpp
+[1.470s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__builder.hpp
+[1.470s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__struct.hpp
+[1.470s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__traits.hpp
+[1.470s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.hpp
+[1.471s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/grid_map_info.hpp
+[1.471s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.471s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/trajectory.hpp
+[1.471s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_introspection_cpp.hpp
+[1.472s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp
+[1.472s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/pythonpath.sh
+[1.472s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/pythonpath.dsv
+[1.472s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/__init__.py
+[1.473s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/__init__.py
+[1.473s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_grid_map_info.py
+[1.473s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_trajectory.py
+[1.474s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[1.474s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[1.475s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[1.475s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__python.so
+[1.475s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/GridMapInfo.idl
+[1.475s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/Trajectory.idl
+[1.475s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/GridMapInfo.msg
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/Trajectory.msg
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/ament_index/resource_index/package_run_dependencies/amr_msg_interfaces
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/ament_index/resource_index/parent_prefix_path/amr_msg_interfaces
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/ament_prefix_path.sh
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/ament_prefix_path.dsv
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/path.sh
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/path.dsv
+[1.476s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.bash
+[1.477s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.sh
+[1.477s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.zsh
+[1.477s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.dsv
+[1.477s] -- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.dsv
+[1.481s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/ament_index/resource_index/packages/amr_msg_interfaces
+[1.481s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.481s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.481s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.481s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.481s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.482s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.482s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.482s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfacesConfig.cmake
+[1.482s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfacesConfig-version.cmake
+[1.482s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.xml
+[1.482s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_generator_c.so
+[1.482s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so
+[1.483s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_c.so
+[1.483s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.483s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so
+[1.535s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake
+[1.535s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.535s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.535s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.535s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake
+[1.536s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.536s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake
+[1.537s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.537s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.537s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake
+[1.537s] -- Up-to-date: /home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.542s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces

@@ -1,0 +1,26 @@
+[0.112s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg -- -j6 -l6
+[0.963s] [ 50%] Built target operate_dynamic_obstacle_node
+[0.991s] [100%] Built target spawn_dynamic_obstacle_node
+[0.995s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg -- -j6 -l6
+[1.015s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg
+[1.027s] -- Install configuration: ""
+[1.040s] -- Execute custom install script
+[1.040s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/operate_dynamic_obstacle_node
+[1.041s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/spawn_dynamic_obstacle_node
+[1.041s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/launch/dynamic_obstacle.launch.py
+[1.041s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg
+[1.041s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg
+[1.042s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.sh
+[1.042s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.dsv
+[1.042s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.sh
+[1.042s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.dsv
+[1.042s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.bash
+[1.042s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.sh
+[1.042s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.zsh
+[1.043s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.dsv
+[1.043s] -- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.dsv
+[1.045s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/ament_index/resource_index/packages/amr-obstacle-pkg
+[1.045s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig.cmake
+[1.045s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig-version.cmake
+[1.046s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.xml
+[1.050s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg

@@ -2,92 +2,222 @@
 // Created by chansik on 23. 7. 27.
 //
 #include "astar/Astar.hpp"
+#define MAX 101
+#define GRID 100
+const int dx1[4] = { 0, -1, 0, 1 };
+const int dy1[4] = { -1, 0, 1, 0 };
 
-Astar_planning::cell_data Astar_planning::Calculate_astar(int x, int y, int f, int x_p, int y_p) {
-    cell_data result;
-    int end_p_loc_x = end_point.first;
-    int end_p_loc_y = end_point.second;
-    result.h = sqrt((x - end_p_loc_x) * (x - end_p_loc_x) + (y - end_p_loc_y) * (y - end_p_loc_y));
-    int a = abs(x_p - x);
-    int b = abs(y_p - y);
-    result.f = (a + b == 2) ? f + 1.4 : f + 1;
-    result.g = result.h + result.f;
-    result.parent_cell.first = x_p;
-    result.parent_cell.second = y_p;
-    return result;
+const int dx2[4] = { 1, -1, -1, 1 };
+const int dy2[4] = { -1, -1, 1, 1 };
+
+
+
+enum Initseting{
+    grid=100,
+    Startx=0,
+    Starty=0,
+};
+
+
+
+Astar_planning::Astar_planning()
+: Mapmatrix(GRID, std::vector<int>(GRID, 0))
+{
+    grid = 100;
+    Destx[0] = 90;
+    Destx[1] = 10;
+    Destx[2] = 10;
+    Destx[3] = 90;
+    Desty[0] = 10;
+    Desty[1] = 10;
+    Desty[2] = 90;
+    Desty[3] = 90;
+    INF = 1e9+7;
+    ROW = grid;
+    COL = grid;
+    count = 0;
 }
 
-std::stack<coordinate> Astar_planning::Astar(coordinate &start_point, coordinate &end_point, coordinate &mapsize, int map[][100]) {
-    this->row = mapsize.first;
-    this->column = mapsize.second;
-    this->start_point = start_point;
-    this->end_point = end_point;
 
-    bool founddest = false;
-    int x = this->start_point.first;
-    int y = this->start_point.second;
+bool Astar_planning::isDestination(int row, int col, Pair dst) {
+    if (row == dst.first && col == dst.second) return true;
+    return false;
+}
 
-    if (MapFunction::isOutofRange(x, y, mapsize) || MapFunction::isBlocked(x, y, map) ||
-        MapFunction::isOutofRange(this->end_point.first, this->end_point.second, mapsize) ||
-        MapFunction::isBlocked(this->end_point.first, this->end_point.second, map)) {
-        std::cout << "start or end point error";
-        //    return;
+bool Astar_planning::isInRange(int row, int col) {
+    return (row >= 0 && row < ROW && col >= 0 && col < COL);
+}
+
+bool Astar_planning::isUnBlocked(std::vector<std::vector<int>>& map, int row, int col) {
+    return (map[row][col] == 0);
+}
+
+double Astar_planning::GethValue(int row, int col, Pair dst) {
+    return (double)std::sqrt(std::pow(row - dst.first, 2) + std::pow(col - dst.second, 2));
+}
+
+void Astar_planning::tracePath(Cell cellDetails[MAX][MAX], Pair dst) {
+    std::stack<Pair> s;
+    int y = dst.first;
+    int x = dst.second;
+
+    s.push({ y, x });
+    while (!(cellDetails[y][x].parent_x == x && cellDetails[y][x].parent_y == y)) {
+        int tempy = cellDetails[y][x].parent_y;
+        int tempx = cellDetails[y][x].parent_x;
+        y = tempy;
+        x = tempx;
+        s.push({ y, x });
     }
 
-    std::set<loc_data> openList;
-    openList.insert(std::make_pair(0.0, std::make_pair(x, y)));
+    while (!s.empty()) {
+        zmap[s.top().first][s.top().second] = '*';
+        Pair A = s.top();
+        s.pop();
+        traj.push(A);
+    }
+}
 
-    bool closedList[row][column];
+bool Astar_planning::aStarSearch(std::vector<std::vector<int>>& map, Pair src, Pair dst) {
+    if (!isInRange(src.first, src.second) || !isInRange(dst.first, dst.second)) return false;
+    if (!isUnBlocked(map, src.first, src.second) || !isUnBlocked(map, dst.first, dst.second)) return false;
+    if (isDestination(src.first, src.second, dst)) return false;
+
+    bool closedList[MAX][MAX];
     std::memset(closedList, false, sizeof(closedList));
 
-    while (!openList.empty()) {
+    Cell cellDetails[MAX][MAX];
 
-        loc_data current_locate = *openList.begin();
+    for (int i = 0; i < ROW; ++i) {
+        for (int j = 0; j < COL; ++j) {
+            cellDetails[i][j].f = cellDetails[i][j].g = cellDetails[i][j].h = INF;
+            cellDetails[i][j].parent_x = cellDetails[i][j].parent_y = -1;
+        }
+    }
+
+    int sy = src.first;
+    int sx = src.second;
+    cellDetails[sy][sx].f = cellDetails[sy][sx].g = cellDetails[sy][sx].h = 0.0;
+    cellDetails[sy][sx].parent_x = sx;
+    cellDetails[sy][sx].parent_y = sy;
+
+    std::set<pPair> openList;
+    openList.insert({ 0.0, { sy, sx } });
+
+    while (!openList.empty()) {
+        pPair p = *openList.begin();
         openList.erase(openList.begin());
 
-        x = current_locate.second.first;
-        y = current_locate.second.second;
+        int y = p.second.first;
+        int x = p.second.second;
+        closedList[y][x] = true;
 
-        closedList[x][y] = true;
-        if (MapFunction::isEndPoint(x, y, end_point)) {
-            std::cout << "calculation finish \n";
-            founddest = true;
-            int a, b;
-            a = cell[x][y].parent_cell.first;
-            b = cell[x][y].parent_cell.second;
-            while (a != this->start_point.first || b != this->start_point.second) {
-                traj.push(std::make_pair(a, b));
-                int a1 = cell[a][b].parent_cell.first;
-                int b1 = cell[a][b].parent_cell.second;
-                a = a1;
-                b = b1;
+        double ng, nf, nh;
+
+        for (int i = 0; i < 4; ++i) {
+            int ny = y + dy1[i];
+            int nx = x + dx1[i];
+
+            if (isInRange(ny, nx)) {
+                if (isDestination(ny, nx, dst)) {
+                    cellDetails[ny][nx].parent_y = y;
+                    cellDetails[ny][nx].parent_x = x;
+                    tracePath(cellDetails, dst);
+                    return true;
+                }
+
+                else if (!closedList[ny][nx] && isUnBlocked(map, ny, nx)) {
+                    ng = cellDetails[y][x].g + 1.0;
+                    nh = GethValue(ny, nx, dst);
+                    nf = ng + nh;
+
+                    if (cellDetails[ny][nx].f == INF || cellDetails[ny][nx].f > nf) {
+                        cellDetails[ny][nx].f = nf;
+                        cellDetails[ny][nx].g = ng;
+                        cellDetails[ny][nx].h = nh;
+                        cellDetails[ny][nx].parent_x = x;
+                        cellDetails[ny][nx].parent_y = y;
+                        openList.insert({ nf, { ny, nx } });
+                    }
+                }
             }
-            traj.push(this->start_point);
-
-            return traj;
         }
-        for (int i = x - 1; i <= x + 1; i++) {
-            for (int j = y - 1; j <= y + 1; j++) {
-                int a = i - x;
-                int b = j - y;
-                if (((x == 0 || y == 0) || (a != i && b != j)) && !MapFunction::isOutofRange(i, j, mapsize) &&
-                    !MapFunction::isBlocked(i, j, map)) {
 
-                    if (closedList[i][j]) continue;
-                    cell_data a = Calculate_astar(i, j, cell[x][y].f, x, y);
-                    if (cell[i][j].f == 0) { // first search
-                        cell[i][j] = a;
-                        openList.insert(std::make_pair(cell[i][j].g, std::make_pair(i, j)));
-                    } else { // already include in openList
-                        if (cell[i][j].g > a.g) cell[i][j] = a;
-                        openList.insert(std::make_pair(cell[i][j].g, std::make_pair(i, j)));
+        for (int i = 0; i < 4; ++i) {
+            int ny = y + dy2[i];
+            int nx = x + dx2[i];
+
+            if (isInRange(ny, nx)) {
+                if (isDestination(ny, nx, dst)) {
+                    cellDetails[ny][nx].parent_y = y;
+                    cellDetails[ny][nx].parent_x = x;
+                    tracePath(cellDetails, dst);
+                    return true;
+                }
+                else if (!closedList[ny][nx] && isUnBlocked(map, ny, nx)) {
+                    ng = cellDetails[y][x].g + 1.414;
+                    nh = GethValue(ny, nx, dst);
+                    nf = ng + nh;
+
+                    if (cellDetails[ny][nx].f == INF || cellDetails[ny][nx].f > nf) {
+                        cellDetails[ny][nx].f = nf;
+                        cellDetails[ny][nx].g = ng;
+                        cellDetails[ny][nx].h = nh;
+                        cellDetails[ny][nx].parent_x = x;
+                        cellDetails[ny][nx].parent_y = y;
+                        openList.insert({ nf, { ny, nx } });
                     }
                 }
             }
         }
     }
-    if (founddest == false) {
-        std::cout << "destination not found.";
-        //return;
+
+    return false;
+}
+
+void Astar_planning::PrintMap() {
+    std::cout<< "\n";
+    for (int i = 0; i < ROW; ++i) {
+        for (int j = 0; j < COL; ++j) {
+            std::cout << zmap[i][j];
+//            std::cout << Savedmatrix[i][j];
+//            std::cout << DynamicMatrix[i][j];
+//            std::cout << ClusteringMatrix[i][j];
+        }
+        std::cout << '\n';
     }
+}
+
+void Astar_planning::startAstar(int Startx, int Starty)
+{
+    Mapmatrix[Startx][Starty] = 2;
+    Mapmatrix[Destx[count]][Desty[count]] = 3;
+    Pair src, dst;
+    for (int i = 0; i < ROW; ++i) {
+        for (int j = 0; j < COL; ++j) {
+            if (Mapmatrix[i][j] == 2) {
+                src = { i, j };
+                Mapmatrix[i][j] = 0;
+            }
+            if (Mapmatrix[i][j] == 3) {
+                dst = { i, j };
+                Mapmatrix[i][j] = 0;
+            }
+        }
+    }
+    for (int i = 0; i < ROW; ++i) {
+        for (int j = 0; j < COL; ++j) {
+            zmap[i][j] = Mapmatrix[i][j] + '0';
+        }
+    }
+    if (aStarSearch(Mapmatrix, src, dst))
+    {
+//        PrintMap();
+    }
+    else std::cout << "Good Bye ~~ !";
+}
+
+Astar_planning::~Astar_planning()
+{
+
 }

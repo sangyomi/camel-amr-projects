@@ -1,0 +1,335 @@
+[5.929s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[5.929s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1b60e1d0a0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1b60e1d0a0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1b60e1d550>)
+[6.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[6.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[6.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[6.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[6.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[6.186s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[6.186s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sangjun/camel-amr-projects-V1'
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[6.186s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[6.250s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[6.250s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[6.250s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[6.250s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[6.250s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[6.250s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[6.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extensions ['ignore', 'ignore_ament_install']
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extension 'ignore'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extension 'ignore_ament_install'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extensions ['colcon_pkg']
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extension 'colcon_pkg'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extensions ['colcon_meta']
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extension 'colcon_meta'
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extensions ['ros']
+[6.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-gazebo-pkg) by extension 'ros'
+[6.270s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr-gazebo-pkg' with type 'ros.ament_cmake' and name 'amr-gazebo-pkg'
+[6.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extensions ['ignore', 'ignore_ament_install']
+[6.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extension 'ignore'
+[6.270s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extension 'ignore_ament_install'
+[6.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extensions ['colcon_pkg']
+[6.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extension 'colcon_pkg'
+[6.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extensions ['colcon_meta']
+[6.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extension 'colcon_meta'
+[6.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extensions ['ros']
+[6.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-main-pkg) by extension 'ros'
+[6.286s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr-main-pkg' with type 'ros.ament_cmake' and name 'amr-main-pkg'
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extensions ['ignore', 'ignore_ament_install']
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extension 'ignore'
+[6.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extension 'ignore_ament_install'
+[6.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extensions ['colcon_pkg']
+[6.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extension 'colcon_pkg'
+[6.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extensions ['colcon_meta']
+[6.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extension 'colcon_meta'
+[6.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extensions ['ros']
+[6.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr-obstacle-pkg) by extension 'ros'
+[6.301s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr-obstacle-pkg' with type 'ros.ament_cmake' and name 'amr-obstacle-pkg'
+[6.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[6.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extension 'ignore'
+[6.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extension 'ignore_ament_install'
+[6.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extensions ['colcon_pkg']
+[6.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extension 'colcon_pkg'
+[6.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extensions ['colcon_meta']
+[6.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extension 'colcon_meta'
+[6.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extensions ['ros']
+[6.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/amr_msg_interfaces) by extension 'ros'
+[6.311s] DEBUG:colcon.colcon_core.package_identification:Package 'src/amr_msg_interfaces' with type 'ros.ament_cmake' and name 'amr_msg_interfaces'
+[6.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[6.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[6.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[6.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[6.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[6.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[6.430s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[6.435s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/sangjun/camel-amr-projects-V1/install
+[6.473s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 344 installed packages in /opt/ros/foxy
+[6.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'cmake_args' from command line to 'None'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'cmake_target' from command line to 'None'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'cmake_clean_first' from command line to 'False'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'cmake_force_configure' from command line to 'False'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'ament_cmake_args' from command line to 'None'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[8.688s] Level 5:colcon.colcon_core.verb:set package 'amr-gazebo-pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[8.688s] DEBUG:colcon.colcon_core.verb:Building package 'amr-gazebo-pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg', 'merge_install': False, 'path': '/home/sangjun/camel-amr-projects-V1/src/amr-gazebo-pkg', 'symlink_install': True, 'test_result_base': None}
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'cmake_args' from command line to 'None'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'cmake_target' from command line to 'None'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'cmake_clean_first' from command line to 'False'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'cmake_force_configure' from command line to 'False'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'ament_cmake_args' from command line to 'None'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[8.690s] Level 5:colcon.colcon_core.verb:set package 'amr-obstacle-pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[8.690s] DEBUG:colcon.colcon_core.verb:Building package 'amr-obstacle-pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg', 'merge_install': False, 'path': '/home/sangjun/camel-amr-projects-V1/src/amr-obstacle-pkg', 'symlink_install': True, 'test_result_base': None}
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'cmake_args' from command line to 'None'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'cmake_target' from command line to 'None'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[8.691s] Level 5:colcon.colcon_core.verb:set package 'amr_msg_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[8.691s] DEBUG:colcon.colcon_core.verb:Building package 'amr_msg_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces', 'merge_install': False, 'path': '/home/sangjun/camel-amr-projects-V1/src/amr_msg_interfaces', 'symlink_install': True, 'test_result_base': None}
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'cmake_args' from command line to 'None'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'cmake_target' from command line to 'None'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'cmake_clean_first' from command line to 'False'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'cmake_force_configure' from command line to 'False'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'ament_cmake_args' from command line to 'None'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[8.692s] Level 5:colcon.colcon_core.verb:set package 'amr-main-pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[8.692s] DEBUG:colcon.colcon_core.verb:Building package 'amr-main-pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg', 'merge_install': False, 'path': '/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg', 'symlink_install': True, 'test_result_base': None}
+[8.693s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[8.695s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[8.695s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sangjun/camel-amr-projects-V1/src/amr_msg_interfaces' with build type 'ament_cmake'
+[8.695s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sangjun/camel-amr-projects-V1/src/amr_msg_interfaces'
+[8.781s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[8.781s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.781s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.786s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/home/sangjun/catkin_ws/devel'
+[8.787s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/opt/ros/noetic'
+[8.797s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sangjun/camel-amr-projects-V1/src/amr-gazebo-pkg' with build type 'ament_cmake'
+[8.798s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sangjun/camel-amr-projects-V1/src/amr-gazebo-pkg'
+[8.800s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.800s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.805s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/home/sangjun/catkin_ws/devel'
+[8.806s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/opt/ros/noetic'
+[8.807s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sangjun/camel-amr-projects-V1/src/amr-obstacle-pkg' with build type 'ament_cmake'
+[8.808s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sangjun/camel-amr-projects-V1/src/amr-obstacle-pkg'
+[8.809s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.809s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.815s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/home/sangjun/catkin_ws/devel'
+[8.816s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/opt/ros/noetic'
+[8.837s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces -- -j6 -l6
+[8.912s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg -- -j6 -l6
+[8.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg -- -j6 -l6
+[9.454s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg -- -j6 -l6
+[9.472s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg
+[9.716s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr-gazebo-pkg)
+[9.717s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg
+[9.941s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg' for CMake module files
+[9.942s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg' for CMake config files
+[9.942s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr-gazebo-pkg', 'cmake_prefix_path')
+[9.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/hook/cmake_prefix_path.ps1'
+[9.965s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/hook/cmake_prefix_path.dsv'
+[9.988s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/hook/cmake_prefix_path.sh'
+[9.989s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/bin'
+[9.989s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/lib/pkgconfig/amr-gazebo-pkg.pc'
+[9.990s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/lib/python3.8/site-packages'
+[9.990s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/bin'
+[9.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.ps1'
+[10.007s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.dsv'
+[10.008s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.sh'
+[10.010s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.bash'
+[10.048s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.zsh'
+[10.068s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/colcon-core/packages/amr-gazebo-pkg)
+[10.072s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg -- -j6 -l6
+[10.085s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr-gazebo-pkg)
+[10.087s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg' for CMake module files
+[10.087s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg' for CMake config files
+[10.087s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr-gazebo-pkg', 'cmake_prefix_path')
+[10.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/hook/cmake_prefix_path.ps1'
+[10.089s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/hook/cmake_prefix_path.dsv'
+[10.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/hook/cmake_prefix_path.sh'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/bin'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/lib/pkgconfig/amr-gazebo-pkg.pc'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/lib/python3.8/site-packages'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/bin'
+[10.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.ps1'
+[10.091s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.dsv'
+[10.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.sh'
+[10.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.bash'
+[10.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.zsh'
+[10.092s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg/share/colcon-core/packages/amr-gazebo-pkg)
+[10.095s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg
+[10.105s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr-obstacle-pkg)
+[10.108s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg' for CMake module files
+[10.109s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-obstacle-pkg
+[10.109s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg' for CMake config files
+[10.110s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr-obstacle-pkg', 'cmake_prefix_path')
+[10.112s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/hook/cmake_prefix_path.ps1'
+[10.112s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/hook/cmake_prefix_path.dsv'
+[10.113s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/hook/cmake_prefix_path.sh'
+[10.113s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib'
+[10.114s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/bin'
+[10.114s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/pkgconfig/amr-obstacle-pkg.pc'
+[10.114s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/python3.8/site-packages'
+[10.114s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/bin'
+[10.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.ps1'
+[10.116s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.dsv'
+[10.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.sh'
+[10.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.bash'
+[10.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.zsh'
+[10.117s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/colcon-core/packages/amr-obstacle-pkg)
+[10.131s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces -- -j6 -l6
+[10.135s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr-obstacle-pkg)
+[10.137s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg' for CMake module files
+[10.137s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg' for CMake config files
+[10.137s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr-obstacle-pkg', 'cmake_prefix_path')
+[10.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/hook/cmake_prefix_path.ps1'
+[10.139s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/hook/cmake_prefix_path.dsv'
+[10.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/hook/cmake_prefix_path.sh'
+[10.140s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib'
+[10.140s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/bin'
+[10.140s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/pkgconfig/amr-obstacle-pkg.pc'
+[10.140s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/lib/python3.8/site-packages'
+[10.141s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/bin'
+[10.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.ps1'
+[10.143s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.dsv'
+[10.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.sh'
+[10.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.bash'
+[10.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.zsh'
+[10.145s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg/share/colcon-core/packages/amr-obstacle-pkg)
+[10.175s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces
+[10.282s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_msg_interfaces)
+[10.285s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces' for CMake module files
+[10.286s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces
+[10.286s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces' for CMake config files
+[10.287s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_msg_interfaces', 'cmake_prefix_path')
+[10.288s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/cmake_prefix_path.ps1'
+[10.288s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/cmake_prefix_path.dsv'
+[10.288s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/cmake_prefix_path.sh'
+[10.288s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib'
+[10.288s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_msg_interfaces', 'ld_library_path_lib')
+[10.289s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/ld_library_path_lib.ps1'
+[10.290s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/ld_library_path_lib.dsv'
+[10.290s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/ld_library_path_lib.sh'
+[10.290s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/bin'
+[10.290s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/pkgconfig/amr_msg_interfaces.pc'
+[10.290s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages'
+[10.290s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_msg_interfaces', 'pythonpath')
+[10.291s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/pythonpath.ps1'
+[10.291s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/pythonpath.dsv'
+[10.291s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/pythonpath.sh'
+[10.292s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/bin'
+[10.293s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.ps1'
+[10.293s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.dsv'
+[10.293s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.sh'
+[10.294s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.bash'
+[10.294s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.zsh'
+[10.294s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/colcon-core/packages/amr_msg_interfaces)
+[10.341s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr_msg_interfaces)
+[10.344s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces' for CMake module files
+[10.345s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces' for CMake config files
+[10.346s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_msg_interfaces', 'cmake_prefix_path')
+[10.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/cmake_prefix_path.ps1'
+[10.348s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/cmake_prefix_path.dsv'
+[10.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/cmake_prefix_path.sh'
+[10.348s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib'
+[10.348s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_msg_interfaces', 'ld_library_path_lib')
+[10.349s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/ld_library_path_lib.ps1'
+[10.350s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/ld_library_path_lib.dsv'
+[10.350s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/ld_library_path_lib.sh'
+[10.350s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/bin'
+[10.350s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/pkgconfig/amr_msg_interfaces.pc'
+[10.350s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages'
+[10.350s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr_msg_interfaces', 'pythonpath')
+[10.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/pythonpath.ps1'
+[10.351s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/pythonpath.dsv'
+[10.351s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/hook/pythonpath.sh'
+[10.352s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/bin'
+[10.353s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.ps1'
+[10.353s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.dsv'
+[10.353s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.sh'
+[10.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.bash'
+[10.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/package.zsh'
+[10.354s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/colcon-core/packages/amr_msg_interfaces)
+[10.354s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg' with build type 'ament_cmake'
+[10.354s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg'
+[10.355s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.355s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.359s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/home/sangjun/catkin_ws/devel'
+[10.359s] DEBUG:colcon.colcon_core.shell:Ignoring prefix path '/opt/ros/noetic'
+[10.430s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[14.590s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[14.614s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(amr-main-pkg)
+[14.617s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg' for CMake module files
+[14.617s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg' for CMake config files
+[14.618s] Level 1:colcon.colcon_core.shell:create_environment_hook('amr-main-pkg', 'cmake_prefix_path')
+[14.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/hook/cmake_prefix_path.ps1'
+[14.620s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/hook/cmake_prefix_path.dsv'
+[14.620s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/hook/cmake_prefix_path.sh'
+[14.620s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib'
+[14.620s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/bin'
+[14.621s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib/pkgconfig/amr-main-pkg.pc'
+[14.621s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib/python3.8/site-packages'
+[14.621s] Level 1:colcon.colcon_core.environment:checking '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/bin'
+[14.622s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/package.ps1'
+[14.623s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/package.dsv'
+[14.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/package.sh'
+[14.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/package.bash'
+[14.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/package.zsh'
+[14.624s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/colcon-core/packages/amr-main-pkg)
+[14.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[14.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[14.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[14.624s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[14.702s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[14.703s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[14.703s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[14.945s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[14.948s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sangjun/camel-amr-projects-V1/install/local_setup.ps1'
+[14.959s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sangjun/camel-amr-projects-V1/install/_local_setup_util_ps1.py'
+[14.983s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sangjun/camel-amr-projects-V1/install/setup.ps1'
+[14.986s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sangjun/camel-amr-projects-V1/install/local_setup.sh'
+[14.987s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sangjun/camel-amr-projects-V1/install/_local_setup_util_sh.py'
+[14.988s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sangjun/camel-amr-projects-V1/install/setup.sh'
+[14.990s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sangjun/camel-amr-projects-V1/install/local_setup.bash'
+[14.991s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sangjun/camel-amr-projects-V1/install/setup.bash'
+[14.992s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sangjun/camel-amr-projects-V1/install/local_setup.zsh'
+[15.003s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sangjun/camel-amr-projects-V1/install/setup.zsh'

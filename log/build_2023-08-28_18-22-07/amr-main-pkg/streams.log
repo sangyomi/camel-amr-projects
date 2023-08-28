@@ -1,0 +1,46 @@
+[0.012s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/sangjun/catkin_ws/devel/lib:/opt/ros/noetic/lib:home/user/raisimLib/install/lib PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages:home/user/raisimLib/install/lib /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[0.033s] [ 20%] Built target visualize_lib
+[0.035s] [ 40%] Built target obsDetection_lib
+[0.035s] [ 60%] Built target astar_lib
+[0.035s] [ 80%] Built target dynamicObstacle_lib
+[0.040s] [35m[1mConsolidate compiler generated dependencies of target simulmain[0m
+[0.049s] [ 90%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[1.178s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.178s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:32:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.178s]    32 | void ParkingNode::sub_callback([01;35m[Kconst LaserScan::SharedPtr msg[m[K)
+[1.178s]       |                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[4.881s] [100%] [32m[1mLinking CXX executable simulmain[0m
+[5.078s] [100%] Built target simulmain
+[5.082s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/sangjun/catkin_ws/devel/lib:/opt/ros/noetic/lib:home/user/raisimLib/install/lib PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages:home/user/raisimLib/install/lib /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[5.105s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/sangjun/catkin_ws/devel/lib:/opt/ros/noetic/lib:home/user/raisimLib/install/lib PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages:home/user/raisimLib/install/lib /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg
+[5.109s] -- Install configuration: ""
+[5.109s] -- Execute custom install script
+[5.110s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/include/DynamicObstacle/DynamicObstacle.hpp
+[5.110s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp
+[5.110s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/include/Variables/Variable.hpp
+[5.110s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/include/Variables/mapinfo.hpp
+[5.110s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/include/Visualize/Map_In_Out.hpp
+[5.110s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/include/astar/Astar.hpp
+[5.110s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/include/simulmain/simul_main.hpp
+[5.111s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib/libastar_lib.a
+[5.111s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib/libvisualize_lib.a
+[5.111s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib/libdynamicObstacle_lib.a
+[5.111s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib/libobsDetection_lib.a
+[5.111s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/lib/amr-main-pkg/simulmain
+[5.112s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml
+[5.112s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg
+[5.112s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg
+[5.112s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh
+[5.112s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv
+[5.113s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh
+[5.113s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv
+[5.113s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash
+[5.113s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh
+[5.113s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh
+[5.113s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv
+[5.114s] -- Symlinking: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/package.dsv
+[5.116s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg
+[5.117s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake
+[5.117s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake
+[5.117s] -- Up-to-date symlink: /home/sangjun/camel-amr-projects-V1/install/amr-main-pkg/share/amr-main-pkg/package.xml
+[5.121s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic LD_LIBRARY_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/sangjun/catkin_ws/devel/lib:/opt/ros/noetic/lib:home/user/raisimLib/install/lib PYTHONPATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages:home/user/raisimLib/install/lib /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg

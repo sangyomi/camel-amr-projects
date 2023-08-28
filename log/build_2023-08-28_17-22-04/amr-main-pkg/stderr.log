@@ -1,0 +1,79 @@
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:49:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KAstar_planning::MAX[m[K’
+   40 | void Astar_planning::tracePath(Cell cellDetails[[01;31m[KMAX[m[K][MAX], Pair dst) {
+      |                                                 [01;31m[K^~~[m[K
+In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:43:9:[m[K [01;36m[Knote: [m[Kdeclared here
+   43 |     int [01;36m[KMAX[m[K;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:54:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KAstar_planning::MAX[m[K’
+   40 | void Astar_planning::tracePath(Cell cellDetails[MAX][[01;31m[KMAX[m[K], Pair dst) {
+      |                                                      [01;31m[K^~~[m[K
+In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:43:9:[m[K [01;36m[Knote: [m[Kdeclared here
+   43 |     int [01;36m[KMAX[m[K;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K,[m[K’ token
+   40 | void Astar_planning::tracePath[34m[K([m[KCell cellDetails[MAX][MAX][01;31m[K,[m[K Pair dst) {
+      |                               [34m[K~[m[K                          [01;31m[K^[m[K
+      |                                                          [32m[K)[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Astar_planning::tracePath(...)[m[K’
+   40 | void [01;31m[KAstar_planning[m[K::tracePath(Cell cellDetails[MAX][MAX], Pair dst) {
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:54:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid Astar_planning::tracePath(Cell (*)[201], Pair)[m[K’
+   54 |     void [01;36m[KtracePath[m[K(Cell cellDetails[201][201], Pair dst);
+      |          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:38:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Astar_planning[m[K’ defined here
+   38 | class [01;36m[KAstar_planning[m[K {
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kint Astar_planning::MAX[m[K’ is private within this context
+   40 | void Astar_planning::tracePath(Cell cellDetails[[01;31m[KMAX[m[K][MAX], Pair dst) {
+      |                                                 [01;31m[K^~~[m[K
+In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:43:9:[m[K [01;36m[Knote: [m[Kdeclared private here
+   43 |     int [01;36m[KMAX[m[K;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:65:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kdst[m[K’
+   40 | void Astar_planning::tracePath(Cell cellDetails[MAX][MAX], Pair [01;31m[Kdst[m[K) {
+      |                                                                 [01;31m[K^~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kbool Astar_planning::aStarSearch(std::vector<std::vector<int> >&, Pair, Pair)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:65:10:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[KclosedList[m[K’ [[01;35m[K-Wvla[m[K]
+   65 |     bool [01;35m[KclosedList[m[K[MAX][MAX];
+      |          [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:65:10:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[KclosedList[m[K’ [[01;35m[K-Wvla[m[K]
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:68:10:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[KcellDetails[m[K’ [[01;35m[K-Wvla[m[K]
+   68 |     Cell [01;35m[KcellDetails[m[K[MAX][MAX];
+      |          [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:68:10:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[KcellDetails[m[K’ [[01;35m[K-Wvla[m[K]
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:104:31:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KCell [((Astar_planning*)this)->Astar_planning::MAX][((Astar_planning*)this)->Astar_planning::MAX][m[K’ to ‘[01m[KCell (*)[201][m[K’
+  104 |                     tracePath([01;31m[KcellDetails[m[K, dst);
+      |                               [01;31m[K^~~~~~~~~~~[m[K
+      |                               [01;31m[K|[m[K
+      |                               [01;31m[KCell [((Astar_planning*)this)->Astar_planning::MAX][((Astar_planning*)this)->Astar_planning::MAX][m[K
+In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:54:25:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid Astar_planning::tracePath(Cell (*)[201], Pair)[m[K’
+   54 |     void tracePath([01;36m[KCell cellDetails[201][201][m[K, Pair dst);
+      |                    [01;36m[K~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:133:31:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[KCell [((Astar_planning*)this)->Astar_planning::MAX][((Astar_planning*)this)->Astar_planning::MAX][m[K’ to ‘[01m[KCell (*)[201][m[K’
+  133 |                     tracePath([01;31m[KcellDetails[m[K, dst);
+      |                               [01;31m[K^~~~~~~~~~~[m[K
+      |                               [01;31m[K|[m[K
+      |                               [01;31m[KCell [((Astar_planning*)this)->Astar_planning::MAX][((Astar_planning*)this)->Astar_planning::MAX][m[K
+In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:54:25:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid Astar_planning::tracePath(Cell (*)[201], Pair)[m[K’
+   54 |     void tracePath([01;36m[KCell cellDetails[201][201][m[K, Pair dst);
+      |                    [01;36m[K~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kvoid Astar_planning::PrintMap()[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:164:26:[m[K [01;31m[Kerror: [m[K‘[01m[KClusteringMatrix[m[K’ was not declared in this scope
+  164 |             std::cout << [01;31m[KClusteringMatrix[m[K[i][j];
+      |                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kvoid Astar_planning::startAstar(int, int)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:172:5:[m[K [01;31m[Kerror: [m[K‘[01m[KMapmatrix[m[K’ was not declared in this scope
+  172 |     [01;31m[KMapmatrix[m[K[Startx][Starty] = 2;
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:173:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount[m[K’ was not declared in this scope
+  173 |     Mapmatrix[Destx[[01;31m[Kcount[m[K]][Desty[count]] = 3;
+      |                     [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/astar_lib.dir/build.make:76: CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:145: CMakeFiles/astar_lib.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

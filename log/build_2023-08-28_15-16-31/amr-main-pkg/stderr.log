@@ -1,0 +1,7 @@
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:86:20:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Knext_pos[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   86 |         coordinate [01;35m[Knext_pos[m[K = traj.top();
+      |                    [01;35m[K^~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:36:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   36 | void ParkingNode::sub_callback([01;35m[Kconst LaserScan::SharedPtr msg[m[K)
+      |                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
