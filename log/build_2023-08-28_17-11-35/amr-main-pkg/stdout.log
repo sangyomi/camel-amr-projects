@@ -1,4 +1,0 @@
-[ 40%] Built target obsDetection_lib
-[ 40%] Built target dynamicObstacle_lib
-[ 50%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m
-[ 70%] Built target visualize_lib

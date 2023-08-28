@@ -1,4 +1,0 @@
-[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/Visualize/Map_In_Out.cpp:[m[K In member function ‘[01m[Kvoid Map_In_Out::Map_Input(coordinate&, coordinate&, coordinate&, int (*)[100])[m[K’:
-[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/Visualize/Map_In_Out.cpp:8:88:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmap[m[K’ [[01;35m[K-Wunused-parameter[m[K]
-    8 | void Map_In_Out::Map_Input(coordinate &start, coordinate &end,coordinate& mapsize, [01;35m[Kint map[][100][m[K){
-      |                                                                                    [01;35m[K~~~~^~~~~~~~~~[m[K

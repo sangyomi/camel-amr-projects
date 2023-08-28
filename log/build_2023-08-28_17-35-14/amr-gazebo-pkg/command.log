@@ -1,4 +1,0 @@
-Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg': /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg -- -j6 -l6
-Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg' returned '0': /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg -- -j6 -l6
-Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg': /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg
-Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg' returned '0': /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-V1/build/amr-gazebo-pkg

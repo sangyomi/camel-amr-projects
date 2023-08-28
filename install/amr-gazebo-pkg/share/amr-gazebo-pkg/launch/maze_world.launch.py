@@ -1,1 +1,0 @@
-/home/sangjun/camel-amr-projects-V1/src/amr-gazebo-pkg/launch/maze_world.launch.py

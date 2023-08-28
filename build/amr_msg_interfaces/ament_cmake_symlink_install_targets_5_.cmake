@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/sangjun/camel-amr-projects-V1/build/amr_msg_interfaces/rosidl_generator_py/amr_msg_interfaces/libamr_msg_interfaces__python.so" "TARGETS" "amr_msg_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

@@ -1,5 +1,0 @@
-[ 20%] Built target dynamicObstacle_lib
-[ 40%] Built target visualize_lib
-[ 60%] Built target astar_lib
-[ 80%] Built target obsDetection_lib
-[ 90%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m

@@ -1,8 +1,0 @@
-[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:[m[K In member function ‘[01m[Kstd::stack<std::pair<int, int> > Astar_planning::Astar(coordinate&, coordinate&, coordinate&, int (*)[100])[m[K’:
-[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:10:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[KclosedList[m[K’ [[01;35m[K-Wvla[m[K]
-   40 |     bool [01;35m[KclosedList[m[K[row][column];
-      |          [01;35m[K^~~~~~~~~~[m[K
-[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:40:10:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[KclosedList[m[K’ [[01;35m[K-Wvla[m[K]
-[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:93:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K-Wreturn-type[m[K]
-   93 | [01;35m[K}[m[K
-      | [01;35m[K^[m[K

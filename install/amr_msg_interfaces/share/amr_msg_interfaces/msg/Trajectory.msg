@@ -1,1 +1,0 @@
-/home/sangjun/camel-amr-projects-V1/src/amr_msg_interfaces/msg/Trajectory.msg
