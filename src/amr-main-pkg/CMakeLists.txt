@@ -44,15 +44,22 @@ add_library(obsDetection_lib
         src/ObsDetection/ObsDetection.cpp
 )
 
+add_library(clusteringDynamicObs_lib
+        src/ClusteringDynamicObs/ClusteringDynamicObs.cpp
+)
+
 target_include_directories(astar_lib PUBLIC include)
 target_include_directories(visualize_lib PUBLIC include)
 target_include_directories(dynamicObstacle_lib PUBLIC include)
 target_include_directories(obsDetection_lib PUBLIC include)
+target_include_directories(clusteringDynamicObs_lib PUBLIC include)
 
 ament_target_dependencies(astar_lib rclcpp)
 ament_target_dependencies(visualize_lib rclcpp)
 ament_target_dependencies(dynamicObstacle_lib rclcpp)
 ament_target_dependencies(obsDetection_lib rclcpp)
+ament_target_dependencies(clusteringDynamicObs_lib rclcpp)
+
 
 install(
         DIRECTORY include/
@@ -64,6 +71,7 @@ install(TARGETS
         visualize_lib
         dynamicObstacle_lib
         obsDetection_lib
+        clusteringDynamicObs_lib
         ARCHIVE DESTINATION lib
         LIBRARY DESTINATION lib
         RUNTIME DESTINATION bin
@@ -79,7 +87,7 @@ ament_target_dependencies(simulmain
         nav_msgs
 )
 
-target_link_libraries(simulmain astar_lib visualize_lib dynamicObstacle_lib obsDetection_lib)
+target_link_libraries(simulmain astar_lib visualize_lib dynamicObstacle_lib obsDetection_lib clusteringDynamicObs_lib)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

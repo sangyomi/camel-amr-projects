@@ -22,6 +22,7 @@
 #include "astar/Astar.hpp"
 #include "ObsDetection/ObsDetection.hpp"
 #include "DynamicObstacle/DynamicObstacle.hpp"
+#include "ClusteringDynamicObs/ClusteringDynamicObs.hpp"
 #include "Visualize/Map_In_Out.hpp"
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
@@ -44,7 +45,9 @@ private:
     double xpos;
     double ypos;
     time_t timer;
+
     int MapCounter;
+    ClusteringDynamicObs Cluster;
 
     Astar_planning ASTAR;
     coordinate mapsize;

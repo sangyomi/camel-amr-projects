@@ -16,7 +16,7 @@ enum Initseting{
 
 Astar_planning::Astar_planning()
 : Mapmatrix(GRID, std::vector<int>(GRID, 0)), dx1{0, -1, 0, 1}, dy1{-1, 0, 1, 0},
-  dx2{1, -1, -1, 1}, dy2{-1, -1, 1, 1}, Destx{90, 10, 10, 90}, Desty{10, 10, 90, 90},
+  dx2{1, -1, -1, 1}, dy2{-1, -1, 1, 1}, Destx{90, 10, 90, 10}, Desty{10, 90, 10, 90},
   direction{0,-1*PI*0.25,-1*PI*0.5,-1*PI*0.75,PI,PI*0.75,PI*0.5,PI*0.25,0}
 {
     grid = 100;

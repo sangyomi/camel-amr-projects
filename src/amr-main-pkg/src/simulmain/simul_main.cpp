@@ -9,6 +9,7 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
     RCLCPP_INFO(get_logger(), "Parking Node Created");
 
     step = 0;
+    MapCounter = 0;
 
     m_pub = create_publisher<Twist>("diffbot_amr/cmd_vel", 10);
     m_sub = create_subscription<LaserScan>(
@@ -22,6 +23,8 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
 void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 {
+    MapCounter++;
+
     int xAstar = int((xpos+10)*5);
     int yAstar = int((ypos+10)*5);
 
@@ -39,11 +42,13 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.startAstar(xAstar, yAstar);
     }
+
+    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, heading, xpos, ypos, MapCounter);
     control_star_position(star_position(int((xpos+10)*5), int((ypos+10)*5)));
 
     while(!ASTAR.traj.empty())
     {
-        std::cout << ASTAR.traj.top().first << ASTAR.traj.top().second << std::endl;
+//        std::cout << ASTAR.traj.top().first << ASTAR.traj.top().second << std::endl;
         ASTAR.traj.pop();
     }
 }
@@ -66,7 +71,7 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
 
 int ParkingNode::star_position(int CurrentX, int CurrentY)
 {
-    std::cout << CurrentX << ", " << CurrentY << std::endl;
+//    std::cout << CurrentX << ", " << CurrentY << std::endl;
     for (int i = 0 ; i < 4 ; ++i) {
         if (ASTAR.zmap[CurrentX + ASTAR.dx1[i]][CurrentY + ASTAR.dy1[i]] == '*') {
             return 2 * i + 2;
@@ -89,7 +94,7 @@ void ParkingNode::control_star_position(int dict)
     if (value > 3.14) {value = value - 2*PI;}
     else if (value < -3.14) {value = value + 2*PI;}
     float turn_offset = 0.7 * (value);
-    std::cout << "Turn_offset: " << turn_offset << std::endl;
+//    std::cout << "Turn_offset: " << turn_offset << std::endl;
     if (abs(turn_offset) > 0.01) {
         m_twist_msg.linear.x = 0.4;
         m_twist_msg.angular.z = turn_offset;
