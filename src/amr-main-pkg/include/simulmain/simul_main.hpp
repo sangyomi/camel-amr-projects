@@ -19,7 +19,6 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
 #include "nav_msgs/msg/odometry.hpp"
-//#include "amr_msg_interfaces/msg/grid_map_info.hpp"
 #include "astar/Astar.hpp"
 #include "ObsDetection/ObsDetection.hpp"
 #include "DynamicObstacle/DynamicObstacle.hpp"
@@ -33,7 +32,6 @@ const int sensor_range = 10; // Sensing distance
 using Twist = geometry_msgs::msg::Twist;
 using LaserScan = sensor_msgs::msg::LaserScan;
 using Odometry = nav_msgs::msg::Odometry;
-//using GridMapInfo = amr_msg_interfaces::msg::GridMapInfo;
 
 class ParkingNode : public rclcpp::Node {
 private:
@@ -54,7 +52,6 @@ private:
     coordinate start_point;
     coordinate end_point;
     std::stack<coordinate> traj;
-//    Map_In_Out MapIO;
     DynamicObstacle obs[num_obs];
     coordinate present_pos;
     coordinate next_pos;

@@ -4,13 +4,7 @@
 #include "astar/Astar.hpp"
 #define MAX 101
 #define GRID 100
-const int dx1[4] = { 0, -1, 0, 1 };
-const int dy1[4] = { -1, 0, 1, 0 };
-
-const int dx2[4] = { 1, -1, -1, 1 };
-const int dy2[4] = { -1, -1, 1, 1 };
-
-
+#define PI 3.14159265
 
 enum Initseting{
     grid=100,
@@ -21,17 +15,11 @@ enum Initseting{
 
 
 Astar_planning::Astar_planning()
-: Mapmatrix(GRID, std::vector<int>(GRID, 0))
+: Mapmatrix(GRID, std::vector<int>(GRID, 0)), dx1{0, -1, 0, 1}, dy1{-1, 0, 1, 0},
+  dx2{1, -1, -1, 1}, dy2{-1, -1, 1, 1}, Destx{90, 10, 10, 90}, Desty{10, 10, 90, 90},
+  direction{0,-1*PI*0.25,-1*PI*0.5,-1*PI*0.75,PI,PI*0.75,PI*0.5,PI*0.25,0}
 {
     grid = 100;
-    Destx[0] = 90;
-    Destx[1] = 10;
-    Destx[2] = 10;
-    Destx[3] = 90;
-    Desty[0] = 10;
-    Desty[1] = 10;
-    Desty[2] = 90;
-    Desty[3] = 90;
     INF = 1e9+7;
     ROW = grid;
     COL = grid;
@@ -70,11 +58,10 @@ void Astar_planning::tracePath(Cell cellDetails[MAX][MAX], Pair dst) {
         s.push({ y, x });
     }
 
+    traj = s;
     while (!s.empty()) {
         zmap[s.top().first][s.top().second] = '*';
-        Pair A = s.top();
         s.pop();
-        traj.push(A);
     }
 }
 

@@ -4,20 +4,11 @@
 #include "simulmain/simul_main.hpp"
 #define PI 3.14159265
 
-const int dx1[4] = { 0, -1, 0, 1 };
-const int dy1[4] = { -1, 0, 1, 0 };
-
-const int dx2[4] = { 1, -1, -1, 1 };
-const int dy2[4] = { -1, -1, 1, 1 };
-
-const float direction[9] = {0,-1*PI*0.25,-1*PI*0.5,-1*PI*0.75,PI,PI*0.75,PI*0.5,PI*0.25,0};
-
 ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
     RCLCPP_INFO(get_logger(), "Parking Node Created");
 
     step = 0;
-    count = 0;
 
     m_pub = create_publisher<Twist>("diffbot_amr/cmd_vel", 10);
     m_sub = create_subscription<LaserScan>(
@@ -34,13 +25,13 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     int xAstar = int((xpos+10)*5);
     int yAstar = int((ypos+10)*5);
 
-    if(abs(xAstar-ASTAR.Destx[count]) < 3 && abs(yAstar-ASTAR.Desty[count]) < 3)
+    if(abs(xAstar-ASTAR.Destx[ASTAR.count]) < 3 && abs(yAstar-ASTAR.Desty[ASTAR.count]) < 3)
     {
-        ASTAR.Mapmatrix[ASTAR.Destx[count]][ASTAR.Desty[count]] = 0;
-        count++;
-        if(count==3)
+        ASTAR.Mapmatrix[ASTAR.Destx[ASTAR.count]][ASTAR.Desty[ASTAR.count]] = 0;
+        ASTAR.count++;
+        if(ASTAR.count==3)
         {
-            count-=3;
+            ASTAR.count-=3;
         }
         ASTAR.startAstar(xAstar, yAstar);
     }
@@ -48,8 +39,13 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.startAstar(xAstar, yAstar);
     }
-
     control_star_position(star_position(int((xpos+10)*5), int((ypos+10)*5)));
+
+    while(!ASTAR.traj.empty())
+    {
+        std::cout << ASTAR.traj.top().first << ASTAR.traj.top().second << std::endl;
+        ASTAR.traj.pop();
+    }
 }
 
 
@@ -72,10 +68,10 @@ int ParkingNode::star_position(int CurrentX, int CurrentY)
 {
     std::cout << CurrentX << ", " << CurrentY << std::endl;
     for (int i = 0 ; i < 4 ; ++i) {
-        if (ASTAR.zmap[CurrentX + dx1[i]][CurrentY + dy1[i]] == '*') {
+        if (ASTAR.zmap[CurrentX + ASTAR.dx1[i]][CurrentY + ASTAR.dy1[i]] == '*') {
             return 2 * i + 2;
         }
-        if (ASTAR.zmap[CurrentX + dx2[i]][CurrentY + dy2[i]] == '*') {
+        if (ASTAR.zmap[CurrentX + ASTAR.dx2[i]][CurrentY + ASTAR.dy2[i]] == '*') {
             return 2 * i + 1;
         }
     }
@@ -89,7 +85,7 @@ void ParkingNode::control_star_position(int dict)
         std::cout << "++++++++++++++++++++++++++++++" << std::endl;
         rclcpp::shutdown();
     }
-    float value = direction[dict] - heading;
+    float value = ASTAR.direction[dict] - heading;
     if (value > 3.14) {value = value - 2*PI;}
     else if (value < -3.14) {value = value + 2*PI;}
     float turn_offset = 0.7 * (value);

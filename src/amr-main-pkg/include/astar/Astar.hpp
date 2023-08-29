@@ -26,8 +26,13 @@ struct Cell {
 class Astar_planning {
 
 public:
+    int dx1[4];
+    int dy1[4];
+    int dx2[4];
+    int dy2[4];
     int Destx[4];
     int Desty[4];
+    float direction[9];
     double INF;
     char zmap[101][101];
     std::vector<std::vector<int>> Mapmatrix;
