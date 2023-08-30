@@ -1,9 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target clusteringDynamicObs_lib[0m
-[ 16%] Built target visualize_lib
-[ 33%] Built target dynamicObstacle_lib
-[ 50%] Built target obsDetection_lib
-[ 66%] Built target astar_lib
-[ 75%] [32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o[0m
-[ 83%] [32m[1mLinking CXX static library libclusteringDynamicObs_lib.a[0m
-[ 83%] Built target clusteringDynamicObs_lib
-[ 91%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m

@@ -1,8 +1,0 @@
-[ 16%] Built target astar_lib
-[ 33%] Built target visualize_lib
-[35m[1mConsolidate compiler generated dependencies of target clusteringDynamicObs_lib[0m
-[ 50%] Built target obsDetection_lib
-[ 66%] Built target dynamicObstacle_lib
-[ 83%] Built target clusteringDynamicObs_lib
-[35m[1mConsolidate compiler generated dependencies of target simulmain[0m
-[ 91%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m

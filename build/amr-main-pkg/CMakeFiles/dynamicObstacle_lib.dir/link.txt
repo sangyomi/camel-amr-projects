@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdynamicObstacle_lib.a CMakeFiles/dynamicObstacle_lib.dir/src/DynamicObstacle/DynamicObstacle.cpp.o
-/usr/bin/ranlib libdynamicObstacle_lib.a

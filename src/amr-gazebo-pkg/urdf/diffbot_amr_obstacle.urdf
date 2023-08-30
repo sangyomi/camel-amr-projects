@@ -128,7 +128,7 @@
       <geometry>
         <!-- <box size=".4 .2 .1"/> -->
         <!-- <mesh filename="$(find gcamp_gazebo)/meshes/base_link.STL" /> -->
-        <mesh filename="/home/sangjun/AMR_ros2_ws/src/gcamp_ros2_basic/gcamp_gazebo/meshes/base_link.STL"/>
+        <mesh filename="/home/sangjun/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL"/>
       </geometry>
     </visual>
     <!-- <visual name="chassis_middle_visual">

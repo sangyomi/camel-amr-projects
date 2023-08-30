@@ -1,13 +1,31 @@
-# 명령어
+# Initial settings
+
+! edit mesh filename
+camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf 
+131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/">
+
+camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
+131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/">
+
+! build
+cd camel-amr-projects-V1
+source /opt/ros/foxy/setup.bash
+colcon build --symlink-install
+
+
+# commend
+
 ros2 launch amr-gazebo-pkg maze_world.launch.py
-// 환경 세팅
+// Environment setting
 
 ros2 launch amr-obstacle-pkg dynamic_obstacle.launch.py
-// 장애물 생성
+// Dynamic obstacle spawn and operate
 
 ros2 run amr-main-pkg simulmain
-// 메인 노드 
+// main node
 
+
+========= 2023. 08. 30 =========
 
 # 변수 수정 사항
 start_point = ASTAR.traj.top();
@@ -22,5 +40,5 @@ step = step;
 
 # Dynamic Obstacle
 OBS = std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> 사이클마다 한번 씩
-timer (실수단위의 시간 변수)
+timer  = double timer_cycle;
 
