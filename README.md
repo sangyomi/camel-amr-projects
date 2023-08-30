@@ -7,13 +7,13 @@
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf 
 
 
-    131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL"/>
+    131: <mesh filename="/home/<Your Path>/camel-amr-projects/src/amr-gazebo-pkg/meshes/base_link.STL"/>
 
 
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
 
-    131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL"/>
+    131: <mesh filename="/home/<Your Path>/camel-amr-projects/src/amr-gazebo-pkg/meshes/base_link.STL"/>
 
 ---
 ### build
