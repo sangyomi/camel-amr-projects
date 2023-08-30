@@ -12,6 +12,10 @@
 #include <cmath>
 #include <iostream>
 #include <ctime>
+#include <chrono>
+#include <time.h>
+
+using Time = std::chrono::high_resolution_clock::time_point;
 
 class ClusteringDynamicObs {
 private:
@@ -23,7 +27,10 @@ private:
     std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> LabelingArray;
     std::vector<int> LabelingStack;
     int ObstacleLabel;
+    clock_t timer_start;
+    clock_t timer_end;
 public:
+    double timer_cycle;
     ClusteringDynamicObs();
     void UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, double heading, double xpos, double ypos, int MapCounter);
     void ClusteringDynamicObstacle();

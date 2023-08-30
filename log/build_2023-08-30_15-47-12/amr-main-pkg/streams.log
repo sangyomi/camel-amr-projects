@@ -1,0 +1,102 @@
+[0.012s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake /home/sangjun/camel-amr-projects-V1/src/amr-main-pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg
+[0.057s] -- The C compiler identification is GNU 9.4.0
+[0.112s] -- The CXX compiler identification is GNU 9.4.0
+[0.123s] -- Detecting C compiler ABI info
+[0.168s] -- Detecting C compiler ABI info - done
+[0.177s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.177s] -- Detecting C compile features
+[0.178s] -- Detecting C compile features - done
+[0.182s] -- Detecting CXX compiler ABI info
+[0.243s] -- Detecting CXX compiler ABI info - done
+[0.254s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.254s] -- Detecting CXX compile features
+[0.254s] -- Detecting CXX compile features - done
+[0.257s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.283s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.283s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.435s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.456s] -- Found amr_msg_interfaces: 0.6.0 (/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake)
+[0.479s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.484s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.566s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.599s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.680s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.724s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.764s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.765s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.766s] -- Looking for pthread.h
+[0.814s] -- Looking for pthread.h - found
+[0.814s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.866s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.866s] -- Looking for pthread_create in pthreads
+[0.899s] -- Looking for pthread_create in pthreads - not found
+[0.899s] -- Looking for pthread_create in pthread
+[0.946s] -- Looking for pthread_create in pthread - found
+[0.947s] -- Found Threads: TRUE  
+[1.111s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.246s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.301s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.355s] -- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+[1.359s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.360s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.361s] -- Configured cppcheck include dirs: /home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include
+[1.361s] -- Configured cppcheck exclude dirs and/or files: 
+[1.362s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.362s] -- Configured cpplint exclude dirs and/or files: 
+[1.363s] -- Added test 'lint_cmake' to check CMake code style
+[1.364s] -- Added test 'uncrustify' to check C / C++ code style
+[1.364s] -- Configured uncrustify additional arguments: 
+[1.365s] -- Added test 'xmllint' to check XML markup files
+[1.366s] -- Configuring done
+[1.381s] -- Generating done
+[1.382s] -- Build files have been written to: /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg
+[1.389s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake /home/sangjun/camel-amr-projects-V1/src/amr-main-pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg
+[1.391s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[1.415s] [  8%] [32mBuilding CXX object CMakeFiles/dynamicObstacle_lib.dir/src/DynamicObstacle/DynamicObstacle.cpp.o[0m
+[1.415s] [ 16%] [32mBuilding CXX object CMakeFiles/visualize_lib.dir/src/Visualize/Map_In_Out.cpp.o[0m
+[1.416s] [ 25%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m
+[1.418s] [ 33%] [32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o[0m
+[1.437s] [ 41%] [32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/src/ObsDetection/ObsDetection.cpp.o[0m
+[1.655s] In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[1.656s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:[m[K In constructor ‘[01m[KAstar_planning::Astar_planning()[m[K’:
+[1.656s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:38:35:[m[K [01;35m[Kwarning: [m[K‘[01m[KAstar_planning::Mapmatrix[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[1.656s]    38 |     std::vector<std::vector<int>> [01;35m[KMapmatrix[m[K;
+[1.656s]       |                                   [01;35m[K^~~~~~~~~[m[K
+[1.656s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/astar/Astar.hpp:29:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint Astar_planning::dx1 [4][m[K’ [[01;35m[K-Wreorder[m[K]
+[1.656s]    29 |     int [01;35m[Kdx1[m[K[4];
+[1.656s]       |         [01;35m[K^~~[m[K
+[1.656s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/astar/Astar.cpp:17:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[1.656s]    17 | [01;35m[KAstar_planning[m[K::Astar_planning()
+[1.656s]       | [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.657s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/Visualize/Map_In_Out.cpp:[m[K In member function ‘[01m[Kvoid Map_In_Out::Map_Input(coordinate&, coordinate&, coordinate&, int (*)[100])[m[K’:
+[1.657s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/Visualize/Map_In_Out.cpp:8:88:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmap[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.657s]     8 | void Map_In_Out::Map_Input(coordinate &start, coordinate &end,coordinate& mapsize, [01;35m[Kint map[][100][m[K){
+[1.657s]       |                                                                                    [01;35m[K~~~~^~~~~~~~~~[m[K
+[1.726s] [ 50%] [32m[1mLinking CXX static library libvisualize_lib.a[0m
+[1.739s] [ 58%] [32m[1mLinking CXX static library libdynamicObstacle_lib.a[0m
+[1.740s] [ 58%] Built target visualize_lib
+[1.761s] [ 58%] Built target dynamicObstacle_lib
+[1.940s] [ 66%] [32m[1mLinking CXX static library libastar_lib.a[0m
+[1.957s] [ 66%] Built target astar_lib
+[1.962s] [ 75%] [32m[1mLinking CXX static library libobsDetection_lib.a[0m
+[1.977s] [ 75%] Built target obsDetection_lib
+[2.315s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float>&, std::vector<std::vector<int> >&, double, double, double, int)[m[K’:
+[2.315s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:57:5:[m[K [01;31m[Kerror: [m[K‘[01m[KdurationInMillis[m[K’ was not declared in this scope; did you mean ‘[01m[KdurationInt[m[K’?
+[2.315s]    57 |     [01;31m[KdurationInMillis[m[K = duration.count();
+[2.315s]       |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.315s]       |     [32m[KdurationInt[m[K
+[2.320s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ClusteringDynamicObstacle()[m[K’:
+[2.321s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:94:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[2.321s]    94 |     for (int i = 0 ; [01;35m[Ki < LabelingStack.size()[m[K ; i++)
+[2.321s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.324s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:102:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[2.324s]   102 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+[2.324s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.325s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ConnectObs(int, int)[m[K’:
+[2.325s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:131:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[2.325s]   131 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+[2.325s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.484s] make[2]: *** [CMakeFiles/clusteringDynamicObs_lib.dir/build.make:76: CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o] Error 1
+[2.484s] make[1]: *** [CMakeFiles/Makefile2:255: CMakeFiles/clusteringDynamicObs_lib.dir/all] Error 2
+[2.484s] make: *** [Makefile:146: all] Error 2
+[2.485s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6

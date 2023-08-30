@@ -1,0 +1,34 @@
+[0.015s] Invoking command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6
+[0.036s] [35m[1mConsolidate compiler generated dependencies of target clusteringDynamicObs_lib[0m
+[0.039s] [ 16%] Built target visualize_lib
+[0.039s] [ 33%] Built target dynamicObstacle_lib
+[0.040s] [ 50%] Built target obsDetection_lib
+[0.041s] [ 66%] Built target astar_lib
+[0.043s] [ 75%] [32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o[0m
+[0.724s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ClusteringDynamicObstacle()[m[K’:
+[0.724s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:94:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[0.724s]    94 |     for (int i = 0 ; [01;35m[Ki < LabelingStack.size()[m[K ; i++)
+[0.724s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.726s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:102:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[0.726s]   102 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+[0.726s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.727s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ConnectObs(int, int)[m[K’:
+[0.727s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:131:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[0.727s]   131 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+[0.727s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.962s] [ 83%] [32m[1mLinking CXX static library libclusteringDynamicObs_lib.a[0m
+[0.974s] [ 83%] Built target clusteringDynamicObs_lib
+[0.982s] [ 91%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[2.209s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.209s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:53:43:[m[K [01;31m[Kerror: [m[K‘[01m[Klong long int ClusteringDynamicObs::durationInt[m[K’ is private within this context
+[2.209s]    53 |     std::cout << "Cycle time: "<< Cluster.[01;31m[KdurationInt[m[K << std::endl;
+[2.209s]       |                                           [01;31m[K^~~~~~~~~~~[m[K
+[2.209s] In file included from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/simulmain/simul_main.hpp:25[m[K,
+[2.209s]                  from [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/simulmain/simul_main.cpp:4[m[K:
+[2.209s] [01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp:31:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+[2.209s]    31 |     long long [01;36m[KdurationInt[m[K;
+[2.209s]       |               [01;36m[K^~~~~~~~~~~[m[K
+[4.219s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:76: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+[4.219s] make[1]: *** [CMakeFiles/Makefile2:177: CMakeFiles/simulmain.dir/all] Error 2
+[4.219s] make: *** [Makefile:146: all] Error 2
+[4.221s] Invoked command in '/home/sangjun/camel-amr-projects-V1/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-V1/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-V1/install/amr-main-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-V1/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-V1/build/amr-main-pkg -- -j6 -l6

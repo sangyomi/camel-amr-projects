@@ -50,6 +50,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.traj.pop();
     }
+    std::cout << "Cycle time: "<< Cluster.timer_cycle << std::endl;
 }
 
 void ParkingNode::odom_callback(const Odometry::SharedPtr msg)

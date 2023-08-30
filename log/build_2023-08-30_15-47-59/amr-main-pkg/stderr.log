@@ -1,0 +1,11 @@
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ClusteringDynamicObstacle()[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:94:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   94 |     for (int i = 0 ; [01;35m[Ki < LabelingStack.size()[m[K ; i++)
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:102:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  102 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ConnectObs(int, int)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-V1/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:131:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  131 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K

@@ -16,6 +16,7 @@ ClusteringDynamicObs::ClusteringDynamicObs()
 
 void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, double heading, double xpos, double ypos, int MapCounter)
 {
+
     for (int i=0 ; i<720 ; i++)
     {
         x_spot[i] = int(((scanarray[i]*cos((heading+(RR*(i-359)))) + xpos)+10)*(grid/20));
@@ -31,6 +32,8 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     }
     if(MapCounter%30 == 0)
     {
+        timer_start = clock();
+
         for (int i = 0; i < grid; ++i)
         {
             for(int j = 0 ; j < grid ; ++j)
@@ -49,7 +52,11 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
             }
         }
         ClusteringDynamicObstacle();
+
+        timer_end = clock();
     }
+
+    timer_cycle = (double)(timer_end - timer_start);
     PrintMap();
 }
 
