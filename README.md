@@ -18,7 +18,7 @@ camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 ---
 ### build
 
-    cd camel-amr-projects-V1
+    cd camel-amr-projects
 
     source /opt/ros/foxy/setup.bash
 
