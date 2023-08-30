@@ -48,12 +48,9 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 
     while(!ASTAR.traj.empty())
     {
-//        std::cout << ASTAR.traj.top().first << ASTAR.traj.top().second << std::endl;
         ASTAR.traj.pop();
     }
 }
-
-
 
 void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
 {
@@ -71,7 +68,6 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
 
 int ParkingNode::star_position(int CurrentX, int CurrentY)
 {
-//    std::cout << CurrentX << ", " << CurrentY << std::endl;
     for (int i = 0 ; i < 4 ; ++i) {
         if (ASTAR.zmap[CurrentX + ASTAR.dx1[i]][CurrentY + ASTAR.dy1[i]] == '*') {
             return 2 * i + 2;
@@ -94,7 +90,7 @@ void ParkingNode::control_star_position(int dict)
     if (value > 3.14) {value = value - 2*PI;}
     else if (value < -3.14) {value = value + 2*PI;}
     float turn_offset = 0.7 * (value);
-//    std::cout << "Turn_offset: " << turn_offset << std::endl;
+    std::cout << "Turn_offset: " << turn_offset << std::endl;
     if (abs(turn_offset) > 0.01) {
         m_twist_msg.linear.x = 0.4;
         m_twist_msg.angular.z = turn_offset;

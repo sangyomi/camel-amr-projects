@@ -82,10 +82,21 @@ void ClusteringDynamicObs::ClusteringDynamicObstacle()
                         sumY = sumY / numPoints;
                     }
                     ConnectObs(sumX, sumY);
-                    LabelingArray.push_back(std::make_pair(sumX, sumY));
                 }
             }
         }
+    }
+    for (int i = 0 ; i < LabelingStack.size() ; i++)
+    {
+        if(LabelingStack[i] == LabelingArray[i].first.second)
+        {
+            LabelingArray.erase(LabelingArray.begin() + i);
+        }
+    }
+    LabelingStack.clear();
+    for (int i = 0 ; i < LabelingArray.size() ; i++)
+    {
+        LabelingStack.push_back(LabelingArray[i].first.second);
     }
 }
 
@@ -109,22 +120,34 @@ void ClusteringDynamicObs::CheckObstacle(int i, int j, int ChangeObstacle, int& 
 
 void ClusteringDynamicObs::ConnectObs(int avgX, int avgY)
 {
-    double distance = 5;
+    double distance = 7;
+    int temp = -1;
 
-//    for (int i = 0 ; i < LabelingArray.size() ; i++)
-//    {
-//        if(distance > std::sqrt(std::pow(avgX-LabelingArray[i].first,2) + std::pow(avgY-LabelingArray[i].second,2)))
-//        {
-//            std::cout <<LabelingArray[i].first << LabelingArray[i].second << std::endl;
-//            distance = std::sqrt(std::pow(avgX-LabelingArray[i].first,2) + std::pow(avgY-LabelingArray[i].second,2));
-//            ClusteringMatrix[avgX][avgY] = ClusteringMatrix[LabelingArray[i].first][LabelingArray[i].second];
-//        }
-//    }
-    if (distance == 5)
+    for (int i = 0 ; i < LabelingArray.size() ; i++)
+    {
+        int t = std::sqrt(std::pow(avgX-LabelingArray[i].second.first,2) + std::pow(avgY-LabelingArray[i].second.second,2));
+
+        if(distance > t)
+        {
+            distance = t;
+            ClusteringMatrix[avgX][avgY] = LabelingArray[i].first.first;
+            temp = i;
+        }
+    }
+
+    if (temp != -1) // 기존 노드 업데이트
+    {
+        LabelingArray[temp] = std::make_pair(std::make_pair(LabelingArray[temp].first.first, LabelingArray[temp].first.second + 1), std::make_pair(avgX, avgY));
+    }
+    else // 새로운 노드 생성
     {
         ObstacleLabel++;
         ClusteringMatrix[avgX][avgY] = ObstacleLabel;
+        LabelingArray.push_back(std::make_pair(std::make_pair(ObstacleLabel, 1), std::make_pair(avgX, avgY)));
     }
+
+
+
 }
 
 void ClusteringDynamicObs::PrintMap()

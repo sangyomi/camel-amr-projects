@@ -20,7 +20,8 @@ private:
     std::vector<std::vector<int>> SavedMatrix;
     std::vector<std::vector<int>> DynamicMatrix;
     std::vector<std::vector<int>> ClusteringMatrix;
-    std::vector<std::pair<int,int>> LabelingArray;
+    std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> LabelingArray;
+    std::vector<int> LabelingStack;
     int ObstacleLabel;
 public:
     ClusteringDynamicObs();

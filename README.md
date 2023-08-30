@@ -20,6 +20,7 @@ present_pos = xAstar, yAstar;
 next_pos = ASTAR.tra항j.top();
 step = step;
 
-# 장애물 인식시 넘겨줄 것들
-OBS = std::vector<std::pair< int, std::pair<int,int>> 사이클마다 한번 씩
+# Dynamic Obstacle
+OBS = std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> 사이클마다 한번 씩
 timer (실수단위의 시간 변수)
+
