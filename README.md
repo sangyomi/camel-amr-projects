@@ -1,5 +1,5 @@
 ----
-##Initial settings
+## Initial settings
 
 # edit mesh filename
 
