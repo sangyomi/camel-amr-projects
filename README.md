@@ -1,22 +1,22 @@
 ----
-## Initial settings
+# Initial settings
 
-# edit mesh filename
+### edit mesh filename
 
 
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf 
 
 
-131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
+    131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
 
 
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
 
-131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
+    131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
 
 ---
-# build
+### build
 
     cd camel-amr-projects-V1
 
@@ -26,7 +26,7 @@ camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
 
 ----
-## Commend
+# Commend
 Environment setting
 
 
@@ -43,7 +43,7 @@ Main node
     ros2 run amr-main-pkg simulmain
 
 ----
-## 변수 수정 사항
+# 변수 수정 사항
 
     start_point = ASTAR.traj.top();
 
@@ -64,7 +64,7 @@ Main node
     step = step;
 
 ----
-## Dynamic Obstacle
+# Dynamic Obstacle
     
     OBS = std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> 사이클마다 한번 씩
     
