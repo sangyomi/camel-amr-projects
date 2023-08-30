@@ -1,23 +1,22 @@
 ----
-# Initial settings
+##Initial settings
 
-1. edit mesh filename
+# edit mesh filename
 
 
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf 
 
 
-131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/">
+131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
 
 
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
 
-131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/">
+131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
 
-----
-2. build
-
+---
+# build
 
     cd camel-amr-projects-V1
 
@@ -25,29 +24,26 @@ camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
     colcon build --symlink-install
 
+
 ----
-# Commend
+## Commend
+Environment setting
+
 
     ros2 launch amr-gazebo-pkg maze_world.launch.py
 
-// Environment setting
+Dynamic obstacle spawn and operate
 
 
     ros2 launch amr-obstacle-pkg dynamic_obstacle.launch.py
 
-
-// Dynamic obstacle spawn and operate
+Main node
 
 
     ros2 run amr-main-pkg simulmain
 
-// main node
-
 ----
-
-
-# 변수 수정 사항
-========= 2023. 08. 30 =========
+## 변수 수정 사항
 
     start_point = ASTAR.traj.top();
 
@@ -68,8 +64,7 @@ camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
     step = step;
 
 ----
-# Dynamic Obstacle
-
+## Dynamic Obstacle
     
     OBS = std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> 사이클마다 한번 씩
     
