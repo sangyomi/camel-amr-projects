@@ -7,13 +7,13 @@
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf 
 
 
-    131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
+    131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL"/>
 
 
 camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
 
-    131: mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL/"
+    131: <mesh filename="/home/<Your Path>/camel-amr-projects-V1/src/amr-gazebo-pkg/meshes/base_link.STL"/>
 
 ---
 ### build
@@ -41,6 +41,14 @@ Main node
 
 
     ros2 run amr-main-pkg simulmain
+
+----
+# Print Map
+
+if you want to check PathPlanning Map, edit simulmain.cpp 54 line
+
+
+if you want to check Dynamic Obstacle Map, edit simulmain.cpp 54 line
 
 ----
 # 변수 수정 사항

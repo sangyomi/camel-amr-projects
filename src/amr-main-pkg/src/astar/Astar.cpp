@@ -167,9 +167,7 @@ void Astar_planning::PrintMap() {
     for (int i = 0; i < ROW; ++i) {
         for (int j = 0; j < COL; ++j) {
             std::cout << zmap[i][j];
-//            std::cout << Savedmatrix[i][j];
-//            std::cout << DynamicMatrix[i][j];
-//            std::cout << ClusteringMatrix[i][j];
+//            std::cout << Mapmatrix[i][j];
         }
         std::cout << '\n';
     }

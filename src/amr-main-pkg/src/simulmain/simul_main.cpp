@@ -36,14 +36,13 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
         {
             ASTAR.count-=3;
         }
-        ASTAR.startAstar(xAstar, yAstar);
     }
     else
     {
+        Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, heading, xpos, ypos, MapCounter);
         ASTAR.startAstar(xAstar, yAstar);
     }
 
-    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, heading, xpos, ypos, MapCounter);
     control_star_position(star_position(int((xpos+10)*5), int((ypos+10)*5)));
 
     while(!ASTAR.traj.empty())
@@ -51,6 +50,9 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
         ASTAR.traj.pop();
     }
     std::cout << "Cycle time: "<< Cluster.timer_cycle << std::endl;
+
+//    ASTAR.PrintMap(); // PathPlanning Map
+    Cluster.PrintMap(); // Dynamic Obstacle Map
 }
 
 void ParkingNode::odom_callback(const Odometry::SharedPtr msg)

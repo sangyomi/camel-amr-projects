@@ -24,9 +24,13 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     }
     for (int i = 0; i < 720; ++i)
     {
-        if ((0<=x_spot[i]&&x_spot[i]<grid) && (0<=y_spot[i]&&y_spot[i]<grid))
+        if ((0<x_spot[i]&&x_spot[i]<grid-1) && (0<y_spot[i]&&y_spot[i]<grid-1))
         {
             Mapmatrix[x_spot[i]][y_spot[i]] = 1;
+            Mapmatrix[x_spot[i]+1][y_spot[i]] = 1;
+            Mapmatrix[x_spot[i]-1][y_spot[i]] = 1;
+            Mapmatrix[x_spot[i]][y_spot[i]+1] = 1;
+            Mapmatrix[x_spot[i]][y_spot[i]-1] = 1;
             SavedMatrix[x_spot[i]][y_spot[i]] += 1;
         }
     }
@@ -40,13 +44,13 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
             {
                 if (SavedMatrix[i][j] != 0 && SavedMatrix[i][j] != 30)
                 {
-                    Mapmatrix[i][j] = 0;
                     DynamicMatrix[i][j] = 1;
                 }
                 else
                 {
                     DynamicMatrix[i][j] = 0;
                 }
+                Mapmatrix[i][j] = 0;
                 SavedMatrix[i][j] = 0;
                 ClusteringMatrix[i][j] = 0;
             }
@@ -57,7 +61,6 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     }
 
     timer_cycle = (double)(timer_end - timer_start);
-    PrintMap();
 }
 
 void ClusteringDynamicObs::ClusteringDynamicObstacle()
@@ -152,9 +155,6 @@ void ClusteringDynamicObs::ConnectObs(int avgX, int avgY)
         ClusteringMatrix[avgX][avgY] = ObstacleLabel;
         LabelingArray.push_back(std::make_pair(std::make_pair(ObstacleLabel, 1), std::make_pair(avgX, avgY)));
     }
-
-
-
 }
 
 void ClusteringDynamicObs::PrintMap()
@@ -162,7 +162,6 @@ void ClusteringDynamicObs::PrintMap()
     std::cout<< "\n";
     for (int i = 0; i < grid; ++i) {
         for (int j = 0; j < grid; ++j) {
-//            std::cout << MapMatrix[i][j];
             std::cout << ClusteringMatrix[i][j];
 //            std::cout << SavedMatrix[i][j];
 //            std::cout << DynamicMatrix[i][j];
