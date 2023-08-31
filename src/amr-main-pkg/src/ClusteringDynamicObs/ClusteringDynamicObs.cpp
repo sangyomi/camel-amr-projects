@@ -55,7 +55,9 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
                 ClusteringMatrix[i][j] = 0;
             }
         }
-        ClusteringDynamicObstacle();
+        int xPos = int((xpos+10)*5);
+        int yPos = int((xpos+10)*5);
+        ClusteringDynamicObstacle(xPos, yPos);
 
         timer_end = clock();
     }
@@ -63,7 +65,7 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     timer_cycle = (double)(timer_end - timer_start);
 }
 
-void ClusteringDynamicObs::ClusteringDynamicObstacle()
+void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
 {
     int ChangeObstacle = 5;
     for (int i = 0; i < grid; ++i)
@@ -91,6 +93,12 @@ void ClusteringDynamicObs::ClusteringDynamicObstacle()
                         sumX = sumX / numPoints;
                         sumY = sumY / numPoints;
                     }
+
+                    double rad = std::atan2(sumY - yPos, sumX - xPos);
+
+                    sumX = sumX + int((SizeCount * 0.01)*(std::cos(rad)));
+                    sumY = sumY + int((SizeCount * 0.01)*(std::sin(rad)));
+
                     ConnectObs(sumX, sumY);
                 }
             }

@@ -37,11 +37,12 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
             ASTAR.count-=3;
         }
     }
-    else
-    {
-        Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, heading, xpos, ypos, MapCounter);
-        ASTAR.startAstar(xAstar, yAstar);
-    }
+
+    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, heading, xpos, ypos, MapCounter);
+
+    // 여기다 넣어줘 하읏.. 속도 방향 예측 계산 부분
+
+    ASTAR.startAstar(xAstar, yAstar);
 
     control_star_position(star_position(int((xpos+10)*5), int((ypos+10)*5)));
 
