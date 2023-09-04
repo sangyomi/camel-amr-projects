@@ -1,0 +1,101 @@
+[0.019s] Invoking command in '/home/percy/camel-amr-projects/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake /home/percy/camel-amr-projects/src/amr-obstacle-pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/percy/camel-amr-projects/install/amr-obstacle-pkg
+[0.050s] -- The C compiler identification is GNU 9.4.0
+[0.098s] -- The CXX compiler identification is GNU 9.4.0
+[0.116s] -- Detecting C compiler ABI info
+[0.169s] -- Detecting C compiler ABI info - done
+[0.180s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.180s] -- Detecting C compile features
+[0.180s] -- Detecting C compile features - done
+[0.187s] -- Detecting CXX compiler ABI info
+[0.247s] -- Detecting CXX compiler ABI info - done
+[0.259s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.259s] -- Detecting CXX compile features
+[0.260s] -- Detecting CXX compile features - done
+[0.261s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.264s] [33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+[0.264s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[0.264s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[0.264s]   the cmake_policy command to set the policy and suppress this warning.
+[0.264s] 
+[0.264s] Call Stack (most recent call first):
+[0.264s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+[0.264s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+[0.264s]   /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.264s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.264s]   /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.264s]   CMakeLists.txt:19 (find_package)
+[0.265s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.265s] [0m
+[0.281s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.281s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.405s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.429s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.474s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.481s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.542s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.573s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.647s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.688s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.689s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.690s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.741s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.742s] -- Looking for pthread_create in pthreads
+[0.777s] -- Looking for pthread_create in pthreads - not found
+[0.777s] -- Looking for pthread_create in pthread
+[0.832s] -- Looking for pthread_create in pthread - found
+[0.833s] -- Found Threads: TRUE  
+[0.944s] -- Found gazebo_msgs: 3.5.3 (/opt/ros/foxy/share/gazebo_msgs/cmake)
+[1.129s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.181s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.236s] -- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)
+[1.238s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.305s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.305s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.305s] -- Configured cppcheck include dirs: 
+[1.306s] -- Configured cppcheck exclude dirs and/or files: 
+[1.306s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.306s] -- Configured cpplint exclude dirs and/or files: 
+[1.306s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.307s] -- Added test 'lint_cmake' to check CMake code style
+[1.307s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[1.308s] -- Added test 'uncrustify' to check C / C++ code style
+[1.308s] -- Configured uncrustify additional arguments: 
+[1.308s] -- Added test 'xmllint' to check XML markup files
+[1.309s] -- Configuring done (1.3s)
+[1.321s] -- Generating done (0.0s)
+[1.325s] -- Build files have been written to: /home/percy/camel-amr-projects/build/amr-obstacle-pkg
+[1.339s] Invoked command in '/home/percy/camel-amr-projects/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake /home/percy/camel-amr-projects/src/amr-obstacle-pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/percy/camel-amr-projects/install/amr-obstacle-pkg
+[1.339s] Invoking command in '/home/percy/camel-amr-projects/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/percy/camel-amr-projects/build/amr-obstacle-pkg -- -j6 -l6
+[1.374s] [ 25%] [32mBuilding CXX object CMakeFiles/spawn_dynamic_obstacle_node.dir/src/spawn_dynamic_obstacle.cpp.o[0m
+[1.421s] [ 50%] [32mBuilding CXX object CMakeFiles/operate_dynamic_obstacle_node.dir/src/operate_dynamic_obstacle.cpp.o[0m
+[2.712s] [01m[K/home/percy/camel-amr-projects/src/amr-obstacle-pkg/src/operate_dynamic_obstacle.cpp:[m[K In member function ‘[01m[Kvoid RobotController::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.712s] [01m[K/home/percy/camel-amr-projects/src/amr-obstacle-pkg/src/operate_dynamic_obstacle.cpp:62:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::Twist_<std::allocator<void> > > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[2.712s]    62 |         for (int i = 0; [01;35m[Ki < velocity_publishers_.size()[m[K; ++i) {
+[2.712s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.421s] [ 75%] [32m[1mLinking CXX executable spawn_dynamic_obstacle_node[0m
+[3.545s] [ 75%] Built target spawn_dynamic_obstacle_node
+[5.726s] [100%] [32m[1mLinking CXX executable operate_dynamic_obstacle_node[0m
+[5.900s] [100%] Built target operate_dynamic_obstacle_node
+[5.905s] Invoked command in '/home/percy/camel-amr-projects/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/percy/camel-amr-projects/build/amr-obstacle-pkg -- -j6 -l6
+[5.924s] Invoking command in '/home/percy/camel-amr-projects/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/percy/camel-amr-projects/build/amr-obstacle-pkg
+[5.927s] -- Install configuration: ""
+[5.927s] -- Execute custom install script
+[5.927s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/operate_dynamic_obstacle_node
+[5.930s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/spawn_dynamic_obstacle_node
+[5.932s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/launch/dynamic_obstacle.launch.py
+[5.935s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg
+[5.937s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg
+[5.938s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.sh
+[5.940s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.dsv
+[5.942s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.sh
+[5.945s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.dsv
+[5.949s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.bash
+[5.951s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.sh
+[5.953s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.zsh
+[5.955s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.dsv
+[5.957s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.dsv
+[5.959s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/packages/amr-obstacle-pkg
+[5.961s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig.cmake
+[5.963s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig-version.cmake
+[5.965s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.xml
+[5.970s] Invoked command in '/home/percy/camel-amr-projects/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/percy/camel-amr-projects/build/amr-obstacle-pkg

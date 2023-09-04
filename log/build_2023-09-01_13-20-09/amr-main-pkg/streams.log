@@ -1,0 +1,58 @@
+[0.011s] Invoking command in '/home/percy/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces:/home/percy/camel-amr-projects/install/amr-main-pkg:/home/percy/camel-amr-projects/install/amr-obstacle-pkg:/home/percy/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/percy/raisimLib/install/lib PYTHONPATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/percy/raisimLib/install/lib /usr/local/bin/cmake --build /home/percy/camel-amr-projects/build/amr-main-pkg -- -j6 -l6
+[0.035s] [  3%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.035s] [  7%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.036s] [ 11%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[0.037s] [ 15%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[0.039s] [ 19%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.043s] [ 19%] Built target visualize_lib_autogen
+[0.043s] [ 19%] Built target dynamicObstacle_lib_autogen
+[0.046s] [ 19%] Built target clusteringDynamicObs_lib_autogen
+[0.048s] [ 19%] Built target astar_lib_autogen
+[0.052s] [ 19%] Built target obsDetection_lib_autogen
+[0.054s] [ 30%] Built target visualize_lib
+[0.056s] [ 42%] Built target dynamicObstacle_lib
+[0.057s] [ 53%] Built target clusteringDynamicObs_lib
+[0.057s] [ 65%] Built target astar_lib
+[0.060s] [ 76%] Built target obsDetection_lib
+[0.066s] [ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.078s] [ 80%] Built target simulmain_autogen
+[0.095s] [ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/main_GUI.cpp.o[0m
+[0.095s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+[0.785s] [ 92%] [32m[1mLinking CXX executable simulmain[0m
+[1.335s] [100%] Built target simulmain
+[1.340s] Invoked command in '/home/percy/camel-amr-projects/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces:/home/percy/camel-amr-projects/install/amr-main-pkg:/home/percy/camel-amr-projects/install/amr-obstacle-pkg:/home/percy/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/percy/raisimLib/install/lib PYTHONPATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/percy/raisimLib/install/lib /usr/local/bin/cmake --build /home/percy/camel-amr-projects/build/amr-main-pkg -- -j6 -l6
+[1.379s] Invoking command in '/home/percy/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces:/home/percy/camel-amr-projects/install/amr-main-pkg:/home/percy/camel-amr-projects/install/amr-obstacle-pkg:/home/percy/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/percy/raisimLib/install/lib PYTHONPATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/percy/raisimLib/install/lib /usr/local/bin/cmake --install /home/percy/camel-amr-projects/build/amr-main-pkg
+[1.382s] -- Install configuration: ""
+[1.383s] -- Execute custom install script
+[1.384s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp
+[1.384s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/DynamicObstacle/DynamicObstacle.hpp
+[1.384s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp
+[1.384s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/Variables/Variable.hpp
+[1.384s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/Variables/mapinfo.hpp
+[1.384s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/Visualize/Map_In_Out.hpp
+[1.384s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/astar/Astar.hpp
+[1.385s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/include/simulmain/simul_main.hpp
+[1.385s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/lib/libastar_lib.a
+[1.385s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/lib/libvisualize_lib.a
+[1.385s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/lib/libdynamicObstacle_lib.a
+[1.385s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/lib/libobsDetection_lib.a
+[1.386s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/lib/libclusteringDynamicObs_lib.a
+[1.386s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain
+[1.386s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch/t
+[1.386s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml
+[1.387s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg
+[1.387s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg
+[1.387s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh
+[1.387s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv
+[1.387s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh
+[1.388s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv
+[1.388s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash
+[1.388s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh
+[1.388s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh
+[1.388s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv
+[1.389s] -- Symlinking: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.dsv
+[1.392s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg
+[1.392s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake
+[1.392s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake
+[1.392s] -- Up-to-date symlink: /home/percy/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.xml
+[1.397s] Invoked command in '/home/percy/camel-amr-projects/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces:/home/percy/camel-amr-projects/install/amr-main-pkg:/home/percy/camel-amr-projects/install/amr-obstacle-pkg:/home/percy/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/percy/raisimLib/install/lib PYTHONPATH=/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/percy/raisimLib/install/lib /usr/local/bin/cmake --install /home/percy/camel-amr-projects/build/amr-main-pkg

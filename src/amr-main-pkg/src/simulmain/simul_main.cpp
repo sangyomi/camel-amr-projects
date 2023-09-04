@@ -2,6 +2,9 @@
 // Created by sangjun on 23. 8. 24.
 //
 #include "simulmain/simul_main.hpp"
+#include "mainwindow.h"
+#include <QApplication>
+#include <QThread>
 #define PI 3.14159265
 
 ParkingNode::ParkingNode() : Node("robot_parking_node") {
@@ -108,12 +111,26 @@ ParkingNode::~ParkingNode()
 //    delete pO_D;
 }
 
+class CommunicationThread : public QThread
+{
+public:
+    void run() override
+    {
+        auto parking_node = std::make_shared<ParkingNode>();
+        rclcpp::spin(parking_node);
+        rclcpp::shutdown();
+    }
+};
+
 int main(int argc, char ** argv)
 {
+    QApplication a(argc, argv);
+    MainWindow w;
     rclcpp::init(argc, argv);
-    auto parking_node = std::make_shared<ParkingNode>();
-    rclcpp::spin(parking_node);
-    rclcpp::shutdown();
+    CommunicationThread communicationThread;
+    communicationThread.start();
+    w.show();
 
-    return 0;
+
+    return a.exec();
 }

@@ -1,0 +1,2 @@
+source;share/amr-obstacle-pkg/environment/ament_prefix_path.sh
+source;share/amr-obstacle-pkg/environment/path.sh

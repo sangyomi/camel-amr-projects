@@ -1,0 +1,1 @@
+/home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_generator_cpp/amr_msg_interfaces/msg/detail/trajectory__builder.hpp

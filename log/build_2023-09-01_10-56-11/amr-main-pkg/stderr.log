@@ -1,0 +1,40 @@
+[33mCMake Warning (dev) at /opt/ros/foxy/share/ament_cmake_core/cmake/core/python.cmake:22 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/all.cmake:53 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_core-extras.cmake:17 (include)
+  /opt/ros/foxy/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+  /opt/ros/foxy/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+  CMakeLists.txt:29 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/Visualize/Map_In_Out.cpp:[m[K In member function ‘[01m[Kvoid Map_In_Out::Map_Input(coordinate&, coordinate&, coordinate&, int (*)[100])[m[K’:
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/Visualize/Map_In_Out.cpp:8:88:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmap[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+    8 | void Map_In_Out::Map_Input(coordinate &start, coordinate &end,coordinate& mapsize, [01;35m[Kint map[][100][m[K){
+      |                                                                                    [01;35m[K~~~~^~~~~~~~~~[m[K
+In file included from [01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:[m[K In constructor ‘[01m[KAstar_planning::Astar_planning()[m[K’:
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:38:35:[m[K [01;35m[Kwarning: [m[K‘[01m[KAstar_planning::Mapmatrix[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   38 |     std::vector<std::vector<int>> [01;35m[KMapmatrix[m[K;
+      |                                   [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:29:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint Astar_planning::dx1 [4][m[K’ [[01;35m[K-Wreorder[m[K]
+   29 |     int [01;35m[Kdx1[m[K[4];
+      |         [01;35m[K^~~[m[K
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/astar/Astar.cpp:17:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   17 | [01;35m[KAstar_planning[m[K::Astar_planning()
+      | [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ClusteringDynamicObstacle(int, int)[m[K’:
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:107:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  107 |     for (int i = 0 ; [01;35m[Ki < LabelingStack.size()[m[K ; i++)
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:115:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  115 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ConnectObs(int, int)[m[K’:
+[01m[K/home/percy/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:144:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  144 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+      |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K

@@ -15,6 +15,16 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+if(NOT WIN32)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall -Wextra -fPIC")
+endif()
+
+if(NOT DEFINED BUILD_VERSION)
+  set(BUILD_VERSION "not set")
+endif()
+
+add_definitions(-DBUILD_VERSION="${BUILD_VERSION}")
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(amr_msg_interfaces REQUIRED)
@@ -22,11 +32,27 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
+find_package(rmw_implementation REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Quick REQUIRED)
+find_package(Qt5Widgets REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-include_directories(include)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+include_directories(
+        include
+        ${std_msgs_INCLUDE_DIRS}
+        ${Qt5Core_INCLUDE_DIRS}
+        ${Qt5Quick_INCLUDE_DIRS}
+        ${Qt5Widgets_INCLUDE_DIRS}
+)
 
 add_library(astar_lib
         src/astar/Astar.cpp
@@ -47,6 +73,10 @@ add_library(obsDetection_lib
 add_library(clusteringDynamicObs_lib
         src/ClusteringDynamicObs/ClusteringDynamicObs.cpp
 )
+
+#add_library(main_gui_lib
+#        src/ros2_ui/main_GUI.cpp
+#)
 
 target_include_directories(astar_lib PUBLIC include)
 target_include_directories(visualize_lib PUBLIC include)
@@ -77,7 +107,14 @@ install(TARGETS
         RUNTIME DESTINATION bin
 )
 
-add_executable(simulmain src/simulmain/simul_main.cpp)
+add_executable(simulmain
+        src/simulmain/simul_main.cpp
+        src/simulmain/main_GUI.cpp
+        src/simulmain/mainwindow.cpp
+        src/simulmain/mainwindow.h
+        src/simulmain/mainwindow.ui
+        src/simulmain/ui_mainwindow.h
+)
 
 ament_target_dependencies(simulmain
         amr_msg_interfaces
@@ -85,9 +122,20 @@ ament_target_dependencies(simulmain
         sensor_msgs
         geometry_msgs
         nav_msgs
+        std_msgs
+        rmw_implementation
 )
 
-target_link_libraries(simulmain astar_lib visualize_lib dynamicObstacle_lib obsDetection_lib clusteringDynamicObs_lib)
+target_link_libraries(simulmain
+        astar_lib
+        visualize_lib
+        dynamicObstacle_lib
+        obsDetection_lib
+        clusteringDynamicObs_lib
+        Qt5::Core
+        Qt5::Quick
+        Qt5::Widgets
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -111,5 +159,7 @@ install(TARGETS
 install(DIRECTORY launch param
         DESTINATION share/${PROJECT_NAME}
 )
+
+# install(TARGETS ros2_ui DESTINATION bin)
 
 ament_package()

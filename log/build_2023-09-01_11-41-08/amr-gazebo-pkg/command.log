@@ -1,0 +1,4 @@
+Invoking command in '/home/percy/camel-amr-projects/build/amr-gazebo-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/percy/camel-amr-projects/build/amr-gazebo-pkg -- -j6 -l6
+Invoked command in '/home/percy/camel-amr-projects/build/amr-gazebo-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/percy/camel-amr-projects/build/amr-gazebo-pkg -- -j6 -l6
+Invoking command in '/home/percy/camel-amr-projects/build/amr-gazebo-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/percy/camel-amr-projects/build/amr-gazebo-pkg
+Invoked command in '/home/percy/camel-amr-projects/build/amr-gazebo-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/percy/camel-amr-projects/build/amr-gazebo-pkg
