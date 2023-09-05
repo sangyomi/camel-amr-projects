@@ -1,1 +1,1 @@
-/home/percy/camel-amr-projects/build/amr_msg_interfaces/ament_cmake_environment_hooks/pythonpath.sh
+/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/ament_cmake_environment_hooks/pythonpath.sh

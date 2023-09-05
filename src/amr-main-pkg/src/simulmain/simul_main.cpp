@@ -131,6 +131,5 @@ int main(int argc, char ** argv)
     communicationThread.start();
     w.show();
 
-
     return a.exec();
 }

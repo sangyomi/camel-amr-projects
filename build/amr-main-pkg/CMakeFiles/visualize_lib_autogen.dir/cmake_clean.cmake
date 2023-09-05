@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/visualize_lib_autogen"
-  "visualize_lib_autogen/include/src/simulmain/ui_mainwindow.h"
   "visualize_lib_autogen/mocs_compilation.cpp"
 )
 

@@ -1,0 +1,41 @@
+[0.012s] Invoking command in '/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-UI/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-UI/install/amr-main-pkg:/home/sangjun/camel-amr-projects-UI/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-UI/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-UI/build/amr-main-pkg -- -j6 -l6
+[0.038s] [  3%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[0.038s] [  7%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.038s] [ 11%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.039s] [ 15%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[0.039s] [ 19%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.047s] [ 19%] Built target astar_lib_autogen
+[0.049s] [ 19%] Built target dynamicObstacle_lib_autogen
+[0.050s] [ 19%] Built target clusteringDynamicObs_lib_autogen
+[0.050s] [ 19%] Built target visualize_lib_autogen
+[0.050s] [ 19%] Built target obsDetection_lib_autogen
+[0.056s] [ 30%] Built target astar_lib
+[0.059s] [ 46%] Built target dynamicObstacle_lib
+[0.059s] [ 53%] Built target visualize_lib
+[0.060s] [ 69%] Built target clusteringDynamicObs_lib
+[0.060s] [ 76%] Built target obsDetection_lib
+[0.067s] [ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.161s] [ 80%] Built target simulmain_autogen
+[0.179s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[0.180s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[0.180s] [ 92%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+[0.257s] In file included from [01m[K/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/simulmain_autogen/ITIM7IFCI6/moc_mainwindow.cpp:9[m[K,
+[0.257s]                  from [01m[K/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/simulmain_autogen/mocs_compilation.cpp:2[m[K:
+[0.257s] [01m[K/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/simulmain_autogen/ITIM7IFCI6/../../../../src/amr-main-pkg/src/simulmain/mainwindow.h:5:9:[m[K [01;31m[Kerror: [m[K#include expects "FILENAME" or <FILENAME>
+[0.258s]     5 | #include
+[0.258s]       |         [01;31m[K^[m[K
+[0.259s] In file included from [01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/mainwindow.cpp:1[m[K:
+[0.259s] [01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/mainwindow.h:5:9:[m[K [01;31m[Kerror: [m[K#include expects "FILENAME" or <FILENAME>
+[0.259s]     5 | #include
+[0.259s]       |         [01;31m[K^[m[K
+[0.341s] In file included from [01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/simul_main.cpp:5[m[K:
+[0.342s] [01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/mainwindow.h:5:9:[m[K [01;31m[Kerror: [m[K#include expects "FILENAME" or <FILENAME>
+[0.342s]     5 | #include
+[0.342s]       |         [01;31m[K^[m[K
+[2.643s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
+[2.644s] make[2]: *** Waiting for unfinished jobs....
+[2.788s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:76: CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o] Error 1
+[4.018s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+[4.018s] make[1]: *** [CMakeFiles/Makefile2:184: CMakeFiles/simulmain.dir/all] Error 2
+[4.018s] make: *** [Makefile:146: all] Error 2
+[4.020s] Invoked command in '/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/sangjun/camel-amr-projects-UI/install/amr_msg_interfaces:/home/sangjun/camel-amr-projects-UI/install/amr-main-pkg:/home/sangjun/camel-amr-projects-UI/install/amr-obstacle-pkg:/home/sangjun/camel-amr-projects-UI/install/amr-gazebo-pkg:/opt/ros/foxy:/home/sangjun/catkin_ws/devel:/opt/ros/noetic /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-UI/build/amr-main-pkg -- -j6 -l6

@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/dynamicObstacle_lib_autogen"
-  "dynamicObstacle_lib_autogen/include/src/simulmain/ui_mainwindow.h"
   "dynamicObstacle_lib_autogen/mocs_compilation.cpp"
 )
 

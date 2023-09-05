@@ -1,7 +1,7 @@
 CMakeFiles/simulmain.dir/src/simulmain/main_GUI.cpp.o: \
- /home/percy/camel-amr-projects/src/amr-main-pkg/src/simulmain/main_GUI.cpp \
+ /home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/main_GUI.cpp \
  /usr/include/stdc-predef.h \
- /home/percy/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.h \
+ /home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \

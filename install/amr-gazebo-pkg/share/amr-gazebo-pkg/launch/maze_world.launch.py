@@ -1,1 +1,1 @@
-/home/percy/camel-amr-projects/src/amr-gazebo-pkg/launch/maze_world.launch.py
+/home/sangjun/camel-amr-projects-UI/src/amr-gazebo-pkg/launch/maze_world.launch.py

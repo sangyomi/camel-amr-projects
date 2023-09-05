@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/percy/camel-amr-projects/install/amr-main-pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/percy/camel-amr-projects/install/amr-main-pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/percy/camel-amr-projects/install/amr-main-pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/percy/camel-amr-projects/install/amr-main-pkg/${destination}")
+      set(destination "/home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,55 +311,55 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "include/" "DESTINATION" "include")
-ament_cmake_symlink_install_directory("/home/percy/camel-amr-projects/src/amr-main-pkg" DIRECTORY "include/" "DESTINATION" "include")
+ament_cmake_symlink_install_directory("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" DIRECTORY "include/" "DESTINATION" "include")
 
 # install("TARGETS" "astar_lib" "visualize_lib" "dynamicObstacle_lib" "obsDetection_lib" "clusteringDynamicObs_lib" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
-include("/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "simulmain" "DESTINATION" "lib/amr-main-pkg")
-include("/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "param" "DESTINATION" "share/amr-main-pkg")
-ament_cmake_symlink_install_directory("/home/percy/camel-amr-projects/src/amr-main-pkg" DIRECTORY "launch" "param" "DESTINATION" "share/amr-main-pkg")
+ament_cmake_symlink_install_directory("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" DIRECTORY "launch" "param" "DESTINATION" "share/amr-main-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr-main-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr-main-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr-main-pkg/environment")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr-main-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr-main-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr-main-pkg/environment")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-main-pkg/environment")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-main-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-main-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-main-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-main-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-main-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-main-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-main-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-main-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-main-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-main-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-main-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-main-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-main-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-main-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-main-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-main-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-main-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-main-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-main-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-main-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-main-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig.cmake" "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig-version.cmake" "DESTINATION" "share/amr-main-pkg/cmake")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig.cmake" "/home/percy/camel-amr-projects/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig-version.cmake" "DESTINATION" "share/amr-main-pkg/cmake")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig.cmake" "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig-version.cmake" "DESTINATION" "share/amr-main-pkg/cmake")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig.cmake" "/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig-version.cmake" "DESTINATION" "share/amr-main-pkg/cmake")
 
-# install(FILES "/home/percy/camel-amr-projects/src/amr-main-pkg/package.xml" "DESTINATION" "share/amr-main-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-main-pkg" FILES "/home/percy/camel-amr-projects/src/amr-main-pkg/package.xml" "DESTINATION" "share/amr-main-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/package.xml" "DESTINATION" "share/amr-main-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg" FILES "/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/package.xml" "DESTINATION" "share/amr-main-pkg")

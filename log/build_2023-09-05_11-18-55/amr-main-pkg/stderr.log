@@ -1,0 +1,16 @@
+In file included from [01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/mainwindow.cpp:2[m[K:
+[01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/ui_mainwindow.h:[m[K In member function ‘[01m[Kvoid Ui_MainWindow::setupUi(QMainWindow*)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/ui_mainwindow.h:49:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kfont1[m[K’ was not declared in this scope
+   49 |         DistanceInfo->setFont([01;31m[Kfont1[m[K);
+      |                               [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:118: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/qcustomplot.cpp:[m[K In member function ‘[01m[KQPointF QCPLabelPainterPrivate::getAnchorPos(const QPointF&)[m[K’:
+[01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/qcustomplot.cpp:5752:13:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K-Wimplicit-fallthrough=[m[K]
+ 5752 |             [01;35m[Kswitch[m[K (mAnchorSide)
+      |             [01;35m[K^~~~~~[m[K
+[01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/qcustomplot.cpp:5764:9:[m[K [01;36m[Knote: [m[Khere
+ 5764 |         [01;36m[Kcase[m[K amSkewedUpright:
+      |         [01;36m[K^~~~[m[K
+make[1]: *** [CMakeFiles/Makefile2:184: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

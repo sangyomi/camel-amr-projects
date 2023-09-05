@@ -109,11 +109,8 @@ install(TARGETS
 
 add_executable(simulmain
         src/simulmain/simul_main.cpp
-        src/simulmain/main_GUI.cpp
         src/simulmain/mainwindow.cpp
-        src/simulmain/mainwindow.h
-        src/simulmain/mainwindow.ui
-        src/simulmain/ui_mainwindow.h
+        src/simulmain/qcustomplot.cpp
 )
 
 ament_target_dependencies(simulmain

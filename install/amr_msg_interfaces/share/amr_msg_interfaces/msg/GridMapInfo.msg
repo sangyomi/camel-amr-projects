@@ -1,1 +1,1 @@
-/home/percy/camel-amr-projects/src/amr_msg_interfaces/msg/GridMapInfo.msg
+/home/sangjun/camel-amr-projects-UI/src/amr_msg_interfaces/msg/GridMapInfo.msg

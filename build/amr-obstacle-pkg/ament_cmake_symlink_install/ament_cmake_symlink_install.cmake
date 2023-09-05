@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/percy/camel-amr-projects/install/amr-obstacle-pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/sangjun/camel-amr-projects-UI/install/amr-obstacle-pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/percy/camel-amr-projects/install/amr-obstacle-pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/sangjun/camel-amr-projects-UI/install/amr-obstacle-pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/percy/camel-amr-projects/install/amr-obstacle-pkg/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/sangjun/camel-amr-projects-UI/install/amr-obstacle-pkg/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/percy/camel-amr-projects/install/amr-obstacle-pkg/${destination}")
+      set(destination "/home/sangjun/camel-amr-projects-UI/install/amr-obstacle-pkg/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -311,52 +311,52 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install("TARGETS" "operate_dynamic_obstacle_node" "DESTINATION" "lib/amr-obstacle-pkg")
-include("/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install("TARGETS" "spawn_dynamic_obstacle_node" "DESTINATION" "lib/amr-obstacle-pkg")
-include("/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+include("/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/amr-obstacle-pkg")
-ament_cmake_symlink_install_directory("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" DIRECTORY "launch" "DESTINATION" "share/amr-obstacle-pkg")
+ament_cmake_symlink_install_directory("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" DIRECTORY "launch" "DESTINATION" "share/amr-obstacle-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr-obstacle-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr-obstacle-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/amr-obstacle-pkg/environment")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr-obstacle-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr-obstacle-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/amr-obstacle-pkg/environment")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/amr-obstacle-pkg/environment")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-obstacle-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-obstacle-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-obstacle-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/amr-obstacle-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-obstacle-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-obstacle-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-obstacle-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/amr-obstacle-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-obstacle-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-obstacle-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-obstacle-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/amr-obstacle-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-obstacle-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-obstacle-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-obstacle-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/amr-obstacle-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-obstacle-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-obstacle-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-obstacle-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/amr-obstacle-pkg")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_index/share/ament_index/resource_index/packages/amr-obstacle-pkg" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig.cmake" "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig-version.cmake" "DESTINATION" "share/amr-obstacle-pkg/cmake")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig.cmake" "/home/percy/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig-version.cmake" "DESTINATION" "share/amr-obstacle-pkg/cmake")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig.cmake" "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig-version.cmake" "DESTINATION" "share/amr-obstacle-pkg/cmake")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig.cmake" "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig-version.cmake" "DESTINATION" "share/amr-obstacle-pkg/cmake")
 
-# install(FILES "/home/percy/camel-amr-projects/src/amr-obstacle-pkg/package.xml" "DESTINATION" "share/amr-obstacle-pkg")
-ament_cmake_symlink_install_files("/home/percy/camel-amr-projects/src/amr-obstacle-pkg" FILES "/home/percy/camel-amr-projects/src/amr-obstacle-pkg/package.xml" "DESTINATION" "share/amr-obstacle-pkg")
+# install(FILES "/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg/package.xml" "DESTINATION" "share/amr-obstacle-pkg")
+ament_cmake_symlink_install_files("/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg" FILES "/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg/package.xml" "DESTINATION" "share/amr-obstacle-pkg")

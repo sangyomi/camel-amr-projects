@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/obsDetection_lib_autogen"
-  "obsDetection_lib_autogen/include/src/simulmain/ui_mainwindow.h"
   "obsDetection_lib_autogen/mocs_compilation.cpp"
 )
 

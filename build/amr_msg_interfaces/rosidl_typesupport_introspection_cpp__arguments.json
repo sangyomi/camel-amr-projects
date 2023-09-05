@@ -1,10 +1,10 @@
 {
   "package_name": "amr_msg_interfaces",
-  "output_dir": "/home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_typesupport_introspection_cpp/amr_msg_interfaces",
+  "output_dir": "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/rosidl_typesupport_introspection_cpp/amr_msg_interfaces",
   "template_dir": "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource",
   "idl_tuples": [
-    "/home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces:msg/GridMapInfo.idl",
-    "/home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces:msg/Trajectory.idl"
+    "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces:msg/GridMapInfo.idl",
+    "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces:msg/Trajectory.idl"
   ],
   "ros_interface_dependencies": [
     "builtin_interfaces:/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
@@ -19,8 +19,8 @@
     "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
     "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
-    "/home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces/msg/GridMapInfo.idl",
-    "/home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces/msg/Trajectory.idl",
+    "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces/msg/GridMapInfo.idl",
+    "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/rosidl_adapter/amr_msg_interfaces/msg/Trajectory.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
     "/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl"
   ]

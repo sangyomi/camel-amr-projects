@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/clusteringDynamicObs_lib_autogen"
-  "clusteringDynamicObs_lib_autogen/include/src/simulmain/ui_mainwindow.h"
   "clusteringDynamicObs_lib_autogen/mocs_compilation.cpp"
 )
 

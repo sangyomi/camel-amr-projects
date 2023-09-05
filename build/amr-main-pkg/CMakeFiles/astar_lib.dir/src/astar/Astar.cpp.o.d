@@ -1,7 +1,7 @@
 CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o: \
- /home/percy/camel-amr-projects/src/amr-main-pkg/src/astar/Astar.cpp \
+ /home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/astar/Astar.cpp \
  /usr/include/stdc-predef.h \
- /home/percy/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp \
+ /home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/include/astar/Astar.hpp \
  /usr/include/c++/9/utility \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -168,6 +168,6 @@ CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
  /usr/include/c++/9/bits/fstream.tcc \
- /home/percy/camel-amr-projects/src/amr-main-pkg/include/Variables/Variable.hpp \
+ /home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/include/Variables/Variable.hpp \
  /usr/include/c++/9/iostream \
- /home/percy/camel-amr-projects/src/amr-main-pkg/include/Variables/mapinfo.hpp
+ /home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/include/Variables/mapinfo.hpp

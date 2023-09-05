@@ -1,0 +1,4 @@
+Invoking command in '/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg -- -j6 -l6
+Invoked command in '/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --build /home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg -- -j6 -l6
+Invoking command in '/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg
+Invoked command in '/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} /usr/local/bin/cmake --install /home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg

@@ -1,5 +1,5 @@
 CMakeFiles/amr_msg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msg_interfaces/msg/trajectory__type_support.cpp.o: \
- /home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_typesupport_cpp/amr_msg_interfaces/msg/trajectory__type_support.cpp \
+ /home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/rosidl_typesupport_cpp/amr_msg_interfaces/msg/trajectory__type_support.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/cstddef \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -13,7 +13,7 @@ CMakeFiles/amr_msg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp
  /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h \
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h \
  /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h \
- /home/percy/camel-amr-projects/build/amr_msg_interfaces/rosidl_generator_cpp/amr_msg_interfaces/msg/detail/trajectory__struct.hpp \
+ /home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/rosidl_generator_cpp/amr_msg_interfaces/msg/detail/trajectory__struct.hpp \
  /opt/ros/foxy/include/rosidl_runtime_cpp/bounded_vector.hpp \
  /usr/include/c++/9/algorithm /usr/include/c++/9/utility \
  /usr/include/c++/9/bits/stl_relops.h /usr/include/c++/9/bits/stl_pair.h \

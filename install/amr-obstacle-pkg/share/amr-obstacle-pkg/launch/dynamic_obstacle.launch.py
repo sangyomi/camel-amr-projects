@@ -1,1 +1,1 @@
-/home/percy/camel-amr-projects/src/amr-obstacle-pkg/launch/dynamic_obstacle.launch.py
+/home/sangjun/camel-amr-projects-UI/src/amr-obstacle-pkg/launch/dynamic_obstacle.launch.py

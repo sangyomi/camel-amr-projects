@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/percy/camel-amr-projects/src/amr_msg_interfaces
-# Build directory: /home/percy/camel-amr-projects/build/amr_msg_interfaces
+# Source directory: /home/sangjun/camel-amr-projects-UI/src/amr_msg_interfaces
+# Build directory: /home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

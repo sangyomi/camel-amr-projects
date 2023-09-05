@@ -1,8 +1,8 @@
-# Install script for directory: /home/percy/camel-amr-projects/src/amr_msg_interfaces
+# Install script for directory: /home/sangjun/camel-amr-projects-UI/src/amr_msg_interfaces
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/percy/camel-amr-projects/install/amr_msg_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/sangjun/camel-amr-projects-UI/install/amr_msg_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -42,18 +42,18 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/percy/camel-amr-projects/build/amr_msg_interfaces/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_generator_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_generator_c.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_generator_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_generator_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_generator_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_generator_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_generator_c.so")
     file(RPATH_CHANGE
@@ -66,22 +66,22 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/percy/camel-amr-projects/build/amr_msg_interfaces:/opt/ros/foxy/lib:"
+         OLD_RPATH "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces:/opt/ros/foxy/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so")
@@ -89,17 +89,17 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_c.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_c.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_c.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_c.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_c.so")
     file(RPATH_CHANGE
@@ -112,17 +112,17 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHANGE
@@ -135,17 +135,17 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_cpp.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/libamr_msg_interfaces__rosidl_typesupport_cpp.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so")
     file(RPATH_CHANGE
@@ -158,155 +158,131 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/percy/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/__init__.py"
+        "/home/sangjun/camel-amr-projects-UI/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/__init__.py"
       )
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
+    file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake"
-         "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_generator_cExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
+         "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake")
+    if(EXPORT_FILE_CHANGED)
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport-*.cmake")
+      if(OLD_CONFIG_FILES)
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        file(REMOVE ${OLD_CONFIG_FILES})
       endif()
-      unset(_cmake_old_config_files)
     endif()
-    unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_generator_cExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_generator_cExport-noconfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport-noconfig.cmake")
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
+    file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake"
-         "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
+         "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake")
+    if(EXPORT_FILE_CHANGED)
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport-*.cmake")
+      if(OLD_CONFIG_FILES)
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        file(REMOVE ${OLD_CONFIG_FILES})
       endif()
-      unset(_cmake_old_config_files)
     endif()
-    unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake")
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
+    file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake"
-         "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_cExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
+         "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake")
+    if(EXPORT_FILE_CHANGED)
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport-*.cmake")
+      if(OLD_CONFIG_FILES)
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        file(REMOVE ${OLD_CONFIG_FILES})
       endif()
-      unset(_cmake_old_config_files)
     endif()
-    unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_cExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_cExport-noconfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport-noconfig.cmake")
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
+    file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake"
-         "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_generator_cppExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
+         "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake")
+    if(EXPORT_FILE_CHANGED)
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport-*.cmake")
+      if(OLD_CONFIG_FILES)
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        file(REMOVE ${OLD_CONFIG_FILES})
       endif()
-      unset(_cmake_old_config_files)
     endif()
-    unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_generator_cppExport.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
+    file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake"
-         "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
+         "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake")
+    if(EXPORT_FILE_CHANGED)
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport-*.cmake")
+      if(OLD_CONFIG_FILES)
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        file(REMOVE ${OLD_CONFIG_FILES})
       endif()
-      unset(_cmake_old_config_files)
     endif()
-    unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake")
   endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake")
-    file(DIFFERENT _cmake_export_file_changed FILES
+    file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake"
-         "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake")
-    if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport-*.cmake")
-      if(_cmake_old_config_files)
-        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
-        unset(_cmake_old_config_files_text)
-        file(REMOVE ${_cmake_old_config_files})
+         "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake")
+    if(EXPORT_FILE_CHANGED)
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport-*.cmake")
+      if(OLD_CONFIG_FILES)
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        file(REMOVE ${OLD_CONFIG_FILES})
       endif()
-      unset(_cmake_old_config_files)
     endif()
-    unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/percy/camel-amr-projects/build/amr_msg_interfaces/CMakeFiles/Export/2146581469a97ba2a870af8963665234/amr_msg_interfaces__rosidl_typesupport_cppExport-noconfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^()$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_msg_interfaces/cmake" TYPE FILE FILES "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/CMakeFiles/Export/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport-noconfig.cmake")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/percy/camel-amr-projects/build/amr_msg_interfaces/amr_msg_interfaces__py/cmake_install.cmake")
+  include("/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/amr_msg_interfaces__py/cmake_install.cmake")
 
 endif()
 
@@ -318,5 +294,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/percy/camel-amr-projects/build/amr_msg_interfaces/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

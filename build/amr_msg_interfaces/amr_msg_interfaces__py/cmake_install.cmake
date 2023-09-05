@@ -1,8 +1,8 @@
-# Install script for directory: /home/percy/camel-amr-projects/build/amr_msg_interfaces/amr_msg_interfaces__py
+# Install script for directory: /home/sangjun/camel-amr-projects-UI/build/amr_msg_interfaces/amr_msg_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/percy/camel-amr-projects/install/amr_msg_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/sangjun/camel-amr-projects-UI/install/amr_msg_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

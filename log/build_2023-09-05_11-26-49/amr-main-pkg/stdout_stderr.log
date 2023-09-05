@@ -1,0 +1,56 @@
+[  3%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[  7%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[ 11%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[ 15%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 19%] Built target dynamicObstacle_lib_autogen
+[ 19%] Built target astar_lib_autogen
+[ 19%] Built target clusteringDynamicObs_lib_autogen
+[ 19%] Built target visualize_lib_autogen
+[ 19%] Built target obsDetection_lib_autogen
+[ 30%] Built target dynamicObstacle_lib
+[ 42%] Built target astar_lib
+[ 53%] Built target clusteringDynamicObs_lib
+[ 65%] Built target visualize_lib
+[ 76%] Built target obsDetection_lib
+[ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 80%] Built target simulmain_autogen
+[35m[1mConsolidate compiler generated dependencies of target simulmain[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[ 96%] [32m[1mLinking CXX executable simulmain[0m
+[100%] Built target simulmain
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/DynamicObstacle/DynamicObstacle.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/Variables/Variable.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/Variables/mapinfo.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/Visualize/Map_In_Out.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/astar/Astar.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/include/simulmain/simul_main.hpp
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/lib/libastar_lib.a
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/lib/libvisualize_lib.a
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/lib/libdynamicObstacle_lib.a
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/lib/libobsDetection_lib.a
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/lib/libclusteringDynamicObs_lib.a
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/lib/amr-main-pkg/simulmain
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/launch/t
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv
+-- Symlinking: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/package.dsv
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake
+-- Up-to-date symlink: /home/sangjun/camel-amr-projects-UI/install/amr-main-pkg/share/amr-main-pkg/package.xml
