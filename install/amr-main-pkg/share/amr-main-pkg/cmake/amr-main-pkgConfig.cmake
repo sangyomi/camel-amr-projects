@@ -1,1 +1,0 @@
-/home/sangjun/camel-amr-projects-UI/build/amr-main-pkg/ament_cmake_core/amr-main-pkgConfig.cmake

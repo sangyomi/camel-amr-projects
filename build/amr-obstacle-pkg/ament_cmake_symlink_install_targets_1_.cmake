@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/spawn_dynamic_obstacle_node" "TARGETS" "spawn_dynamic_obstacle_node" "DESTINATION" "lib/amr-obstacle-pkg")

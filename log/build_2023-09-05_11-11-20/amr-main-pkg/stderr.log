@@ -1,9 +1,0 @@
-In file included from [01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/mainwindow.cpp:2[m[K:
-[01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/ui_mainwindow.h:[m[K In member function ‘[01m[Kvoid Ui_MainWindow::setupUi(QMainWindow*)[m[K’:
-[01m[K/home/sangjun/camel-amr-projects-UI/src/amr-main-pkg/src/simulmain/ui_mainwindow.h:37:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kstatusbar[m[K’ was not declared in this scope; did you mean ‘[01m[KQStatusBar[m[K’?
-   37 |         MainWindow->setStatusBar([01;31m[Kstatusbar[m[K);
-      |                                  [01;31m[K^~~~~~~~~[m[K
-      |                                  [32m[KQStatusBar[m[K
-make[2]: *** [CMakeFiles/simulmain.dir/build.make:118: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:184: CMakeFiles/simulmain.dir/all] Error 2
-make: *** [Makefile:146: all] Error 2

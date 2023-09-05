@@ -1,1 +1,0 @@
-/home/sangjun/camel-amr-projects-UI/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig.cmake

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libvisualize_lib.a CMakeFiles/visualize_lib.dir/visualize_lib_autogen/mocs_compilation.cpp.o CMakeFiles/visualize_lib.dir/src/Visualize/Map_In_Out.cpp.o
-/usr/bin/ranlib libvisualize_lib.a
