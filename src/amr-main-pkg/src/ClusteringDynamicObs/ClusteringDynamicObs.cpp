@@ -7,9 +7,9 @@
 #define grid 100
 
 ClusteringDynamicObs::ClusteringDynamicObs()
-: SavedMatrix(grid, std::vector<int>(grid, 0)),
-  DynamicMatrix(grid, std::vector<int>(grid, 0)),
-  ClusteringMatrix(grid, std::vector<int>(grid, 0))
+        : SavedMatrix(grid, std::vector<int>(grid, 0)),
+          DynamicMatrix(grid, std::vector<int>(grid, 0)),
+          ClusteringMatrix(grid, std::vector<int>(grid, 0))
 {
     ObstacleLabel = 4;
 }

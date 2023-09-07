@@ -58,13 +58,6 @@ add_library(astar_lib
         src/astar/Astar.cpp
 )
 
-add_library(visualize_lib
-        src/Visualize/Map_In_Out.cpp
-)
-
-add_library(dynamicObstacle_lib
-        src/DynamicObstacle/DynamicObstacle.cpp
-)
 
 add_library(obsDetection_lib
         src/ObsDetection/ObsDetection.cpp
@@ -80,14 +73,10 @@ add_library(clusteringDynamicObs_lib
 #)
 
 target_include_directories(astar_lib PUBLIC include)
-target_include_directories(visualize_lib PUBLIC include)
-target_include_directories(dynamicObstacle_lib PUBLIC include)
 target_include_directories(obsDetection_lib PUBLIC include)
 target_include_directories(clusteringDynamicObs_lib PUBLIC include)
 
 ament_target_dependencies(astar_lib rclcpp)
-ament_target_dependencies(visualize_lib rclcpp)
-ament_target_dependencies(dynamicObstacle_lib rclcpp)
 ament_target_dependencies(obsDetection_lib rclcpp)
 ament_target_dependencies(clusteringDynamicObs_lib rclcpp)
 
@@ -99,8 +88,6 @@ install(
 
 install(TARGETS
         astar_lib
-        visualize_lib
-        dynamicObstacle_lib
         obsDetection_lib
         clusteringDynamicObs_lib
         ARCHIVE DESTINATION lib
@@ -126,8 +113,6 @@ ament_target_dependencies(simulmain
 
 target_link_libraries(simulmain
         astar_lib
-        visualize_lib
-        dynamicObstacle_lib
         obsDetection_lib
         clusteringDynamicObs_lib
         Qt5::Core

@@ -21,9 +21,7 @@
 #include "nav_msgs/msg/odometry.hpp"
 #include "astar/Astar.hpp"
 #include "ObsDetection/ObsDetection.hpp"
-#include "DynamicObstacle/DynamicObstacle.hpp"
 #include "ClusteringDynamicObs/ClusteringDynamicObs.hpp"
-#include "Visualize/Map_In_Out.hpp"
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
 #include "Variables/SharedMemory.h"
@@ -35,7 +33,7 @@ using Twist = geometry_msgs::msg::Twist;
 using LaserScan = sensor_msgs::msg::LaserScan;
 using Odometry = nav_msgs::msg::Odometry;
 
-class ParkingNode : public rclcpp::Node{
+class ParkingNode : public rclcpp::Node {
 private:
     rclcpp::Publisher<Twist>::SharedPtr m_pub;
     rclcpp::Subscription<LaserScan>::SharedPtr m_sub;
@@ -46,6 +44,7 @@ private:
 //    double xpos;
     double ypos;
     time_t timer;
+    time_t StartTime;
 
     int MapCounter;
     ClusteringDynamicObs Cluster;
@@ -56,10 +55,9 @@ private:
     coordinate start_point;
     coordinate end_point;
     std::stack<coordinate> traj;
-    DynamicObstacle obs[num_obs];
     coordinate present_pos;
     coordinate next_pos;
-    ObsDetection *pO_D;
+    ObsDetection O_D;
     int step;
     int count;
 
@@ -69,9 +67,6 @@ public:
     void odom_callback(const Odometry::SharedPtr msg);
     int star_position(int CurrentX, int CurrentY);
     void control_star_position(int dict);
-    void clearSharedMemory();
-    void StartSimulation();
-
     ~ParkingNode();
 };
 

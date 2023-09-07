@@ -3,135 +3,127 @@
 //
 #include "ObsDetection/ObsDetection.hpp"
 
-/// Private Function
-bool ObsDetection::isObstacle(int i, int j, int map[][100]) {
-//    bool test2 = (map[i][j] == 6) ? 1 : 0;
-    return (map[i][j] == 6) ? 1 : 0;
+void ObsDetection::SaveObsInfo(std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> &LidarData, int time) { // 라벨링, 카운팅된 횟수, 좌표(x,y)
+bool checklist = false; /// 라이다 라벨이 실제 배열안에 있는 건지 확인
+if(ObsLog.empty()){ //
+for(int i=0; i<LidarData.size(); i++ ){
+obs_info temp;
+temp.timepos.push(std::make_pair(time, LidarData[i].second));
+temp.label = LidarData[i].first.first;
+temp.labelcheck = false;
+temp.loss = 0;
+ObsLog.push_back(temp);
 }
-void ObsDetection::updateGradient(){
-    if (rs.next_pos.first == rs.present_pos.first) rs.grad = rs.dy * 999999;
-    else rs.grad = rs.dy / rs.dx;
+return;
+}
+for(int i=0; i<LidarData.size(); i++ ){
+for(int j=0; j<ObsLog.size(); j++){
+if(LidarData[i].first.first == ObsLog[j].label){ ///Label is in the vector
+checklist = true;
+ObsLog[j].labelcheck = true;
+if((ObsLog[j].timepos.top().second.first!=LidarData[i].second.first) || (ObsLog[j].timepos.top().second.second!=LidarData[i].second.second)){ ///좌표값이 다를때만 pos에 저장
+ObsLog[j].timepos.push(std::make_pair(time,LidarData[i].second));
+}
+}
+}
+if(checklist ==  false){ ///new label detected from lidar
+obs_info newinfo;
+newinfo.timepos.push(std::make_pair(time,LidarData[i].second));
+newinfo.label = LidarData[i].first.first;
+newinfo.labelcheck = true;
+newinfo.loss = 0;
+ObsLog.push_back(newinfo);
+}
+checklist = false; ///should be changed to false for checking in next Lidar label
+}
+for(int i=0; i<ObsLog.size(); i++){
+if(ObsLog[i].labelcheck == false){
+ObsLog.erase(ObsLog.begin()+i); /// label that is not in the lidar should be removed
+}
+else{
+ObsLog[i].labelcheck = false; /// labelcheck should be changed to false for checking in future loop
+}
+}
 }
 
-bool ObsDetection::isObstacleInSlope(int i, int j){
-    if (rs.grad > 0) {
-//        bool test1 = (j > -1 / grad * (i - present_pos.first) + present_pos.second);
-        return (j > -1 / rs.grad * (i - rs.present_pos.first) + rs.present_pos.second);
-    }
-    if (rs.grad == 0) {
-        if ((rs.dy > 0 && j < rs.present_pos.second) || (rs.dy < 0 && j > rs.present_pos.second))
-            return false;
-    }
-    return (j < -1 / rs.grad * (i - rs.present_pos.first) + rs.present_pos.second);
-}
+void ObsDetection::Print(){
+    std::cout << "======================" << std::endl;
+    for(int i=0; i<ObsLog.size(); i++){
+        std::stack<std::pair<double, coordinate>> temp = ObsLog[i].timepos;
 
-void ObsDetection::New_labeling(coordinate &obs_loc, int &step) {
-    labeled_obs[labeling].pos.push(obs_loc);
-    labeled_obs[labeling].step.push(step);
-    labeling++;
-}
-
-void ObsDetection::SaveObsTraj(coordinate obs_loc, int &step) {
-    if (labeling == 0) {
-        detected_obs_num.push(labeling);
-        New_labeling(obs_loc, step);
-    } else {
-        bool check = false;
-        for (int i = 0; i < labeling; i++) {
-            coordinate old = labeled_obs[i].pos.top();
-            if (abs(obs_loc.first - old.first) <= 1 && abs(obs_loc.second - old.second) <= 1) {
-                detected_obs_num.push(i);
-                labeled_obs[i].pos.push(obs_loc);
-                labeled_obs[i].step.push(step);
-                labeled_obs[i].velocity = 1;
-                labeled_obs[i].dir.first = obs_loc.first - old.first;
-                labeled_obs[i].dir.second = obs_loc.second - old.second;
-                check = true;
-                break;
-            }
-
+        std::cout << "장애물" << ObsLog[i].label << "의 좌표 : ";
+        while(!temp.empty()){
+            std::cout << "(" << temp.top().second.first << "," << temp.top().second.second << ")" << " ";
+            temp.pop();
         }
-        if (!check) {
-            detected_obs_num.push(labeling);
-            New_labeling(obs_loc, step);
+        std::cout << "\n";
+        temp = ObsLog[i].timepos;
+        std::cout << "장애물" << ObsLog[i].label << "의 절대시간 : ";
+        while(!temp.empty()){
+            std::cout << temp.top().first << "  ";
+            temp.pop();
         }
+
+        std::cout << "\n\n";
     }
 }
 
-coordinate ObsDetection::GetObsNextPos(int &i, int &iter) {
-    auto NextPos = labeled_obs[i].pos.top();
-    NextPos.first = NextPos.first + labeled_obs[i].dir.first*labeled_obs[i].velocity*iter;
-    NextPos.second = NextPos.second + labeled_obs[i].dir.second*labeled_obs[i].velocity*iter;
-    return NextPos;
-}
-
-/// Public Function
-void ObsDetection::SetSensorRange(int SensorRange) {
-    rs.SensorRange = SensorRange;
-}
-
-void ObsDetection::loadRobotStatus(coordinate pre, coordinate nex) {
-    rs.present_pos = pre;
-    rs.next_pos = nex;
-    rs.dy = rs.next_pos.second - rs.present_pos.second;
-    rs.dx = rs.next_pos.first - rs.present_pos.first;
-    updateGradient();
-}
-
-int ObsDetection::isObstacleDetected(int map[][100], coordinate &mapsize, int &step) {
-    int detect_count = 0;
-    for (int i = rs.present_pos.first - rs.SensorRange; i <= rs.present_pos.first + rs.SensorRange; ++i) {
-        for (int j = rs.present_pos.second - rs.SensorRange; j <= rs.present_pos.second + rs.SensorRange; ++j) {
-            if (MapFunction::isOutofRange(i, j, mapsize)) continue; /// detection area should be in the map,,,,
-            if (isObstacleInSlope(i, j) && (isObstacle(i, j, map) == 1)) {
-                detect_count++;
-                SaveObsTraj(std::make_pair(i, j), step);
-            }
+void ObsDetection::Prediction(){
+    if(ObsLog.empty()) return;
+    for(int i = 0; i < ObsLog.size(); i++){
+        int n_samples = ObsLog[i].timepos.size();
+        Eigen::MatrixXd X(n_samples, 2); // 독립 변수 (시간과 상수항)
+        Eigen::VectorXd y_x(n_samples);   // 종속 변수 (x)
+        Eigen::VectorXd y_y(n_samples);
+        std::stack<TimeLoc> temp = ObsLog[i].timepos; // t, (x, y)
+        for (int j = 0; j < n_samples; ++j) {
+            double t = temp.top().first; // 시간 데이터
+            double x = temp.top().second.first; // 가상의 x 데이터
+            double y = temp.top().second.second; // 가상의 y 데이터
+            X(j, 0) = 1.0; // 상수항 (Intercept)을 위한 열 추가
+            X(j, 1) = t;   // 시간
+            y_x(j) = x;    // x를 종속 변수로 저장
+            y_y(j) = y;    // y를 종속 변수로 저장
+            temp.pop();
         }
-    }
-    return detect_count;
-}
+        Eigen::VectorXd coefficients_x = X.colPivHouseholderQr().solve(y_x); // 회귀계수 계산 (x)
+        Eigen::VectorXd coefficients_y = X.colPivHouseholderQr().solve(y_y); // 회귀계수 계산 (y)
 
-int ObsDetection::GetDetectedObsNum() {
-    int num = detected_obs_num.top();
-    detected_obs_num.pop();
-    return num;
-}
-void ObsDetection::SetNumObstacle(int num_obs){
-    this->num_obs = num_obs;
-}
+        Eigen::VectorXd y_pred_x = X * coefficients_x;
+        Eigen::VectorXd y_pred_y = X * coefficients_y;
 
-int ObsDetection::GetLabelData() {
-    return labeling;
-}
+        double loss_x = (y_pred_x - y_x).squaredNorm() / n_samples;
+        double loss_y = (y_pred_y - y_y).squaredNorm() / n_samples;
 
+        double total_loss = loss_x + loss_y;
+        double Time = ObsLog[i].timepos.top().first;
 
-void ObsDetection::CollisionDetection(std::stack<coordinate> AMR_Traj){
-    auto SAVE_DATA = AMR_Traj;
-    while(!detected_obs_num.empty()){
-        int obsNum = GetDetectedObsNum();
-        for(int i = 1; i <= 5; i++){
-            auto obsPos = GetObsNextPos(obsNum,i);
-            auto amr_next_pos = AMR_Traj.top();
-
-            if(obsPos == amr_next_pos){
-                std::cout <<"Obstacle label " << obsNum << "가 " << i << "초 이후 충돌합니다!!\n";
-                std::cout << "Predicted Obstacle Trajectory: ";
-                for(int j = 1; j <= i; j++){
-                    auto obsFuturePos = GetObsNextPos(obsNum, j);
-                    std::cout << "("<< obsFuturePos.first << ", " << obsFuturePos.second << ")";
-                    if(j!=i) std::cout <<", ";
-                }
-                std::cout << "\nAMR Trajectory: ";
-                for(int j = 1; j <= i; j++){
-                    std::cout << "("<< SAVE_DATA.top().first << ", " << SAVE_DATA.top().second << ")";
-                    if(j!=i) std::cout <<", ";
-                    SAVE_DATA.pop();
-                }
-                std::cout << "\n";
-            }
-            AMR_Traj.pop();
+        obs_info temp2;
+        temp2.loss = total_loss;
+        temp2.label = ObsLog[i].label;
+        temp2.labelcheck = false;
+        for(int i = 0; i < 5; i++) { // 5스탭 미래 예측
+            Time += 1000;
+            TimeLoc NTP;
+            NTP.first = Time;
+            NTP.second.first = coefficients_x(0) + coefficients_x(1) * Time;
+            NTP.second.second = coefficients_y(0) + coefficients_y(1) * Time;
+            temp2.timepos.push(NTP);
         }
+        ObsPredPoint.push_back(temp2);
     }
 }
-//현재
+
+void ObsDetection::Pred_Print(){
+    std::cout << "======================" << std::endl;
+    for(int i=0; i<ObsPredPoint.size(); i++){
+        std::stack<TimeLoc> temp = ObsPredPoint[i].timepos;
+        std::cout << "장애물" << ObsPredPoint[i].label << "의 좌표 및 시간 : ";
+
+        while(!temp.empty()){
+            std::cout <<"["<< temp.top().first << ": (" << temp.top().second.first << "," << temp.top().second.second << ")], ";
+            temp.pop();
+        }
+        std::cout << "\n\n";
+    }
+}

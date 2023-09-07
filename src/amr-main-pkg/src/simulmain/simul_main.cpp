@@ -12,7 +12,7 @@ pSHM sharedMemory;
 ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
     RCLCPP_INFO(get_logger(), "Parking Node Created");
-
+    StartTime = time(NULL);
     step = 0;
     MapCounter = 0;
 
@@ -28,6 +28,8 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
 void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 {
+    timer = time(NULL);
+    std::cout << "absolute time: " << timer << std::endl;
     MapCounter++;
 
     int xAstar = int((sharedMemory->xpos+10)*5);
@@ -45,6 +47,15 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 
     Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, ypos, MapCounter);
 
+
+    int absT = int(timer - StartTime);
+
+    O_D.SaveObsInfo(Cluster.LabelingArray, absT);
+    O_D.Print();
+//    O_D.Pred_Print();
+    std::cout << "\n";
+
+
     ASTAR.startAstar(xAstar, yAstar);
 
     control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((ypos+10)*5)));
@@ -53,7 +64,6 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.traj.pop();
     }
-    std::cout << "Cycle time: "<< Cluster.timer_cycle << std::endl;
 
 //    ASTAR.PrintMap(); // PathPlanning Map
     Cluster.PrintMap(); // Dynamic Obstacle Map

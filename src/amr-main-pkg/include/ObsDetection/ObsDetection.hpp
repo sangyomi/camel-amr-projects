@@ -7,46 +7,29 @@
 
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
+#include <cmath>
+#include <vector>
+#include <eigen3/Eigen/Dense>
 
 class ObsDetection {
+    typedef std::pair<double, coordinate> TimeLoc;
+
 private:
     struct obs_info{
-        std::stack<coordinate> pos;
-        int velocity;
-        coordinate dir;
-        std::stack<int> step;
+        std::stack<TimeLoc> timepos;
+        int label;
+        bool labelcheck;
+        int loss;
     };
-    struct Robot_status{
-        int grad;
-        int dy;
-        int dx;
-        coordinate next_pos;
-        coordinate present_pos;
-        int SensorRange;
-    };
-    Robot_status rs;
-    int num_obs;
 
-    obs_info labeled_obs[4];
-    int labeling = 0;
-    std::stack<int> detected_obs_num;
-    bool isObstacle(int i, int j,int map[][100]);
-    void updateGradient();
-    bool isObstacleInSlope(int i, int j);
-    void New_labeling(coordinate &obs_loc, int &step);
-    void SaveObsTraj(coordinate new_obs, int &step);
-    coordinate GetObsNextPos(int &i, int &iter);
-
+    std::vector<obs_info> ObsLog;
+    std::vector<obs_info> ObsPredPoint;
 public:
-    void SetSensorRange(int SensorRange);
-    void loadRobotStatus(coordinate pre, coordinate nex);
-    int isObstacleDetected(int map[][100],coordinate &mapsize,int &step);
-    int GetDetectedObsNum();
-    void SetNumObstacle(int num_obs);
-    int GetLabelData();
-    void CollisionDetection(std::stack<coordinate> AMR_Traj);
+    void Print();
+    void SaveObsInfo(std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> &LidarData, int time);
+    void Prediction();
+    void Pred_Print();
 
-private:
 };
 
 #endif //AMR_OBSDETECTION_HPP
