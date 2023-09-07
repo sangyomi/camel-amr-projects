@@ -24,6 +24,8 @@ camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
     colcon build --symlink-install
 
+    . install/setup.bash
+
 
 ----
 # Commend
@@ -70,7 +72,6 @@ if you want to check Dynamic Obstacle Map, edit simulmain.cpp 54 line
     next_pos = ASTAR.tra항j.top();
 
     step = step;
-    
 
 ----
 # Dynamic Obstacle
