@@ -24,6 +24,8 @@ camel-amr-projects-V1/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
 
     colcon build --symlink-install
 
+    . install/setup.bash
+
 
 ----
 # Commend
