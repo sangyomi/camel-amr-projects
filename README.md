@@ -70,6 +70,7 @@ if you want to check Dynamic Obstacle Map, edit simulmain.cpp 54 line
     next_pos = ASTAR.tra항j.top();
 
     step = step;
+    
 
 ----
 # Dynamic Obstacle
@@ -78,3 +79,4 @@ if you want to check Dynamic Obstacle Map, edit simulmain.cpp 54 line
     
     timer  = double timer_cycle;
 ----
+

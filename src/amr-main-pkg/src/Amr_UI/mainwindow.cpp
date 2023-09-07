@@ -25,6 +25,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+    free(sharedMemory);
 }
 
 void MainWindow::updateValue()
