@@ -1,0 +1,29 @@
+[ 10%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 10%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 10%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 13%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[ 16%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[ 20%] [34m[1mAutomatic MOC and UIC for target mainwindow_lib[0m
+[ 20%] Built target visualize_lib_autogen
+[ 20%] Built target obsDetection_lib_autogen
+[ 20%] Built target clusteringDynamicObs_lib_autogen
+[ 20%] Built target dynamicObstacle_lib_autogen
+[ 20%] Built target astar_lib_autogen
+[ 46%] Built target obsDetection_lib
+[ 50%] Built target visualize_lib
+[ 50%] Built target dynamicObstacle_lib
+[ 60%] Built target clusteringDynamicObs_lib
+
+AutoUic error
+-------------
+"SRC:/src/Amr_UI/mainwindow.cpp"
+includes the uic file "ui_mainwindow2.h",
+but the user interface file "mainwindow2.ui"
+could not be found in the following directories
+  "SRC:/src/Amr_UI"
+
+make[2]: *** [CMakeFiles/mainwindow_lib_autogen.dir/build.make:71: CMakeFiles/mainwindow_lib_autogen] Error 1
+make[1]: *** [CMakeFiles/Makefile2:473: CMakeFiles/mainwindow_lib_autogen.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 70%] Built target astar_lib
+make: *** [Makefile:146: all] Error 2

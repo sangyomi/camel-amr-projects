@@ -74,6 +74,7 @@ add_library(clusteringDynamicObs_lib
         src/ClusteringDynamicObs/ClusteringDynamicObs.cpp
 )
 
+
 #add_library(main_gui_lib
 #        src/ros2_ui/main_GUI.cpp
 #)
@@ -109,8 +110,8 @@ install(TARGETS
 
 add_executable(simulmain
         src/simulmain/simul_main.cpp
-        src/simulmain/mainwindow.cpp
-        src/simulmain/qcustomplot.cpp
+        src/Amr_UI/mainwindow.cpp
+        src/Amr_UI/qcustomplot.cpp
 )
 
 ament_target_dependencies(simulmain

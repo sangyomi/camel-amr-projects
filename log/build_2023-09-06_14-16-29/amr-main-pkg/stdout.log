@@ -1,0 +1,20 @@
+[ 19%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[ 19%] Built target clusteringDynamicObs_lib_autogen
+[ 19%] Built target obsDetection_lib_autogen
+[ 19%] Built target visualize_lib_autogen
+[ 19%] Built target astar_lib_autogen
+[ 19%] Built target dynamicObstacle_lib_autogen
+[ 42%] Built target obsDetection_lib
+[ 42%] Built target visualize_lib
+[ 53%] Built target astar_lib
+[ 65%] Built target dynamicObstacle_lib
+[ 76%] Built target clusteringDynamicObs_lib
+[ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 80%] Built target simulmain_autogen
+[ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m

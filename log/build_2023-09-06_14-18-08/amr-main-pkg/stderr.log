@@ -1,0 +1,8 @@
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:74:10:[m[K [01;31m[Kerror: [m[K‘[01m[KupdateHeading[m[K’ was not declared in this scope; did you mean ‘[01m[KgetHeading[m[K’?
+   74 |     emit [01;31m[KupdateHeading[m[K(heading);
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+      |          [32m[KgetHeading[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

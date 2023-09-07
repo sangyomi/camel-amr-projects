@@ -1,0 +1,46 @@
+[0.009s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[0.027s] [  3%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.027s] [  7%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.027s] [ 11%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[0.027s] [ 15%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.027s] [ 19%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[0.034s] [ 19%] Built target dynamicObstacle_lib_autogen
+[0.034s] [ 19%] Built target clusteringDynamicObs_lib_autogen
+[0.034s] [ 19%] Built target astar_lib_autogen
+[0.034s] [ 19%] Built target obsDetection_lib_autogen
+[0.034s] [ 19%] Built target visualize_lib_autogen
+[0.043s] [ 61%] Built target visualize_lib
+[0.043s] [ 61%] Built target obsDetection_lib
+[0.043s] [ 61%] Built target dynamicObstacle_lib
+[0.043s] [ 65%] Built target astar_lib
+[0.044s] [ 76%] Built target clusteringDynamicObs_lib
+[0.050s] [ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.150s] [ 80%] Built target simulmain_autogen
+[0.173s] [ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[0.174s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[0.174s] [ 92%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+[2.118s] In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:3[m[K:
+[2.118s] [01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/include/ui_mainwindow2.h:22:7:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kclass Ui_MainWindow[m[K’
+[2.118s]    22 | class [01;31m[KUi_MainWindow[m[K
+[2.118s]       |       [01;31m[K^~~~~~~~~~~~~[m[K
+[2.118s] In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:2[m[K:
+[2.118s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/ui_mainwindow.h:28:7:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kclass Ui_MainWindow[m[K’
+[2.118s]    28 | class [01;36m[KUi_MainWindow[m[K
+[2.118s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[2.118s] In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:3[m[K:
+[2.118s] [01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/include/ui_mainwindow2.h:63:11:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kclass Ui::MainWindow[m[K’
+[2.118s]    63 |     class [01;31m[KMainWindow[m[K: public Ui_MainWindow {};
+[2.119s]       |           [01;31m[K^~~~~~~~~~[m[K
+[2.119s] In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:2[m[K:
+[2.119s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/ui_mainwindow.h:70:11:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kclass Ui::MainWindow[m[K’
+[2.119s]    70 |     class [01;36m[KMainWindow[m[K: public Ui_MainWindow {};
+[2.119s]       |           [01;36m[K^~~~~~~~~~[m[K
+[2.119s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::updateValue()[m[K’:
+[2.119s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:26:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Klabel[m[K’
+[2.119s]    26 |     ui->[01;31m[Klabel[m[K->setText(QString("바뀐 값: %1").arg(randomValue));
+[2.119s]       |         [01;31m[K^~~~~[m[K
+[2.461s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
+[2.461s] make[2]: *** Waiting for unfinished jobs....
+[6.264s] make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+[6.265s] make: *** [Makefile:146: all] Error 2
+[6.265s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10

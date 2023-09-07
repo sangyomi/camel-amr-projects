@@ -1,0 +1,31 @@
+[0.008s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[0.025s] [ 15%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.025s] [ 15%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[0.025s] [ 15%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[0.025s] [ 15%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.025s] [ 19%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.030s] [ 19%] Built target astar_lib_autogen
+[0.031s] [ 19%] Built target obsDetection_lib_autogen
+[0.031s] [ 19%] Built target dynamicObstacle_lib_autogen
+[0.031s] [ 19%] Built target clusteringDynamicObs_lib_autogen
+[0.031s] [ 19%] Built target visualize_lib_autogen
+[0.037s] [ 42%] Built target obsDetection_lib
+[0.038s] [ 42%] Built target dynamicObstacle_lib
+[0.038s] [ 53%] Built target clusteringDynamicObs_lib
+[0.044s] [ 65%] Built target visualize_lib
+[0.044s] [ 76%] Built target astar_lib
+[0.050s] [ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.055s] [ 80%] Built target simulmain_autogen
+[0.080s] [ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+[1.855s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::updateValue()[m[K’:
+[1.855s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:25:5:[m[K [01;31m[Kerror: [m[K‘[01m[KparkingNode[m[K’ was not declared in this scope; did you mean ‘[01m[KParkingNode[m[K’?
+[1.855s]    25 |     [01;31m[KparkingNode[m[K parking;
+[1.856s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[1.856s]       |     [32m[KParkingNode[m[K
+[1.857s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:26:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kparking[m[K’ was not declared in this scope
+[1.857s]    26 |     double randomValue = [01;31m[Kparking[m[K.heading;
+[1.857s]       |                          [01;31m[K^~~~~~~[m[K
+[2.233s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
+[2.233s] make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+[2.233s] make: *** [Makefile:146: all] Error 2
+[2.234s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10

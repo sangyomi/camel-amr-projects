@@ -2,10 +2,12 @@
 // Created by sangjun on 23. 8. 24.
 //
 #include "simulmain/simul_main.hpp"
-#include "mainwindow.h"
+#include "../Amr_UI/mainwindow.h"
 #include <QApplication>
 #include <QThread>
 #define PI 3.14159265
+
+pSHM sharedMemory;
 
 ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
@@ -28,7 +30,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 {
     MapCounter++;
 
-    int xAstar = int((xpos+10)*5);
+    int xAstar = int((sharedMemory->xpos+10)*5);
     int yAstar = int((ypos+10)*5);
 
     if(abs(xAstar-ASTAR.Destx[ASTAR.count]) < 3 && abs(yAstar-ASTAR.Desty[ASTAR.count]) < 3)
@@ -41,11 +43,11 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
         }
     }
 
-    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, heading, xpos, ypos, MapCounter);
+    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, ypos, MapCounter);
 
     ASTAR.startAstar(xAstar, yAstar);
 
-    control_star_position(star_position(int((xpos+10)*5), int((ypos+10)*5)));
+    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((ypos+10)*5)));
 
     while(!ASTAR.traj.empty())
     {
@@ -66,9 +68,10 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
     double siny_cosp = 2 * (w * z + x * y);
     double cosy_cosp = 1 - 2 * (y * y + z * z);
     double yaw = atan2(siny_cosp,cosy_cosp);
-    heading = yaw;
-    xpos = msg->pose.pose.position.x;
+    sharedMemory->heading = yaw;
+    sharedMemory->xpos = msg->pose.pose.position.x;
     ypos = msg->pose.pose.position.y;
+
 }
 
 int ParkingNode::star_position(int CurrentX, int CurrentY)
@@ -91,7 +94,7 @@ void ParkingNode::control_star_position(int dict)
         std::cout << "++++++++++++++++++++++++++++++" << std::endl;
         rclcpp::shutdown();
     }
-    float value = ASTAR.direction[dict] - heading;
+    float value = ASTAR.direction[dict] - sharedMemory->heading;
     if (value > 3.14) {value = value - 2*PI;}
     else if (value < -3.14) {value = value + 2*PI;}
     float turn_offset = 0.7 * (value);
@@ -101,6 +104,20 @@ void ParkingNode::control_star_position(int dict)
         m_twist_msg.angular.z = turn_offset;
         m_pub->publish(m_twist_msg);
     }
+}
+
+void clearSharedMemory()
+{
+    sharedMemory->heading=0;
+    sharedMemory->xpos=0;
+
+}
+
+void StartSimulation()
+{
+    sharedMemory = (pSHM)malloc(sizeof(SHM));
+    clearSharedMemory();
+
 }
 
 
@@ -118,11 +135,13 @@ public:
         rclcpp::spin(parking_node);
         rclcpp::shutdown();
     }
+
 };
 
 int main(int argc, char ** argv)
 {
     QApplication a(argc, argv);
+    StartSimulation();
     MainWindow w;
     rclcpp::init(argc, argv);
     CommunicationThread communicationThread;

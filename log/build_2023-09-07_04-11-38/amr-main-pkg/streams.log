@@ -1,0 +1,57 @@
+[0.009s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[0.021s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.038s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.178s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.183s] -- Found amr_msg_interfaces: 0.6.0 (/home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake)
+[0.200s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.202s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.292s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.322s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.348s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.349s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.451s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.533s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.596s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.644s] -- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+[0.647s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.649s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.650s] -- Configured cppcheck include dirs: /home/dongju/camel-amr-projects/src/amr-main-pkg/include
+[0.650s] -- Configured cppcheck exclude dirs and/or files: 
+[0.652s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.652s] -- Configured cpplint exclude dirs and/or files: 
+[0.652s] -- Added test 'lint_cmake' to check CMake code style
+[0.654s] -- Added test 'uncrustify' to check C / C++ code style
+[0.654s] -- Configured uncrustify additional arguments: 
+[0.654s] -- Added test 'xmllint' to check XML markup files
+[0.655s] -- Configuring done (0.6s)
+[0.709s] -- Generating done (0.0s)
+[0.711s] -- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-main-pkg
+[0.725s] [  3%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[0.725s] [  6%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.725s] [ 10%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[0.725s] [ 16%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.725s] [ 16%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.726s] [ 20%] [34m[1mAutomatic MOC and UIC for target mainwindow_lib[0m
+[0.731s] [ 20%] Built target dynamicObstacle_lib_autogen
+[0.731s] [ 20%] Built target visualize_lib_autogen
+[0.731s] [ 20%] Built target astar_lib_autogen
+[0.731s] [ 20%] Built target clusteringDynamicObs_lib_autogen
+[0.732s] [ 20%] Built target obsDetection_lib_autogen
+[0.733s] [ 20%] Built target mainwindow_lib_autogen
+[0.739s] [ 33%] Built target dynamicObstacle_lib
+[0.739s] [ 40%] Built target visualize_lib
+[0.740s] [ 50%] Built target astar_lib
+[0.740s] [ 60%] Built target obsDetection_lib
+[0.741s] [ 70%] Built target clusteringDynamicObs_lib
+[0.755s] [ 83%] Built target mainwindow_lib
+[0.761s] [ 86%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.766s] [ 86%] Built target simulmain_autogen
+[0.786s] [ 90%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[0.912s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:5:10:[m[K [01;31m[Kfatal error: [m[KAmr_UI/mainwindow.h: No such file or directory
+[0.912s]     5 | #include [01;31m[K"Amr_UI/mainwindow.h"[m[K
+[0.912s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[0.912s] compilation terminated.
+[0.914s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+[0.915s] make[1]: *** [CMakeFiles/Makefile2:318: CMakeFiles/simulmain.dir/all] Error 2
+[0.915s] make: *** [Makefile:146: all] Error 2
+[0.916s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10

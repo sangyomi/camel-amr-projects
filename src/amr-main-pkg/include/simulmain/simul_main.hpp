@@ -26,6 +26,7 @@
 #include "Visualize/Map_In_Out.hpp"
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
+#include "Variables/SharedMemory.h"
 
 const int num_obs = 1; // number of moving obstacle
 const int sensor_range = 10; // Sensing distance
@@ -34,15 +35,15 @@ using Twist = geometry_msgs::msg::Twist;
 using LaserScan = sensor_msgs::msg::LaserScan;
 using Odometry = nav_msgs::msg::Odometry;
 
-class ParkingNode : public rclcpp::Node {
+class ParkingNode : public rclcpp::Node{
 private:
     rclcpp::Publisher<Twist>::SharedPtr m_pub;
     rclcpp::Subscription<LaserScan>::SharedPtr m_sub;
     rclcpp::Subscription<Odometry>::SharedPtr m_sub_odom;
     Twist m_twist_msg;
 
-    double heading;
-    double xpos;
+//    double heading;
+//    double xpos;
     double ypos;
     time_t timer;
 
@@ -68,6 +69,9 @@ public:
     void odom_callback(const Odometry::SharedPtr msg);
     int star_position(int CurrentX, int CurrentY);
     void control_star_position(int dict);
+    void clearSharedMemory();
+    void StartSimulation();
+
     ~ParkingNode();
 };
 

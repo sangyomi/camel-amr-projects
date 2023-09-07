@@ -1,0 +1,46 @@
+[0.009s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[0.026s] [ 19%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.026s] [ 19%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.026s] [ 19%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[0.026s] [ 19%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[0.026s] [ 19%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.032s] [ 19%] Built target clusteringDynamicObs_lib_autogen
+[0.032s] [ 19%] Built target astar_lib_autogen
+[0.032s] [ 19%] Built target obsDetection_lib_autogen
+[0.032s] [ 19%] Built target dynamicObstacle_lib_autogen
+[0.032s] [ 19%] Built target visualize_lib_autogen
+[0.039s] [ 53%] Built target dynamicObstacle_lib
+[0.039s] [ 53%] Built target astar_lib
+[0.039s] [ 53%] Built target obsDetection_lib
+[0.039s] [ 65%] Built target clusteringDynamicObs_lib
+[0.045s] [ 76%] Built target visualize_lib
+[0.051s] [ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.056s] [ 80%] Built target simulmain_autogen
+[0.072s] [ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[0.073s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[0.073s] [ 92%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+[0.197s] In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:4[m[K:
+[0.197s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:29:10:[m[K [01;31m[Kfatal error: [m[K../../simulmain/SharedMemory.h: No such file or directory
+[0.197s]    29 | #include [01;31m[K"../../simulmain/SharedMemory.h"[m[K
+[0.197s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.197s] compilation terminated.
+[0.198s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+[0.198s] make[2]: *** Waiting for unfinished jobs....
+[0.220s] In file included from [01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/ITIM7IFCI6/../../../../src/amr-main-pkg/src/simulmain/mainwindow.h:5[m[K,
+[0.220s]                  from [01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/ITIM7IFCI6/moc_mainwindow.cpp:9[m[K,
+[0.220s]                  from [01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/mocs_compilation.cpp:2[m[K:
+[0.220s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:29:10:[m[K [01;31m[Kfatal error: [m[K../../simulmain/SharedMemory.h: No such file or directory
+[0.220s]    29 | #include [01;31m[K"../../simulmain/SharedMemory.h"[m[K
+[0.220s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.220s] In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.h:5[m[K,
+[0.220s]                  from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:1[m[K:
+[0.221s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:29:10:[m[K [01;31m[Kfatal error: [m[K../../simulmain/SharedMemory.h: No such file or directory
+[0.221s]    29 | #include [01;31m[K"../../simulmain/SharedMemory.h"[m[K
+[0.221s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.221s] compilation terminated.
+[0.221s] compilation terminated.
+[0.222s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
+[0.222s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:76: CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o] Error 1
+[0.222s] make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+[0.223s] make: *** [Makefile:146: all] Error 2
+[0.224s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10

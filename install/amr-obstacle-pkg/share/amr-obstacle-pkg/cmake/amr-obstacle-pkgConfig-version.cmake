@@ -1,0 +1,1 @@
+/home/dongju/camel-amr-projects/build/amr-obstacle-pkg/ament_cmake_core/amr-obstacle-pkgConfig-version.cmake

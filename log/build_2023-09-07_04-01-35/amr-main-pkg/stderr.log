@@ -1,0 +1,13 @@
+
+AutoUic error
+-------------
+"SRC:/src/Amr_UI/mainwindow.cpp"
+includes the uic file "ui_mainwindow2.h",
+but the user interface file "mainwindow2.ui"
+could not be found in the following directories
+  "SRC:/src/Amr_UI"
+
+make[2]: *** [CMakeFiles/mainwindow_lib_autogen.dir/build.make:71: CMakeFiles/mainwindow_lib_autogen] Error 1
+make[1]: *** [CMakeFiles/Makefile2:473: CMakeFiles/mainwindow_lib_autogen.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:146: all] Error 2

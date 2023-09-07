@@ -1,0 +1,9 @@
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:46:88:[m[K [01;31m[Kerror: [m[K‘[01m[Kxpos[m[K’ was not declared in this scope; did you mean ‘[01m[Kypos[m[K’?
+   46 |     Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, [01;31m[Kxpos[m[K, ypos, MapCounter);
+      |                                                                                        [01;31m[K^~~~[m[K
+      |                                                                                        [32m[Kypos[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

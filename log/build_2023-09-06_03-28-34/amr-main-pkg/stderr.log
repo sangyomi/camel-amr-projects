@@ -1,0 +1,11 @@
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::updateValue()[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:26:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble ParkingNode::heading[m[K’ is private within this context
+   26 |     double randomValue = parking.[01;31m[Kheading[m[K;
+      |                                  [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:4[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:44:12:[m[K [01;36m[Knote: [m[Kdeclared private here
+   44 |     double [01;36m[Kheading[m[K;
+      |            [01;36m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

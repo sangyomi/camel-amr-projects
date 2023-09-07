@@ -1,0 +1,40 @@
+[ 11%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[ 11%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 19%] Built target visualize_lib_autogen
+[ 19%] Built target dynamicObstacle_lib_autogen
+[ 19%] Built target obsDetection_lib_autogen
+[ 19%] Built target astar_lib_autogen
+[ 19%] Built target clusteringDynamicObs_lib_autogen
+[ 42%] Built target obsDetection_lib
+[ 42%] Built target dynamicObstacle_lib
+[ 53%] Built target clusteringDynamicObs_lib
+[ 65%] Built target visualize_lib
+[ 76%] Built target astar_lib
+[ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 80%] Built target simulmain_autogen
+[ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:4[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:[m[K In member function ‘[01m[Kdouble ParkingNode::getHeading() const[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:73:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kreuturn[m[K’ was not declared in this scope
+   73 |         [01;31m[Kreuturn[m[K heading;
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:74:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   74 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/mainwindow.cpp:4[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:[m[K In member function ‘[01m[Kdouble ParkingNode::getHeading() const[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:73:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kreuturn[m[K’ was not declared in this scope
+   73 |         [01;31m[Kreuturn[m[K heading;
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/simulmain/simul_main.hpp:74:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   74 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

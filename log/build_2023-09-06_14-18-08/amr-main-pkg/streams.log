@@ -1,0 +1,28 @@
+[0.009s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[0.026s] [ 19%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.027s] [ 19%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.027s] [ 19%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[0.027s] [ 19%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[0.027s] [ 19%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.032s] [ 19%] Built target visualize_lib_autogen
+[0.033s] [ 19%] Built target obsDetection_lib_autogen
+[0.033s] [ 19%] Built target clusteringDynamicObs_lib_autogen
+[0.033s] [ 19%] Built target astar_lib_autogen
+[0.035s] [ 19%] Built target dynamicObstacle_lib_autogen
+[0.040s] [ 42%] Built target astar_lib
+[0.040s] [ 42%] Built target visualize_lib
+[0.040s] [ 53%] Built target obsDetection_lib
+[0.041s] [ 65%] Built target clusteringDynamicObs_lib
+[0.042s] [ 76%] Built target dynamicObstacle_lib
+[0.048s] [ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.054s] [ 80%] Built target simulmain_autogen
+[0.083s] [ 84%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[1.839s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.839s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:74:10:[m[K [01;31m[Kerror: [m[K‘[01m[KupdateHeading[m[K’ was not declared in this scope; did you mean ‘[01m[KgetHeading[m[K’?
+[1.839s]    74 |     emit [01;31m[KupdateHeading[m[K(heading);
+[1.839s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.840s]       |          [32m[KgetHeading[m[K
+[3.562s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+[3.563s] make[1]: *** [CMakeFiles/Makefile2:288: CMakeFiles/simulmain.dir/all] Error 2
+[3.563s] make: *** [Makefile:146: all] Error 2
+[3.564s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10

@@ -1,0 +1,16 @@
+[ 10%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 10%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 10%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 13%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[ 16%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[ 20%] [34m[1mAutomatic MOC and UIC for target mainwindow_lib[0m
+[ 20%] Built target visualize_lib_autogen
+[ 20%] Built target obsDetection_lib_autogen
+[ 20%] Built target clusteringDynamicObs_lib_autogen
+[ 20%] Built target dynamicObstacle_lib_autogen
+[ 20%] Built target astar_lib_autogen
+[ 46%] Built target obsDetection_lib
+[ 50%] Built target visualize_lib
+[ 50%] Built target dynamicObstacle_lib
+[ 60%] Built target clusteringDynamicObs_lib
+[ 70%] Built target astar_lib

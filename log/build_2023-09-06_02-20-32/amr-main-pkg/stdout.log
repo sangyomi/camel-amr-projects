@@ -1,0 +1,120 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found amr_msg_interfaces: 0.6.0 (/home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/dongju/camel-amr-projects/src/amr-main-pkg/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-main-pkg
+[ 11%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 11%] [34m[1mAutomatic MOC and UIC for target visualize_lib[0m
+[ 11%] [34m[1mAutomatic MOC and UIC for target dynamicObstacle_lib[0m
+[ 15%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 19%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 19%] Built target astar_lib_autogen
+[ 19%] Built target clusteringDynamicObs_lib_autogen
+[ 19%] Built target dynamicObstacle_lib_autogen
+[ 19%] Built target obsDetection_lib_autogen
+[ 19%] Built target visualize_lib_autogen
+[ 26%] [32mBuilding CXX object CMakeFiles/dynamicObstacle_lib.dir/dynamicObstacle_lib_autogen/mocs_compilation.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/clusteringDynamicObs_lib_autogen/mocs_compilation.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/obsDetection_lib_autogen/mocs_compilation.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/astar_lib_autogen/mocs_compilation.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/dynamicObstacle_lib.dir/src/DynamicObstacle/DynamicObstacle.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/src/ObsDetection/ObsDetection.cpp.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/visualize_lib.dir/visualize_lib_autogen/mocs_compilation.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/visualize_lib.dir/src/Visualize/Map_In_Out.cpp.o[0m
+[ 61%] [32m[1mLinking CXX static library libdynamicObstacle_lib.a[0m
+[ 61%] Built target dynamicObstacle_lib
+[ 65%] [32m[1mLinking CXX static library libvisualize_lib.a[0m
+[ 65%] Built target visualize_lib
+[ 69%] [32m[1mLinking CXX static library libobsDetection_lib.a[0m
+[ 69%] Built target obsDetection_lib
+[ 73%] [32m[1mLinking CXX static library libastar_lib.a[0m
+[ 73%] Built target astar_lib
+[ 76%] [32m[1mLinking CXX static library libclusteringDynamicObs_lib.a[0m
+[ 76%] Built target clusteringDynamicObs_lib
+[ 80%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 80%] Built target simulmain_autogen
+[ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/mainwindow.cpp.o[0m
+[ 96%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/qcustomplot.cpp.o[0m
+[100%] [32m[1mLinking CXX executable simulmain[0m
+[100%] Built target simulmain
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/DynamicObstacle/DynamicObstacle.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/Variable.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/mapinfo.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Visualize/Map_In_Out.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar/Astar.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain/simul_main.hpp
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libastar_lib.a
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libvisualize_lib.a
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libdynamicObstacle_lib.a
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libobsDetection_lib.a
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libclusteringDynamicObs_lib.a
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch/t
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.xml
