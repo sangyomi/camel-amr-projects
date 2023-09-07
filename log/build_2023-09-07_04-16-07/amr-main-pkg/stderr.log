@@ -1,6 +1,0 @@
-[31mCMake Error at CMakeLists.txt:90 (target_include_directories):
-  Cannot specify include directories for target "mainwindow_lib" which is not
-  built by this project.
-
-[0m
-make: *** [Makefile:830: cmake_check_build_system] Error 1

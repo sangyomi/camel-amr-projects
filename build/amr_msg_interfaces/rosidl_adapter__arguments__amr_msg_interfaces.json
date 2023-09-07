@@ -1,7 +1,0 @@
-{
-  "package_name": "amr_msg_interfaces",
-  "non_idl_tuples": [
-    "/home/dongju/camel-amr-projects/src/amr_msg_interfaces:msg/GridMapInfo.msg",
-    "/home/dongju/camel-amr-projects/src/amr_msg_interfaces:msg/Trajectory.msg"
-  ]
-}

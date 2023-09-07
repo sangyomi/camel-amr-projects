@@ -1,1 +1,0 @@
-/home/dongju/camel-amr-projects/build/amr_msg_interfaces/ament_cmake_core/amr_msg_interfacesConfig-version.cmake
