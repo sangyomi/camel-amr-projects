@@ -1,0 +1,13 @@
+[ 11%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 11%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 16%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 16%] Built target astar_lib_autogen
+[ 16%] Built target clusteringDynamicObs_lib_autogen
+[ 16%] Built target obsDetection_lib_autogen
+[ 33%] Built target astar_lib
+[ 61%] Built target obsDetection_lib
+[ 66%] Built target clusteringDynamicObs_lib
+[ 72%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 72%] Built target simulmain_autogen
+[ 77%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable simulmain[0m

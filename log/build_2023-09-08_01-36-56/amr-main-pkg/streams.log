@@ -1,0 +1,172 @@
+[0.009s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake /home/dongju/camel-amr-projects/src/amr-main-pkg -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr-main-pkg
+[0.043s] -- The C compiler identification is GNU 9.4.0
+[0.083s] -- The CXX compiler identification is GNU 9.4.0
+[0.090s] -- Detecting C compiler ABI info
+[0.130s] -- Detecting C compiler ABI info - done
+[0.138s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.139s] -- Detecting C compile features
+[0.139s] -- Detecting C compile features - done
+[0.142s] -- Detecting CXX compiler ABI info
+[0.189s] -- Detecting CXX compiler ABI info - done
+[0.198s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.199s] -- Detecting CXX compile features
+[0.199s] -- Detecting CXX compile features - done
+[0.201s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.220s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.220s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.380s] -- Found amr_msg_interfaces: 0.6.0 (/home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake)
+[0.403s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.408s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.462s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.485s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.545s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.578s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.610s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.611s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.612s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.655s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.655s] -- Looking for pthread_create in pthreads
+[0.687s] -- Looking for pthread_create in pthreads - not found
+[0.687s] -- Looking for pthread_create in pthread
+[0.727s] -- Looking for pthread_create in pthread - found
+[0.728s] -- Found Threads: TRUE  
+[0.838s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.923s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.993s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.051s] -- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+[1.053s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.055s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.056s] -- Configured cppcheck include dirs: /home/dongju/camel-amr-projects/src/amr-main-pkg/include
+[1.056s] -- Configured cppcheck exclude dirs and/or files: 
+[1.057s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.057s] -- Configured cpplint exclude dirs and/or files: 
+[1.058s] -- Added test 'lint_cmake' to check CMake code style
+[1.059s] -- Added test 'uncrustify' to check C / C++ code style
+[1.059s] -- Configured uncrustify additional arguments: 
+[1.060s] -- Added test 'xmllint' to check XML markup files
+[1.061s] -- Configuring done (1.0s)
+[1.111s] -- Generating done (0.0s)
+[1.113s] -- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-main-pkg
+[1.120s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake /home/dongju/camel-amr-projects/src/amr-main-pkg -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr-main-pkg
+[1.122s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[1.138s] [ 11%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[1.139s] [ 11%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[1.139s] [ 16%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[1.149s] [ 16%] Built target astar_lib_autogen
+[1.150s] [ 16%] Built target obsDetection_lib_autogen
+[1.151s] [ 16%] Built target clusteringDynamicObs_lib_autogen
+[1.156s] [ 33%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o[0m
+[1.156s] [ 33%] [32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/obsDetection_lib_autogen/mocs_compilation.cpp.o[0m
+[1.156s] [ 33%] [32mBuilding CXX object CMakeFiles/astar_lib.dir/astar_lib_autogen/mocs_compilation.cpp.o[0m
+[1.156s] [ 38%] [32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/src/ObsDetection/ObsDetection.cpp.o[0m
+[1.157s] [ 44%] [32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o[0m
+[1.158s] [ 50%] [32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/clusteringDynamicObs_lib_autogen/mocs_compilation.cpp.o[0m
+[1.418s] In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/astar/Astar.cpp:4[m[K:
+[1.418s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:[m[K In constructor ‘[01m[KAstar_planning::Astar_planning()[m[K’:
+[1.418s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:38:35:[m[K [01;35m[Kwarning: [m[K‘[01m[KAstar_planning::Mapmatrix[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[1.418s]    38 |     std::vector<std::vector<int>> [01;35m[KMapmatrix[m[K;
+[1.418s]       |                                   [01;35m[K^~~~~~~~~[m[K
+[1.418s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:29:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint Astar_planning::dx1 [4][m[K’ [[01;35m[K-Wreorder[m[K]
+[1.418s]    29 |     int [01;35m[Kdx1[m[K[4];
+[1.419s]       |         [01;35m[K^~~[m[K
+[1.419s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/astar/Astar.cpp:17:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[1.419s]    17 | [01;35m[KAstar_planning[m[K::Astar_planning()
+[1.419s]       | [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.705s] [ 55%] [32m[1mLinking CXX static library libastar_lib.a[0m
+[1.718s] [ 55%] Built target astar_lib
+[1.861s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ClusteringDynamicObstacle(int, int)[m[K’:
+[1.861s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:107:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.861s]   107 |     for (int i = 0 ; [01;35m[Ki < LabelingStack.size()[m[K ; i++)
+[1.862s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.862s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:[m[K In member function ‘[01m[Kvoid ObsDetection::SaveObsInfo(std::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >&, int)[m[K’:
+[1.862s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:9:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.862s]     9 | for(int i=0; [01;35m[Ki<LidarData.size()[m[K; i++ ){
+[1.862s]       |              [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[1.864s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:115:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.864s]   115 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+[1.864s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.864s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:[m[K In member function ‘[01m[Kvoid ClusteringDynamicObs::ConnectObs(int, int)[m[K’:
+[1.864s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:144:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.864s]   144 |     for (int i = 0 ; [01;35m[Ki < LabelingArray.size()[m[K ; i++)
+[1.864s]       |                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.869s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:19:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.869s]    19 | for(int i=0; [01;35m[Ki<LidarData.size()[m[K; i++ ){
+[1.869s]       |              [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[1.869s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:20:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<ObsDetection::obs_info>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.869s]    20 | for(int j=0; [01;35m[Kj<ObsLog.size()[m[K; j++){
+[1.869s]       |              [01;35m[K~^~~~~~~~~~~~~~[m[K
+[1.869s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:39:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<ObsDetection::obs_info>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.869s]    39 | for(int i=0; [01;35m[Ki<ObsLog.size()[m[K; i++){
+[1.869s]       |              [01;35m[K~^~~~~~~~~~~~~~[m[K
+[1.870s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:[m[K In member function ‘[01m[Kvoid ObsDetection::Print()[m[K’:
+[1.870s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:51:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<ObsDetection::obs_info>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.870s]    51 |     for(int i=0; [01;35m[Ki<ObsLog.size()[m[K; i++){
+[1.871s]       |                  [01;35m[K~^~~~~~~~~~~~~~[m[K
+[1.872s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:[m[K In member function ‘[01m[Kvoid ObsDetection::Prediction()[m[K’:
+[1.872s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:73:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<ObsDetection::obs_info>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.872s]    73 |     for(int i = 0; [01;35m[Ki < ObsLog.size()[m[K; i++){
+[1.872s]       |                    [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[1.936s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:[m[K In member function ‘[01m[Kvoid ObsDetection::Pred_Print()[m[K’:
+[1.936s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:119:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<ObsDetection::obs_info>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[1.936s]   119 |     for(int i=0; [01;35m[Ki<ObsPredPoint.size()[m[K; i++){
+[1.936s]       |                  [01;35m[K~^~~~~~~~~~~~~~~~~~~~[m[K
+[2.115s] [ 61%] [32m[1mLinking CXX static library libclusteringDynamicObs_lib.a[0m
+[2.126s] [ 61%] Built target clusteringDynamicObs_lib
+[5.858s] [ 66%] [32m[1mLinking CXX static library libobsDetection_lib.a[0m
+[5.924s] [ 66%] Built target obsDetection_lib
+[5.936s] [ 72%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[6.408s] [ 72%] Built target simulmain_autogen
+[6.417s] [ 77%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o[0m
+[6.417s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[6.417s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[6.417s] [ 94%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/qcustomplot.cpp.o[0m
+[10.344s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/qcustomplot.cpp:[m[K In member function ‘[01m[KQPointF QCPLabelPainterPrivate::getAnchorPos(const QPointF&)[m[K’:
+[10.344s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/qcustomplot.cpp:5752:1:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K-Wimplicit-fallthrough=[m[K]
+[10.344s]  5752 | [01;35m[Kswitch[m[K (mAnchorSide)
+[10.345s]       | [01;35m[K^~~~~~[m[K
+[10.345s] [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/qcustomplot.cpp:5764:1:[m[K [01;36m[Knote: [m[Khere
+[10.345s]  5764 | [01;36m[Kcase[m[K amSkewedUpright:
+[10.345s]       | [01;36m[K^~~~[m[K
+[14.610s] [100%] [32m[1mLinking CXX executable simulmain[0m
+[15.497s] [100%] Built target simulmain
+[15.500s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[15.523s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-main-pkg
+[15.526s] -- Install configuration: ""
+[15.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include
+[15.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection
+[15.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp
+[15.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar
+[15.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar/Astar.hpp
+[15.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/Variable.hpp
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/mapinfo.hpp
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/SharedMemory.h
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain/simul_main.hpp
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libastar_lib.a
+[15.527s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libobsDetection_lib.a
+[15.530s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libclusteringDynamicObs_lib.a
+[15.530s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain
+[15.535s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain" to ""
+[15.535s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch
+[15.535s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch/t
+[15.535s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param
+[15.535s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml
+[15.538s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg
+[15.538s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.dsv
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake
+[15.539s] -- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.xml
+[15.543s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-main-pkg

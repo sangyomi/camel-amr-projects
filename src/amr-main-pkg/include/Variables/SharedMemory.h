@@ -9,6 +9,7 @@ typedef struct _SHM_
 {
     double heading;
     double xpos;
+    double ypos;
 
 } SHM, *pSHM;
 

@@ -1,0 +1,46 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-gazebo-pkg
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/launch/maze_world.launch.py
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/AMR_factory.world
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/Factory.world
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/simplemap.world
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.gazebo
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.urdf
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.urdf.xacro
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot_amr.urdf
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/rviz/diffbot.rviz
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/rviz/diffbot_amr.rviz
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/package_run_dependencies/amr-gazebo-pkg
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/parent_prefix_path/amr-gazebo-pkg
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/ament_prefix_path.sh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/ament_prefix_path.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/path.sh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/path.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.bash
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.sh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.zsh
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.dsv
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/packages/amr-gazebo-pkg
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/cmake/amr-gazebo-pkgConfig.cmake
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/cmake/amr-gazebo-pkgConfig-version.cmake
+-- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.xml

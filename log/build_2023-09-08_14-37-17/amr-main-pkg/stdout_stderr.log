@@ -1,0 +1,21 @@
+[ 16%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 16%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 16%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 16%] Built target astar_lib_autogen
+[ 16%] Built target clusteringDynamicObs_lib_autogen
+[ 16%] Built target obsDetection_lib_autogen
+[ 33%] Built target astar_lib
+[ 50%] Built target clusteringDynamicObs_lib
+[ 66%] Built target obsDetection_lib
+[ 72%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 72%] Built target simulmain_autogen
+[ 77%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o[0m
+[ 94%] [32m[1mLinking CXX executable simulmain[0m
+/usr/bin/ld: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o:(.bss+0x0): multiple definition of `sharedMemory'; CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o:(.bss+0x0): first defined here
+/usr/bin/ld: CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o:(.bss+0x0): multiple definition of `sharedMemory'; CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o:(.bss+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:221: simulmain] Error 1
+make[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

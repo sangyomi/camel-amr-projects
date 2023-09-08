@@ -1,0 +1,23 @@
+[0.009s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[0.025s] [ 16%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.025s] [ 16%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.025s] [ 16%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.030s] [ 16%] Built target astar_lib_autogen
+[0.030s] [ 16%] Built target clusteringDynamicObs_lib_autogen
+[0.031s] [ 16%] Built target obsDetection_lib_autogen
+[0.037s] [ 33%] Built target astar_lib
+[0.038s] [ 50%] Built target clusteringDynamicObs_lib
+[0.038s] [ 66%] Built target obsDetection_lib
+[0.044s] [ 72%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.049s] [ 72%] Built target simulmain_autogen
+[0.081s] [ 77%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[0.081s] [ 83%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[0.082s] [ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o[0m
+[6.731s] [ 94%] [32m[1mLinking CXX executable simulmain[0m
+[7.614s] /usr/bin/ld: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o:(.bss+0x0): multiple definition of `sharedMemory'; CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o:(.bss+0x0): first defined here
+[7.614s] /usr/bin/ld: CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o:(.bss+0x0): multiple definition of `sharedMemory'; CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o:(.bss+0x0): first defined here
+[7.614s] collect2: error: ld returned 1 exit status
+[7.614s] make[2]: *** [CMakeFiles/simulmain.dir/build.make:221: simulmain] Error 1
+[7.614s] make[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/simulmain.dir/all] Error 2
+[7.615s] make: *** [Makefile:146: all] Error 2
+[7.616s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '2': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10

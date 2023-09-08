@@ -1,0 +1,32 @@
+[0.022s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-gazebo-pkg -- -j10 -l10
+[0.033s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-gazebo-pkg -- -j10 -l10
+[0.050s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-gazebo-pkg
+[0.052s] -- Install configuration: ""
+[0.053s] -- Execute custom install script
+[0.053s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/launch/maze_world.launch.py
+[0.053s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/AMR_factory.world
+[0.053s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/Factory.world
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/simplemap.world
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.gazebo
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.urdf
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.urdf.xacro
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot_amr.urdf
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/rviz/diffbot.rviz
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/rviz/diffbot_amr.rviz
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/package_run_dependencies/amr-gazebo-pkg
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/parent_prefix_path/amr-gazebo-pkg
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/ament_prefix_path.sh
+[0.054s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/ament_prefix_path.dsv
+[0.055s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/path.sh
+[0.055s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/path.dsv
+[0.055s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.bash
+[0.055s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.sh
+[0.055s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.zsh
+[0.055s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.dsv
+[0.055s] -- Symlinking: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.dsv
+[0.058s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/packages/amr-gazebo-pkg
+[0.058s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/cmake/amr-gazebo-pkgConfig.cmake
+[0.058s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/cmake/amr-gazebo-pkgConfig-version.cmake
+[0.058s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.xml
+[0.059s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-gazebo-pkg

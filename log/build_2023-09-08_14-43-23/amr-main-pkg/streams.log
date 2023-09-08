@@ -1,0 +1,48 @@
+[0.010s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[0.027s] [ 11%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[0.027s] [ 11%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[0.027s] [ 16%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[0.033s] [ 16%] Built target clusteringDynamicObs_lib_autogen
+[0.033s] [ 16%] Built target obsDetection_lib_autogen
+[0.033s] [ 16%] Built target astar_lib_autogen
+[0.041s] [ 50%] Built target clusteringDynamicObs_lib
+[0.041s] [ 50%] Built target obsDetection_lib
+[0.049s] [ 66%] Built target astar_lib
+[0.055s] [ 72%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[0.061s] [ 72%] Built target simulmain_autogen
+[0.094s] [ 77%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o[0m
+[2.947s] [ 83%] [32m[1mLinking CXX executable simulmain[0m
+[3.973s] [100%] Built target simulmain
+[3.976s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-main-pkg -- -j10 -l10
+[4.002s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-main-pkg': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-main-pkg
+[4.004s] -- Install configuration: ""
+[4.005s] -- Execute custom install script
+[4.005s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp
+[4.005s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp
+[4.005s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/SharedMemory.h
+[4.005s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/Variable.hpp
+[4.005s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/mapinfo.hpp
+[4.005s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar/Astar.hpp
+[4.006s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain/simul_main.hpp
+[4.006s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libastar_lib.a
+[4.006s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libobsDetection_lib.a
+[4.006s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libclusteringDynamicObs_lib.a
+[4.006s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain
+[4.007s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch/t
+[4.007s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml
+[4.007s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg
+[4.007s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg
+[4.007s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh
+[4.007s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv
+[4.007s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh
+[4.008s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv
+[4.008s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash
+[4.008s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh
+[4.008s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh
+[4.008s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv
+[4.008s] -- Symlinking: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.dsv
+[4.011s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg
+[4.011s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake
+[4.011s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake
+[4.011s] -- Up-to-date symlink: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.xml
+[4.014s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-main-pkg' returned '0': CMAKE_PREFIX_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/home/dongju/camel-amr-projects/install/amr-main-pkg:/home/dongju/camel-amr-projects/install/amr-obstacle-pkg:/home/dongju/camel-amr-projects/install/amr-gazebo-pkg:/opt/ros/foxy LD_LIBRARY_PATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib PYTHONPATH=/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-main-pkg

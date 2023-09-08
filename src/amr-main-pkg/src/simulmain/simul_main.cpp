@@ -33,7 +33,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     MapCounter++;
 
     int xAstar = int((sharedMemory->xpos+10)*5);
-    int yAstar = int((ypos+10)*5);
+    int yAstar = int((sharedMemory->ypos+10)*5);
 
     if(abs(xAstar-ASTAR.Destx[ASTAR.count]) < 3 && abs(yAstar-ASTAR.Desty[ASTAR.count]) < 3)
     {
@@ -45,7 +45,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
         }
     }
 
-    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, ypos, MapCounter);
+    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, sharedMemory->ypos, MapCounter);
 
 
     int absT = int(timer - StartTime);
@@ -58,7 +58,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 
     ASTAR.startAstar(xAstar, yAstar);
 
-    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((ypos+10)*5)));
+    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
 
     while(!ASTAR.traj.empty())
     {
@@ -80,7 +80,7 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
     double yaw = atan2(siny_cosp,cosy_cosp);
     sharedMemory->heading = yaw;
     sharedMemory->xpos = msg->pose.pose.position.x;
-    ypos = msg->pose.pose.position.y;
+    sharedMemory->ypos = msg->pose.pose.position.y;
 
 }
 

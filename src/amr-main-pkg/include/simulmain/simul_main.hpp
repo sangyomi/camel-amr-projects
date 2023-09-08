@@ -26,6 +26,7 @@
 #include "Variables/mapinfo.hpp"
 #include "Variables/SharedMemory.h"
 
+
 const int num_obs = 1; // number of moving obstacle
 const int sensor_range = 10; // Sensing distance
 
@@ -42,7 +43,7 @@ private:
 
 //    double heading;
 //    double xpos;
-    double ypos;
+//    double ypos;
     time_t timer;
     time_t StartTime;
 
