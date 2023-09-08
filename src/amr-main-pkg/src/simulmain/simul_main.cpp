@@ -120,6 +120,7 @@ void clearSharedMemory()
 {
     sharedMemory->heading=0;
     sharedMemory->xpos=0;
+    sharedMemory->ypos=0;
 
 }
 
