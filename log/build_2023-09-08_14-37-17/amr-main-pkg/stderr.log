@@ -1,6 +1,0 @@
-/usr/bin/ld: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o:(.bss+0x0): multiple definition of `sharedMemory'; CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o:(.bss+0x0): first defined here
-/usr/bin/ld: CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o:(.bss+0x0): multiple definition of `sharedMemory'; CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o:(.bss+0x0): first defined here
-collect2: error: ld returned 1 exit status
-make[2]: *** [CMakeFiles/simulmain.dir/build.make:221: simulmain] Error 1
-make[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/simulmain.dir/all] Error 2
-make: *** [Makefile:146: all] Error 2

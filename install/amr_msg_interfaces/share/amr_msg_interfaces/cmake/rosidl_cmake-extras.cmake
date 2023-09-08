@@ -1,1 +1,0 @@
-/home/dongju/camel-amr-projects/build/amr_msg_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake

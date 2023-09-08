@@ -1,2 +1,0 @@
-/usr/bin/ar qc libobsDetection_lib.a CMakeFiles/obsDetection_lib.dir/obsDetection_lib_autogen/mocs_compilation.cpp.o CMakeFiles/obsDetection_lib.dir/src/ObsDetection/ObsDetection.cpp.o
-/usr/bin/ranlib libobsDetection_lib.a
