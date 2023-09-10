@@ -26,6 +26,7 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
 }
 
+
 void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 {
     timer = time(NULL);
@@ -154,6 +155,7 @@ int main(int argc, char ** argv)
     QApplication a(argc, argv);
     StartSimulation();
     MainWindow w;
+    w.setWindowTitle("AMR_UI");
     rclcpp::init(argc, argv);
     CommunicationThread communicationThread;
     communicationThread.start();

@@ -11,7 +11,14 @@
 #include <QGraphicsView>
 #include <QGraphicsScene>
 #include <QTimer>
-#include <QGraphicsRectItem>
+#include <QLineF>
+#include <QPen>
+#include <QTextEdit>
+
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
 
 class MainWindow : public QMainWindow
@@ -24,15 +31,15 @@ public:
 
 private slots:
     void updateScene();
-    void drawRectangular();
 
 private:
+    Ui::MainWindow *ui;
     QGraphicsView *view;
+    QGraphicsView *view2;
     QGraphicsScene *scene;
     QTimer *timer;
     QVector<QPointF> points; // coordinates storage
     QPen pen; //line style
-    int radius;
 
 };
 

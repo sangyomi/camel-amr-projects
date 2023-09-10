@@ -3,32 +3,30 @@
 //
 
 #include "mainwindow.h"
-#include "ui_mainwindow2.h"
-#include <QTimer>
+#include "ui_mainwindow.h"
 
 
 extern pSHM sharedMemory;
 
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent)
+        , ui(new Ui::MainWindow)
 {
-
+    ui->setupUi(this);
     // 그래픽 뷰 생성 및 설정
-    view = new QGraphicsView(this);
-    setCentralWidget(view);
-
-    // 그래픽 씬 생성
+    ui->Textedit->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    ui->Textedit->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view = new QGraphicsView(ui->frame);
+    view2 = new QGraphicsView(ui->frame_2);
     scene = new QGraphicsScene(this);
     view->setScene(scene);
 
-    resize(800,800);
-    // 그래픽 뷰 설정
+    // 그래픽 뷰 탭1 생성 및 설정
+    view->setGeometry(ui->frame->rect());
     view->setRenderHint(QPainter::Antialiasing);
-    view->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    view->setRenderHint(QPainter::Antialiasing);
-//    view->setSceneRect(200, 200, 400, 400);
-    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+    view2->setGeometry(ui->frame_2->rect());
+
 
 
     // 선을 그릴 QPen 설정
@@ -39,7 +37,6 @@ MainWindow::MainWindow(QWidget *parent)
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MainWindow::updateScene);
     timer->start(500); // 1000ms마다 새로운 점 추가
-    connect(timer, &QTimer::timeout, this, &MainWindow::drawRectangular);
 }
 
 MainWindow::~MainWindow()
@@ -47,18 +44,19 @@ MainWindow::~MainWindow()
     delete view; //delte dynamic allocation
     delete scene;
     delete timer;
+    delete ui;
     free(sharedMemory);
 }
 
 void MainWindow::updateScene()
 {
-    radius =8;
-    QPointF newPoint((sharedMemory->xpos)*20, (sharedMemory->ypos)*(-20)); // 임의의 점 생성(-200~200)
+    int circumstance =8;
+    QPointF newPoint((sharedMemory->xpos)*35+360, (sharedMemory->ypos)*(-35)+390); // 임의의 점 생성(-200~200)
     points.append(newPoint);
 
     // 씬에 점을 추가
     scene->clear(); //delete previous point
-    scene->addEllipse(newPoint.x() - radius/2, newPoint.y() - radius/2, radius, radius, pen);
+    scene->addEllipse(newPoint.x() - circumstance/2, newPoint.y() - circumstance/2, circumstance, circumstance, pen);
 
     // 선을 그립니다.
     if (points.size() >= 2) {
@@ -69,17 +67,6 @@ void MainWindow::updateScene()
 }
 
 
-void MainWindow::drawRectangular(){
-    QGraphicsRectItem *rectangle = new QGraphicsRectItem(-200,-200,400,400);
-
-    QPen pen1;
-    pen1.setColor(Qt::black);
-    pen1.setWidth(2);
-    rectangle->setPen(pen1);
-    scene->addItem(rectangle);
-
-
-}
 
 
 
