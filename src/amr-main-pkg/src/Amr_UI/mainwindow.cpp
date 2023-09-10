@@ -22,7 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
     view->setScene(scene);
 
     // 그래픽 뷰 탭1 생성 및 설정
-    view->setGeometry(ui->frame->rect());
+//    view->setGeometry(ui->frame->rect());
+    view->setSceneRect(12,39,698,698);
     view->setRenderHint(QPainter::Antialiasing);
 
     view2->setGeometry(ui->frame_2->rect());
