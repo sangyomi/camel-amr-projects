@@ -1,0 +1,22 @@
+[ 11%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 16%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 16%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 16%] Built target obsDetection_lib_autogen
+[ 16%] Built target clusteringDynamicObs_lib_autogen
+[ 16%] Built target astar_lib_autogen
+[ 33%] Built target astar_lib
+[ 50%] Built target clusteringDynamicObs_lib
+[ 66%] Built target obsDetection_lib
+[ 72%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 72%] Built target simulmain_autogen
+[ 77%] [32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o[0m
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::updateLabel()[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:75:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::MainWindow[m[K’ has no member named ‘[01m[Klabel[m[K’
+   75 |     ui->[01;31m[Klabel[m[K->setText(labelText);
+      |         [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

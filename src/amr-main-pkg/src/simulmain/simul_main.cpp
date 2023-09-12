@@ -12,10 +12,11 @@ pSHM sharedMemory;
 ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
     RCLCPP_INFO(get_logger(), "Parking Node Created");
-    StartTime = time(NULL);
+    startTime = std::chrono::steady_clock::now();
     step = 0;
     MapCounter = 0;
-
+    PATH.push_back(StartPoint);
+    PATH.push_back(EndPoint);
     m_pub = create_publisher<Twist>("diffbot_amr/cmd_vel", 10);
     m_sub = create_subscription<LaserScan>(
             "diffbot_amr/scan", 10,
@@ -26,38 +27,77 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
 }
 
-
 void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 {
-    timer = time(NULL);
-    std::cout << "absolute time: " << timer << std::endl;
-    MapCounter++;
 
+
+    auto endTime = std::chrono::steady_clock::now();
+    auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
+    double duration = static_cast<double>(elapsedTime.count());
+    MapCounter++;
     int xAstar = int((sharedMemory->xpos+10)*5);
     int yAstar = int((sharedMemory->ypos+10)*5);
-
-    if(abs(xAstar-ASTAR.Destx[ASTAR.count]) < 3 && abs(yAstar-ASTAR.Desty[ASTAR.count]) < 3)
+    coordinate AmrLoc = {xAstar,yAstar};
+    PATH.front() = AmrLoc;
+    if(PathAdded){
+        if(PATH.size() != 2)
+            PATH.erase(PATH.begin()+1,PATH.end()-1);
+        PATH.insert(PATH.begin()+1,P_C.SafeLocation.begin(),P_C.SafeLocation.end());
+        PathAdded = false;
+    }
+    if(abs(xAstar-PATH[1].first) < 2 && abs(yAstar-PATH[1].second) < 2)
     {
-        ASTAR.Mapmatrix[ASTAR.Destx[ASTAR.count]][ASTAR.Desty[ASTAR.count]] = 0;
-        ASTAR.count++;
-        if(ASTAR.count==3)
-        {
-            ASTAR.count-=3;
-        }
+        PATH.erase(PATH.begin()+1);
+    }
+    if(PATH.size() == 1){
+        std::cout << "Calculation Finished!";
+        return;
+    }
+    std::cout << "----------------------------" << std::endl;
+    std::cout << "Present AMR Location: " << "(" << xAstar << "," << yAstar << ")" <<std::endl;
+    std::cout << "ABSTime: " << duration << std::endl;
+    for(int i = 0; i < PATH.size(); i++){
+        std::cout << PATH[i].first << ", " << PATH[i].second << "\n";
     }
 
     Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, sharedMemory->ypos, MapCounter);
-
-
-    int absT = int(timer - StartTime);
-
-    O_D.SaveObsInfo(Cluster.LabelingArray, absT);
-    O_D.Print();
-//    O_D.Pred_Print();
-    std::cout << "\n";
-
-
-    ASTAR.startAstar(xAstar, yAstar);
+    O_D.SaveObsInfo(Cluster.LabelingArray, duration);
+    O_D.LinearRegression();
+    O_D.Prediction(5,1000);
+    O_D.Pred_Print();
+    ASTAR.startAstar(PATH);
+    ASTAR.AmrFuturePath(ASTAR.traj, m_twist_msg.linear.x);
+    for(int i = 0 ; i < O_D.GetNum_ObsPredPoint() ; i++) {
+        auto temp = O_D.GetObsPredPoint(i);
+        int CollisionPoint = P_C.CollisionPrediction(ASTAR.futuretraj, temp);
+        if (CollisionPoint == -1) {
+            continue;
+        }
+        else {
+            int ColPredictedPointX = int(O_D.coeff_data[i].first.first +
+                                         O_D.coeff_data[i].first.second * (duration + 1000 * CollisionPoint));
+            int ColPredictedPointY = int(O_D.coeff_data[i].second.first +
+                                         O_D.coeff_data[i].second.second * (duration + 1000 * CollisionPoint));
+            coordinate ColPredictedPoint = std::make_pair(ColPredictedPointX, ColPredictedPointY);
+            std::cout << "충돌 시간[ms] 및 위치: " << duration + 1000 * CollisionPoint << "[ms], (" << ColPredictedPointX << ", " << ColPredictedPointY << ")\n";
+            O_D.Prediction(20, 400);
+            PathChangeDatas.ColPredictedPoint = ColPredictedPoint;
+            PathChangeDatas.ObsTrajSample = O_D.GetObsPredPoint(i);
+            PathChangeDatas.AmrLoc = std::make_pair(xAstar, yAstar);
+            PathChangeDatas.AmrVel = m_twist_msg.linear.x;
+            PathChangeDatas.ObsCoeffData = O_D.coeff_data[i];
+            P_C.GetSafeLoc(PathChangeDatas, duration);
+            if(P_C.SafeLocation.front().first != -1)PathAdded = true;
+            std::cout << P_C.SafeLocation.size() << "LOC \n";
+            for (int i = 0; i < P_C.SafeLocation.size(); i++) {
+                std::cout << "Alternative Path: (" << P_C.SafeLocation[i].first << ", " << P_C.SafeLocation[i].second
+                          << ")\n";
+            }
+        }
+        std::cout << std::endl;
+        std::cout << CollisionPoint << "초 후 충돌합니다!!\n";
+        std::cout << std::endl;
+    }
 
     control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
 
@@ -65,9 +105,8 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.traj.pop();
     }
-
-//    ASTAR.PrintMap(); // PathPlanning Map
-    Cluster.PrintMap(); // Dynamic Obstacle Map
+    ASTAR.PrintMap(); // PathPlanning Map
+//    Cluster.PrintMap(); // Dynamic Obstacle Map
 }
 
 void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
@@ -82,7 +121,6 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
     sharedMemory->heading = yaw;
     sharedMemory->xpos = msg->pose.pose.position.x;
     sharedMemory->ypos = msg->pose.pose.position.y;
-
 }
 
 int ParkingNode::star_position(int CurrentX, int CurrentY)
@@ -109,12 +147,16 @@ void ParkingNode::control_star_position(int dict)
     if (value > 3.14) {value = value - 2*PI;}
     else if (value < -3.14) {value = value + 2*PI;}
     float turn_offset = 0.7 * (value);
-    std::cout << "Turn_offset: " << turn_offset << std::endl;
-    if (abs(turn_offset) > 0.01) {
-        m_twist_msg.linear.x = 0.4;
+//    std::cout << "Turn_offset: " << turn_offset << "\n\n";
+    if (abs(turn_offset) > 0.005) {
+        m_twist_msg.linear.x = 0.6;
         m_twist_msg.angular.z = turn_offset;
         m_pub->publish(m_twist_msg);
     }
+}
+ParkingNode::~ParkingNode()
+{
+
 }
 
 void clearSharedMemory()
@@ -132,11 +174,6 @@ void StartSimulation()
 
 }
 
-
-ParkingNode::~ParkingNode()
-{
-//    delete pO_D;
-}
 
 class CommunicationThread : public QThread
 {

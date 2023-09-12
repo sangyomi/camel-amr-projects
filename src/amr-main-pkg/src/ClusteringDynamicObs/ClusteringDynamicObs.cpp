@@ -26,11 +26,11 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     {
         if ((0<x_spot[i]&&x_spot[i]<grid-1) && (0<y_spot[i]&&y_spot[i]<grid-1))
         {
-            Mapmatrix[x_spot[i]][y_spot[i]] = 1;
-            Mapmatrix[x_spot[i]+1][y_spot[i]] = 1;
-            Mapmatrix[x_spot[i]-1][y_spot[i]] = 1;
-            Mapmatrix[x_spot[i]][y_spot[i]+1] = 1;
-            Mapmatrix[x_spot[i]][y_spot[i]-1] = 1;
+//            Mapmatrix[x_spot[i]][y_spot[i]] = 1;
+//            Mapmatrix[x_spot[i]+1][y_spot[i]] = 1;
+//            Mapmatrix[x_spot[i]-1][y_spot[i]] = 1;
+//            Mapmatrix[x_spot[i]][y_spot[i]+1] = 1;
+//            Mapmatrix[x_spot[i]][y_spot[i]-1] = 1;
             SavedMatrix[x_spot[i]][y_spot[i]] += 1;
         }
     }
@@ -50,7 +50,7 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
                 {
                     DynamicMatrix[i][j] = 0;
                 }
-                Mapmatrix[i][j] = 0;
+//                Mapmatrix[i][j] = 0;
                 SavedMatrix[i][j] = 0;
                 ClusteringMatrix[i][j] = 0;
             }

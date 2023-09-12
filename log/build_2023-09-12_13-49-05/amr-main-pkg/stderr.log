@@ -1,0 +1,57 @@
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:5[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/../Amr_UI/mainwindow.h:49:25:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+   49 |     QSize frameSize = ui[01;31m[K->[m[Kframe->size();
+      |                         [01;31m[K^~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/../Amr_UI/mainwindow.h:21:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+   21 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+      |                      [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:5[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.h:49:25:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+   49 |     QSize frameSize = ui[01;31m[K->[m[Kframe->size();
+      |                         [01;31m[K^~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.h:21:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+   21 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+      |                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:12:1:[m[K [01;31m[Kerror: [m[Kuninitialized reference member in ‘[01m[Kdouble&[m[K’ [[01;31m[K-fpermissive[m[K]
+   12 | [01;31m[KMainWindow[m[K::MainWindow(QWidget* parent)
+      | [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:5[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.h:50:13:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble& MainWindow::scaling_x[m[K’ should be initialized
+   50 |     double &[01;36m[Kscaling_x[m[K;
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:12:1:[m[K [01;31m[Kerror: [m[Kuninitialized reference member in ‘[01m[Kdouble&[m[K’ [[01;31m[K-fpermissive[m[K]
+   12 | [01;31m[KMainWindow[m[K::MainWindow(QWidget* parent)
+      | [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:5[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.h:51:13:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble& MainWindow::scaling_y[m[K’ should be initialized
+   51 |     double &[01;36m[Kscaling_y[m[K;
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:12:1:[m[K [01;31m[Kerror: [m[Kuninitialized reference member in ‘[01m[Kdouble&[m[K’ [[01;31m[K-fpermissive[m[K]
+   12 | [01;31m[KMainWindow[m[K::MainWindow(QWidget* parent)
+      | [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:5[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.h:52:13:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble& MainWindow::add_x[m[K’ should be initialized
+   52 |     double &[01;36m[Kadd_x[m[K, &add_y;
+      |             [01;36m[K^~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:12:1:[m[K [01;31m[Kerror: [m[Kuninitialized reference member in ‘[01m[Kdouble&[m[K’ [[01;31m[K-fpermissive[m[K]
+   12 | [01;31m[KMainWindow[m[K::MainWindow(QWidget* parent)
+      | [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:5[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.h:52:21:[m[K [01;36m[Knote: [m[K‘[01m[Kdouble& MainWindow::add_y[m[K’ should be initialized
+   52 |     double &add_x, &[01;36m[Kadd_y[m[K;
+      |                     [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/YFTHPEQBWW/moc_mainwindow.cpp:9[m[K,
+                 from [01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/mocs_compilation.cpp:2[m[K:
+[01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/YFTHPEQBWW/../../../../src/amr-main-pkg/src/Amr_UI/mainwindow.h:49:25:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+   49 |     QSize frameSize = ui[01;31m[K->[m[Kframe->size();
+      |                         [01;31m[K^~[m[K
+[01m[K/home/dongju/camel-amr-projects/build/amr-main-pkg/simulmain_autogen/YFTHPEQBWW/../../../../src/amr-main-pkg/src/Amr_UI/mainwindow.h:21:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+   21 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+      |                      [01;36m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:90: CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o] Error 1
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:76: CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

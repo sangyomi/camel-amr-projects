@@ -1,0 +1,20 @@
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:[m[K In destructor ‘[01m[Kvirtual MainWindow::~MainWindow()[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:66:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kview[m[K’ was not declared in this scope
+   66 |     delete [01;31m[Kview[m[K; //delte dynamic allocation
+      |            [01;31m[K^~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:67:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kscene[m[K’ was not declared in this scope
+   67 |     delete [01;31m[Kscene[m[K;
+      |            [01;31m[K^~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:[m[K At global scope:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:75:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::updateLabel()[m[K’
+   75 | void [01;31m[KMainWindow[m[K::updateLabel()
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:75:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::updateLabel()[m[K’
+In file included from [01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp:5[m[K:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/mainwindow.h:25:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   25 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/simulmain.dir/build.make:104: CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:228: CMakeFiles/simulmain.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

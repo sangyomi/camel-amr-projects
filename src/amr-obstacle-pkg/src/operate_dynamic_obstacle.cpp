@@ -60,11 +60,12 @@ private:
         RCLCPP_INFO(get_logger(), "Time: %d", elapsed_time);
 
         for (int i = 0; i < velocity_publishers_.size(); ++i) {
-            if (elapsed_time % 14 < 7) {
-                moveRobotForward(velocity_publishers_[i]);
-            } else {
-                moveRobotBackward(velocity_publishers_[i]);
-            }
+            moveRobotForward(velocity_publishers_[i]);
+//            if (elapsed_time % 14 < 7) {
+//                moveRobotForward(velocity_publishers_[i]);
+//            } else {
+//                moveRobotBackward(velocity_publishers_[i]);
+//            }
         }
     }
 

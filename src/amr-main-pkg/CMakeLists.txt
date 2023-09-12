@@ -37,6 +37,9 @@ find_package(std_msgs REQUIRED)
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Widgets REQUIRED)
+find_package(Eigen3 REQUIRED)
+link_directories(${Eigen_INCLUDE_DIRS})
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -61,10 +64,12 @@ add_library(astar_lib
 
 add_library(obsDetection_lib
         src/ObsDetection/ObsDetection.cpp
+        src/ObsDetection/PathChanger.cpp
 )
 
 add_library(clusteringDynamicObs_lib
         src/ClusteringDynamicObs/ClusteringDynamicObs.cpp
+
 )
 
 
@@ -98,7 +103,7 @@ install(TARGETS
 add_executable(simulmain
         src/simulmain/simul_main.cpp
         src/Amr_UI/mainwindow.cpp
-        src/Amr_UI/qcustomplot.cpp
+#        src/Amr_UI/qcustomplot.cpp
 )
 
 ament_target_dependencies(simulmain

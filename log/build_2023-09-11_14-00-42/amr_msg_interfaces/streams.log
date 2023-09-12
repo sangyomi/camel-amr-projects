@@ -1,0 +1,224 @@
+[0.023s] Invoking command in '/home/dongju/camel-amr-projects/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake /home/dongju/camel-amr-projects/src/amr_msg_interfaces -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr_msg_interfaces
+[0.070s] -- The C compiler identification is GNU 9.4.0
+[0.113s] -- The CXX compiler identification is GNU 9.4.0
+[0.124s] -- Detecting C compiler ABI info
+[0.165s] -- Detecting C compiler ABI info - done
+[0.173s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.174s] -- Detecting C compile features
+[0.174s] -- Detecting C compile features - done
+[0.176s] -- Detecting CXX compiler ABI info
+[0.226s] -- Detecting CXX compiler ABI info - done
+[0.242s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.242s] -- Detecting CXX compile features
+[0.243s] -- Detecting CXX compile features - done
+[0.245s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.265s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.266s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.440s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[0.480s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.489s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.555s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.586s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.646s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.672s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.698s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[0.806s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[0.933s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.943s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.962s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[0.964s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[0.987s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[0.987s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.987s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[0.987s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.004s] -- Found PythonExtra: .so  
+[1.043s] -- Configuring done (1.0s)
+[1.076s] -- Generating done (0.0s)
+[1.078s] -- Build files have been written to: /home/dongju/camel-amr-projects/build/amr_msg_interfaces
+[1.094s] Invoked command in '/home/dongju/camel-amr-projects/build/amr_msg_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake /home/dongju/camel-amr-projects/src/amr_msg_interfaces -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr_msg_interfaces
+[1.095s] Invoking command in '/home/dongju/camel-amr-projects/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr_msg_interfaces -- -j10 -l10
+[1.109s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.112s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.352s] [  5%] Built target amr_msg_interfaces__cpp
+[1.356s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.356s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.356s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.371s] [ 17%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_generator_c.dir/rosidl_generator_c/amr_msg_interfaces/msg/detail/grid_map_info__functions.c.o[0m
+[1.371s] [ 17%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_generator_c.dir/rosidl_generator_c/amr_msg_interfaces/msg/detail/trajectory__functions.c.o[0m
+[1.417s] [ 20%] [32m[1mLinking C shared library libamr_msg_interfaces__rosidl_generator_c.so[0m
+[1.447s] [ 20%] Built target amr_msg_interfaces__rosidl_generator_c
+[1.451s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.451s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.592s] [ 28%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msg_interfaces/msg/detail/grid_map_info__type_support.cpp.o[0m
+[1.592s] [ 30%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msg_interfaces/msg/detail/dds_fastrtps/trajectory__type_support.cpp.o[0m
+[1.592s] [ 33%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msg_interfaces/msg/detail/dds_fastrtps/grid_map_info__type_support.cpp.o[0m
+[1.610s] [ 35%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msg_interfaces/msg/detail/trajectory__type_support.cpp.o[0m
+[1.635s] [ 38%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msg_interfaces/msg/grid_map_info__type_support.cpp.o[0m
+[1.636s] [ 41%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msg_interfaces/msg/trajectory__type_support.cpp.o[0m
+[1.645s] [ 43%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msg_interfaces/msg/grid_map_info__type_support.cpp.o[0m
+[1.647s] [ 46%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msg_interfaces/msg/trajectory__type_support.cpp.o[0m
+[1.775s] [ 48%] [32m[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_c.so[0m
+[1.800s] [ 51%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msg_interfaces/msg/detail/trajectory__type_support.c.o[0m
+[1.802s] [ 53%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msg_interfaces/msg/detail/grid_map_info__type_support.c.o[0m
+[1.814s] [ 53%] Built target amr_msg_interfaces__rosidl_typesupport_c
+[1.879s] [ 56%] [32m[1mLinking C shared library libamr_msg_interfaces__rosidl_typesupport_introspection_c.so[0m
+[1.901s] [ 56%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_c
+[2.019s] [ 58%] [32m[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_cpp.so[0m
+[2.041s] [ 58%] Built target amr_msg_interfaces__rosidl_typesupport_cpp
+[2.056s] [ 61%] [32m[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.109s] [ 61%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_cpp
+[2.141s] [ 64%] [32m[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.209s] [ 64%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.212s] [ 66%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.421s] [ 71%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msg_interfaces/msg/detail/grid_map_info__type_support_c.cpp.o[0m
+[2.421s] [ 71%] [32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msg_interfaces/msg/detail/trajectory__type_support_c.cpp.o[0m
+[2.698s] [ 74%] [32m[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.754s] [ 74%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_c
+[2.761s] [ 74%] Built target amr_msg_interfaces
+[2.767s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.246s] [ 76%] Built target amr_msg_interfaces__py
+[3.253s] [ 82%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__python.dir/rosidl_generator_py/amr_msg_interfaces/msg/_trajectory_s.c.o[0m
+[3.253s] [ 82%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__python.dir/rosidl_generator_py/amr_msg_interfaces/msg/_grid_map_info_s.c.o[0m
+[3.348s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/amr_msg_interfaces/libamr_msg_interfaces__python.so[0m
+[3.369s] [ 84%] Built target amr_msg_interfaces__python
+[3.376s] [ 92%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/amr_msg_interfaces/_amr_msg_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[3.377s] [ 92%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/amr_msg_interfaces/_amr_msg_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.377s] [ 92%] [32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/amr_msg_interfaces/_amr_msg_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.437s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[3.437s] [ 97%] [32m[1mLinking CXX shared library rosidl_generator_py/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[3.437s] [100%] [32m[1mLinking C shared library rosidl_generator_py/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[3.456s] [100%] Built target amr_msg_interfaces__rosidl_typesupport_c__pyext
+[3.456s] [100%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.478s] [100%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.482s] Invoked command in '/home/dongju/camel-amr-projects/build/amr_msg_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr_msg_interfaces -- -j10 -l10
+[3.517s] Invoking command in '/home/dongju/camel-amr-projects/build/amr_msg_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr_msg_interfaces
+[3.521s] -- Install configuration: ""
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/rosidl_interfaces/amr_msg_interfaces
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/trajectory.h
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__struct.h
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__functions.c
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.h
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.h
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__functions.c
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__functions.h
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__struct.h
+[3.521s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__functions.h
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/grid_map_info.h
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/library_path.sh
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/library_path.dsv
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_generator_c.so
+[3.522s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_generator_c.so" to ""
+[3.522s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces
+[3.522s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg
+[3.522s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_fastrtps_c.h
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.522s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.522s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[3.522s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces
+[3.523s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg
+[3.523s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_fastrtps_cpp.hpp
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/dds_fastrtps
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.523s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.523s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces
+[3.523s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg
+[3.523s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_introspection_c.h
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.c
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.c
+[3.523s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_introspection_c.h
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so
+[3.524s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_c.so
+[3.524s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_c.so" to ""
+[3.524s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces
+[3.524s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/trajectory.hpp
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/grid_map_info.hpp
+[3.524s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__struct.hpp
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__builder.hpp
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.hpp
+[3.524s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.hpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__traits.hpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__traits.hpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__builder.hpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__struct.hpp
+[3.525s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces
+[3.525s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg
+[3.525s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_introspection_cpp.hpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.cpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.cpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.525s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so
+[3.525s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so" to ""
+[3.525s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/pythonpath.sh
+[3.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/pythonpath.dsv
+[3.526s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/__init__.py
+[3.550s] Compiling '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/__init__.py'...
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_trajectory_s.c
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/__init__.py
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_grid_map_info_s.c
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_grid_map_info.py
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_trajectory.py
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[3.553s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[3.553s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[3.553s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[3.554s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__python.so
+[3.554s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__python.so" to ""
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/GridMapInfo.idl
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/Trajectory.idl
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/GridMapInfo.msg
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/Trajectory.msg
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/package_run_dependencies/amr_msg_interfaces
+[3.554s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/parent_prefix_path/amr_msg_interfaces
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/ament_prefix_path.sh
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/ament_prefix_path.dsv
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/path.sh
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/path.dsv
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.bash
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.sh
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.zsh
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.dsv
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/package.dsv
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/packages/amr_msg_interfaces
+[3.555s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.556s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfacesConfig.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfacesConfig-version.cmake
+[3.557s] -- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/package.xml
+[3.560s] Invoked command in '/home/dongju/camel-amr-projects/build/amr_msg_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr_msg_interfaces

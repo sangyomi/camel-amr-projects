@@ -8,12 +8,13 @@
 #include <QMainWindow>
 #include "simulmain/simul_main.hpp"
 #include "../../include/Variables/SharedMemory.h"
-#include <QGraphicsView>
-#include <QGraphicsScene>
 #include <QTimer>
-#include <QLineF>
 #include <QPen>
-#include <QTextEdit>
+#include <QVector>
+#include <QPoint>
+#include <QLabel>
+#include <QPainter>
+
 
 
 QT_BEGIN_NAMESPACE
@@ -29,17 +30,27 @@ public:
     MainWindow(QWidget *parent = nullptr); //생성자
     ~MainWindow(); //소멸자
 
+public:
+    void Initsetting();
+    void paintEvent(QPaintEvent* event);
+    void drawcoordinates(QPainter &painter);
+
 private slots:
-    void updateScene();
+    void updatePoints();
+    void updateLabel();
+
 
 private:
     Ui::MainWindow *ui;
-    QGraphicsView *view;
-    QGraphicsView *view2;
-    QGraphicsScene *scene;
-    QTimer *timer;
-    QVector<QPointF> points; // coordinates storage
     QPen pen; //line style
+    QTimer* timer;
+    QVector<QPoint> points;
+    QLabel* label;
+    QSize frameSize;
+    double scaling_x;
+    double scaling_y;
+    double add_x, add_y;
+
 
 };
 

@@ -1,0 +1,80 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found amr_msg_interfaces: 0.6.0 (/home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/dongju/camel-amr-projects/src/amr-main-pkg/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-main-pkg
+[ 15%] [34m[1mAutomatic MOC and UIC for target obsDetection_lib[0m
+[ 15%] [34m[1mAutomatic MOC and UIC for target astar_lib[0m
+[ 15%] [34m[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib[0m
+[ 15%] Built target clusteringDynamicObs_lib_autogen
+[ 15%] Built target astar_lib_autogen
+[ 15%] Built target obsDetection_lib_autogen
+[ 31%] Built target astar_lib
+[ 47%] Built target clusteringDynamicObs_lib
+[ 52%] [32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/src/ObsDetection/PathChanger.cpp.o[0m
+[ 57%] [32m[1mLinking CXX static library libobsDetection_lib.a[0m
+[ 68%] Built target obsDetection_lib
+[ 73%] [34m[1mAutomatic MOC and UIC for target simulmain[0m
+[ 73%] Built target simulmain_autogen
+[ 78%] [32m[1mLinking CXX executable simulmain[0m
+[100%] Built target simulmain
+-- Install configuration: ""
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection/PathChanger.hpp
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar/Astar.hpp
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/Variable.hpp
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/mapinfo.hpp
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/SharedMemory.h
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain/simul_main.hpp
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libastar_lib.a
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libobsDetection_lib.a
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libclusteringDynamicObs_lib.a
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain
+-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain" to ""
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch/t
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv
+-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.dsv
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake
+-- Up-to-date: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.xml

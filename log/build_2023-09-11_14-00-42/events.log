@@ -1,0 +1,778 @@
+[0.000000] (-) TimerEvent: {}
+[0.000322] (amr-gazebo-pkg) JobQueued: {'identifier': 'amr-gazebo-pkg', 'dependencies': OrderedDict()}
+[0.000432] (amr-obstacle-pkg) JobQueued: {'identifier': 'amr-obstacle-pkg', 'dependencies': OrderedDict()}
+[0.000601] (amr_msg_interfaces) JobQueued: {'identifier': 'amr_msg_interfaces', 'dependencies': OrderedDict()}
+[0.000636] (amr-main-pkg) JobQueued: {'identifier': 'amr-main-pkg', 'dependencies': OrderedDict([('amr_msg_interfaces', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces')])}
+[0.000657] (amr_msg_interfaces) JobStarted: {'identifier': 'amr_msg_interfaces'}
+[0.011036] (amr-gazebo-pkg) JobStarted: {'identifier': 'amr-gazebo-pkg'}
+[0.016308] (amr-obstacle-pkg) JobStarted: {'identifier': 'amr-obstacle-pkg'}
+[0.022741] (amr_msg_interfaces) JobProgress: {'identifier': 'amr_msg_interfaces', 'progress': 'cmake'}
+[0.023042] (amr_msg_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '/home/dongju/camel-amr-projects/src/amr_msg_interfaces', '-DCMAKE_EXPORT_COMPILE_COMMANDS=1', '-DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr_msg_interfaces'], 'cwd': '/home/dongju/camel-amr-projects/build/amr_msg_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr_msg_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.026771] (amr-gazebo-pkg) JobProgress: {'identifier': 'amr-gazebo-pkg', 'progress': 'cmake'}
+[0.027144] (amr-gazebo-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '/home/dongju/camel-amr-projects/src/amr-gazebo-pkg', '-DCMAKE_EXPORT_COMPILE_COMMANDS=1', '-DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr-gazebo-pkg'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.031020] (amr-obstacle-pkg) JobProgress: {'identifier': 'amr-obstacle-pkg', 'progress': 'cmake'}
+[0.031067] (amr-obstacle-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '/home/dongju/camel-amr-projects/src/amr-obstacle-pkg', '-DCMAKE_EXPORT_COMPILE_COMMANDS=1', '-DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr-obstacle-pkg'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.070393] (amr_msg_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.071505] (amr-gazebo-pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.071614] (amr-obstacle-pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.099833] (-) TimerEvent: {}
+[0.113900] (amr_msg_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.117135] (amr-gazebo-pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.117900] (amr-obstacle-pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.124467] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.124595] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.126380] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.164897] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.165721] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.166118] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.173128] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.173601] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.174051] (amr_msg_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.174145] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.174281] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.174378] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.174586] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.174668] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.174910] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.176741] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.177112] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.177409] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199930] (-) TimerEvent: {}
+[0.226024] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.226364] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.226513] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.234747] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.234974] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.235363] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.239927] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.242363] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.242451] (amr_msg_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.242733] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.242803] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.243376] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.243453] (amr_msg_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.245760] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.245869] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.262626] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.262769] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.266018] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.266136] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.266195] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.266255] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.300009] (-) TimerEvent: {}
+[0.400220] (-) TimerEvent: {}
+[0.440245] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.440403] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.440522] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)\n'}
+[0.480243] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.481464] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.488551] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.489552] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.490371] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.497281] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.500275] (-) TimerEvent: {}
+[0.554205] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.555789] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.555882] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.578637] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.586429] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.586610] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.600358] (-) TimerEvent: {}
+[0.646187] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.646326] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.646393] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.672263] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.698598] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.700106] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.700189] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.700413] (-) TimerEvent: {}
+[0.702129] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.702199] (amr-gazebo-pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.703700] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.703802] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.749157] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[0.749331] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[0.749478] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[0.749612] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[0.784074] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[0.784253] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[0.784327] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[0.784386] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[0.800519] (-) TimerEvent: {}
+[0.806068] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[0.825731] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[0.825910] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[0.826637] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.826888] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.900601] (-) TimerEvent: {}
+[0.933537] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.944056] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.952185] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.962717] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.964449] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[0.976904] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.5.3 (/opt/ros/foxy/share/gazebo_msgs/cmake)\n'}
+[0.987728] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.987865] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.987923] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[0.987979] (amr_msg_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.000668] (-) TimerEvent: {}
+[1.004417] (amr_msg_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.018752] (amr-gazebo-pkg) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.020784] (amr-gazebo-pkg) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.021335] (amr-gazebo-pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.021849] (amr-gazebo-pkg) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.022984] (amr-gazebo-pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.024271] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Configuring done (1.0s)\n'}
+[1.027148] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.027975] (amr-gazebo-pkg) StderrLine: {'line': b'\x1b[33mCMake Warning:\n'}
+[1.028101] (amr-gazebo-pkg) StderrLine: {'line': b'  Manually-specified variables were not used by the project:\n'}
+[1.028245] (amr-gazebo-pkg) StderrLine: {'line': b'\n'}
+[1.028305] (amr-gazebo-pkg) StderrLine: {'line': b'    CMAKE_EXPORT_COMPILE_COMMANDS\n'}
+[1.028362] (amr-gazebo-pkg) StderrLine: {'line': b'\n'}
+[1.028417] (amr-gazebo-pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[1.028508] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-gazebo-pkg\n'}
+[1.032824] (amr-gazebo-pkg) CommandEnded: {'returncode': 0}
+[1.033320] (amr-gazebo-pkg) JobProgress: {'identifier': 'amr-gazebo-pkg', 'progress': 'build'}
+[1.034017] (amr-gazebo-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg', '--', '-j10', '-l10'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.043153] (amr_msg_interfaces) StdoutLine: {'line': b'-- Configuring done (1.0s)\n'}
+[1.047545] (amr-gazebo-pkg) CommandEnded: {'returncode': 0}
+[1.057686] (amr-gazebo-pkg) JobProgress: {'identifier': 'amr-gazebo-pkg', 'progress': 'install'}
+[1.061714] (amr-gazebo-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-gazebo-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.064919] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.065041] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/launch\n'}
+[1.065120] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/launch/maze_world.launch.py\n'}
+[1.065200] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds\n'}
+[1.065255] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/Factory.world\n'}
+[1.066204] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/simplemap.world\n'}
+[1.066694] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/worlds/AMR_factory.world\n'}
+[1.069003] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf\n'}
+[1.069101] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.gazebo\n'}
+[1.069444] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot_amr.urdf\n'}
+[1.069776] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.urdf.xacro\n'}
+[1.069986] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot.urdf\n'}
+[1.070297] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf\n'}
+[1.070597] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/rviz\n'}
+[1.070663] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/rviz/diffbot_amr.rviz\n'}
+[1.070850] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/rviz/diffbot.rviz\n'}
+[1.071179] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/package_run_dependencies/amr-gazebo-pkg\n'}
+[1.071282] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/parent_prefix_path/amr-gazebo-pkg\n'}
+[1.071385] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/ament_prefix_path.sh\n'}
+[1.071462] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/ament_prefix_path.dsv\n'}
+[1.071540] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/path.sh\n'}
+[1.071618] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/environment/path.dsv\n'}
+[1.071694] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.bash\n'}
+[1.071770] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.sh\n'}
+[1.071846] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.zsh\n'}
+[1.071922] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/local_setup.dsv\n'}
+[1.072004] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.dsv\n'}
+[1.072178] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/ament_index/resource_index/packages/amr-gazebo-pkg\n'}
+[1.072275] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/cmake/amr-gazebo-pkgConfig.cmake\n'}
+[1.072352] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/cmake/amr-gazebo-pkgConfig-version.cmake\n'}
+[1.072418] (amr-gazebo-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-gazebo-pkg/share/amr-gazebo-pkg/package.xml\n'}
+[1.073323] (amr-gazebo-pkg) CommandEnded: {'returncode': 0}
+[1.076984] (amr_msg_interfaces) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.078869] (amr_msg_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/dongju/camel-amr-projects/build/amr_msg_interfaces\n'}
+[1.094238] (amr_msg_interfaces) CommandEnded: {'returncode': 0}
+[1.094805] (amr_msg_interfaces) JobProgress: {'identifier': 'amr_msg_interfaces', 'progress': 'build'}
+[1.095119] (amr_msg_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/dongju/camel-amr-projects/build/amr_msg_interfaces', '--', '-j10', '-l10'], 'cwd': '/home/dongju/camel-amr-projects/build/amr_msg_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr_msg_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.100756] (-) TimerEvent: {}
+[1.109300] (amr_msg_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.111041] (amr-gazebo-pkg) JobEnded: {'identifier': 'amr-gazebo-pkg', 'rc': 0}
+[1.112667] (amr_msg_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.177531] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[1.200834] (-) TimerEvent: {}
+[1.234754] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[1.292176] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)\n'}
+[1.295339] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.300914] (-) TimerEvent: {}
+[1.353005] (amr_msg_interfaces) StdoutLine: {'line': b'[  5%] Built target amr_msg_interfaces__cpp\n'}
+[1.356616] (amr_msg_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.356853] (amr_msg_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.356980] (amr_msg_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.357793] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.358960] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.359147] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.359255] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.360147] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.360393] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.361237] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.362070] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.362585] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[1.363396] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.363523] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.363964] (amr-obstacle-pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.365362] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.371583] (amr_msg_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_generator_c.dir/rosidl_generator_c/amr_msg_interfaces/msg/detail/grid_map_info__functions.c.o\x1b[0m\n'}
+[1.371825] (amr_msg_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_generator_c.dir/rosidl_generator_c/amr_msg_interfaces/msg/detail/trajectory__functions.c.o\x1b[0m\n'}
+[1.386380] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.388798] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-obstacle-pkg\n'}
+[1.400659] (amr-obstacle-pkg) CommandEnded: {'returncode': 0}
+[1.402622] (-) TimerEvent: {}
+[1.403018] (amr-obstacle-pkg) JobProgress: {'identifier': 'amr-obstacle-pkg', 'progress': 'build'}
+[1.403078] (amr-obstacle-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg', '--', '-j10', '-l10'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[1.417397] (amr_msg_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libamr_msg_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[1.424367] (amr-obstacle-pkg) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/operate_dynamic_obstacle_node.dir/src/operate_dynamic_obstacle.cpp.o\x1b[0m\n'}
+[1.424683] (amr-obstacle-pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/spawn_dynamic_obstacle_node.dir/src/spawn_dynamic_obstacle.cpp.o\x1b[0m\n'}
+[1.447140] (amr_msg_interfaces) StdoutLine: {'line': b'[ 20%] Built target amr_msg_interfaces__rosidl_generator_c\n'}
+[1.451710] (amr_msg_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.451933] (amr_msg_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.502685] (-) TimerEvent: {}
+[1.592560] (amr_msg_interfaces) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msg_interfaces/msg/detail/grid_map_info__type_support.cpp.o\x1b[0m\n'}
+[1.592804] (amr_msg_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msg_interfaces/msg/detail/dds_fastrtps/trajectory__type_support.cpp.o\x1b[0m\n'}
+[1.592908] (amr_msg_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/amr_msg_interfaces/msg/detail/dds_fastrtps/grid_map_info__type_support.cpp.o\x1b[0m\n'}
+[1.602776] (-) TimerEvent: {}
+[1.610346] (amr_msg_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/amr_msg_interfaces/msg/detail/trajectory__type_support.cpp.o\x1b[0m\n'}
+[1.635625] (amr_msg_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msg_interfaces/msg/grid_map_info__type_support.cpp.o\x1b[0m\n'}
+[1.636406] (amr_msg_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/amr_msg_interfaces/msg/trajectory__type_support.cpp.o\x1b[0m\n'}
+[1.645965] (amr_msg_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msg_interfaces/msg/grid_map_info__type_support.cpp.o\x1b[0m\n'}
+[1.647730] (amr_msg_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/amr_msg_interfaces/msg/trajectory__type_support.cpp.o\x1b[0m\n'}
+[1.702866] (-) TimerEvent: {}
+[1.775188] (amr_msg_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.800787] (amr_msg_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msg_interfaces/msg/detail/trajectory__type_support.c.o\x1b[0m\n'}
+[1.802650] (amr_msg_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/amr_msg_interfaces/msg/detail/grid_map_info__type_support.c.o\x1b[0m\n'}
+[1.802927] (-) TimerEvent: {}
+[1.814791] (amr_msg_interfaces) StdoutLine: {'line': b'[ 53%] Built target amr_msg_interfaces__rosidl_typesupport_c\n'}
+[1.879589] (amr_msg_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking C shared library libamr_msg_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.901958] (amr_msg_interfaces) StdoutLine: {'line': b'[ 56%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.903017] (-) TimerEvent: {}
+[2.003312] (-) TimerEvent: {}
+[2.019067] (amr_msg_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.041620] (amr_msg_interfaces) StdoutLine: {'line': b'[ 58%] Built target amr_msg_interfaces__rosidl_typesupport_cpp\n'}
+[2.057004] (amr_msg_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.103405] (-) TimerEvent: {}
+[2.109520] (amr_msg_interfaces) StdoutLine: {'line': b'[ 61%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.141762] (amr_msg_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.203497] (-) TimerEvent: {}
+[2.209679] (amr_msg_interfaces) StdoutLine: {'line': b'[ 64%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[2.212992] (amr_msg_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.303579] (-) TimerEvent: {}
+[2.403804] (-) TimerEvent: {}
+[2.421262] (amr_msg_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msg_interfaces/msg/detail/grid_map_info__type_support_c.cpp.o\x1b[0m\n'}
+[2.421417] (amr_msg_interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/amr_msg_interfaces/msg/detail/trajectory__type_support_c.cpp.o\x1b[0m\n'}
+[2.503897] (-) TimerEvent: {}
+[2.590307] (amr-obstacle-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-obstacle-pkg/src/operate_dynamic_obstacle.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid RobotController::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.590496] (amr-obstacle-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-obstacle-pkg/src/operate_dynamic_obstacle.cpp:62:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::Twist_<std::allocator<void> > > > >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[2.590565] (amr-obstacle-pkg) StderrLine: {'line': b'   62 |         for (int i = 0; \x1b[01;35m\x1b[Ki < velocity_publishers_.size()\x1b[m\x1b[K; ++i) {\n'}
+[2.590623] (amr-obstacle-pkg) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.603997] (-) TimerEvent: {}
+[2.698207] (amr_msg_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libamr_msg_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.704069] (-) TimerEvent: {}
+[2.754936] (amr_msg_interfaces) StdoutLine: {'line': b'[ 74%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[2.761355] (amr_msg_interfaces) StdoutLine: {'line': b'[ 74%] Built target amr_msg_interfaces\n'}
+[2.767951] (amr_msg_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.804148] (-) TimerEvent: {}
+[2.904361] (-) TimerEvent: {}
+[3.004586] (-) TimerEvent: {}
+[3.104807] (-) TimerEvent: {}
+[3.205029] (-) TimerEvent: {}
+[3.246514] (amr_msg_interfaces) StdoutLine: {'line': b'[ 76%] Built target amr_msg_interfaces__py\n'}
+[3.253178] (amr_msg_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__python.dir/rosidl_generator_py/amr_msg_interfaces/msg/_trajectory_s.c.o\x1b[0m\n'}
+[3.253317] (amr_msg_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__python.dir/rosidl_generator_py/amr_msg_interfaces/msg/_grid_map_info_s.c.o\x1b[0m\n'}
+[3.305115] (-) TimerEvent: {}
+[3.348078] (amr_msg_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msg_interfaces/libamr_msg_interfaces__python.so\x1b[0m\n'}
+[3.369883] (amr_msg_interfaces) StdoutLine: {'line': b'[ 84%] Built target amr_msg_interfaces__python\n'}
+[3.376936] (amr_msg_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/amr_msg_interfaces/_amr_msg_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.377139] (amr_msg_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/amr_msg_interfaces/_amr_msg_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.377235] (amr_msg_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/amr_msg_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/amr_msg_interfaces/_amr_msg_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.405217] (-) TimerEvent: {}
+[3.437675] (amr_msg_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.437892] (amr_msg_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.437978] (amr_msg_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.456090] (amr_msg_interfaces) StdoutLine: {'line': b'[100%] Built target amr_msg_interfaces__rosidl_typesupport_c__pyext\n'}
+[3.456253] (amr_msg_interfaces) StdoutLine: {'line': b'[100%] Built target amr_msg_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[3.478501] (amr_msg_interfaces) StdoutLine: {'line': b'[100%] Built target amr_msg_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.482304] (amr_msg_interfaces) CommandEnded: {'returncode': 0}
+[3.505315] (-) TimerEvent: {}
+[3.516396] (amr_msg_interfaces) JobProgress: {'identifier': 'amr_msg_interfaces', 'progress': 'install'}
+[3.516669] (amr_msg_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/dongju/camel-amr-projects/build/amr_msg_interfaces'], 'cwd': '/home/dongju/camel-amr-projects/build/amr_msg_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr_msg_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[3.521075] (amr_msg_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.521230] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/rosidl_interfaces/amr_msg_interfaces\n'}
+[3.521308] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces\n'}
+[3.521388] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg\n'}
+[3.521458] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/trajectory.h\n'}
+[3.521526] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.521592] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail\n'}
+[3.521668] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__struct.h\n'}
+[3.521736] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__functions.c\n'}
+[3.521802] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.h\n'}
+[3.521869] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.h\n'}
+[3.521935] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__functions.c\n'}
+[3.522011] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__functions.h\n'}
+[3.522066] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__struct.h\n'}
+[3.522130] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__functions.h\n'}
+[3.522185] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/grid_map_info.h\n'}
+[3.522250] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/library_path.sh\n'}
+[3.522303] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/library_path.dsv\n'}
+[3.522368] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_generator_c.so\n'}
+[3.522495] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_generator_c.so" to ""\n'}
+[3.522578] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces\n'}
+[3.522644] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg\n'}
+[3.522709] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail\n'}
+[3.522773] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h\n'}
+[3.522839] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_fastrtps_c.h\n'}
+[3.522893] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.522946] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.523009] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[3.523098] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces\n'}
+[3.523166] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg\n'}
+[3.523233] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail\n'}
+[3.523298] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.523364] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/dds_fastrtps\n'}
+[3.523422] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.523475] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.523528] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.523618] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[3.523684] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces\n'}
+[3.523748] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg\n'}
+[3.523822] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail\n'}
+[3.523888] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_introspection_c.h\n'}
+[3.523947] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.c\n'}
+[3.524028] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.c\n'}
+[3.524083] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_introspection_c.h\n'}
+[3.524149] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.524214] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.524268] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.524322] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_c.so\n'}
+[3.524393] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[3.524463] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces\n'}
+[3.524528] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg\n'}
+[3.524603] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/trajectory.hpp\n'}
+[3.524677] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.524744] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/grid_map_info.hpp\n'}
+[3.524815] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail\n'}
+[3.524881] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__struct.hpp\n'}
+[3.524947] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__builder.hpp\n'}
+[3.525020] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.hpp\n'}
+[3.525075] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.hpp\n'}
+[3.525161] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__traits.hpp\n'}
+[3.525233] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__traits.hpp\n'}
+[3.525299] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__builder.hpp\n'}
+[3.525366] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__struct.hpp\n'}
+[3.525431] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces\n'}
+[3.525487] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg\n'}
+[3.525542] (amr_msg_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail\n'}
+[3.525595] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.525661] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/grid_map_info__type_support.cpp\n'}
+[3.525726] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__type_support.cpp\n'}
+[3.525780] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/include/amr_msg_interfaces/msg/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.525845] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.525912] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.525978] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.526036] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[3.526104] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/pythonpath.sh\n'}
+[3.526158] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/pythonpath.dsv\n'}
+[3.526216] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/__init__.py\n'}
+[3.550085] (amr_msg_interfaces) StdoutLine: {'line': b"Compiling '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/__init__.py'...\n"}
+[3.553185] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg\n'}
+[3.553310] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_trajectory_s.c\n'}
+[3.553392] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/__init__.py\n'}
+[3.553462] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_grid_map_info_s.c\n'}
+[3.553530] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_grid_map_info.py\n'}
+[3.553587] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/msg/_trajectory.py\n'}
+[3.553655] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.553801] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[3.553874] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.554053] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[3.554129] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.554302] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages/amr_msg_interfaces/amr_msg_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[3.554369] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__python.so\n'}
+[3.554549] (amr_msg_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/libamr_msg_interfaces__python.so" to ""\n'}
+[3.554621] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/GridMapInfo.idl\n'}
+[3.554694] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/Trajectory.idl\n'}
+[3.554771] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/GridMapInfo.msg\n'}
+[3.554851] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/msg/Trajectory.msg\n'}
+[3.554957] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/package_run_dependencies/amr_msg_interfaces\n'}
+[3.555058] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/parent_prefix_path/amr_msg_interfaces\n'}
+[3.555139] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/ament_prefix_path.sh\n'}
+[3.555222] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/ament_prefix_path.dsv\n'}
+[3.555304] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/path.sh\n'}
+[3.555383] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/environment/path.dsv\n'}
+[3.555467] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.bash\n'}
+[3.555547] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.sh\n'}
+[3.555624] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.zsh\n'}
+[3.555728] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/local_setup.dsv\n'}
+[3.555948] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/package.dsv\n'}
+[3.556045] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/ament_index/resource_index/packages/amr_msg_interfaces\n'}
+[3.556114] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport.cmake\n'}
+[3.556171] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.556239] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.556305] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.556377] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.556451] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.556555] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_generator_cppExport.cmake\n'}
+[3.556641] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.556722] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.556812] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.556895] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.556974] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[3.557051] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.557131] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.557211] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.557291] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.557372] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.557449] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.557527] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfacesConfig.cmake\n'}
+[3.557600] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake/amr_msg_interfacesConfig-version.cmake\n'}
+[3.557672] (amr_msg_interfaces) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/package.xml\n'}
+[3.558833] (amr_msg_interfaces) CommandEnded: {'returncode': 0}
+[3.606259] (-) TimerEvent: {}
+[3.618792] (amr_msg_interfaces) JobEnded: {'identifier': 'amr_msg_interfaces', 'rc': 0}
+[3.620800] (amr-main-pkg) JobStarted: {'identifier': 'amr-main-pkg'}
+[3.626836] (amr-main-pkg) JobProgress: {'identifier': 'amr-main-pkg', 'progress': 'cmake'}
+[3.627034] (amr-main-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '/home/dongju/camel-amr-projects/src/amr-main-pkg', '-DCMAKE_EXPORT_COMPILE_COMMANDS=1', '-DCMAKE_INSTALL_PREFIX=/home/dongju/camel-amr-projects/install/amr-main-pkg'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-main-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-main-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/opt/ros/foxy')]), 'shell': False}
+[3.663842] (amr-main-pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[3.704581] (amr-main-pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[3.706312] (-) TimerEvent: {}
+[3.711110] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.752499] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.760850] (amr-main-pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[3.761028] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.761488] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.764024] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.806414] (-) TimerEvent: {}
+[3.812627] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.818174] (amr-obstacle-pkg) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable spawn_dynamic_obstacle_node\x1b[0m\n'}
+[3.821398] (amr-main-pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[3.821619] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.822017] (amr-main-pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.823657] (amr-main-pkg) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[3.843249] (amr-main-pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[3.843399] (amr-main-pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.906498] (-) TimerEvent: {}
+[3.990353] (amr-obstacle-pkg) StdoutLine: {'line': b'[ 75%] Built target spawn_dynamic_obstacle_node\n'}
+[4.006579] (-) TimerEvent: {}
+[4.007758] (amr-main-pkg) StdoutLine: {'line': b'-- Found amr_msg_interfaces: 0.6.0 (/home/dongju/camel-amr-projects/install/amr_msg_interfaces/share/amr_msg_interfaces/cmake)\n'}
+[4.029538] (amr-main-pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.034565] (amr-main-pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[4.083634] (amr-main-pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[4.106656] (-) TimerEvent: {}
+[4.106868] (amr-main-pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[4.165837] (amr-main-pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.198305] (amr-main-pkg) StdoutLine: {'line': b'-- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[4.206717] (-) TimerEvent: {}
+[4.230202] (amr-main-pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[4.231191] (amr-main-pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.231830] (amr-main-pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.275194] (amr-main-pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[4.275329] (amr-main-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[4.306802] (-) TimerEvent: {}
+[4.307677] (amr-main-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[4.307788] (amr-main-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[4.348203] (amr-main-pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[4.348998] (amr-main-pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.406887] (-) TimerEvent: {}
+[4.456946] (amr-main-pkg) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[4.506974] (-) TimerEvent: {}
+[4.541280] (amr-main-pkg) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[4.607061] (-) TimerEvent: {}
+[4.610941] (amr-main-pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[4.670191] (amr-main-pkg) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 0.9.12 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)\n'}
+[4.672310] (amr-main-pkg) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[4.673736] (amr-main-pkg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.674710] (amr-main-pkg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/dongju/camel-amr-projects/src/amr-main-pkg/include\n'}
+[4.674768] (amr-main-pkg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.675946] (amr-main-pkg) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[4.676014] (amr-main-pkg) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[4.677090] (amr-main-pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.678996] (amr-main-pkg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.679055] (amr-main-pkg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.679444] (amr-main-pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.680421] (amr-main-pkg) StdoutLine: {'line': b'-- Configuring done (1.0s)\n'}
+[4.707142] (-) TimerEvent: {}
+[4.728265] (amr-main-pkg) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.729862] (amr-main-pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-main-pkg\n'}
+[4.737151] (amr-main-pkg) CommandEnded: {'returncode': 0}
+[4.737656] (amr-main-pkg) JobProgress: {'identifier': 'amr-main-pkg', 'progress': 'build'}
+[4.737880] (amr-main-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/dongju/camel-amr-projects/build/amr-main-pkg', '--', '-j10', '-l10'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-main-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-main-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/opt/ros/foxy')]), 'shell': False}
+[4.756179] (amr-main-pkg) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target obsDetection_lib\x1b[0m\n'}
+[4.756426] (amr-main-pkg) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target astar_lib\x1b[0m\n'}
+[4.756506] (amr-main-pkg) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target clusteringDynamicObs_lib\x1b[0m\n'}
+[4.767701] (amr-main-pkg) StdoutLine: {'line': b'[ 16%] Built target clusteringDynamicObs_lib_autogen\n'}
+[4.767898] (amr-main-pkg) StdoutLine: {'line': b'[ 16%] Built target astar_lib_autogen\n'}
+[4.767977] (amr-main-pkg) StdoutLine: {'line': b'[ 16%] Built target obsDetection_lib_autogen\n'}
+[4.774504] (amr-main-pkg) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/obsDetection_lib_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[4.774678] (amr-main-pkg) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o\x1b[0m\n'}
+[4.774805] (amr-main-pkg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/astar_lib.dir/astar_lib_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[4.774974] (amr-main-pkg) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/clusteringDynamicObs_lib.dir/clusteringDynamicObs_lib_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[4.775087] (amr-main-pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/astar_lib.dir/src/astar/Astar.cpp.o\x1b[0m\n'}
+[4.775185] (amr-main-pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/obsDetection_lib.dir/src/ObsDetection/ObsDetection.cpp.o\x1b[0m\n'}
+[4.807248] (-) TimerEvent: {}
+[4.907565] (-) TimerEvent: {}
+[5.007831] (-) TimerEvent: {}
+[5.028535] (amr-main-pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/astar/Astar.cpp:4\x1b[m\x1b[K:\n'}
+[5.028814] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KAstar_planning::Astar_planning()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.028942] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:38:35:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KAstar_planning::Mapmatrix\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[5.029056] (amr-main-pkg) StderrLine: {'line': b'   38 |     std::vector<std::vector<int>> \x1b[01;35m\x1b[KMapmatrix\x1b[m\x1b[K;\n'}
+[5.029158] (amr-main-pkg) StderrLine: {'line': b'      |                                   \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[5.029257] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/include/astar/Astar.hpp:29:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kint Astar_planning::dx1 [4]\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[5.029365] (amr-main-pkg) StderrLine: {'line': b'   29 |     int \x1b[01;35m\x1b[Kdx1\x1b[m\x1b[K[4];\n'}
+[5.029466] (amr-main-pkg) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[5.029568] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/astar/Astar.cpp:17:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[5.029673] (amr-main-pkg) StderrLine: {'line': b'   17 | \x1b[01;35m\x1b[KAstar_planning\x1b[m\x1b[K::Astar_planning()\n'}
+[5.029773] (amr-main-pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.107932] (-) TimerEvent: {}
+[5.208243] (-) TimerEvent: {}
+[5.308500] (-) TimerEvent: {}
+[5.315121] (amr-main-pkg) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX static library libastar_lib.a\x1b[0m\n'}
+[5.326978] (amr-main-pkg) StdoutLine: {'line': b'[ 55%] Built target astar_lib\n'}
+[5.408591] (-) TimerEvent: {}
+[5.488982] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ObsDetection::SaveObsInfo(std::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >&, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.489146] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:9:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.489218] (amr-main-pkg) StderrLine: {'line': b'    9 | for(int i=0; \x1b[01;35m\x1b[Ki<LidarData.size()\x1b[m\x1b[K; i++ ){\n'}
+[5.489275] (amr-main-pkg) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.494144] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ClusteringDynamicObs::ClusteringDynamicObstacle(int, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.494253] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:107:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.494316] (amr-main-pkg) StderrLine: {'line': b'  107 |     for (int i = 0 ; \x1b[01;35m\x1b[Ki < LabelingStack.size()\x1b[m\x1b[K ; i++)\n'}
+[5.494370] (amr-main-pkg) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.496217] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:19:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.496315] (amr-main-pkg) StderrLine: {'line': b'   19 | for(int i=0; \x1b[01;35m\x1b[Ki<LidarData.size()\x1b[m\x1b[K; i++ ){\n'}
+[5.496371] (amr-main-pkg) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.496425] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:20:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<ObsDetection::obs_info>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.496481] (amr-main-pkg) StderrLine: {'line': b'   20 | for(int j=0; \x1b[01;35m\x1b[Kj<ObsLog.size()\x1b[m\x1b[K; j++){\n'}
+[5.496534] (amr-main-pkg) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.496638] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:115:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.496698] (amr-main-pkg) StderrLine: {'line': b'  115 |     for (int i = 0 ; \x1b[01;35m\x1b[Ki < LabelingArray.size()\x1b[m\x1b[K ; i++)\n'}
+[5.496756] (amr-main-pkg) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.497192] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:39:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<ObsDetection::obs_info>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.497293] (amr-main-pkg) StderrLine: {'line': b'   39 | for(int i=0; \x1b[01;35m\x1b[Ki<ObsLog.size()\x1b[m\x1b[K; i++){\n'}
+[5.497346] (amr-main-pkg) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.497397] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ClusteringDynamicObs::ConnectObs(int, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.497459] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp:144:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::pair<std::pair<int, int>, std::pair<int, int> > >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.497519] (amr-main-pkg) StderrLine: {'line': b'  144 |     for (int i = 0 ; \x1b[01;35m\x1b[Ki < LabelingArray.size()\x1b[m\x1b[K ; i++)\n'}
+[5.497572] (amr-main-pkg) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.498252] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ObsDetection::Print()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.498310] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:51:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<ObsDetection::obs_info>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.498366] (amr-main-pkg) StderrLine: {'line': b'   51 |     for(int i=0; \x1b[01;35m\x1b[Ki<ObsLog.size()\x1b[m\x1b[K; i++){\n'}
+[5.498418] (amr-main-pkg) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.499920] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ObsDetection::Prediction()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.499977] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:73:22:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<ObsDetection::obs_info>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.500041] (amr-main-pkg) StderrLine: {'line': b'   73 |     for(int i = 0; \x1b[01;35m\x1b[Ki < ObsLog.size()\x1b[m\x1b[K; i++){\n'}
+[5.500094] (amr-main-pkg) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.508675] (-) TimerEvent: {}
+[5.564467] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ObsDetection::Pred_Print()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.564651] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/ObsDetection.cpp:119:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<ObsDetection::obs_info>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[5.564730] (amr-main-pkg) StderrLine: {'line': b'  119 |     for(int i=0; \x1b[01;35m\x1b[Ki<ObsPredPoint.size()\x1b[m\x1b[K; i++){\n'}
+[5.564788] (amr-main-pkg) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K~^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.608769] (-) TimerEvent: {}
+[5.694921] (amr-obstacle-pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable operate_dynamic_obstacle_node\x1b[0m\n'}
+[5.708858] (-) TimerEvent: {}
+[5.753160] (amr-main-pkg) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX static library libclusteringDynamicObs_lib.a\x1b[0m\n'}
+[5.764219] (amr-main-pkg) StdoutLine: {'line': b'[ 61%] Built target clusteringDynamicObs_lib\n'}
+[5.808950] (-) TimerEvent: {}
+[5.882219] (amr-obstacle-pkg) StdoutLine: {'line': b'[100%] Built target operate_dynamic_obstacle_node\n'}
+[5.885310] (amr-obstacle-pkg) CommandEnded: {'returncode': 0}
+[5.897812] (amr-obstacle-pkg) JobProgress: {'identifier': 'amr-obstacle-pkg', 'progress': 'install'}
+[5.898224] (amr-obstacle-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib::home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages::home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[5.902582] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.902778] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/operate_dynamic_obstacle_node\n'}
+[5.904007] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/operate_dynamic_obstacle_node" to ""\n'}
+[5.904091] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/spawn_dynamic_obstacle_node\n'}
+[5.904486] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/spawn_dynamic_obstacle_node" to ""\n'}
+[5.904573] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/launch\n'}
+[5.904644] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/launch/dynamic_obstacle.launch.py\n'}
+[5.904732] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg\n'}
+[5.904844] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg\n'}
+[5.904954] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.sh\n'}
+[5.905043] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.dsv\n'}
+[5.905136] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.sh\n'}
+[5.905221] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.dsv\n'}
+[5.905307] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.bash\n'}
+[5.905396] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.sh\n'}
+[5.905483] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.zsh\n'}
+[5.905578] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.dsv\n'}
+[5.905653] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.dsv\n'}
+[5.905738] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/packages/amr-obstacle-pkg\n'}
+[5.905829] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig.cmake\n'}
+[5.905894] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig-version.cmake\n'}
+[5.905966] (amr-obstacle-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.xml\n'}
+[5.907013] (amr-obstacle-pkg) CommandEnded: {'returncode': 0}
+[5.910920] (-) TimerEvent: {}
+[5.949704] (amr-obstacle-pkg) JobEnded: {'identifier': 'amr-obstacle-pkg', 'rc': 0}
+[6.011020] (-) TimerEvent: {}
+[6.111247] (-) TimerEvent: {}
+[6.211475] (-) TimerEvent: {}
+[6.311714] (-) TimerEvent: {}
+[6.411944] (-) TimerEvent: {}
+[6.512179] (-) TimerEvent: {}
+[6.612412] (-) TimerEvent: {}
+[6.712641] (-) TimerEvent: {}
+[6.812867] (-) TimerEvent: {}
+[6.913090] (-) TimerEvent: {}
+[7.013324] (-) TimerEvent: {}
+[7.113552] (-) TimerEvent: {}
+[7.213776] (-) TimerEvent: {}
+[7.314005] (-) TimerEvent: {}
+[7.414231] (-) TimerEvent: {}
+[7.514466] (-) TimerEvent: {}
+[7.614701] (-) TimerEvent: {}
+[7.714934] (-) TimerEvent: {}
+[7.815152] (-) TimerEvent: {}
+[7.915367] (-) TimerEvent: {}
+[8.015587] (-) TimerEvent: {}
+[8.115808] (-) TimerEvent: {}
+[8.216026] (-) TimerEvent: {}
+[8.316242] (-) TimerEvent: {}
+[8.416461] (-) TimerEvent: {}
+[8.516682] (-) TimerEvent: {}
+[8.616899] (-) TimerEvent: {}
+[8.717120] (-) TimerEvent: {}
+[8.817340] (-) TimerEvent: {}
+[8.917552] (-) TimerEvent: {}
+[9.017772] (-) TimerEvent: {}
+[9.117984] (-) TimerEvent: {}
+[9.218216] (-) TimerEvent: {}
+[9.318440] (-) TimerEvent: {}
+[9.403589] (amr-main-pkg) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX static library libobsDetection_lib.a\x1b[0m\n'}
+[9.418523] (-) TimerEvent: {}
+[9.444896] (amr-main-pkg) StdoutLine: {'line': b'[ 66%] Built target obsDetection_lib\n'}
+[9.451133] (amr-main-pkg) StdoutLine: {'line': b'[ 72%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target simulmain\x1b[0m\n'}
+[9.518612] (-) TimerEvent: {}
+[9.618851] (-) TimerEvent: {}
+[9.719077] (-) TimerEvent: {}
+[9.737659] (amr-main-pkg) StdoutLine: {'line': b'[ 72%] Built target simulmain_autogen\n'}
+[9.743991] (amr-main-pkg) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/simulmain.dir/src/simulmain/simul_main.cpp.o\x1b[0m\n'}
+[9.744212] (amr-main-pkg) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/simulmain.dir/simulmain_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[9.744295] (amr-main-pkg) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/mainwindow.cpp.o\x1b[0m\n'}
+[9.744358] (amr-main-pkg) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding CXX object CMakeFiles/simulmain.dir/src/Amr_UI/qcustomplot.cpp.o\x1b[0m\n'}
+[9.819230] (-) TimerEvent: {}
+[9.919553] (-) TimerEvent: {}
+[10.019859] (-) TimerEvent: {}
+[10.120189] (-) TimerEvent: {}
+[10.220486] (-) TimerEvent: {}
+[10.320784] (-) TimerEvent: {}
+[10.421088] (-) TimerEvent: {}
+[10.521386] (-) TimerEvent: {}
+[10.621689] (-) TimerEvent: {}
+[10.721996] (-) TimerEvent: {}
+[10.822336] (-) TimerEvent: {}
+[10.922652] (-) TimerEvent: {}
+[11.022965] (-) TimerEvent: {}
+[11.123267] (-) TimerEvent: {}
+[11.223562] (-) TimerEvent: {}
+[11.323873] (-) TimerEvent: {}
+[11.424201] (-) TimerEvent: {}
+[11.524526] (-) TimerEvent: {}
+[11.624831] (-) TimerEvent: {}
+[11.725125] (-) TimerEvent: {}
+[11.825424] (-) TimerEvent: {}
+[11.925728] (-) TimerEvent: {}
+[12.026045] (-) TimerEvent: {}
+[12.126370] (-) TimerEvent: {}
+[12.226676] (-) TimerEvent: {}
+[12.326991] (-) TimerEvent: {}
+[12.427294] (-) TimerEvent: {}
+[12.527602] (-) TimerEvent: {}
+[12.627905] (-) TimerEvent: {}
+[12.728226] (-) TimerEvent: {}
+[12.828517] (-) TimerEvent: {}
+[12.928818] (-) TimerEvent: {}
+[13.029144] (-) TimerEvent: {}
+[13.129475] (-) TimerEvent: {}
+[13.229786] (-) TimerEvent: {}
+[13.330097] (-) TimerEvent: {}
+[13.430396] (-) TimerEvent: {}
+[13.474936] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/qcustomplot.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KQPointF QCPLabelPainterPrivate::getAnchorPos(const QPointF&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[13.475155] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/qcustomplot.cpp:5752:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kthis statement may fall through [\x1b[01;35m\x1b[K-Wimplicit-fallthrough=\x1b[m\x1b[K]\n'}
+[13.475282] (amr-main-pkg) StderrLine: {'line': b' 5752 | \x1b[01;35m\x1b[Kswitch\x1b[m\x1b[K (mAnchorSide)\n'}
+[13.475390] (amr-main-pkg) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[13.475484] (amr-main-pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/Amr_UI/qcustomplot.cpp:5764:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Khere\n'}
+[13.475595] (amr-main-pkg) StderrLine: {'line': b' 5764 | \x1b[01;36m\x1b[Kcase\x1b[m\x1b[K amSkewedUpright:\n'}
+[13.475696] (amr-main-pkg) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[13.530503] (-) TimerEvent: {}
+[13.630801] (-) TimerEvent: {}
+[13.731100] (-) TimerEvent: {}
+[13.831405] (-) TimerEvent: {}
+[13.931704] (-) TimerEvent: {}
+[14.032004] (-) TimerEvent: {}
+[14.132310] (-) TimerEvent: {}
+[14.232616] (-) TimerEvent: {}
+[14.332917] (-) TimerEvent: {}
+[14.433203] (-) TimerEvent: {}
+[14.533501] (-) TimerEvent: {}
+[14.633796] (-) TimerEvent: {}
+[14.734092] (-) TimerEvent: {}
+[14.834378] (-) TimerEvent: {}
+[14.934662] (-) TimerEvent: {}
+[15.034946] (-) TimerEvent: {}
+[15.135227] (-) TimerEvent: {}
+[15.235512] (-) TimerEvent: {}
+[15.335793] (-) TimerEvent: {}
+[15.436078] (-) TimerEvent: {}
+[15.536359] (-) TimerEvent: {}
+[15.636638] (-) TimerEvent: {}
+[15.736923] (-) TimerEvent: {}
+[15.837207] (-) TimerEvent: {}
+[15.937483] (-) TimerEvent: {}
+[16.037767] (-) TimerEvent: {}
+[16.138047] (-) TimerEvent: {}
+[16.238332] (-) TimerEvent: {}
+[16.338608] (-) TimerEvent: {}
+[16.438894] (-) TimerEvent: {}
+[16.539174] (-) TimerEvent: {}
+[16.639445] (-) TimerEvent: {}
+[16.739716] (-) TimerEvent: {}
+[16.840000] (-) TimerEvent: {}
+[16.940278] (-) TimerEvent: {}
+[17.040551] (-) TimerEvent: {}
+[17.140830] (-) TimerEvent: {}
+[17.241107] (-) TimerEvent: {}
+[17.341380] (-) TimerEvent: {}
+[17.441651] (-) TimerEvent: {}
+[17.541881] (-) TimerEvent: {}
+[17.642110] (-) TimerEvent: {}
+[17.742352] (-) TimerEvent: {}
+[17.769591] (amr-main-pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable simulmain\x1b[0m\n'}
+[17.842452] (-) TimerEvent: {}
+[17.942713] (-) TimerEvent: {}
+[18.043001] (-) TimerEvent: {}
+[18.143319] (-) TimerEvent: {}
+[18.243590] (-) TimerEvent: {}
+[18.343851] (-) TimerEvent: {}
+[18.444096] (-) TimerEvent: {}
+[18.544339] (-) TimerEvent: {}
+[18.644584] (-) TimerEvent: {}
+[18.654298] (amr-main-pkg) StdoutLine: {'line': b'[100%] Built target simulmain\n'}
+[18.657377] (amr-main-pkg) CommandEnded: {'returncode': 0}
+[18.679567] (amr-main-pkg) JobProgress: {'identifier': 'amr-main-pkg', 'progress': 'install'}
+[18.679861] (amr-main-pkg) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/dongju/camel-amr-projects/build/amr-main-pkg'], 'cwd': '/home/dongju/camel-amr-projects/build/amr-main-pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dongju'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '1687'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:home/dongju/raisimLib/install/lib'), ('HOME', '/home/dongju'), ('OLDPWD', '/home/dongju'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '1508'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6316'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dongju'), ('JOURNAL_STREAM', '8:40665'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dongju'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/dongju/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/dongju-desktop:@/tmp/.ICE-unix/1722,unix/dongju-desktop:/tmp/.ICE-unix/1722'), ('INVOCATION_ID', '1337af767c71499e8c65dce5501eeffb'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:0a0d0a9f-b0e9-4dde-b7ca-0d3d65075b42'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dongju/camel-amr-projects/build/amr-main-pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:home/dongju/raisimLib/install/lib'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/dongju/camel-amr-projects/install/amr_msg_interfaces:/opt/ros/foxy')]), 'shell': False}
+[18.683548] (amr-main-pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.683684] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include\n'}
+[18.683766] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection\n'}
+[18.683834] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ObsDetection/ObsDetection.hpp\n'}
+[18.683913] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar\n'}
+[18.683977] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/astar/Astar.hpp\n'}
+[18.684063] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables\n'}
+[18.684137] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/Variable.hpp\n'}
+[18.684203] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/mapinfo.hpp\n'}
+[18.684264] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/Variables/SharedMemory.h\n'}
+[18.684318] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs\n'}
+[18.684370] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/ClusteringDynamicObs/ClusteringDynamicObs.hpp\n'}
+[18.684424] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain\n'}
+[18.684476] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/include/simulmain/simul_main.hpp\n'}
+[18.684541] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libastar_lib.a\n'}
+[18.684594] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libobsDetection_lib.a\n'}
+[18.687699] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/libclusteringDynamicObs_lib.a\n'}
+[18.687937] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain\n'}
+[18.692161] (amr-main-pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/dongju/camel-amr-projects/install/amr-main-pkg/lib/amr-main-pkg/simulmain" to ""\n'}
+[18.692276] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch\n'}
+[18.692348] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/launch/t\n'}
+[18.692413] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param\n'}
+[18.692470] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/param/amr_config.yaml\n'}
+[18.692677] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/package_run_dependencies/amr-main-pkg\n'}
+[18.692778] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/parent_prefix_path/amr-main-pkg\n'}
+[18.692877] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.sh\n'}
+[18.692952] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/ament_prefix_path.dsv\n'}
+[18.693030] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.sh\n'}
+[18.693104] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/environment/path.dsv\n'}
+[18.693179] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.bash\n'}
+[18.693253] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.sh\n'}
+[18.693331] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.zsh\n'}
+[18.693404] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/local_setup.dsv\n'}
+[18.693477] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.dsv\n'}
+[18.693573] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/ament_index/resource_index/packages/amr-main-pkg\n'}
+[18.693670] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig.cmake\n'}
+[18.693737] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/cmake/amr-main-pkgConfig-version.cmake\n'}
+[18.693806] (amr-main-pkg) StdoutLine: {'line': b'-- Installing: /home/dongju/camel-amr-projects/install/amr-main-pkg/share/amr-main-pkg/package.xml\n'}
+[18.694774] (amr-main-pkg) CommandEnded: {'returncode': 0}
+[18.733936] (amr-main-pkg) JobEnded: {'identifier': 'amr-main-pkg', 'rc': 0}
+[18.734641] (-) EventReactorShutdown: {}

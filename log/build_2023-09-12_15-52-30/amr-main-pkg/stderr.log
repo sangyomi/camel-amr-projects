@@ -1,0 +1,13 @@
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/PathChanger.cpp:[m[K In member function ‘[01m[Kvoid PathChanger::GetSafeLoc(PathChangeData, double)[m[K’:
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/PathChanger.cpp:86:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, int> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   86 |     for(int i = 0 ; [01;35m[Ki < PCD.ObsTrajSample.size()[m[K; i++){
+      |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/PathChanger.cpp:122:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<PathChanger::SafeLoc>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  122 |         for(int i = 0; [01;35m[Ki <newTraj.size()[m[K;i++){
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/PathChanger.cpp:137:24:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kadditional_dest[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  137 |             coordinate [01;35m[Kadditional_dest[m[K = std::make_pair(temp.destination.first + xplus, temp.destination.second+yplus);
+      |                        [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/ObsDetection/PathChanger.cpp:147:24:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kadditional_dest[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  147 |             coordinate [01;35m[Kadditional_dest[m[K = std::make_pair(temp.destination.first + xplus, temp.destination.second+yplus);
+      |                        [01;35m[K^~~~~~~~~~~~~~~[m[K

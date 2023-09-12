@@ -1,0 +1,64 @@
+[0.018s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-obstacle-pkg -- -j10 -l10
+[0.038s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.060s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.225s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.263s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.268s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.378s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.428s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.430s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.550s] -- Found gazebo_msgs: 3.5.3 (/opt/ros/foxy/share/gazebo_msgs/cmake)
+[0.737s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[0.793s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.848s] -- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)
+[0.850s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.914s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.915s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.915s] -- Configured cppcheck include dirs: 
+[0.915s] -- Configured cppcheck exclude dirs and/or files: 
+[0.916s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.916s] -- Configured cpplint exclude dirs and/or files: 
+[0.916s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.917s] -- Added test 'lint_cmake' to check CMake code style
+[0.917s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.918s] -- Added test 'uncrustify' to check C / C++ code style
+[0.918s] -- Configured uncrustify additional arguments: 
+[0.918s] -- Added test 'xmllint' to check XML markup files
+[0.920s] -- Configuring done (0.9s)
+[0.939s] -- Generating done (0.0s)
+[0.940s] -- Build files have been written to: /home/dongju/camel-amr-projects/build/amr-obstacle-pkg
+[0.959s] [ 50%] [32mBuilding CXX object CMakeFiles/operate_dynamic_obstacle_node.dir/src/operate_dynamic_obstacle.cpp.o[0m
+[0.959s] [ 50%] [32mBuilding CXX object CMakeFiles/spawn_dynamic_obstacle_node.dir/src/spawn_dynamic_obstacle.cpp.o[0m
+[2.008s] [01m[K/home/dongju/camel-amr-projects/src/amr-obstacle-pkg/src/operate_dynamic_obstacle.cpp:[m[K In member function ‘[01m[Kvoid RobotController::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.008s] [01m[K/home/dongju/camel-amr-projects/src/amr-obstacle-pkg/src/operate_dynamic_obstacle.cpp:62:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::shared_ptr<rclcpp::Publisher<geometry_msgs::msg::Twist_<std::allocator<void> > > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[2.008s]    62 |         for (int i = 0; [01;35m[Ki < velocity_publishers_.size()[m[K; ++i) {
+[2.008s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.127s] [ 75%] [32m[1mLinking CXX executable spawn_dynamic_obstacle_node[0m
+[3.246s] [ 75%] Built target spawn_dynamic_obstacle_node
+[5.057s] [100%] [32m[1mLinking CXX executable operate_dynamic_obstacle_node[0m
+[5.245s] [100%] Built target operate_dynamic_obstacle_node
+[5.248s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --build /home/dongju/camel-amr-projects/build/amr-obstacle-pkg -- -j10 -l10
+[5.263s] Invoking command in '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-obstacle-pkg
+[5.265s] -- Install configuration: ""
+[5.266s] -- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/operate_dynamic_obstacle_node
+[5.267s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/operate_dynamic_obstacle_node" to ""
+[5.267s] -- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/spawn_dynamic_obstacle_node
+[5.268s] -- Set runtime path of "/home/dongju/camel-amr-projects/install/amr-obstacle-pkg/lib/amr-obstacle-pkg/spawn_dynamic_obstacle_node" to ""
+[5.268s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/launch
+[5.268s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/launch/dynamic_obstacle.launch.py
+[5.268s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/package_run_dependencies/amr-obstacle-pkg
+[5.268s] -- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/parent_prefix_path/amr-obstacle-pkg
+[5.268s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.sh
+[5.268s] -- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/ament_prefix_path.dsv
+[5.268s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.sh
+[5.268s] -- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/environment/path.dsv
+[5.268s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.bash
+[5.268s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.sh
+[5.269s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.zsh
+[5.269s] -- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/local_setup.dsv
+[5.269s] -- Installing: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.dsv
+[5.269s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/ament_index/resource_index/packages/amr-obstacle-pkg
+[5.269s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig.cmake
+[5.269s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/cmake/amr-obstacle-pkgConfig-version.cmake
+[5.269s] -- Up-to-date: /home/dongju/camel-amr-projects/install/amr-obstacle-pkg/share/amr-obstacle-pkg/package.xml
+[5.272s] Invoked command in '/home/dongju/camel-amr-projects/build/amr-obstacle-pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/local/bin/cmake --install /home/dongju/camel-amr-projects/build/amr-obstacle-pkg
