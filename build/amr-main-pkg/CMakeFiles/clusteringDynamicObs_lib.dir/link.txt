@@ -1,2 +1,0 @@
-/usr/bin/ar qc libclusteringDynamicObs_lib.a CMakeFiles/clusteringDynamicObs_lib.dir/clusteringDynamicObs_lib_autogen/mocs_compilation.cpp.o CMakeFiles/clusteringDynamicObs_lib.dir/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp.o
-/usr/bin/ranlib libclusteringDynamicObs_lib.a

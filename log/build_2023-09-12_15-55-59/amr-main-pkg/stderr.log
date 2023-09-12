@@ -1,7 +1,0 @@
-[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:[m[K In member function ‘[01m[Kvoid ParkingNode::sub_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K’:
-[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:59:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, int> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
-   59 |     for(int i = 0; [01;35m[Ki < PATH.size()[m[K; i++){
-      |                    [01;35m[K~~^~~~~~~~~~~~~[m[K
-[01m[K/home/dongju/camel-amr-projects/src/amr-main-pkg/src/simulmain/simul_main.cpp:92:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<int, int> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
-   92 |             for (int i = 0; [01;35m[Ki < P_C.SafeLocation.size()[m[K; i++) {
-      |                             [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K

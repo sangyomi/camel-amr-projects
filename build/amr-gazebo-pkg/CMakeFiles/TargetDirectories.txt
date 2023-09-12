@@ -1,9 +1,0 @@
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/uninstall.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/amr-gazebo-pkg_uninstall.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/test.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/edit_cache.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/rebuild_cache.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/list_install_components.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/install.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/install/local.dir
-/home/dongju/camel-amr-projects/build/amr-gazebo-pkg/CMakeFiles/install/strip.dir
