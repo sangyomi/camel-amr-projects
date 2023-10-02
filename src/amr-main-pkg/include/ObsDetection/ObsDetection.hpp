@@ -7,6 +7,7 @@
 
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
+#include "Variables/SharedMemory.h"
 #include <cmath>
 #include <vector>
 #include <eigen3/Eigen/Dense>
@@ -14,6 +15,7 @@
 #include <vector>
 #include <algorithm>
 #include <queue>
+
 
 class ObsDetection {
 
@@ -23,7 +25,6 @@ private:
         int label;
         bool labelcheck;
         int loss;
-
     };
     std::vector<obs_info> ObsLog;
     std::vector<obs_info> ObsPredPoint;
@@ -38,7 +39,6 @@ public:
     void Print();
     int GetNum_ObsPredPoint();
     std::vector<coordinate>  GetObsPredPoint(int &num);
-    std::vector<coefficientData> coeff_data;
     ~ObsDetection();
 };
 

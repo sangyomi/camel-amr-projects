@@ -5,8 +5,12 @@
 #ifndef AMR_VARIABLE_HPP
 #define AMR_VARIABLE_HPP
 
+#define PI 3.14159265
+
 #include<iostream>
 #include<stack>
+#include<vector>
+
 typedef std::pair<int, int> coordinate;
 typedef std::pair<double, coordinate> loc_data; // detailed data;
 typedef std::pair<double, coordinate> TimeLoc; // Time[ms], coordinate

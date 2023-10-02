@@ -27,6 +27,9 @@
 #include "Variables/mapinfo.hpp"
 #include "ObsDetection/PathChanger.hpp"
 #include "Variables/SharedMemory.h"
+#include "../Amr_UI/mainwindow.h"
+#include <QApplication>
+#include <QThread>
 
 const int num_obs = 1; // number of moving obstacle
 const int sensor_range = 10; // Sensing distance

@@ -3,52 +3,53 @@
 //
 #include "ObsDetection/ObsDetection.hpp"
 
+extern pSHM sharedMemory;
 ObsDetection::ObsDetection()
 {
     CollisionDetectionCheck = false;
 }
 
 void ObsDetection::SaveObsInfo(std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> &LidarData, double time) { // 라벨링, 카운팅된 횟수, 좌표(x,y)
-bool checklist = false; /// 라이다 라벨이 실제 배열안에 있는 건지 확인
-if(ObsLog.empty()){ //
-for(int i=0; i < LidarData.size(); i++ ){
-obs_info temp;
-temp.timepos.push_back(std::make_pair(time, LidarData[i].second));
-temp.label = LidarData[i].first.first;
-temp.labelcheck = false;
-temp.loss = 0;
-ObsLog.push_back(temp);
-}
-return;
-}
-for(int i=0; i<LidarData.size(); i++ ){
-for(int j=0; j<ObsLog.size(); j++){
-if(LidarData[i].first.first == ObsLog[j].label){ ///Label is in the vector
-checklist = true;
-ObsLog[j].labelcheck = true;
-if((ObsLog[j].timepos.back().second.first!=LidarData[i].second.first) || (ObsLog[j].timepos.back().second.second!=LidarData[i].second.second)){ ///좌표값이 다를때만 pos에 저장
-ObsLog[j].timepos.push_back(std::make_pair(time,LidarData[i].second));
-}
-}
-}
-if(checklist ==  false){ ///new label detected from lidar
-obs_info newinfo;
-newinfo.timepos.push_back(std::make_pair(time,LidarData[i].second));
-newinfo.label = LidarData[i].first.first;
-newinfo.labelcheck = true;
-newinfo.loss = 0;
-ObsLog.push_back(newinfo);
-}
-checklist = false; ///should be changed to false for checking in next Lidar label
-}
-for(int i=0; i<ObsLog.size(); i++){
-if(ObsLog[i].labelcheck == false){
-ObsLog.erase(ObsLog.begin()+i); /// label that is not in the lidar should be removed
-}
-else{
-ObsLog[i].labelcheck = false; /// labelcheck should be changed to false for checking in future loop
-}
-}
+    bool checklist = false; /// 라이다 라벨이 실제 배열안에 있는 건지 확인
+    if(ObsLog.empty()){ //
+        for(int i=0; i < LidarData.size(); i++ ){
+            obs_info temp;
+            temp.timepos.push_back(std::make_pair(time, LidarData[i].second));
+            temp.label = LidarData[i].first.first;
+            temp.labelcheck = false;
+            temp.loss = 0;
+            ObsLog.push_back(temp);
+        }
+        return;
+    }
+    for(int i=0; i<LidarData.size(); i++ ){
+        for(int j=0; j<ObsLog.size(); j++){
+            if(LidarData[i].first.first == ObsLog[j].label){ ///Label is in the vector
+                checklist = true;
+                ObsLog[j].labelcheck = true;
+                if((ObsLog[j].timepos.back().second.first!=LidarData[i].second.first) || (ObsLog[j].timepos.back().second.second!=LidarData[i].second.second)){ ///좌표값이 다를때만 pos에 저장
+                    ObsLog[j].timepos.push_back(std::make_pair(time,LidarData[i].second));
+                }
+            }
+        }
+        if(checklist ==  false){ ///new label detected from lidar
+            obs_info newinfo;
+            newinfo.timepos.push_back(std::make_pair(time,LidarData[i].second));
+            newinfo.label = LidarData[i].first.first;
+            newinfo.labelcheck = true;
+            newinfo.loss = 0;
+            ObsLog.push_back(newinfo);
+        }
+        checklist = false; ///should be changed to false for checking in next Lidar label
+    }
+    for(int i=0; i<ObsLog.size(); i++){
+        if(ObsLog[i].labelcheck == false){
+            ObsLog.erase(ObsLog.begin()+i); /// label that is not in the lidar should be removed
+        }
+        else{
+            ObsLog[i].labelcheck = false; /// labelcheck should be changed to false for checking in future loop
+        }
+    }
 }
 
 void ObsDetection::Print(){
@@ -68,7 +69,6 @@ void ObsDetection::Print(){
             std::cout << temp.back().first << "  ";
             temp.pop_back();
         }
-
         std::cout << "\n\n";
     }
 }
@@ -76,7 +76,7 @@ void ObsDetection::Print(){
 void ObsDetection::LinearRegression(){
     if (ObsLog.empty()) return;
     ObsPredPoint.clear();
-    coeff_data.clear();
+    sharedMemory->coeff_data.clear();
     for (int i = 0; i < ObsLog.size(); i++) {
         int n_samples = ObsLog[i].timepos.size();
         if (n_samples < 3) return;
@@ -97,7 +97,7 @@ void ObsDetection::LinearRegression(){
         Eigen::VectorXd coefficients_x = X.colPivHouseholderQr().solve(y_x); // 회귀계수 계산 (x)
         Eigen::VectorXd coefficients_y = X.colPivHouseholderQr().solve(y_y); // 회귀계수 계산 (y)
 
-        coeff_data.push_back(std::make_pair(std::make_pair(coefficients_x(0), coefficients_x(1)) , std::make_pair(coefficients_y(0), coefficients_y(1))));
+        sharedMemory->coeff_data.push_back(std::make_pair(std::make_pair(coefficients_x(0), coefficients_x(1)) , std::make_pair(coefficients_y(0), coefficients_y(1))));
         Eigen::VectorXd y_pred_x = X * coefficients_x;
         Eigen::VectorXd y_pred_y = X * coefficients_y;
         double loss_x = (y_pred_x - y_x).squaredNorm() / n_samples;
@@ -123,8 +123,8 @@ void ObsDetection::Prediction(int step, int stepsize){
         for (int j = 0; j <= step; j++) { // n스탭 미래 예측
             TimeLoc NTP;
             NTP.first = Time;
-            NTP.second.first = coeff_data[i].first.first + coeff_data[i].first.second * Time;
-            NTP.second.second = coeff_data[i].second.first + coeff_data[i].second.second * Time;
+            NTP.second.first = sharedMemory->coeff_data[i].first.first + sharedMemory->coeff_data[i].first.second * Time;
+            NTP.second.second = sharedMemory->coeff_data[i].second.first + sharedMemory->coeff_data[i].second.second * Time;
             if ((NTP.second.first >= 100 || NTP.second.first <= 0) ||
                 (NTP.second.second >= 100 || NTP.second.second <= 0)) {
                 ObsPredPoint[i].timepos.push_back(NTP);

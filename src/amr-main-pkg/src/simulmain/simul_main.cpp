@@ -2,10 +2,6 @@
 // Created by sangjun on 23. 8. 24.
 //
 #include "simulmain/simul_main.hpp"
-#include "../Amr_UI/mainwindow.h"
-#include <QApplication>
-#include <QThread>
-#define PI 3.14159265
 
 pSHM sharedMemory;
 
@@ -29,8 +25,6 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
 
 void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 {
-
-
     auto endTime = std::chrono::steady_clock::now();
     auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
     double duration = static_cast<double>(elapsedTime.count());
@@ -74,10 +68,10 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
             continue;
         }
         else {
-            int ColPredictedPointX = int(O_D.coeff_data[i].first.first +
-                                         O_D.coeff_data[i].first.second * (duration + 1000 * CollisionPoint));
-            int ColPredictedPointY = int(O_D.coeff_data[i].second.first +
-                                         O_D.coeff_data[i].second.second * (duration + 1000 * CollisionPoint));
+            int ColPredictedPointX = int(sharedMemory->coeff_data[i].first.first +
+                    sharedMemory->coeff_data[i].first.second * (duration + 1000 * CollisionPoint));
+            int ColPredictedPointY = int(sharedMemory->coeff_data[i].second.first +
+                    sharedMemory->coeff_data[i].second.second * (duration + 1000 * CollisionPoint));
             coordinate ColPredictedPoint = std::make_pair(ColPredictedPointX, ColPredictedPointY);
             std::cout << "충돌 시간[ms] 및 위치: " << duration + 1000 * CollisionPoint << "[ms], (" << ColPredictedPointX << ", " << ColPredictedPointY << ")\n";
             O_D.Prediction(20, 400);
@@ -85,7 +79,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
             PathChangeDatas.ObsTrajSample = O_D.GetObsPredPoint(i);
             PathChangeDatas.AmrLoc = std::make_pair(xAstar, yAstar);
             PathChangeDatas.AmrVel = m_twist_msg.linear.x;
-            PathChangeDatas.ObsCoeffData = O_D.coeff_data[i];
+            PathChangeDatas.ObsCoeffData = sharedMemory->coeff_data[i];
             P_C.GetSafeLoc(PathChangeDatas, duration);
             if(P_C.SafeLocation.front().first != -1)PathAdded = true;
             std::cout << P_C.SafeLocation.size() << "LOC \n";
@@ -105,7 +99,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.traj.pop();
     }
-    ASTAR.PrintMap(); // PathPlanning Map
+//    ASTAR.PrintMap(); // PathPlanning Map
 //    Cluster.PrintMap(); // Dynamic Obstacle Map
 }
 
@@ -164,6 +158,7 @@ void clearSharedMemory()
     sharedMemory->heading=0;
     sharedMemory->xpos=0;
     sharedMemory->ypos=0;
+    sharedMemory->coeff_data.clear();
 
 }
 

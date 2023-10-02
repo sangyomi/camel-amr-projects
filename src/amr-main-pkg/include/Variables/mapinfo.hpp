@@ -4,7 +4,7 @@
 
 #ifndef AMR_MAPINFO_HPP
 #define AMR_MAPINFO_HPP
-#include <vector>
+#include "Variable.hpp"
 
 namespace MapFunction{
     inline bool isOutofRange(int x, int y, coordinate &mapsize){
