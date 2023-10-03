@@ -20,14 +20,8 @@
 class ObsDetection {
 
 private:
-    struct obs_info{
-        std::vector<TimeLoc> timepos;
-        int label;
-        bool labelcheck;
-        int loss;
-    };
-    std::vector<obs_info> ObsLog;
-    std::vector<obs_info> ObsPredPoint;
+    std::vector<OBSINFO> ObsPredPoint;
+
 public:
     bool CollisionDetectionCheck;
     std::pair<int,int> DynamicDestination;
@@ -36,7 +30,6 @@ public:
     void LinearRegression();
     void Prediction(int step, int stepsize);
     void Pred_Print();
-    void Print();
     int GetNum_ObsPredPoint();
     std::vector<coordinate>  GetObsPredPoint(int &num);
     ~ObsDetection();

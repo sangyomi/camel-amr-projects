@@ -27,7 +27,6 @@
 #include "Variables/mapinfo.hpp"
 #include "ObsDetection/PathChanger.hpp"
 #include "Variables/SharedMemory.h"
-#include "../Amr_UI/mainwindow.h"
 #include <QApplication>
 #include <QThread>
 

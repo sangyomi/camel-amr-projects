@@ -11,9 +11,13 @@ typedef struct _SHM_
     double heading;
     double xpos;
     double ypos;
-    std::vector<coefficientData> coeff_data;
-
 } SHM, *pSHM;
+
+typedef struct _DSHM_
+{
+    std::vector<OBSINFO> obsLog;
+    std::vector<COEFF> coeff_data;
+} DSHM, *pDSHM;
 
 
 #endif //CAMEL_AMR_PROJECTS_SHAREDMEMORY_H

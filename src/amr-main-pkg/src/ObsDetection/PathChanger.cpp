@@ -100,8 +100,8 @@ void PathChanger::GetSafeLoc(PathChangeData PCD, double AbsTime){
             Check = 1;
         }
 
-        double ObsXLoc = PCD.ObsCoeffData.first.first + PCD.ObsCoeffData.first.second * AmrArrivalTime;
-        double ObsYLoc = PCD.ObsCoeffData.second.first + PCD.ObsCoeffData.second.second * AmrArrivalTime;
+        double ObsXLoc = PCD.ObsCoeffData.c1 + PCD.ObsCoeffData.a * AmrArrivalTime;
+        double ObsYLoc = PCD.ObsCoeffData.c2 + PCD.ObsCoeffData.b * AmrArrivalTime;
 
         if(ObsXLoc > 100 || ObsYLoc < 0 || ObsYLoc > 100 || ObsXLoc < 0) continue;
 

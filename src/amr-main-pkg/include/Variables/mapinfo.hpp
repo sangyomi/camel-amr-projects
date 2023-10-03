@@ -23,7 +23,7 @@ struct PathChangeData{
     double AmrVel;
     coordinate AmrLoc;
     std::vector<coordinate> ObsTrajSample;
-    coefficientData ObsCoeffData;
+    COEFF ObsCoeffData;
 };
 
 #endif //AMR_MAPINFO_HPP
