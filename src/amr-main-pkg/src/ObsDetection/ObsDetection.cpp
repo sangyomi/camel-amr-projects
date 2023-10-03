@@ -99,6 +99,7 @@ void ObsDetection::LinearRegression(){
 
     }
 }
+
 void ObsDetection::Prediction(int step, int stepsize){
     if(dynamicSharedMemory.obsLog.empty()) return;
     for(int i = 0; i < dynamicSharedMemory.obsLog.size(); i++){

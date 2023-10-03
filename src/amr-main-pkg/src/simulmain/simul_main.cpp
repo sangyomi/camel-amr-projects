@@ -3,7 +3,6 @@
 //
 #include "simulmain/simul_main.hpp"
 #include "../Amr_UI/mainwindow.h"
-#define PI 3.14159265
 
 pSHM sharedMemory;
 DSHM dynamicSharedMemory;
@@ -71,10 +70,10 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
             continue;
         }
         else {
-            int ColPredictedPointX = int(dynamicSharedMemory.coeff_data[i].c1 +
-                    dynamicSharedMemory.coeff_data[i].a * (duration + 1000 * CollisionPoint));
-            int ColPredictedPointY = int(dynamicSharedMemory.coeff_data[i].c2 +
-                    dynamicSharedMemory.coeff_data[i].b * (duration + 1000 * CollisionPoint));
+            int ColPredictedPointX = int(dynamicSharedMemory.obsLog[i].coeff_data.c1 +
+                    dynamicSharedMemory.obsLog[i].coeff_data.a * (duration + 1000 * CollisionPoint));
+            int ColPredictedPointY = int(dynamicSharedMemory.obsLog[i].coeff_data.c2 +
+                    dynamicSharedMemory.obsLog[i].coeff_data.b * (duration + 1000 * CollisionPoint));
             coordinate ColPredictedPoint = std::make_pair(ColPredictedPointX, ColPredictedPointY);
             std::cout << "충돌 시간[ms] 및 위치: " << duration + 1000 * CollisionPoint << "[ms], (" << ColPredictedPointX << ", " << ColPredictedPointY << ")\n";
             O_D.Prediction(20, 400);
@@ -82,7 +81,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
             PathChangeDatas.ObsTrajSample = O_D.GetObsPredPoint(i);
             PathChangeDatas.AmrLoc = std::make_pair(xAstar, yAstar);
             PathChangeDatas.AmrVel = m_twist_msg.linear.x;
-            PathChangeDatas.ObsCoeffData = dynamicSharedMemory.coeff_data[i];
+            PathChangeDatas.ObsCoeffData = dynamicSharedMemory.obsLog[i].coeff_data;
             P_C.GetSafeLoc(PathChangeDatas, duration);
             if(P_C.SafeLocation.front().first != -1)PathAdded = true;
             std::cout << P_C.SafeLocation.size() << "LOC \n";

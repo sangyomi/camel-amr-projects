@@ -10,6 +10,9 @@
 #include<iostream>
 #include<stack>
 #include<vector>
+#include<cmath>
+#include<algorithm>
+#include<queue>
 
 typedef std::pair<int, int> coordinate;
 typedef std::pair<double, coordinate> loc_data; // detailed data;

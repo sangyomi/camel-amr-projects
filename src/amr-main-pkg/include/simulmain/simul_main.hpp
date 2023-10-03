@@ -5,17 +5,18 @@
 #ifndef CAMEL_AMR_PROJECTS_V1_SIMUL_MAIN_HPP
 #define CAMEL_AMR_PROJECTS_V1_SIMUL_MAIN_HPP
 
-#include <iostream>
+#include "Variables/Variable.hpp"
+#include "Variables/mapinfo.hpp"
+#include "Variables/SharedMemory.h"
 #include <bits/stdc++.h>
 #include <memory>
-#include <vector>
 #include <tuple>
-#include <cmath>
-#include <stack>
 #include <fstream>
 #include <ctime>
 #include <unistd.h>
 #include <chrono>
+#include <QApplication>
+#include <QThread>
 #include "geometry_msgs/msg/twist.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
@@ -23,12 +24,7 @@
 #include "astar/Astar.hpp"
 #include "ObsDetection/ObsDetection.hpp"
 #include "ClusteringDynamicObs/ClusteringDynamicObs.hpp"
-#include "Variables/Variable.hpp"
-#include "Variables/mapinfo.hpp"
 #include "ObsDetection/PathChanger.hpp"
-#include "Variables/SharedMemory.h"
-#include <QApplication>
-#include <QThread>
 
 const int num_obs = 1; // number of moving obstacle
 const int sensor_range = 10; // Sensing distance

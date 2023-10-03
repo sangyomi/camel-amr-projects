@@ -8,13 +8,7 @@
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
 #include "Variables/SharedMemory.h"
-#include <cmath>
-#include <vector>
 #include <eigen3/Eigen/Dense>
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <queue>
 
 
 class ObsDetection {
