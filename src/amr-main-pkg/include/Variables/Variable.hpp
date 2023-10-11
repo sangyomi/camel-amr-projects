@@ -6,6 +6,7 @@
 #define AMR_VARIABLE_HPP
 
 #define PI 3.14159265
+#define GRID 100
 
 #include<iostream>
 #include<stack>
@@ -33,7 +34,7 @@ typedef struct _OBSINFO_
     int label; // 장애물 이름
     std::vector<TimeLoc> obsLocationLog; // 장애물 위치 기록
     std::vector<TimeLoc> obsPredLoc; // 장애물 미래 위치
-    int loss; // 회귀분석 loss값
+    double loss; // 회귀분석 loss값
     COEFF coeff_data; // 회귀분석 계수
     bool labelcheck;
     bool regDataCheck;

@@ -14,6 +14,7 @@
 #include <fstream>
 #include "Variables/Variable.hpp"
 #include "Variables/mapinfo.hpp"
+#include "Variables/SharedMemory.h"
 
 using Pair = std::pair<int, int>;
 using pPair = std::pair<double, Pair>;
@@ -26,6 +27,12 @@ struct Cell {
 class Astar_planning {
 
 private :
+    bool isDestination(int row, int col, Pair dst);
+    bool isInRange(int row, int col);
+    bool isUnBlocked(std::vector<std::vector<int>>& map, int row, int col);
+    double GethValue(int row, int col, Pair dst);
+    void tracePath(Cell cellDetails[101][101], Pair dst);
+    bool aStarSearch(std::vector<std::vector<int>>& map, Pair src, Pair dst);
 
 public:
     int dx1[4];
@@ -43,21 +50,12 @@ public:
     int count;
     int grid;
     std::stack<coordinate> traj;
-    std::vector<coordinate> futuretraj;
     bool CollisionDetectionCheck;
     std::pair<int,int> DynamicDestination;
 
     Astar_planning();
-    bool isDestination(int row, int col, Pair dst);
-    bool isInRange(int row, int col);
-    bool isUnBlocked(std::vector<std::vector<int>>& map, int row, int col);
-    double GethValue(int row, int col, Pair dst);
-    void tracePath(Cell cellDetails[101][101], Pair dst);
-    bool aStarSearch(std::vector<std::vector<int>>& map, Pair src, Pair dst);
     void PrintMap();
     void startAstar(std::vector<coordinate> Path);
-    void AmrFuturePath(std::stack<coordinate> amrtraj, double velocity);
-
     ~Astar_planning();
 };
 

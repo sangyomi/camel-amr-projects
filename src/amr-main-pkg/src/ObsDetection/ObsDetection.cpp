@@ -11,13 +11,13 @@ ObsDetection::ObsDetection()
     CollisionDetectionCheck = false;
 }
 
-void ObsDetection::SaveObsInfo(std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> &LidarData, double time) { // 라벨링, 카운팅된 횟수, 좌표(x,y)
+void ObsDetection::ClassifyObsData() { // 라벨링, 카운팅된 횟수, 좌표(x,y)
     bool checklist = false; /// 라이다 라벨이 실제 배열안에 있는 건지 확인
     if(dynamicSharedMemory.obsLog.empty()){ //
-        for(int i=0; i < LidarData.size(); i++ ){
+        for(int i=0; i < dynamicSharedMemory.LabelingArray.size(); i++ ){
             OBSINFO temp;
-            temp.obsLocationLog.push_back(std::make_pair(time, LidarData[i].second));
-            temp.label = LidarData[i].first.first;
+            temp.obsLocationLog.push_back(std::make_pair(sharedMemory->duration, dynamicSharedMemory.LabelingArray[i].second));
+            temp.label = dynamicSharedMemory.LabelingArray[i].first.first;
             temp.labelcheck = false;
             temp.loss = 0;
             temp.regDataCheck = false;
@@ -25,20 +25,20 @@ void ObsDetection::SaveObsInfo(std::vector<std::pair<std::pair<int,int>, std::pa
         }
         return;
     }
-    for(int i=0; i<LidarData.size(); i++ ){
+    for(int i=0; i<dynamicSharedMemory.LabelingArray.size(); i++ ){
         for(int j=0; j<dynamicSharedMemory.obsLog.size(); j++){
-            if(LidarData[i].first.first == dynamicSharedMemory.obsLog[j].label){ ///Label is in the vector
+            if(dynamicSharedMemory.LabelingArray[i].first.first == dynamicSharedMemory.obsLog[j].label){ ///Label is in the vector
                 checklist = true;
                 dynamicSharedMemory.obsLog[j].labelcheck = true;
-                if((dynamicSharedMemory.obsLog[j].obsLocationLog.back().second.first!=LidarData[i].second.first) || (dynamicSharedMemory.obsLog[j].obsLocationLog.back().second.second!=LidarData[i].second.second)){ ///좌표값이 다를때만 pos에 저장
-                    dynamicSharedMemory.obsLog[j].obsLocationLog.push_back(std::make_pair(time,LidarData[i].second));
+                if((dynamicSharedMemory.obsLog[j].obsLocationLog.back().second.first!=dynamicSharedMemory.LabelingArray[i].second.first) || (dynamicSharedMemory.obsLog[j].obsLocationLog.back().second.second!=dynamicSharedMemory.LabelingArray[i].second.second)){ ///좌표값이 다를때만 pos에 저장
+                    dynamicSharedMemory.obsLog[j].obsLocationLog.push_back(std::make_pair(sharedMemory->duration,dynamicSharedMemory.LabelingArray[i].second));
                 }
             }
         }
         if(checklist ==  false){ ///new label detected from lidar
             OBSINFO temp;
-            temp.obsLocationLog.push_back(std::make_pair(time,LidarData[i].second));
-            temp.label = LidarData[i].first.first;
+            temp.obsLocationLog.push_back(std::make_pair(sharedMemory->duration,dynamicSharedMemory.LabelingArray[i].second));
+            temp.label = dynamicSharedMemory.LabelingArray[i].first.first;
             temp.labelcheck = true;
             temp.loss = 0;
             temp.regDataCheck = false;
@@ -100,27 +100,33 @@ void ObsDetection::LinearRegression(){
     }
 }
 
-void ObsDetection::Prediction(int step, int stepsize){
+void ObsDetection::Prediction(){
     if(dynamicSharedMemory.obsLog.empty()) return;
     for(int i = 0; i < dynamicSharedMemory.obsLog.size(); i++){
         if(dynamicSharedMemory.obsLog[i].regDataCheck){
             double Time = dynamicSharedMemory.obsLog[i].obsLocationLog.back().first;
+            TimeLoc temp2;
             dynamicSharedMemory.obsLog[i].obsPredLoc.clear();
-            for (int j = 0; j <= step; j++) { // n스탭 미래 예측
+            while(Time <= dynamicSharedMemory.obsLog[i].obsLocationLog.back().first + 10000/dynamicSharedMemory.obsLog[i].loss) { // n스탭 미래 예측
                 TimeLoc temp;
                 temp.first = Time;
+                temp2.first = Time;
                 temp.second.first =
                         dynamicSharedMemory.obsLog[i].coeff_data.c1 + dynamicSharedMemory.obsLog[i].coeff_data.a * Time;
                 temp.second.second =
                         dynamicSharedMemory.obsLog[i].coeff_data.c2 + dynamicSharedMemory.obsLog[i].coeff_data.b * Time;
-                if ((temp.second.first >= 100 || temp.second.first <= 0) ||
-                    (temp.second.second >= 100 || temp.second.second <= 0)) {
-                    dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
-                    break;
-                } else {
-                    dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
+                if(temp.second.first != temp2.second.first || temp.second.second != temp2.second.second){
+                    if ((temp.second.first >= 100 || temp.second.first <= 0) ||
+                        (temp.second.second >= 100 || temp.second.second <= 0)) {
+                        dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
+                        break;
+                    }
+                    else {
+                        dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
+                    }
                 }
-                Time += stepsize;
+                temp2 = temp;
+                Time += 10;
             }
         }
     }
@@ -156,7 +162,7 @@ void ObsDetection::Pred_Print(){
         while(!temp.empty()){
             std::cout <<"["<< temp.back().first << "[ms]: (" << temp.back().second.first << "," << temp.back().second.second << ")]\n";
             temp.pop_back();
-            if(temp.empty()) std::cout << "^ 현재 추정 위치 ^\n";
+            if(temp.empty()) std::cout << "^ 현재 추정 위치 ^\n" << "예측 loss값 : " << dynamicSharedMemory.obsLog[i].loss << "\n";
         }
         std::cout << "\n\n";
     }

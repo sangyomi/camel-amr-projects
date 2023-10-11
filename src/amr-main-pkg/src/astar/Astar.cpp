@@ -3,9 +3,11 @@
 //
 #include "astar/Astar.hpp"
 #define MAX 101
-#define GRID 100
 #define GAZEBOGRID 20
-#define PI 3.14159265
+
+
+extern pSHM sharedMemory;
+extern DSHM dynamicSharedMemory;
 
 enum Initseting{
     grid=100,
@@ -117,7 +119,7 @@ bool Astar_planning::aStarSearch(std::vector<std::vector<int>>& map, Pair src, P
                 else if (!closedList[ny][nx] && isUnBlocked(map, ny, nx)) {
                     ng = cellDetails[y][x].g + 1.0;
                     nh = GethValue(ny, nx, dst);
-                    nf = ng + nh;
+                    nf = ng + nh + dynamicSharedMemory.CostMap[nx][ny];
 
                     if (cellDetails[ny][nx].f == INF || cellDetails[ny][nx].f > nf) {
                         cellDetails[ny][nx].f = nf;
@@ -145,7 +147,7 @@ bool Astar_planning::aStarSearch(std::vector<std::vector<int>>& map, Pair src, P
                 else if (!closedList[ny][nx] && isUnBlocked(map, ny, nx)) {
                     ng = cellDetails[y][x].g + 1.414;
                     nh = GethValue(ny, nx, dst);
-                    nf = ng + nh;
+                    nf = ng + nh + dynamicSharedMemory.CostMap[nx][ny];
 
                     if (cellDetails[ny][nx].f == INF || cellDetails[ny][nx].f > nf) {
                         cellDetails[ny][nx].f = nf;
@@ -189,60 +191,6 @@ void Astar_planning::startAstar(std::vector<coordinate> Path)
         aStarSearch(Mapmatrix, src, dst);
     }
 }
-
-void Astar_planning::AmrFuturePath(std::stack<coordinate> amrtraj, double velocity){
-    std::stack<coordinate> temp = amrtraj;
-    int i=0, num=0;
-    double gridDistance = (double)GAZEBOGRID/(double)GRID;
-
-    for(int i=0; i<futuretraj.size(); i++){
-        while(!futuretraj.empty()){
-            futuretraj.erase(futuretraj.begin());
-        }
-    }
-    if(velocity == 0){
-        futuretraj.push_back(amrtraj.top());
-        return;
-    }
-
-    futuretraj.push_back(temp.top());
-    temp.pop();    /// 현재 AMR 좌표는 버리고 다음스텝부터 t+1,t+2,,,,
-
-    int step = velocity/gridDistance; /// 몇 step 가야 1초가 걸리는지 ex)  0.4m/s * 1초 = 0.2m(20/100,그리드1칸 간격) * step, step = 0.4/0.2 = 2
-    if(velocity<gridDistance && step ==0){     /// ex)  속도가 0.05ms * 1초 = 0.2m * x ==> 4초에 1칸 전진,,
-// 나중에 처리
-    }
-    while(num<5 && !temp.empty() ){
-        i++;
-        if(i%step == 0){
-            futuretraj.push_back(temp.top()); /// ex) 속도가 0.4m/s일 경우, step=2칸을 이동한 경우가 1초 이므로, 2칸 간격으로 뽑아냄
-            num++;
-        }
-        if( (num!=5) && (temp.top().first == Destx[count] && temp.top().second == Desty[count])
-            && !(futuretraj.back().first == Destx[count] && futuretraj.back().second == Desty[count]) ) {
-            futuretraj.push_back(temp.top());
-            break;
-        }
-
-        temp.pop();
-    }
-
-/// 프린트 테스트
-    std::cout << "AMR 미래 경로(초 단위) : ";
-    for(int j=0; j<futuretraj.size(); j++){
-        std::cout << "(" << futuretraj[j].first << "," << futuretraj[j].second << ")" << "  ";
-    }
-    std::cout << std::endl;
-//    std::cout << "AMR 전체 경로 : ";
-//    while(!temp.empty()){
-//        std::cout << "(" << temp.top().first << "," << temp.top().second << ")" << "  ";
-//        temp.pop();
-//    }
-//    std::cout << std::endl;
-}
-
-
-
 
 Astar_planning::~Astar_planning()
 {

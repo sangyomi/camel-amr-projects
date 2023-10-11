@@ -43,9 +43,6 @@ private:
     double heading;
     double xpos;
     double ypos;
-    std::chrono::steady_clock::time_point startTime;
-
-
     std::vector<coordinate> a;
 
     int MapCounter;
@@ -58,16 +55,17 @@ private:
     std::stack<coordinate> traj;
     coordinate present_pos;
     coordinate next_pos;
-    ObsDetection O_D;
+    ObsDetection ObsDec;
     int step;
     int count;
     int cnt = 0;
     int AddedPathNum = 1;
-    bool PathAdded = false;
     PathChanger P_C;
     std::vector<coordinate> PATH;
     coordinate StartPoint = {10,90};
     coordinate EndPoint = {90,10};
+    void ClearCostMap();
+    void GetDuration();
 
 public:
     ParkingNode();

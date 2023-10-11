@@ -14,6 +14,7 @@
 #include <ctime>
 #include <chrono>
 #include <time.h>
+#include "Variables/SharedMemory.h"
 
 using Time = std::chrono::high_resolution_clock::time_point;
 
@@ -29,7 +30,6 @@ private:
     clock_t timer_start;
     clock_t timer_end;
 public:
-    std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> LabelingArray;
     double timer_cycle;
     ClusteringDynamicObs();
     void UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, double heading, double xpos, double ypos, int MapCounter);

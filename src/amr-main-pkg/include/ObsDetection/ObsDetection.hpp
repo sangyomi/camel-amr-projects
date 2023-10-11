@@ -20,9 +20,9 @@ public:
     bool CollisionDetectionCheck;
     std::pair<int,int> DynamicDestination;
     ObsDetection();
-    void SaveObsInfo(std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> &LidarData, double time);
+    void ClassifyObsData();
     void LinearRegression();
-    void Prediction(int step, int stepsize);
+    void Prediction();
     void Pred_Print();
     int GetNum_ObsPredPoint();
     std::vector<coordinate>  GetObsPredPoint(int &num);

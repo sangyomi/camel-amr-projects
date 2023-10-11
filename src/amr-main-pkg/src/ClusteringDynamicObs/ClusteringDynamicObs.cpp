@@ -6,6 +6,9 @@
 #define RR 0.00436332313
 #define grid 100
 
+extern pSHM sharedMemory;
+extern DSHM dynamicSharedMemory;
+
 ClusteringDynamicObs::ClusteringDynamicObs()
         : SavedMatrix(grid, std::vector<int>(grid, 0)),
           DynamicMatrix(grid, std::vector<int>(grid, 0)),
@@ -106,15 +109,15 @@ void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
     }
     for (int i = 0 ; i < LabelingStack.size() ; i++)
     {
-        if(LabelingStack[i] == LabelingArray[i].first.second)
+        if(LabelingStack[i] == dynamicSharedMemory.LabelingArray[i].first.second)
         {
-            LabelingArray.erase(LabelingArray.begin() + i);
+            dynamicSharedMemory.LabelingArray.erase(dynamicSharedMemory.LabelingArray.begin() + i);
         }
     }
     LabelingStack.clear();
-    for (int i = 0 ; i < LabelingArray.size() ; i++)
+    for (int i = 0 ; i < dynamicSharedMemory.LabelingArray.size() ; i++)
     {
-        LabelingStack.push_back(LabelingArray[i].first.second);
+        LabelingStack.push_back(dynamicSharedMemory.LabelingArray[i].first.second);
     }
 }
 
@@ -141,27 +144,28 @@ void ClusteringDynamicObs::ConnectObs(int avgX, int avgY)
     double distance = 7;
     int temp = -1;
 
-    for (int i = 0 ; i < LabelingArray.size() ; i++)
+    for (int i = 0 ; i < dynamicSharedMemory.LabelingArray.size() ; i++)
     {
-        int t = std::sqrt(std::pow(avgX-LabelingArray[i].second.first,2) + std::pow(avgY-LabelingArray[i].second.second,2));
+        int t = std::sqrt(std::pow(avgX-dynamicSharedMemory.LabelingArray[i].second.first,2) + std::pow(avgY-dynamicSharedMemory.LabelingArray[i].second.second,2));
 
         if(distance > t)
         {
             distance = t;
-            ClusteringMatrix[avgX][avgY] = LabelingArray[i].first.first;
+            ClusteringMatrix[avgX][avgY] = dynamicSharedMemory.LabelingArray[i].first.first;
             temp = i;
         }
     }
 
     if (temp != -1) // 기존 노드 업데이트
     {
-        LabelingArray[temp] = std::make_pair(std::make_pair(LabelingArray[temp].first.first, LabelingArray[temp].first.second + 1), std::make_pair(avgX, avgY));
+        dynamicSharedMemory.LabelingArray[temp] = std::make_pair(std::make_pair(dynamicSharedMemory.LabelingArray[temp].first.first, dynamicSharedMemory.
+                LabelingArray[temp].first.second + 1), std::make_pair(avgX, avgY));
     }
     else // 새로운 노드 생성
     {
         ObstacleLabel++;
         ClusteringMatrix[avgX][avgY] = ObstacleLabel;
-        LabelingArray.push_back(std::make_pair(std::make_pair(ObstacleLabel, 1), std::make_pair(avgX, avgY)));
+        dynamicSharedMemory.LabelingArray.push_back(std::make_pair(std::make_pair(ObstacleLabel, 1), std::make_pair(avgX, avgY)));
     }
 }
 
