@@ -27,12 +27,12 @@ private:
     const int ObsSafeArea = 7;
     double GetDistance(coordinate p1, coordinate p2);
     double GetAngleCRadian(double a, double b, double c);
-    void MadeCostMap(coordinate &p);
+    void MadeCostMap(coordinate &p, double loss);
 public:
     PathChanger();
     void EvaluatePoint();
     ~PathChanger();
-    int SafeDistance = AmrSafeArea + ObsSafeArea;
+    int SafeDistance = AmrSafeArea + ObsSafeArea + 1;
     std::vector<coordinate> SafeLocation;
     void PrintCostMap();
 };

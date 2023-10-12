@@ -14,7 +14,6 @@
 class ObsDetection {
 
 private:
-    std::vector<OBSINFO> ObsPredPoint;
 
 public:
     bool CollisionDetectionCheck;
@@ -24,8 +23,6 @@ public:
     void LinearRegression();
     void Prediction();
     void Pred_Print();
-    int GetNum_ObsPredPoint();
-    std::vector<coordinate>  GetObsPredPoint(int &num);
     ~ObsDetection();
 };
 

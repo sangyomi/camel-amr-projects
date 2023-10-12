@@ -48,17 +48,16 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     ObsDec.ClassifyObsData();
     ObsDec.LinearRegression();
     ObsDec.Prediction();
-    ObsDec.Pred_Print();
+//    ObsDec.Pred_Print();
     P_C.EvaluatePoint();
     P_C.PrintCostMap();
     ASTAR.startAstar(PATH);
     control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
-
-
     while(!ASTAR.traj.empty())
     {
         ASTAR.traj.pop();
     }
+
 //    ASTAR.PrintMap(); // PathPlanning Map
 //    Cluster.PrintMap(); // Dynamic Obstacle Map
 }

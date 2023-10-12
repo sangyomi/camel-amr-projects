@@ -58,11 +58,10 @@ void ObsDetection::ClassifyObsData() { // 라벨링, 카운팅된 횟수, 좌표
 
 void ObsDetection::LinearRegression(){
     if (dynamicSharedMemory.obsLog.empty()) return;
-    ObsPredPoint.clear();
     dynamicSharedMemory.coeff_data.clear();
     for (int i = 0; i < dynamicSharedMemory.obsLog.size(); i++) {
         int n_samples = dynamicSharedMemory.obsLog[i].obsLocationLog.size();
-        if (n_samples < 3) return;
+        if (n_samples < 5) return;
         Eigen::MatrixXd X(n_samples, 2); // 독립 변수 (시간과 상수항)
         Eigen::VectorXd y_x(n_samples);   // 종속 변수 (x)
         Eigen::VectorXd y_y(n_samples);
@@ -132,28 +131,7 @@ void ObsDetection::Prediction(){
     }
 }
 
-std::vector<coordinate> ObsDetection::GetObsPredPoint(int &num) {
-    std::vector<coordinate> temp;
-    auto temp2 = dynamicSharedMemory.obsLog[num].obsPredLoc;
-    while(!temp2.empty()){
-        temp.push_back(temp2.back().second);
-        temp2.pop_back();
-    }
-    std::reverse(temp.begin(), temp.end());
-    return temp;
-}
-
-int ObsDetection::GetNum_ObsPredPoint() {
-    int count = 0;
-    for(int i = 0; i < dynamicSharedMemory.obsLog.size(); i++){
-        if(!dynamicSharedMemory.obsLog[i].obsPredLoc.empty())
-            count++;
-    }
-    return count;
-}
-
 void ObsDetection::Pred_Print(){
-    if(GetNum_ObsPredPoint() == 0) return;
     std::cout << "==============================" << std::endl;
     for(int i=0; i<dynamicSharedMemory.obsLog.size(); i++){
         std::vector<TimeLoc> temp = dynamicSharedMemory.obsLog[i].obsPredLoc;
