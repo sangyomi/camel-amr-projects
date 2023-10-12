@@ -48,7 +48,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     ObsDec.ClassifyObsData();
     ObsDec.LinearRegression();
     ObsDec.Prediction();
-//    ObsDec.Pred_Print();
+//  ObsDec.Pred_Print();
     P_C.EvaluatePoint();
     P_C.PrintCostMap();
     ASTAR.startAstar(PATH);
