@@ -20,6 +20,7 @@ typedef struct _DSHM_
     std::vector<std::vector<double>> CostMap;
     std::vector<OBSINFO> obsLog;
     std::vector<COEFF> coeff_data;
+    std::vector<COEFF2ND> coeff_sec_data;
     std::vector<std::pair<std::pair<int,int>, std::pair<int,int>>> LabelingArray;
 } DSHM, *pDSHM;
 

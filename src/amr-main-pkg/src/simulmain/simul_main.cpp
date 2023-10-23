@@ -47,6 +47,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, sharedMemory->ypos, MapCounter);
     ObsDec.ClassifyObsData();
     ObsDec.LinearRegression();
+    ObsDec.CurveFitting();
     ObsDec.Prediction();
 //  ObsDec.Pred_Print();
     P_C.EvaluatePoint();

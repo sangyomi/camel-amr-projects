@@ -56,6 +56,77 @@ void ObsDetection::ClassifyObsData() { // 라벨링, 카운팅된 횟수, 좌표
     }
 }
 
+double ObsDetection::quadratic_model(double x, double a, double b, double c) {
+    return a * x * x + b * x + c;
+}
+
+Eigen::VectorXd ObsDetection::curve_fitting(const std::vector<double>& x_data, const std::vector<double>& y_data) {
+    int num_data = x_data.size();
+    Eigen::MatrixXd A(num_data, 3);
+    Eigen::VectorXd y(num_data);
+
+    for (int i = 0; i < num_data; ++i) {
+        double x = x_data[i];
+        A(i, 0) = x * x; // a
+        A(i, 1) = x;     // b
+        A(i, 2) = 1.0;   // c
+        y(i) = y_data[i];
+    }
+
+    Eigen::VectorXd parameters = A.colPivHouseholderQr().solve(y);
+
+    return parameters;
+}
+void ObsDetection::CurveFitting() {
+    if (dynamicSharedMemory.obsLog.empty()) return;
+    dynamicSharedMemory.coeff_data.clear();
+    for (int i = 0; i < dynamicSharedMemory.obsLog.size(); i++) {
+        int n_samples = dynamicSharedMemory.obsLog[i].obsLocationLog.size();
+        if (n_samples < 5) return;
+        std::vector<double> t_data;
+        std::vector<double> x_data;
+        std::vector<double> y_data;
+        std::vector <TimeLoc> temp = dynamicSharedMemory.obsLog[i].obsLocationLog; // t, (x, y)
+        for (int j = 0; j < n_samples; ++j) {
+            double t = temp.back().first; // 시간 데이터
+            double x = temp.back().second.first; // 가상의 x 데이터
+            double y = temp.back().second.second; // 가상의 y 데이터
+            t_data.push_back(t);// 상수항 (Intercept)을 위한 열 추가
+            x_data.push_back(x);
+            y_data.push_back(y);// x를 종속 변수로 저장
+            // y를 종속 변수로 저장
+            temp.pop_back();
+        }
+        Eigen::VectorXd xParameters = curve_fitting(t_data,x_data);
+        Eigen::VectorXd yParameters = curve_fitting(t_data,y_data);
+        double xMse = 0.0;
+        double yMse = 0.0;
+        for (int j = 0; j < n_samples; ++j) {
+            double xPrediction = quadratic_model(t_data[j], xParameters(0), xParameters(1), xParameters(2));
+            double yPrediction = quadratic_model(t_data[j], yParameters(0), yParameters(1), yParameters(2));
+            xMse += (x_data[j] - xPrediction) * (x_data[j] - xPrediction);
+            yMse += (y_data[j] - yPrediction) * (y_data[j] - yPrediction);
+        }
+        xMse /= n_samples;
+        yMse /= n_samples;
+        COEFF2ND tempCOF;
+        tempCOF.a1 = xParameters(0);
+        tempCOF.b1 = xParameters(1);
+        tempCOF.c1 = xParameters(2);
+        tempCOF.a2 = yParameters(0);
+        tempCOF.b2 = yParameters(1);
+        tempCOF.c2 = yParameters(2);
+        tempCOF.xloss = xMse;
+        tempCOF.yloss = yMse;
+        double total_loss = xMse + yMse;
+        dynamicSharedMemory.coeff_sec_data.push_back(tempCOF);
+        dynamicSharedMemory.obsLog[i].coeff_2nd_data = tempCOF;
+        dynamicSharedMemory.obsLog[i].loss = total_loss;
+        dynamicSharedMemory.obsLog[i].regDataCheck = true;
+    }
+}
+
+
 void ObsDetection::LinearRegression(){
     if (dynamicSharedMemory.obsLog.empty()) return;
     dynamicSharedMemory.coeff_data.clear();
@@ -115,7 +186,7 @@ void ObsDetection::Prediction(){
                 temp.second.second =
                         dynamicSharedMemory.obsLog[i].coeff_data.c2 + dynamicSharedMemory.obsLog[i].coeff_data.b * Time;
                 if(temp.second.first != temp2.second.first || temp.second.second != temp2.second.second){
-                    if ((temp.second.first >= 100 || temp.second.first <= 0) ||
+                    if ((temp.second.sfirst >= 100 || temp.second.first <= 0) ||
                         (temp.second.second >= 100 || temp.second.second <= 0)) {
                         dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
                         break;

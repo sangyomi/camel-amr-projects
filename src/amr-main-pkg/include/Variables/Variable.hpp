@@ -27,7 +27,20 @@ typedef struct _COEFFICIENTDATA_{
     double c2;
     double xloss;
     double yloss;
-} COEFF, *pCOEFF; // for LinearRegression
+} COEFF, *pCOEFF;
+
+typedef struct _COEFFICIENT2NDDATA_{
+    // x = a1*t^2 + b1*t + c1
+    // y = a2*t^2 + b2*t + c2
+    double a1;
+    double b1;
+    double c1;
+    double a2;
+    double b2;
+    double c2;
+    double xloss;
+    double yloss;
+} COEFF2ND, *pCOEFF2ND;// for LinearRegression
 
 typedef struct _OBSINFO_
 {
@@ -36,6 +49,7 @@ typedef struct _OBSINFO_
     std::vector<TimeLoc> obsPredLoc; // 장애물 미래 위치
     double loss; // 회귀분석 loss값
     COEFF coeff_data; // 회귀분석 계수
+    COEFF2ND coeff_2nd_data;
     bool labelcheck;
     bool regDataCheck;
 } OBSINFO, *pOBSINFO;
