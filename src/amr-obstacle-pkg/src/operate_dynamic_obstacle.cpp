@@ -71,7 +71,7 @@ private:
 
     void moveRobotForward(const rclcpp::Publisher<Twist>::SharedPtr& publisher) {
         m_twist_msg.linear.x = 0.9;
-        m_twist_msg.angular.z = 0.1;
+        m_twist_msg.angular.z = 0.0;
         publisher->publish(m_twist_msg);
     }
 

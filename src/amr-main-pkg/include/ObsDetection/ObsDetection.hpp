@@ -16,14 +16,17 @@ class ObsDetection {
 private:
     double quadratic_model(double x, double a, double b, double c);
     Eigen::VectorXd curve_fitting(const std::vector<double>& x_data, const std::vector<double>& y_data);
+    void CurveFitting();
+    void LinearRegression();
+    void Prediction();
+    void Prediction2();
 public:
     bool CollisionDetectionCheck;
     std::pair<int,int> DynamicDestination;
     ObsDetection();
     void ClassifyObsData();
-    void CurveFitting();
-    void LinearRegression();
-    void Prediction();
+    void ObsPrediction();
+    void ObsPredictionCurve();
     void Pred_Print();
     ~ObsDetection();
 };

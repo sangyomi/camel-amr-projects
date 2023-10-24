@@ -186,7 +186,7 @@ void ObsDetection::Prediction(){
                 temp.second.second =
                         dynamicSharedMemory.obsLog[i].coeff_data.c2 + dynamicSharedMemory.obsLog[i].coeff_data.b * Time;
                 if(temp.second.first != temp2.second.first || temp.second.second != temp2.second.second){
-                    if ((temp.second.sfirst >= 100 || temp.second.first <= 0) ||
+                    if ((temp.second.first >= 100 || temp.second.first <= 0) ||
                         (temp.second.second >= 100 || temp.second.second <= 0)) {
                         dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
                         break;
@@ -201,7 +201,45 @@ void ObsDetection::Prediction(){
         }
     }
 }
-
+void ObsDetection::Prediction2(){
+    if(dynamicSharedMemory.obsLog.empty()) return;
+    for(int i = 0; i < dynamicSharedMemory.obsLog.size(); i++){
+        if(dynamicSharedMemory.obsLog[i].regDataCheck){
+            double Time = dynamicSharedMemory.obsLog[i].obsLocationLog.back().first;
+            TimeLoc temp2;
+            dynamicSharedMemory.obsLog[i].obsPredLoc.clear();
+            while(Time <= dynamicSharedMemory.obsLog[i].obsLocationLog.back().first + 10000/dynamicSharedMemory.obsLog[i].loss) { // n스탭 미래 예측
+                TimeLoc temp;
+                temp.first = Time;
+                temp2.first = Time;
+                temp.second.first =
+                        dynamicSharedMemory.obsLog[i].coeff_2nd_data.a1 * Time * Time + dynamicSharedMemory.obsLog[i].coeff_2nd_data.b1 * Time + dynamicSharedMemory.obsLog[i].coeff_2nd_data.c1;
+                temp.second.second =
+                        dynamicSharedMemory.obsLog[i].coeff_2nd_data.a2 * Time * Time + dynamicSharedMemory.obsLog[i].coeff_2nd_data.b2 * Time + dynamicSharedMemory.obsLog[i].coeff_2nd_data.c2;
+                if(temp.second.first != temp2.second.first || temp.second.second != temp2.second.second){
+                    if ((temp.second.first >= 100 || temp.second.first <= 0) ||
+                        (temp.second.second >= 100 || temp.second.second <= 0)) {
+                        dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
+                        break;
+                    }
+                    else {
+                        dynamicSharedMemory.obsLog[i].obsPredLoc.push_back(temp);
+                    }
+                }
+                temp2 = temp;
+                Time += 10;
+            }
+        }
+    }
+}
+void ObsDetection::ObsPrediction() {
+    LinearRegression();
+    Prediction();
+}
+void ObsDetection::ObsPredictionCurve() {
+    CurveFitting();
+    Prediction2();
+}
 void ObsDetection::Pred_Print(){
     std::cout << "==============================" << std::endl;
     for(int i=0; i<dynamicSharedMemory.obsLog.size(); i++){

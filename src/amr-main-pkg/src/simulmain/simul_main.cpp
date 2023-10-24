@@ -46,10 +46,9 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
 
     Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, sharedMemory->ypos, MapCounter);
     ObsDec.ClassifyObsData();
-    ObsDec.LinearRegression();
-    ObsDec.CurveFitting();
-    ObsDec.Prediction();
-//  ObsDec.Pred_Print();
+    //ObsDec.ObsPrediction();
+    ObsDec.ObsPredictionCurve();
+    ObsDec.Pred_Print();
     P_C.EvaluatePoint();
     P_C.PrintCostMap();
     ASTAR.startAstar(PATH);
@@ -123,6 +122,7 @@ void clearSharedMemory()
     dynamicSharedMemory.coeff_data.clear();
     dynamicSharedMemory.obsLog.clear();
     dynamicSharedMemory.LabelingArray.clear();
+    dynamicSharedMemory.coeff_sec_data.clear();
     for(int i = 0; i < GRID; i++){
         std::vector<double> temp;
         for(int j = 0; j < GRID; j++){
