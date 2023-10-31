@@ -73,7 +73,7 @@ int main(int argc, char** argv)
     auto node = std::make_shared<SpawnRobot>();
 //    node->sendRequest("dynamic_obstacle_1", 0.0, 0.0, 0);
     //node->sendRequest("dynamic_obstacle_2", 3.0, 8.0, -PI/2);
-    node->sendRequest("dynamic_obstacle_3", 0.0, -9.0, PI/2);
+    node->sendRequest("dynamic_obstacle_3", 0.0, 9.0, -PI/2);
 //    node->sendRequest("dynamic_obstacle_4", -8.0, -8.0, PI/2);
 //    node->sendRequest("dynamic_obstacle_5", 8.0, -5.0, 0);
     rclcpp::shutdown();
