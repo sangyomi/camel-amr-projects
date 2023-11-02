@@ -44,20 +44,21 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     std::cout << "Present AMR Location: " << "(" << xAstar << "," << yAstar << ")" <<std::endl;
     std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
 
-    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, sharedMemory->heading, sharedMemory->xpos, sharedMemory->ypos, MapCounter);
-    ObsDec.ClassifyObsData();
-    ObsDec.ObsPrediction();
-    //ObsDec.ObsPredictionCurve();
-    ObsDec.Pred_Print();
-    P_C.EvaluatePoint();
-    P_C.PrintCostMap();
-    ASTAR.startAstar(PATH);
-    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
+    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, MapCounter);
+
+//    ObsDec.ClassifyObsData();
+//    ObsDec.ObsPrediction();
+//    ObsDec.ObsPredictionCurve();
+//    P_C.EvaluatePoint();
+//
+//    ASTAR.startAstar(PATH);
+//    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
     while(!ASTAR.traj.empty())
     {
         ASTAR.traj.pop();
     }
-
+//    P_C.PrintCostMap();
+//    ObsDec.Pred_Print();
 //    ASTAR.PrintMap(); // PathPlanning Map
 //    Cluster.PrintMap(); // Dynamic Obstacle Map
 }

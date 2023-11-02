@@ -3,6 +3,7 @@
 //
 
 #include "ClusteringDynamicObs/ClusteringDynamicObs.hpp"
+#include "ClusteringDynamicObs/DBSCAN.hpp"
 #define RR 0.00436332313
 #define grid 100
 
@@ -17,55 +18,25 @@ ClusteringDynamicObs::ClusteringDynamicObs()
     ObstacleLabel = 4;
 }
 
-void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, double heading, double xpos, double ypos, int MapCounter)
+void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, int MapCounter)
 {
-
-    for (int i=0 ; i<720 ; i++)
+    int globalX_pos;
+    int globalY_pos;
+    for (int i = 0 ; i < 720 ; i++)
     {
-        x_spot[i] = int(((scanarray[i]*cos((heading+(RR*(i-359)))) + xpos)+10)*(grid/20));
-        y_spot[i] = int(((scanarray[i]*sin((heading+(RR*(i-359)))) + ypos)+10)*(grid/20));
-    }
-    for (int i = 0; i < 720; ++i)
-    {
-        if ((0<x_spot[i]&&x_spot[i]<grid-1) && (0<y_spot[i]&&y_spot[i]<grid-1))
-        {
-//            Mapmatrix[x_spot[i]][y_spot[i]] = 1;
-//            Mapmatrix[x_spot[i]+1][y_spot[i]] = 1;
-//            Mapmatrix[x_spot[i]-1][y_spot[i]] = 1;
-//            Mapmatrix[x_spot[i]][y_spot[i]+1] = 1;
-//            Mapmatrix[x_spot[i]][y_spot[i]-1] = 1;
-            SavedMatrix[x_spot[i]][y_spot[i]] += 1;
+        globalX_pos = int(((scanarray[i]*cos((sharedMemory->heading+(RR*(i-359)))) + sharedMemory->xpos)+10)*(grid/20));
+        globalY_pos = int(((scanarray[i]*sin((sharedMemory->heading+(RR*(i-359)))) + sharedMemory->ypos)+10)*(grid/20));
+        if(globalX_pos >= 0 && globalX_pos < 100 && globalY_pos >= 0 && globalY_pos < 100) {
+            ClusteringMatrix[x_spot[i]][y_spot[i]] = 1;
         }
     }
-    if(MapCounter%30 == 0)
-    {
-        timer_start = clock();
 
-        for (int i = 0; i < grid; ++i)
-        {
-            for(int j = 0 ; j < grid ; ++j)
-            {
-                if (SavedMatrix[i][j] != 0 && SavedMatrix[i][j] != 30)
-                {
-                    DynamicMatrix[i][j] = 1;
-                }
-                else
-                {
-                    DynamicMatrix[i][j] = 0;
-                }
-//                Mapmatrix[i][j] = 0;
-                SavedMatrix[i][j] = 0;
-                ClusteringMatrix[i][j] = 0;
-            }
+    for(int i = 0; i < grid; i++){
+        for(int j = 0; j < grid; j++){
+            std::cout << ClusteringMatrix[i][j];
         }
-        int xPos = int((xpos+10)*5);
-        int yPos = int((xpos+10)*5);
-        ClusteringDynamicObstacle(xPos, yPos);
-
-        timer_end = clock();
+        std::cout << "\n";
     }
-
-    timer_cycle = (double)(timer_end - timer_start);
 }
 
 void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
@@ -174,9 +145,9 @@ void ClusteringDynamicObs::PrintMap()
     std::cout<< "\n";
     for (int i = 0; i < grid; ++i) {
         for (int j = 0; j < grid; ++j) {
-            std::cout << ClusteringMatrix[i][j];
+//            std::cout << ClusteringMatrix[i][j];
 //            std::cout << SavedMatrix[i][j];
-//            std::cout << DynamicMatrix[i][j];
+            std::cout << DynamicMatrix[i][j];
         }
         std::cout << '\n';
     }

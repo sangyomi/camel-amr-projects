@@ -32,7 +32,7 @@ private:
 public:
     double timer_cycle;
     ClusteringDynamicObs();
-    void UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, double heading, double xpos, double ypos, int MapCounter);
+    void UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, int MapCounter);
     void ClusteringDynamicObstacle(int xPos, int yPos);
     void CheckObstacle(int i, int j, int ChangeObstacle, int& SizeCount, std::vector<std::pair<int, int>>& ClusteringInfo);
     void ConnectObs(int avgX, int avgY);
