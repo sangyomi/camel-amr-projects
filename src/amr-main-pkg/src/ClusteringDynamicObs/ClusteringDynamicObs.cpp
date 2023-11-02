@@ -22,7 +22,7 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
 {
     int globalX_pos;
     int globalY_pos;
-    for (int i = 0 ; i < 720 ; i++)
+    for (int i = 0 ; i < scanarray.size() ; i++)
     {
         globalX_pos = int(((scanarray[i]*cos((sharedMemory->heading+(RR*(i-359)))) + sharedMemory->xpos)+10)*(grid/20));
         globalY_pos = int(((scanarray[i]*sin((sharedMemory->heading+(RR*(i-359)))) + sharedMemory->ypos)+10)*(grid/20));
