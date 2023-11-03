@@ -4,35 +4,60 @@
 
 #include "ClusteringDynamicObs/ClusteringDynamicObs.hpp"
 #include "ClusteringDynamicObs/DBSCAN.hpp"
-#define RR 0.00436332313
-#define grid 100
+#define D2R 0.017453293
+#define AMRX 0.325
+#define AMRY 0.455
 
 extern pSHM sharedMemory;
 extern DSHM dynamicSharedMemory;
 
 ClusteringDynamicObs::ClusteringDynamicObs()
-        : SavedMatrix(grid, std::vector<int>(grid, 0)),
-          DynamicMatrix(grid, std::vector<int>(grid, 0)),
-          ClusteringMatrix(grid, std::vector<int>(grid, 0))
+        : SavedMatrix(GRID, std::vector<int>(GRID, 0)),
+          DynamicMatrix(GRID, std::vector<int>(GRID, 0)),
+          ClusteringMatrix(GRID, std::vector<int>(GRID, 0))
 {
     ObstacleLabel = 4;
 }
 
+Dcoordinate ClusteringDynamicObs::ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter){
+    const int LiDAR = 270;
+    double theta = double(LiDAR)/double(numofScan) * iter * D2R;
+    double XPos = scannedlength * sin(theta)+AMRX;
+    double YPos = -1 * scannedlength * cos(theta)+AMRY;
+    Dcoordinate LocalPos = std::make_pair(XPos, YPos);
+    return LocalPos;
+}
+Dcoordinate ClusteringDynamicObs::LocaltoGlobal(Dcoordinate &LocalPos) {
+    double theta = PI/2 - sharedMemory->heading;
+    double XPos = LocalPos.first;
+    double YPos = LocalPos.second;
+    double globalXPos = XPos * cos(theta) + YPos * sin(theta) + sharedMemory->xpos;
+    double globalYPos = -XPos * sin(theta) + YPos * cos(theta) + sharedMemory->ypos;
+    Dcoordinate GlobalPos = std::make_pair(globalXPos,globalYPos);
+    return GlobalPos;
+}
+
+coordinate ClusteringDynamicObs::GazebotoGrid(Dcoordinate &Location) {
+    coordinate temp;
+    temp.first = Location.first*5 + 50;
+    temp.second = Location.second*5 + 50;
+    return temp;
+}
+
 void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, int MapCounter)
 {
-    int globalX_pos;
-    int globalY_pos;
-    for (int i = 0 ; i < scanarray.size() ; i++)
-    {
-        globalX_pos = int(((scanarray[i]*cos((sharedMemory->heading+(RR*(i-359)))) + sharedMemory->xpos)+10)*(grid/20));
-        globalY_pos = int(((scanarray[i]*sin((sharedMemory->heading+(RR*(i-359)))) + sharedMemory->ypos)+10)*(grid/20));
-        if(globalX_pos >= 0 && globalX_pos < 100 && globalY_pos >= 0 && globalY_pos < 100) {
-            ClusteringMatrix[x_spot[i]][y_spot[i]] = 1;
+    int numofScan = scanarray.size();
+    int count =0 ;
+    for (int i = 0 ; i < numofScan ; i++) {
+        Dcoordinate temp = ProcessLidarRawtoLocal(scanarray[i], numofScan, i);
+        temp = LocaltoGlobal(temp);
+        coordinate temp2 = GazebotoGrid(temp);
+        if (temp2.first >= 0 && temp2.first < 100 && temp2.second >= 0 && temp2.second < 100) {
+            ClusteringMatrix[temp2.first][temp2.second] = 1;
         }
     }
-
-    for(int i = 0; i < grid; i++){
-        for(int j = 0; j < grid; j++){
+    for(int i = 0; i < GRID; i++){
+        for(int j = 0; j < GRID; j++){
             std::cout << ClusteringMatrix[i][j];
         }
         std::cout << "\n";
@@ -42,9 +67,9 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
 void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
 {
     int ChangeObstacle = 5;
-    for (int i = 0; i < grid; ++i)
+    for (int i = 0; i < GRID; ++i)
     {
-        for (int j = 0; j < grid; ++j)
+        for (int j = 0; j < GRID; ++j)
         {
             if(DynamicMatrix[i][j] == 1)
             {
@@ -94,7 +119,7 @@ void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
 
 void ClusteringDynamicObs::CheckObstacle(int i, int j, int ChangeObstacle, int& SizeCount, std::vector<std::pair<int, int>>& ClusteringInfo)
 {
-    if(( 0<=i && i<grid ) && ( 0<=j && j<grid ) && (DynamicMatrix[i][j] == 1))
+    if(( 0<=i && i<GRID ) && ( 0<=j && j<GRID ) && (DynamicMatrix[i][j] == 1))
     {
         SizeCount++;
         DynamicMatrix[i][j] = ChangeObstacle;
@@ -143,8 +168,8 @@ void ClusteringDynamicObs::ConnectObs(int avgX, int avgY)
 void ClusteringDynamicObs::PrintMap()
 {
     std::cout<< "\n";
-    for (int i = 0; i < grid; ++i) {
-        for (int j = 0; j < grid; ++j) {
+    for (int i = 0; i < GRID; ++i) {
+        for (int j = 0; j < GRID; ++j) {
 //            std::cout << ClusteringMatrix[i][j];
 //            std::cout << SavedMatrix[i][j];
             std::cout << DynamicMatrix[i][j];
