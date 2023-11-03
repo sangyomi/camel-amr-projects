@@ -23,6 +23,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
+find_package(amr_msg_interfaces REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -46,7 +47,6 @@ foreach( FILE_PATH ${CPP_FILES} )
   # I used a simple string replace, to cut off .cpp.
   get_filename_component(FILE_NAME ${FILE_PATH} NAME_WE)
   add_executable( ${FILE_NAME}_node ${FILE_PATH} )
-
   # Make sure YourLib is linked to each app
   ament_target_dependencies(${FILE_NAME}_node
           "rclcpp"
@@ -54,7 +54,8 @@ foreach( FILE_PATH ${CPP_FILES} )
           "geometry_msgs"
           "gazebo_msgs"
           "ament_index_cpp"
-          "nav_msgs")
+          "nav_msgs"
+          "amr_msg_interfaces")
   install(TARGETS ${FILE_NAME}_node
           DESTINATION lib/${PROJECT_NAME})
 endforeach( FILE_PATH ${APP_SOURCES} )

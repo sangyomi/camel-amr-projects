@@ -22,6 +22,10 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
     m_sub_odom = create_subscription<Odometry>(
             "/diffbot_amr/odom", 10,
             std::bind(&ParkingNode::odom_callback, this, std::placeholders::_1) );
+
+    m_sub_obscom = create_subscription<ObsCom>(
+            "obstacle_com",10,
+            std::bind(&ParkingNode::com_callback, this, std::placeholders::_1));
 }
 
 void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
@@ -44,7 +48,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     std::cout << "Present AMR Location: " << "(" << xAstar << "," << yAstar << ")" <<std::endl;
     std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
 
-    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, MapCounter);
+//    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, MapCounter);
 
 //    ObsDec.ClassifyObsData();
 //    ObsDec.ObsPrediction();
@@ -57,7 +61,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.traj.pop();
     }
-    std::cout << sharedMemory->xpos << " " << sharedMemory->ypos << " " << sharedMemory->heading;
+//    std::cout << sharedMemory->xpos << " " << sharedMemory->ypos << " " << sharedMemory->heading;
 //    P_C.PrintCostMap();
 //    ObsDec.Pred_Print();
 //    ASTAR.PrintMap(); // PathPlanning Map
@@ -76,6 +80,21 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
     sharedMemory->heading = yaw;
     sharedMemory->xpos = msg->pose.pose.position.x;
     sharedMemory->ypos = msg->pose.pose.position.y;
+}
+
+void ParkingNode::com_callback(const ObsCom::SharedPtr msg)
+{
+    double obscom_x = msg->x;
+    double obscom_y = msg->y;
+    auto comvalues = std::make_pair(std::make_pair(1, 1), std::make_pair(obscom_x,obscom_y));
+    dynamicSharedMemory.LabelingArray.push_back(comvalues);
+    for(int i=0; i<dynamicSharedMemory.LabelingArray.size(); i++){
+        std::cout << "Subscribing : " << "("<< dynamicSharedMemory.LabelingArray[i].second.first << ","<< dynamicSharedMemory.LabelingArray[i].second.second << ")" << std::endl;
+    }
+
+    std::cout << "==================" << std::endl;
+    dynamicSharedMemory.LabelingArray.clear();
+
 }
 
 int ParkingNode::star_position(int CurrentX, int CurrentY)

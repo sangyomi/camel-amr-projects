@@ -38,6 +38,7 @@ find_package(Qt5Core REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Eigen3 REQUIRED)
+
 link_directories(${Eigen_INCLUDE_DIRS})
 
 # uncomment the following section in order to fill in

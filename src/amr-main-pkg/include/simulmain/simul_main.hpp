@@ -25,6 +25,7 @@
 #include "ObsDetection/ObsDetection.hpp"
 #include "ClusteringDynamicObs/ClusteringDynamicObs.hpp"
 #include "ObsDetection/PathChanger.hpp"
+#include "amr_msg_interfaces/msg/obs_com.hpp"
 
 const int num_obs = 1; // number of moving obstacle
 const int sensor_range = 10; // Sensing distance
@@ -32,12 +33,16 @@ const int sensor_range = 10; // Sensing distance
 using Twist = geometry_msgs::msg::Twist;
 using LaserScan = sensor_msgs::msg::LaserScan;
 using Odometry = nav_msgs::msg::Odometry;
+using ObsCom = amr_msg_interfaces::msg::ObsCOM;
+
 
 class ParkingNode : public rclcpp::Node {
 private:
     rclcpp::Publisher<Twist>::SharedPtr m_pub;
     rclcpp::Subscription<LaserScan>::SharedPtr m_sub;
     rclcpp::Subscription<Odometry>::SharedPtr m_sub_odom;
+    rclcpp::Subscription<ObsCom>::SharedPtr m_sub_obscom;
+
     Twist m_twist_msg;
 
     double heading;
@@ -67,10 +72,12 @@ private:
     void ClearCostMap();
     void GetDuration();
 
+
 public:
     ParkingNode();
     void sub_callback(const LaserScan::SharedPtr msg);
     void odom_callback(const Odometry::SharedPtr msg);
+    void com_callback(const ObsCom::SharedPtr msg);
     int star_position(int CurrentX, int CurrentY);
     void control_star_position(int dict);
     ~ParkingNode();
