@@ -7,6 +7,8 @@
 #define D2R 0.017453293
 #define AMRX 0.325
 #define AMRY 0.455
+#define MINIMUM_POINTS 4     // minimum number of cluster
+#define EPSILON (2.5*2.5)
 
 extern pSHM sharedMemory;
 extern DSHM dynamicSharedMemory;
@@ -44,23 +46,36 @@ coordinate ClusteringDynamicObs::GazebotoGrid(Dcoordinate &Location) {
     return temp;
 }
 
+void ClusteringDynamicObs::ClearClustringMatrix() {
+    for(int i = 0; i < GRID; i++){
+        for(int j = 0; j < GRID; j++){
+            ClusteringMatrix[i][j] = 0;
+        }
+    }
+}
+
 void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, int MapCounter)
 {
+    ClearClustringMatrix();
     int numofScan = scanarray.size();
-    int count =0 ;
+    vector<Point> points;
     for (int i = 0 ; i < numofScan ; i++) {
         Dcoordinate temp = ProcessLidarRawtoLocal(scanarray[i], numofScan, i);
         temp = LocaltoGlobal(temp);
         coordinate temp2 = GazebotoGrid(temp);
         if (temp2.first >= 0 && temp2.first < 100 && temp2.second >= 0 && temp2.second < 100) {
-            ClusteringMatrix[temp2.first][temp2.second] = 1;
+            Point a;
+            a.x = temp2.first;
+            a.y = temp2.second;
+            a.z = 0;
+            a.clusterID = UNCLASSIFIED;
+            points.push_back(a);
         }
     }
-    for(int i = 0; i < GRID; i++){
-        for(int j = 0; j < GRID; j++){
-            std::cout << ClusteringMatrix[i][j];
-        }
-        std::cout << "\n";
+    DBSCAN ds(MINIMUM_POINTS, EPSILON, points);
+    ds.run();
+    for(int i = 0; i < ds.m_points.size(); i++){
+        ClusteringMatrix[ds.m_points[i].x][ds.m_points[i].y] = ds.m_points[i].clusterID;
     }
 }
 

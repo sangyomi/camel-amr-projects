@@ -29,6 +29,7 @@ private:
     int ObstacleLabel;
     clock_t timer_start;
     clock_t timer_end;
+    void ClearClustringMatrix();
 
     Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter);
     Dcoordinate LocaltoGlobal(Dcoordinate &LocalPos);

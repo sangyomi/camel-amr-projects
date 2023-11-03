@@ -69,6 +69,7 @@ add_library(obsDetection_lib
 
 add_library(clusteringDynamicObs_lib
         src/ClusteringDynamicObs/ClusteringDynamicObs.cpp
+        src/ClusteringDynamicObs/DBSCAN.cpp
 
 )
 

@@ -146,7 +146,7 @@
     <collision name="chassis_top_collision">
       <origin rpy=" 0 0 0" xyz="0 0 0.3"/>
       <geometry>
-        <box size="1.1 .85 0.2"/>
+        <box size="1.1 .85 0.8"/>
       </geometry>
     </collision>    
     <!-- <visual name="chassis_top_visual">
