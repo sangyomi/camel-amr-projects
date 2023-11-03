@@ -16,6 +16,7 @@
 #include<queue>
 
 typedef std::pair<int, int> coordinate;
+typedef std::pair<double, double> Dcoordinate;
 typedef std::pair<double, coordinate> loc_data; // detailed data;
 typedef std::pair<double, coordinate> TimeLoc; // Time[ms], coordinate
 typedef struct _COEFFICIENTDATA_{

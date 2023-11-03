@@ -57,6 +57,7 @@ void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
     {
         ASTAR.traj.pop();
     }
+    std::cout << sharedMemory->xpos << " " << sharedMemory->ypos << " " << sharedMemory->heading;
 //    P_C.PrintCostMap();
 //    ObsDec.Pred_Print();
 //    ASTAR.PrintMap(); // PathPlanning Map

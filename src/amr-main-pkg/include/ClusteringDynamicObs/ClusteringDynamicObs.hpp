@@ -29,6 +29,10 @@ private:
     int ObstacleLabel;
     clock_t timer_start;
     clock_t timer_end;
+
+    Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter);
+    Dcoordinate LocaltoGlobal(Dcoordinate &LocalPos);
+    coordinate GazebotoGrid(Dcoordinate &Location);
 public:
     double timer_cycle;
     ClusteringDynamicObs();
