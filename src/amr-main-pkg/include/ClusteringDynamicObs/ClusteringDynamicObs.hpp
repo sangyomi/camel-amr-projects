@@ -34,7 +34,7 @@ private:
     std::vector<Point> Points;
     Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter, bool ID);
     Dcoordinate LocaltoGlobal(Dcoordinate &LocalPos);
-    coordinate GazebotoGrid(Dcoordinate &Location);
+    Dcoordinate GazebotoGrid(Dcoordinate &Location);
 public:
     double timer_cycle;
     ClusteringDynamicObs();
@@ -44,6 +44,8 @@ public:
     void ConnectObs(int avgX, int avgY);
     void PrintMap();
     void ClusteringData();
+    Dcoordinate GridtoGazebo(Dcoordinate &Location);
+    Dcoordinate GlobaltoLocal(Dcoordinate &GlobalPos);
     ~ClusteringDynamicObs();
 };
 

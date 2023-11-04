@@ -52,6 +52,7 @@ private:
     double ypos;
     std::vector<coordinate> a;
 
+    ofstream fout;
     int MapCounter;
     ClusteringDynamicObs Cluster;
 
@@ -77,6 +78,7 @@ private:
     Dcoordinate ObsRealPos;
     bool HeadLiDARFlag = false;
     bool TailLiDARFlag = false;
+    int printcount = 0;
 
 public:
     ParkingNode();

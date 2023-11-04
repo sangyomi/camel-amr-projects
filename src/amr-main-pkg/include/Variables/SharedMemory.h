@@ -20,6 +20,7 @@ typedef struct _DSHM_
 {
     std::vector<std::vector<double>> CostMap;
     std::vector<std::vector<int>> PresentMatrix;
+    std::vector<Point> Clustered_point;
     std::vector<OBSINFO> obsLog;
     std::vector<COEFF> coeff_data;
     std::vector<COEFF2ND> coeff_sec_data;

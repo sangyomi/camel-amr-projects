@@ -19,6 +19,13 @@ typedef std::pair<int, int> coordinate;
 typedef std::pair<double, double> Dcoordinate;
 typedef std::pair<double, coordinate> loc_data; // detailed data;
 typedef std::pair<double, coordinate> TimeLoc; // Time[ms], coordinate
+
+typedef struct Point_
+{
+    float x, y, z;  // X, Y, Z position
+    int clusterID;  // clustered ID
+}Point;
+
 typedef struct _COEFFICIENTDATA_{
     // x = c1 + a*t
     // y = c2 + b*t

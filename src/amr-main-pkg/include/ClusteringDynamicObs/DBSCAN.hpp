@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <cmath>
+#include "Variables/Variable.hpp"
 
 #define UNCLASSIFIED -1
 #define CORE_POINT 1
@@ -17,11 +18,7 @@
 
 using namespace std;
 
-typedef struct Point_
-{
-    float x, y, z;  // X, Y, Z position
-    int clusterID;  // clustered ID
-}Point;
+
 
 class DBSCAN {
 public:

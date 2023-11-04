@@ -3,12 +3,15 @@
 //
 #include "simulmain/simul_main.hpp"
 #include "../Amr_UI/mainwindow.h"
+#include <fstream>
 
 pSHM sharedMemory;
 DSHM dynamicSharedMemory;
 std::chrono::steady_clock::time_point startTime;
 
 ParkingNode::ParkingNode() : Node("robot_parking_node") {
+
+    fout.open("Learning_Data.txt");
 
     RCLCPP_INFO(get_logger(), "Parking Node Created");
     step = 0;
@@ -51,15 +54,22 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
         HeadLiDARFlag = false;
         TailLiDARFlag = false;
         Cluster.ClusteringData();
-        for(int i = 0; i < GRID; i++){
-            for (int j = 0; j < GRID; j++){
-                std::cout << dynamicSharedMemory.PresentMatrix[i][j];
-            }
-            std::cout << "\n";
-        }
         std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
-        ClearPresentMatrix();// 장애물 인식한거 출력
-//    ClearCostMap();
+        ClearPresentMatrix();
+
+        Dcoordinate temp = Cluster.GridtoGazebo(ObsRealPos);
+        Dcoordinate ObsLocalPos = Cluster.GlobaltoLocal(temp);
+        if(int(sharedMemory->duration/500)-printcount > 0){
+            printcount++;
+            fout << dynamicSharedMemory.Clustered_point.size()+1 <<"\n";
+            fout << ObsLocalPos.first << " " << ObsLocalPos.second << "\n";
+            for(int i = 0; i < dynamicSharedMemory.Clustered_point.size(); i++){
+                fout << dynamicSharedMemory.Clustered_point[i].x << " " << dynamicSharedMemory.Clustered_point[i].y << "\n";
+            }
+
+        }
+
+//    ClearCostMap();음
 //    int xAstar = int((sharedMemory->xpos+10)*5);
 //    int yAstar = int((sharedMemory->ypos+10)*5);
 //    coordinate AmrLoc = {xAstar,yAstar};
@@ -90,6 +100,7 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
 //    ObsDec.Pred_Print();
 //    ASTAR.PrintMap(); // 맵 상의 경로 출력
     }
+
     double x = msg->pose.pose.orientation.x;
     double y = msg->pose.pose.orientation.y;
     double z = msg->pose.pose.orientation.z;
@@ -155,6 +166,7 @@ void clearSharedMemory()
     dynamicSharedMemory.obsLog.clear();
     dynamicSharedMemory.LabelingArray.clear();
     dynamicSharedMemory.coeff_sec_data.clear();
+    dynamicSharedMemory.Clustered_point.clear();
     for(int i = 0; i < GRID; i++){
         std::vector<double> temp;
         std::vector<int> temp2;

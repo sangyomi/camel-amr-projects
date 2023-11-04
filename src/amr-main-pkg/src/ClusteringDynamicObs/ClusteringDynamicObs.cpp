@@ -7,7 +7,7 @@
 #define AMRX 0.325
 #define AMRY 0.455
 #define MINIMUM_POINTS 4     // minimum number of cluster
-#define EPSILON (2.5*2.5)
+#define EPSILON (0.5*0.5)
 
 extern pSHM sharedMemory;
 extern DSHM dynamicSharedMemory;
@@ -47,11 +47,28 @@ Dcoordinate ClusteringDynamicObs::LocaltoGlobal(Dcoordinate &LocalPos) {
     return GlobalPos;
 }
 
-coordinate ClusteringDynamicObs::GazebotoGrid(Dcoordinate &Location) {
-    coordinate temp;
+Dcoordinate ClusteringDynamicObs::GazebotoGrid(Dcoordinate &Location) {
+    Dcoordinate temp;
     temp.first = Location.first*5 + 50;
     temp.second = Location.second*5 + 50;
     return temp;
+}
+
+Dcoordinate ClusteringDynamicObs::GridtoGazebo(Dcoordinate &Location) {
+    Dcoordinate temp;
+    temp.first = (Location.first - 50)/5;
+    temp.second = (Location.second- 50)/5;
+    return temp;
+}
+
+Dcoordinate ClusteringDynamicObs::GlobaltoLocal(Dcoordinate &GlobalPos) {
+    double theta = -1*(PI/2 - sharedMemory->heading);
+    double XPos = GlobalPos.first;
+    double YPos = GlobalPos.second;
+    double LocalXPos = XPos * cos(theta) + YPos * sin(theta) + sharedMemory->xpos;
+    double LocalYPos = -XPos * sin(theta) + YPos * cos(theta) + sharedMemory->ypos;
+    Dcoordinate LocalPos = std::make_pair(LocalXPos,LocalYPos);
+    return LocalPos;
 }
 
 void ClusteringDynamicObs::ClearClustringMatrix() {
@@ -68,11 +85,13 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     for (int iter = 0 ; iter < numofScan ; iter++) {
         Dcoordinate temp = ProcessLidarRawtoLocal(scanarray[iter], numofScan, iter, LiDARID);
         temp = LocaltoGlobal(temp);
-        coordinate temp2 = GazebotoGrid(temp);
-        if (temp2.first >= 0 && temp2.first < 100 && temp2.second >= 0 && temp2.second < 100) {
+        temp = GazebotoGrid(temp);
+        if (temp.first >= 0 && temp.first < 100 && temp.second >= 0 && temp.second < 100) {
+            temp = GridtoGazebo(temp);
+            temp = GlobaltoLocal(temp);
             Point tempP;
-            tempP.x = temp2.first;
-            tempP.y = temp2.second;
+            tempP.x = temp.first;
+            tempP.y = temp.second;
             tempP.z = 0;
             tempP.clusterID = UNCLASSIFIED;
             Points.push_back(tempP);
@@ -83,10 +102,8 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
 void ClusteringDynamicObs::ClusteringData() {
     DBSCAN ds(MINIMUM_POINTS, EPSILON, Points);
     ds.run();
-    for(int i = 0; i < ds.m_points.size(); i++){
-        dynamicSharedMemory.PresentMatrix[ds.m_points[i].x][ds.m_points[i].y] = ds.m_points[i].clusterID;
-    }
     Points.clear();
+    dynamicSharedMemory.Clustered_point = ds.m_points;
 }
 
 void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
