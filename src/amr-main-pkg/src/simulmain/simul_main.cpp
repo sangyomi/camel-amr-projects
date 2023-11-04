@@ -66,6 +66,7 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
             for(int i = 0; i < dynamicSharedMemory.Clustered_point.size(); i++){
                 fout << dynamicSharedMemory.Clustered_point[i].x << " " << dynamicSharedMemory.Clustered_point[i].y << "\n";
             }
+            std::cout << "[Data Saved]";
 
         }
 
