@@ -174,7 +174,7 @@ void ObsDetection::Prediction(){
     if(dynamicSharedMemory.obsLog.empty()) return;
     for(int i = 0; i < dynamicSharedMemory.obsLog.size(); i++){
         if(dynamicSharedMemory.obsLog[i].regDataCheck){
-            double Time = dynamicSharedMemory.obsLog[i].obsLocationLog.back().first;
+            double Time = sharedMemory->duration;
             TimeLoc temp2;
             dynamicSharedMemory.obsLog[i].obsPredLoc.clear();
             while(Time <= dynamicSharedMemory.obsLog[i].obsLocationLog.back().first + 10000/dynamicSharedMemory.obsLog[i].loss) { // n스탭 미래 예측

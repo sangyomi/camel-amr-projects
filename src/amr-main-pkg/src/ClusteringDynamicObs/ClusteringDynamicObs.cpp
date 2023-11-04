@@ -3,7 +3,6 @@
 //
 
 #include "ClusteringDynamicObs/ClusteringDynamicObs.hpp"
-#include "ClusteringDynamicObs/DBSCAN.hpp"
 #define D2R 0.017453293
 #define AMRX 0.325
 #define AMRY 0.455
@@ -21,11 +20,20 @@ ClusteringDynamicObs::ClusteringDynamicObs()
     ObstacleLabel = 4;
 }
 
-Dcoordinate ClusteringDynamicObs::ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter){
+Dcoordinate ClusteringDynamicObs::ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter, bool ID){
     const int LiDAR = 270;
     double theta = double(LiDAR)/double(numofScan) * iter * D2R;
-    double XPos = scannedlength * sin(theta)+AMRX;
-    double YPos = -1 * scannedlength * cos(theta)+AMRY;
+
+    double XPos;
+    double YPos;
+    if(ID){ // Head_LiDAR
+        XPos = scannedlength * sin(theta)+AMRX;
+        YPos = -1 * scannedlength * cos(theta)+AMRY;
+    }
+    else{ // Tail_LiDAR
+        XPos = -1 * scannedlength * sin(theta) - AMRX;
+        YPos = scannedlength * cos(theta) - AMRY;
+    }
     Dcoordinate LocalPos = std::make_pair(XPos, YPos);
     return LocalPos;
 }
@@ -54,29 +62,31 @@ void ClusteringDynamicObs::ClearClustringMatrix() {
     }
 }
 
-void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, int MapCounter)
+void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, bool LiDARID)
 {
-    ClearClustringMatrix();
     int numofScan = scanarray.size();
-    vector<Point> points;
-    for (int i = 0 ; i < numofScan ; i++) {
-        Dcoordinate temp = ProcessLidarRawtoLocal(scanarray[i], numofScan, i);
+    for (int iter = 0 ; iter < numofScan ; iter++) {
+        Dcoordinate temp = ProcessLidarRawtoLocal(scanarray[iter], numofScan, iter, LiDARID);
         temp = LocaltoGlobal(temp);
         coordinate temp2 = GazebotoGrid(temp);
         if (temp2.first >= 0 && temp2.first < 100 && temp2.second >= 0 && temp2.second < 100) {
-            Point a;
-            a.x = temp2.first;
-            a.y = temp2.second;
-            a.z = 0;
-            a.clusterID = UNCLASSIFIED;
-            points.push_back(a);
+            Point tempP;
+            tempP.x = temp2.first;
+            tempP.y = temp2.second;
+            tempP.z = 0;
+            tempP.clusterID = UNCLASSIFIED;
+            Points.push_back(tempP);
         }
     }
-    DBSCAN ds(MINIMUM_POINTS, EPSILON, points);
+}
+
+void ClusteringDynamicObs::ClusteringData() {
+    DBSCAN ds(MINIMUM_POINTS, EPSILON, Points);
     ds.run();
     for(int i = 0; i < ds.m_points.size(); i++){
-        ClusteringMatrix[ds.m_points[i].x][ds.m_points[i].y] = ds.m_points[i].clusterID;
+        dynamicSharedMemory.PresentMatrix[ds.m_points[i].x][ds.m_points[i].y] = ds.m_points[i].clusterID;
     }
+    Points.clear();
 }
 
 void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
@@ -185,9 +195,9 @@ void ClusteringDynamicObs::PrintMap()
     std::cout<< "\n";
     for (int i = 0; i < GRID; ++i) {
         for (int j = 0; j < GRID; ++j) {
-//            std::cout << ClusteringMatrix[i][j];
+            std::cout << ClusteringMatrix[i][j];
 //            std::cout << SavedMatrix[i][j];
-            std::cout << DynamicMatrix[i][j];
+//            std::cout << DynamicMatrix[i][j];
         }
         std::cout << '\n';
     }

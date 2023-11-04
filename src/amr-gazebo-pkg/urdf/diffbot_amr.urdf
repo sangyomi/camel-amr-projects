@@ -134,13 +134,13 @@
         </noise>
       </ray>
       <update_rate>30</update_rate>
-      <!--plugin filename="libgazebo_ros_ray_sensor.so" name="gazebo_ros_tail_hokuyo_controller"-->
-        <!--ros-->
-          <!--<namespace>/diffbot_amr</namespace>-->
-          <!--<argument>~/out:=scan</argument>-->
-        <!--</ros>-->
-        <!--<output_type>sensor_msgs/LaserScan</output_type>-->
-      <!--</plugin>-->
+      <plugin filename="libgazebo_ros_ray_sensor.so" name="gazebo_ros_tail_hokuyo_controller">
+        <ros>
+          <namespace>/diffbot_amr</namespace>
+          <argument>~/out:=scan2</argument>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+      </plugin>
     </sensor>
   </gazebo>
   <link name="robot_footprint"/>
@@ -167,7 +167,7 @@
       <geometry>
         <!-- <box size=".4 .2 .1"/> -->
         <!-- <mesh filename="$(find gcamp_gazebo)/meshes/base_link.STL" /> -->
-        <mesh filename="/home/chansik/camel-amr-projects2/src/amr-gazebo-pkg/meshes/base_link.STL"/>
+        <mesh filename="/home/ys/git/camel-amr-projects/src/amr-gazebo-pkg/meshes/base_link.STL"/>
       </geometry>
     </visual>
     <!-- <visual name="chassis_middle_visual">

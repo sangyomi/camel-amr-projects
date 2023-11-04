@@ -39,11 +39,13 @@ using ObsCom = amr_msg_interfaces::msg::ObsCOM;
 class ParkingNode : public rclcpp::Node {
 private:
     rclcpp::Publisher<Twist>::SharedPtr m_pub;
-    rclcpp::Subscription<LaserScan>::SharedPtr m_sub;
+    rclcpp::Subscription<LaserScan>::SharedPtr m_sub_head;
+    rclcpp::Subscription<LaserScan>::SharedPtr m_sub_tail;
     rclcpp::Subscription<Odometry>::SharedPtr m_sub_odom;
     rclcpp::Subscription<ObsCom>::SharedPtr m_sub_obscom;
 
     Twist m_twist_msg;
+    std::ofstream writeFile;
 
     double heading;
     double xpos;
@@ -70,12 +72,16 @@ private:
     coordinate StartPoint = {10,90};
     coordinate EndPoint = {90,10};
     void ClearCostMap();
+    void ClearPresentMatrix();
     void GetDuration();
-
+    Dcoordinate ObsRealPos;
+    bool HeadLiDARFlag = false;
+    bool TailLiDARFlag = false;
 
 public:
     ParkingNode();
-    void sub_callback(const LaserScan::SharedPtr msg);
+    void Lidar_Head_callback(const LaserScan::SharedPtr msg);
+    void Lidar_Tail_callback(const LaserScan::SharedPtr msg);
     void odom_callback(const Odometry::SharedPtr msg);
     void com_callback(const ObsCom::SharedPtr msg);
     int star_position(int CurrentX, int CurrentY);
@@ -84,6 +90,10 @@ public:
     void clearSharedMemory();
     void StartSimulation();
     PathChangeData PathChangeDatas;
+    int x_obs = 50;
+    int y_obs = 5;
+    int obsoperatetime;
+    bool flag = false;
 
 };
 

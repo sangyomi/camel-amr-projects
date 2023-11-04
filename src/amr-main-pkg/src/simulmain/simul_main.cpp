@@ -16,60 +16,80 @@ ParkingNode::ParkingNode() : Node("robot_parking_node") {
     PATH.push_back(StartPoint);
     PATH.push_back(EndPoint);
     m_pub = create_publisher<Twist>("diffbot_amr/cmd_vel", 10);
-    m_sub = create_subscription<LaserScan>(
+    m_sub_head = create_subscription<LaserScan>(
             "diffbot_amr/scan", 10,
-            std::bind(&ParkingNode::sub_callback, this, std::placeholders::_1));
+            std::bind(&ParkingNode::Lidar_Head_callback, this, std::placeholders::_1));
+    m_sub_tail = create_subscription<LaserScan>(
+            "diffbot_amr/scan2", 10,
+            std::bind(&ParkingNode::Lidar_Tail_callback, this, std::placeholders::_1));
     m_sub_odom = create_subscription<Odometry>(
             "/diffbot_amr/odom", 10,
-            std::bind(&ParkingNode::odom_callback, this, std::placeholders::_1) );
+            std::bind(&ParkingNode::odom_callback, this, std::placeholders::_1));
 
     m_sub_obscom = create_subscription<ObsCom>(
             "obstacle_com",10,
             std::bind(&ParkingNode::com_callback, this, std::placeholders::_1));
 }
 
-void ParkingNode::sub_callback(const LaserScan::SharedPtr msg)
+void ParkingNode::Lidar_Head_callback(const LaserScan::SharedPtr msg)
 {
-    GetDuration();
-    ClearCostMap();
-    int xAstar = int((sharedMemory->xpos+10)*5);
-    int yAstar = int((sharedMemory->ypos+10)*5);
-    coordinate AmrLoc = {xAstar,yAstar};
-    PATH.front() = AmrLoc;
-    if(abs(xAstar-PATH[1].first) < 2 && abs(yAstar-PATH[1].second) < 2)
-    {
-        PATH.erase(PATH.begin()+1);
-    }
-    if(PATH.size() == 1){
-        std::cout << "Calculation Finished!";
-        return;
-    }
-    std::cout << "----------------------------" << std::endl;
-    std::cout << "Present AMR Location: " << "(" << xAstar << "," << yAstar << ")" <<std::endl;
-    std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
+    HeadLiDARFlag = true;
+    Cluster.UpdateDynamicObstacle(msg->ranges, true);
 
-//    Cluster.UpdateDynamicObstacle(msg->ranges, ASTAR.Mapmatrix, MapCounter);
+}
 
-//    ObsDec.ClassifyObsData();
-//    ObsDec.ObsPrediction();
-//    ObsDec.ObsPredictionCurve();
-//    P_C.EvaluatePoint();
-//
-//    ASTAR.startAstar(PATH);
-//    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
-    while(!ASTAR.traj.empty())
-    {
-        ASTAR.traj.pop();
-    }
-//    std::cout << sharedMemory->xpos << " " << sharedMemory->ypos << " " << sharedMemory->heading;
-//    P_C.PrintCostMap();
-//    ObsDec.Pred_Print();
-//    ASTAR.PrintMap(); // PathPlanning Map
-//    Cluster.PrintMap(); // Dynamic Obstacle Map
+void ParkingNode::Lidar_Tail_callback(const LaserScan::SharedPtr msg)
+{
+    TailLiDARFlag = true;
+    Cluster.UpdateDynamicObstacle(msg->ranges, false);
 }
 
 void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
 {
+    GetDuration();
+    if(HeadLiDARFlag && TailLiDARFlag){
+        HeadLiDARFlag = false;
+        TailLiDARFlag = false;
+        Cluster.ClusteringData();
+        for(int i = 0; i < GRID; i++){
+            for (int j = 0; j < GRID; j++){
+                std::cout << dynamicSharedMemory.PresentMatrix[i][j];
+            }
+            std::cout << "\n";
+        }
+        std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
+        ClearPresentMatrix();// 장애물 인식한거 출력
+//    ClearCostMap();
+//    int xAstar = int((sharedMemory->xpos+10)*5);
+//    int yAstar = int((sharedMemory->ypos+10)*5);
+//    coordinate AmrLoc = {xAstar,yAstar};
+//    PATH.front() = AmrLoc;
+//    if(abs(xAstar-PATH[1].first) < 2 && abs(yAstar-PATH[1].second) < 2)
+//    {
+//        PATH.erase(PATH.begin()+1);
+//    }
+//    if(PATH.size() == 1){
+//        std::cout << "Calculation Finished!";
+//        return;
+//    }
+//    std::cout << "----------------------------" << std::endl;
+//    std::cout << "Present AMR Location: " << "(" << xAstar << "," << yAstar << ")" <<std::endl;
+
+//    dynamicSharedMemory.LabelingArray.push_back()
+//    ObsDec.ClassifyObsData();
+//    ObsDec.ObsPrediction();
+//    ObsDec.ObsPredictionCurve();
+//    P_C.EvaluatePoint();
+//    ASTAR.startAstar(PATH);
+//    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
+//    while(!ASTAR.traj.empty())
+//    {
+//        ASTAR.traj.pop();
+//    }
+//    P_C.PrintCostMap();
+//    ObsDec.Pred_Print();
+//    ASTAR.PrintMap(); // 맵 상의 경로 출력
+    }
     double x = msg->pose.pose.orientation.x;
     double y = msg->pose.pose.orientation.y;
     double z = msg->pose.pose.orientation.z;
@@ -84,17 +104,9 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
 
 void ParkingNode::com_callback(const ObsCom::SharedPtr msg)
 {
-    double obscom_x = msg->x;
-    double obscom_y = msg->y;
-    auto comvalues = std::make_pair(std::make_pair(1, 1), std::make_pair(obscom_x,obscom_y));
-    dynamicSharedMemory.LabelingArray.push_back(comvalues);
-    for(int i=0; i<dynamicSharedMemory.LabelingArray.size(); i++){
-        std::cout << "Subscribing : " << "("<< dynamicSharedMemory.LabelingArray[i].second.first << ","<< dynamicSharedMemory.LabelingArray[i].second.second << ")" << std::endl;
-    }
-
-    std::cout << "==================" << std::endl;
-    dynamicSharedMemory.LabelingArray.clear();
-
+    ObsRealPos.first = msg->x;
+    ObsRealPos.second = msg->y;
+    dynamicSharedMemory.PresentMatrix[int(msg->x)][int(msg->y)] = 4;
 }
 
 int ParkingNode::star_position(int CurrentX, int CurrentY)
@@ -121,7 +133,6 @@ void ParkingNode::control_star_position(int dict)
     if (value > 3.14) {value = value - 2*PI;}
     else if (value < -3.14) {value = value + 2*PI;}
     float turn_offset = 0.7 * (value);
-//    std::cout << "Turn_offset: " << turn_offset << "\n\n";
     if (abs(turn_offset) > 0.005) {
         sharedMemory->AMRVelocity = 1.0;
         m_twist_msg.linear.x = sharedMemory->AMRVelocity;
@@ -146,10 +157,13 @@ void clearSharedMemory()
     dynamicSharedMemory.coeff_sec_data.clear();
     for(int i = 0; i < GRID; i++){
         std::vector<double> temp;
+        std::vector<int> temp2;
         for(int j = 0; j < GRID; j++){
             temp.push_back(0);
+            temp2.push_back(0);
         }
         dynamicSharedMemory.CostMap.push_back(temp);
+        dynamicSharedMemory.PresentMatrix.push_back(temp2);
     }
 }
 
@@ -171,6 +185,13 @@ void ParkingNode::ClearCostMap(){
     for(int i = 0; i < GRID; i++){
         for(int j = 0; j < GRID; j++){
             dynamicSharedMemory.CostMap[i][j] = 0;
+        }
+    }
+}
+void ParkingNode::ClearPresentMatrix(){
+    for(int i = 0; i < GRID; i++){
+        for(int j = 0; j < GRID; j++){
+            dynamicSharedMemory.PresentMatrix[i][j] = 0;
         }
     }
 }

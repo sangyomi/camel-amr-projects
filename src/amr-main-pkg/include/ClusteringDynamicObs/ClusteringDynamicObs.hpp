@@ -15,6 +15,7 @@
 #include <chrono>
 #include <time.h>
 #include "Variables/SharedMemory.h"
+#include "ClusteringDynamicObs/DBSCAN.hpp"
 
 using Time = std::chrono::high_resolution_clock::time_point;
 
@@ -30,18 +31,19 @@ private:
     clock_t timer_start;
     clock_t timer_end;
     void ClearClustringMatrix();
-
-    Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter);
+    std::vector<Point> Points;
+    Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter, bool ID);
     Dcoordinate LocaltoGlobal(Dcoordinate &LocalPos);
     coordinate GazebotoGrid(Dcoordinate &Location);
 public:
     double timer_cycle;
     ClusteringDynamicObs();
-    void UpdateDynamicObstacle(std::vector<float> &scanarray, std::vector<std::vector<int>> &Mapmatrix, int MapCounter);
+    void UpdateDynamicObstacle(std::vector<float> &scanarray,bool LiDARID);
     void ClusteringDynamicObstacle(int xPos, int yPos);
     void CheckObstacle(int i, int j, int ChangeObstacle, int& SizeCount, std::vector<std::pair<int, int>>& ClusteringInfo);
     void ConnectObs(int avgX, int avgY);
     void PrintMap();
+    void ClusteringData();
     ~ClusteringDynamicObs();
 };
 
