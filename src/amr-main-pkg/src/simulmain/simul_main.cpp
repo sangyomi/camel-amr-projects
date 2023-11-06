@@ -51,13 +51,9 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
         HeadLiDARFlag = false;
         TailLiDARFlag = false;
         Cluster.ClusteringData();
-        for(int i = 0; i < GRID; i++){
-            for (int j = 0; j < GRID; j++){
-                std::cout << dynamicSharedMemory.PresentMatrix[i][j];
-            }
-            std::cout << "\n";
-        }
+
         std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
+        std::cout << "ObsRealPosition: " << ObsRealPos.first << ", " << ObsRealPos.second << "\n";
         ClearPresentMatrix();// 장애물 인식한거 출력
 //    ClearCostMap();
 //    int xAstar = int((sharedMemory->xpos+10)*5);
@@ -106,7 +102,6 @@ void ParkingNode::com_callback(const ObsCom::SharedPtr msg)
 {
     ObsRealPos.first = msg->x;
     ObsRealPos.second = msg->y;
-    dynamicSharedMemory.PresentMatrix[int(msg->x)][int(msg->y)] = 4;
 }
 
 int ParkingNode::star_position(int CurrentX, int CurrentY)
