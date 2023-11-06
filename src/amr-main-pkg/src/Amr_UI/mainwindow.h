@@ -31,13 +31,13 @@ public:
     ~MainWindow(); //소멸자
 
 public:
-    void Initsetting();
     void paintEvent(QPaintEvent* event);
     void drawcoordinates(QPainter &painter);
 
 private slots:
     void updatePoints();
     void updateLabel();
+    void updateDotDataset();
 
 
 private:
@@ -45,6 +45,8 @@ private:
     QPen pen; //line style
     QTimer* timer;
     QVector<QPoint> points;
+    QVector<QPoint> points2;
+    QVector<QPoint> dotDataset;
     QLabel* label;
     QSize frameSize;
     double scaling_x;

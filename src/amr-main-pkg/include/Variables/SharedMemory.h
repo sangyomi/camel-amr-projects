@@ -13,6 +13,8 @@ typedef struct _SHM_
     double ypos;
     double duration;
     double AMRVelocity;
+    double Dynamicobstacle_x;
+    double Dynamicobstacle_y;
 
 } SHM, *pSHM;
 

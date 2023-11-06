@@ -7,7 +7,7 @@
 
 
 extern pSHM sharedMemory;
-
+extern DSHM dynamicSharedMemory;
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent)
@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget* parent)
 
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updatePoints()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(updateDotDataset()));
     connect(timer,SIGNAL(timeout()),this,SLOT(updateLabel()));
     timer->start(100);
 }
@@ -31,13 +32,16 @@ void MainWindow::paintEvent(QPaintEvent* event)
 {
     Q_UNUSED(event);
     QPainter painter(this);
+    QPainter painter2(this);
     painter.setRenderHint(QPainter::Antialiasing);
-
+    painter2.setRenderHint(QPainter::Antialiasing);
 
     drawcoordinates(painter);
 
 
-    pen.setColor(Qt::red);  // 파란색으로 점 그리기
+
+    pen.setColor(Qt::blue);  // 파란색으로 점 그리기
+
     pen.setWidth(2);
     painter.setPen(pen);
 
@@ -46,20 +50,56 @@ void MainWindow::paintEvent(QPaintEvent* event)
     {
         painter.drawLine(points[i-1],points[i]);
     }
+
+
+    painter.drawPoint(points2.first());
+
+    for(const QPoint& point : dotDataset)
+    {
+        painter.setPen(Qt::red);
+        painter.drawPoint(point);
+    }
+
+
 }
+
 
 void MainWindow::updatePoints()
 {
 
-    QPoint newPoint((sharedMemory->xpos)*scaling_x+add_x, (sharedMemory->ypos)*(-scaling_y)+add_y); // 임의의 점 생성(-200~200)
+//    QPoint newPoint((sharedMemory->xpos)*scaling_x+add_x, (sharedMemory->ypos)*(-scaling_y)+add_y); // 임의의 점 생성
+    QPoint newPoint((sharedMemory->Dynamicobstacle_y)*scaling_x+add_x, (sharedMemory->Dynamicobstacle_x)*(-scaling_y)+add_y); // 임의의 점 생성
+    QPoint newPoint2((sharedMemory->Dynamicobstacle_x)*scaling_x+add_x, (sharedMemory->Dynamicobstacle_y)*(-scaling_y)+add_y);
+
+
+
     points.append(newPoint);
+
+    points2.clear();
+    points2.append(newPoint2);
+
+
+
     update();
+}
+
+void MainWindow::updateDotDataset()
+{
+    for(int i = 0; i < dynamicSharedMemory.Clustered_point.size(); i++){
+        QPoint newDataPoint((dynamicSharedMemory.Clustered_point[i].x)*scaling_x+add_x,(dynamicSharedMemory.Clustered_point[i].y)*(-scaling_y)+add_y);
+        dotDataset.append(newDataPoint);
+    }
+
+
+    update();
+
+
 }
 
 
 void MainWindow::drawcoordinates(QPainter& painter)
 {
-    pen.setColor(Qt::black);
+    pen.setColor(Qt::red);
     pen.setWidth(3);
     painter.setPen(pen);
 
@@ -96,7 +136,8 @@ MainWindow::~MainWindow()
 void MainWindow::updateLabel()
 {
 
-    QString labelText = "AMR 현재위치: ( " + QString::number(sharedMemory->xpos) + ", " + QString::number(sharedMemory->ypos) + ")";
+//    QString labelText = "AMR 현재위치: ( " + QString::number(sharedMemory->xpos) + ", " + QString::number(sharedMemory->ypos) + ")";
+    QString labelText = "AMR 현재위치: ( " + QString::number(sharedMemory->Dynamicobstacle_x) + ", " + QString::number(sharedMemory->Dynamicobstacle_y) + ")";
     ui->label->setText(labelText);
 }
 

@@ -81,3 +81,18 @@ if you want to check Dynamic Obstacle Map, edit simulmain.cpp 54 line
     timer  = double timer_cycle;
 ----
 
+# 학습 모델을 C++ 사용하기
+Download tensorflow lib
+
+
+    wget https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-cpu-linux-x86_64-2.6.0.tar.gz
+
+lib install and copy the local folder
+
+    sudo tar -C /usr/local -xzf libtensorflow-cpu-linux-x86_64-2.6.0.tar.gz
+
+Linking tensorflow lib
+
+
+    sudo ldconfig
+
