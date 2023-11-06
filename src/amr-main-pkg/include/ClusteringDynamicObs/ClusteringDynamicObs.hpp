@@ -35,6 +35,8 @@ private:
     Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter, bool ID);
     Dcoordinate LocaltoGlobal(Dcoordinate &LocalPos);
     coordinate GazebotoGrid(Dcoordinate &Location);
+    Dcoordinate GridtoGazebo(Dcoordinate &Location);
+    Dcoordinate GlobaltoLocal(Dcoordinate &GlobalPos);
 public:
     double timer_cycle;
     ClusteringDynamicObs();

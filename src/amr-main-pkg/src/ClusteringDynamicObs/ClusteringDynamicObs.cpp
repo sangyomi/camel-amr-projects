@@ -80,6 +80,25 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     }
 }
 
+Dcoordinate ClusteringDynamicObs::GridtoGazebo(Dcoordinate &Location) {
+    Dcoordinate temp;
+    temp.first = (Location.first - 50)/5;
+    temp.second = (Location.second- 50)/5;
+    return temp;
+}
+
+Dcoordinate ClusteringDynamicObs::GlobaltoLocal(Dcoordinate &GlobalPos) {
+    double theta = -1*(PI/2 - sharedMemory->heading);
+    double XPos = GlobalPos.first;
+    double YPos = GlobalPos.second;
+    double LocalXPos = XPos * cos(theta) + YPos * sin(theta) + sharedMemory->xpos;
+    double LocalYPos = -XPos * sin(theta) + YPos * cos(theta) + sharedMemory->ypos;
+    Dcoordinate LocalPos = std::make_pair(LocalXPos,LocalYPos);
+    return LocalPos;
+}
+
+
+
 void ClusteringDynamicObs::ClusteringData() {
     DBSCAN ds(MINIMUM_POINTS, EPSILON, Points);
     ds.run();
