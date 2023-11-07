@@ -96,68 +96,61 @@ Dcoordinate ClusteringDynamicObs::GlobaltoLocal(Dcoordinate &GlobalPos) {
     Dcoordinate LocalPos = std::make_pair(LocalXPos,LocalYPos);
     return LocalPos;
 }
-
-void ClusteringDynamicObs::ClusteringData() {
-    DBSCAN ds(MINIMUM_POINTS, EPSILON, Points);
-    ds.run();
-    for(int i = 0; i < ds.m_points.size(); i++){
-        Dcoordinate temp = std::make_pair(ds.m_points[i].x, ds.m_points[i].y);
-        temp = GazebotoGrid(temp);
-        temp = GlobaltoLocal(temp);
-        if(ds.m_points[i].clusterID != -1){
-            ClusteredPoint[ds.m_points[i].clusterID].push_back(temp);
+Dcoordinate ClusteringDynamicObs::ObsCenterCalc(std::vector<Dcoordinate> Data) {
+    double x1 = Data.front().first;
+    double y1 = Data.front().second;
+    double x2 = Data[1].first;
+    double y2 = Data[1].second;
+    double x3 = Data.back().first;
+    double y3 = Data.back().second;
+    double dx1 = x2-x1;
+    double dx2 = x3-x1;
+    double dy1 = y2-y1;
+    double dy2 = y3-y1;
+    double length;
+    double cosin;
+    double xCenter;
+    double yCenter;
+    std::make_pair(length, cosin) = DotProduct(dx1, dx2, dy1, dy2);
+    if(cosin > cos(PI/10)){ // 일자 상황
+        double xMid;
+        double yMid;
+        std::make_pair(xMid, yMid) = GetMidPoint(x1,x3,y1,y3);
+        double distance = std::sqrt(std::pow(xMid,2) + std::pow(yMid,2));
+        if(std::abs(length - 0.8) < std::abs(length-1.1)){
+            xCenter = xMid *((distance + 0.55)/distance);
+            yCenter = yMid *((distance + 0.55)/distance);
+        }
+        else{
+            xCenter = xMid *((distance + 0.4)/distance);
+            yCenter = yMid *((distance + 0.4)/distance);
         }
     }
-    Points.clear();
-//    FindObsCenter();
-//    for(int i = 0; i < CenterPoint.size(); i++){
-//        CenterPoint[i] = LocaltoGlobal(CenterPoint[i]);
-//        CenterPoint[i] = GazebotoGrid(CenterPoint[i]);
-//        std::cout << "Clustered_Center_point: " << CenterPoint[i].first << ", " << CenterPoint[i].second << "\n";
-//    }
+    else if(cosin > cos(PI/3)){ // ㄴ자 상황
+        std::make_pair(xCenter,yCenter) = GetMidPoint(x1, x3, y1, y3);
+    }
+    else { // ㄷ자 상황
+        double distance = std::sqrt(std::pow(dx2,2) + std::pow(dy2,2));
+        std::make_pair(xCenter,yCenter) = GetMidPoint(x1, x3, y1, y3);
+    }
+    return std::make_pair(xCenter,yCenter);
+
 }
 void ClusteringDynamicObs::FindObsCenter(){
-    for(int i = 0; i < ClusteredPoint.size();i++){
-        double x1 = ClusteredPoint[i].front().first;
-        double y1 = ClusteredPoint[i].front().second;
-        double x2 = ClusteredPoint[i][1].first;
-        double y2 = ClusteredPoint[i][1].second;
-        double x3 = ClusteredPoint[i].back().first;
-        double y3 = ClusteredPoint[i].back().second;
-        double dx1 = x2-x1;
-        double dx2 = x3-x1;
-        double dy1 = y2-y1;
-        double dy2 = y3-y1;
-        double length;
-        double cosin;
-        double xCenter;
-        double yCenter;
-        std::make_pair(length, cosin) = DotProduct(dx1, dx2, dy1, dy2);
-        if(cosin > cos(PI/10)){ // 일자 상황
-            double xMid;
-            double yMid;
-            std::make_pair(xMid, yMid) = GetMidPoint(x1,x3,y1,y3);
-            double distance = std::sqrt(std::pow(xMid,2) + std::pow(yMid,2));
-            if(std::abs(length - 0.8) < std::abs(length-1.1)){
-                xCenter = xMid *((distance + 0.55)/distance);
-                yCenter = yMid *((distance + 0.55)/distance);
-            }
-            else{
-                xCenter = xMid *((distance + 0.4)/distance);
-                yCenter = yMid *((distance + 0.4)/distance);
-            }
-
+    int ID = ClusteredPoint.front().first;
+    std::vector<Dcoordinate> temp;
+    for(int i = 0 ;ClusteredPoint.size(); i++){
+        if(ID == ClusteredPoint[i].first){
+            temp.push_back(ClusteredPoint[i].second);
         }
-        else if(cosin > cos(PI/3)){ // ㄴ자 상황
-            std::make_pair(xCenter,yCenter) = GetMidPoint(x1, x3, y1, y3);
+        else{
+            CenterPoint.push_back(ObsCenterCalc(temp));
+            temp.clear();
+            ID = ClusteredPoint[i].first;
+            temp.push_back(ClusteredPoint[i].second);
         }
-
-        else { // ㄷ자 상황
-            double distance = std::sqrt(std::pow(dx2,2) + std::pow(dy2,2));
-            std::make_pair(xCenter,yCenter) = GetMidPoint(x1, x3, y1, y3);
-        }
-        CenterPoint[i] = std::make_pair(xCenter,yCenter);
     }
+    CenterPoint.push_back(ObsCenterCalc(temp));
 }
 Dcoordinate ClusteringDynamicObs::GetMidPoint(double x1, double x2, double y1, double y2){
     Dcoordinate temp;
@@ -170,6 +163,27 @@ Dcoordinate ClusteringDynamicObs::DotProduct(double dx1, double dx2, double dy1,
     double length = std::sqrt((std::pow(dx1,2) + std::pow(dy1,2)) + (std::pow(dx2,2)+std::pow(dy2,2)));
     double cosin = (dx1*dx2 + dy1*dy2)/length;
     return std::make_pair(length,cosin);
+}
+
+void ClusteringDynamicObs::ClusteringData() {
+    DBSCAN ds(MINIMUM_POINTS, EPSILON, Points);
+    ds.run();
+    ClusteredPoint.clear();
+    for(int i = 0; i < ds.m_points.size(); i++){
+        Dcoordinate temp = std::make_pair(ds.m_points[i].x, ds.m_points[i].y);
+        temp = GazebotoGrid(temp);
+        temp = GlobaltoLocal(temp);
+        if(ds.m_points[i].clusterID != -1){
+            ClusteredPoint.push_back(std::make_pair(ds.m_points[i].clusterID,temp));
+        }
+    }
+    Points.clear();
+    if(!ClusteredPoint.empty()) FindObsCenter();
+//    for(int i = 0; i < CenterPoint.size(); i++){
+//        CenterPoint[i] = LocaltoGlobal(CenterPoint[i]);
+//        CenterPoint[i] = GazebotoGrid(CenterPoint[i]);
+//        std::cout << "Clustered_Center_point: " << CenterPoint[i].first << ", " << CenterPoint[i].second << "\n";
+//    }
 }
 
 void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)

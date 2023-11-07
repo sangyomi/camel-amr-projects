@@ -32,13 +32,14 @@ private:
     clock_t timer_end;
     void ClearClustringMatrix();
     std::vector<Point> Points;
-    std::vector<std::vector<Dcoordinate>> ClusteredPoint;
+    std::vector<std::pair<int,Dcoordinate>> ClusteredPoint;
     std::vector<Dcoordinate> CenterPoint;
     Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter, bool ID);
     Dcoordinate LocaltoGlobal(Dcoordinate &LocalPos);
     coordinate GazebotoGrid(Dcoordinate &Location);
     Dcoordinate GridtoGazebo(Dcoordinate &Location);
     Dcoordinate GlobaltoLocal(Dcoordinate &GlobalPos);
+    Dcoordinate ObsCenterCalc(std::vector<Dcoordinate> Data);
     void FindObsCenter();
     Dcoordinate DotProduct(double dx1, double dx2, double dy1, double dy2);
     Dcoordinate GetMidPoint(double x1, double x2, double y1, double y2);
