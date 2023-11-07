@@ -85,6 +85,8 @@ void MainWindow::updatePoints()
 
 void MainWindow::updateDotDataset()
 {
+    dotDataset.clear();
+
     for(int i = 0; i < dynamicSharedMemory.Clustered_point.size(); i++){
         QPoint newDataPoint((dynamicSharedMemory.Clustered_point[i].x)*scaling_x+add_x,(dynamicSharedMemory.Clustered_point[i].y)*(-scaling_y)+add_y);
         dotDataset.append(newDataPoint);
