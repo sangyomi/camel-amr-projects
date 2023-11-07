@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8d93f3a-e934-4d4d-b7c5-0346cd94b83c" name="Changes" comment="ui_add" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop/clustering" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dongjukim123&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d0109e13-4882-4a52-815d-2742c2ac4174" />
+        <option name="url" value="https://github.com/sangyomi/camel-amr-projects.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2V3pLXHVetjN1dNr7zvp42JzXOy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "develop/for-Learning",
+    "last_opened_file_path": "/home/dongju/camel-amr-projects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8d93f3a-e934-4d4d-b7c5-0346cd94b83c" name="Changes" comment="" />
+      <created>1694074563862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694074563862</updated>
+      <workItem from="1694074566818" duration="3356000" />
+      <workItem from="1694114662993" duration="4508000" />
+      <workItem from="1694148771388" duration="5516000" />
+      <workItem from="1694172593881" duration="2879000" />
+      <workItem from="1694189264252" duration="10273000" />
+      <workItem from="1694342375344" duration="3755000" />
+      <workItem from="1694349939751" duration="872000" />
+      <workItem from="1694437119231" duration="6968000" />
+      <workItem from="1694425711731" duration="537000" />
+      <workItem from="1694484472691" duration="11353000" />
+      <workItem from="1694512477265" duration="877000" />
+      <workItem from="1694577589343" duration="13000" />
+      <workItem from="1694579627595" duration="663000" />
+      <workItem from="1694742093762" duration="2258000" />
+      <workItem from="1694757187324" duration="2474000" />
+      <workItem from="1695084552949" duration="14953000" />
+      <workItem from="1695186525245" duration="4998000" />
+      <workItem from="1695703045575" duration="50000" />
+      <workItem from="1695709147758" duration="2303000" />
+      <workItem from="1695789063259" duration="14000" />
+      <workItem from="1695792585536" duration="3062000" />
+      <workItem from="1696389605734" duration="1012000" />
+      <workItem from="1696397246179" duration="599000" />
+      <workItem from="1696918153938" duration="1257000" />
+      <workItem from="1698759942230" duration="1599000" />
+      <workItem from="1698769185502" duration="9921000" />
+      <workItem from="1698997766411" duration="1244000" />
+      <workItem from="1699161212666" duration="294000" />
+      <workItem from="1699161594262" duration="1336000" />
+      <workItem from="1699162992590" duration="4507000" />
+      <workItem from="1699269279648" duration="9635000" />
+    </task>
+    <task id="LOCAL-00001" summary="ui_add">
+      <option name="closed" value="true" />
+      <created>1699297295316</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699297295316</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ui_add">
+      <option name="closed" value="true" />
+      <created>1699297392272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699297392272</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ui_add">
+      <option name="closed" value="true" />
+      <created>1699319439346</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699319439346</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="amr-simulation" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ui_add" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui_add" />
+  </component>
+</project>
