@@ -55,36 +55,39 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
         std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
         std::cout << "ObsRealPosition: " << ObsRealPos.first << ", " << ObsRealPos.second << "\n";
         ClearPresentMatrix();// 장애물 인식한거 출력
-//    ClearCostMap();
-//    int xAstar = int((sharedMemory->xpos+10)*5);
-//    int yAstar = int((sharedMemory->ypos+10)*5);
-//    coordinate AmrLoc = {xAstar,yAstar};
-//    PATH.front() = AmrLoc;
-//    if(abs(xAstar-PATH[1].first) < 2 && abs(yAstar-PATH[1].second) < 2)
-//    {
-//        PATH.erase(PATH.begin()+1);
-//    }
-//    if(PATH.size() == 1){
-//        std::cout << "Calculation Finished!";
-//        return;
-//    }
-//    std::cout << "----------------------------" << std::endl;
-//    std::cout << "Present AMR Location: " << "(" << xAstar << "," << yAstar << ")" <<std::endl;
-
-//    dynamicSharedMemory.LabelingArray.push_back()
-//    ObsDec.ClassifyObsData();
-//    ObsDec.ObsPrediction();
-//    ObsDec.ObsPredictionCurve();
-//    P_C.EvaluatePoint();
-//    ASTAR.startAstar(PATH);
-//    control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
-//    while(!ASTAR.traj.empty())
-//    {
-//        ASTAR.traj.pop();
-//    }
-//    P_C.PrintCostMap();
-//    ObsDec.Pred_Print();
-//    ASTAR.PrintMap(); // 맵 상의 경로 출력
+        if(!dynamicSharedMemory.LabelingArray.empty()){
+            dynamicSharedMemory.LabelingArray.front().second.first = int(ObsRealPos.first);
+            dynamicSharedMemory.LabelingArray.front().second.second = int(ObsRealPos.second);
+        }
+        for(int i = 0; i < dynamicSharedMemory.LabelingArray.size(); i++){
+            std::cout << "LabeledCenterPos[" << dynamicSharedMemory.LabelingArray[i].first.first <<"]: " << dynamicSharedMemory.LabelingArray[i].second.first << ", " << dynamicSharedMemory.LabelingArray[i].second.second << "\n";
+        }
+        ClearCostMap();
+        int xAstar = int((sharedMemory->xpos+10)*5);
+        int yAstar = int((sharedMemory->ypos+10)*5);
+        coordinate AmrLoc = {xAstar,yAstar};
+        PATH.front() = AmrLoc;
+        if(abs(xAstar-PATH[1].first) < 1 && abs(yAstar-PATH[1].second) < 1)
+        {
+            PATH.erase(PATH.begin()+1);
+        }
+        if(PATH.size() == 1){
+            std::cout << "Calculation Finished!";
+            return;
+        }
+        ObsDec.ClassifyObsData();
+        ObsDec.ObsPrediction();
+////        ObsDec.ObsPredictionCurve();
+        P_C.EvaluatePoint();
+        ASTAR.startAstar(PATH);
+        control_star_position(star_position(int((sharedMemory->xpos+10)*5), int((sharedMemory->ypos+10)*5)));
+        while(!ASTAR.traj.empty())
+        {
+            ASTAR.traj.pop();
+        }
+        P_C.PrintCostMap();
+//        ObsDec.Pred_Print();
+//        ASTAR.PrintMap(); // 맵 상의 경로 출력
     }
     double x = msg->pose.pose.orientation.x;
     double y = msg->pose.pose.orientation.y;

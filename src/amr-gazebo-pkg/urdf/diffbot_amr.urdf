@@ -179,13 +179,13 @@
     <collision name="chassis_middle_collision">
       <origin rpy=" 0 0 0" xyz="0 0 0.1"/>
       <geometry>
-        <box size="1.1 0.2 0.1"/>
+        <box size="1.1 0.2 0.05"/>
       </geometry>
     </collision>
     <collision name="chassis_top_collision">
-      <origin rpy=" 0 0 0" xyz="0 0 0.3"/>
+      <origin rpy=" 0 0 0" xyz="0 0 0.5"/>
       <geometry>
-        <box size="1.1 .85 0.2"/>
+        <box size="1.1 .85 .01"/>
       </geometry>
     </collision>
     <!-- <visual name="chassis_top_visual">
@@ -207,15 +207,15 @@
       </geometry>
     </visual> -->
     <collision name="chassis_left_collision">
-      <origin rpy=" 0 0 0" xyz="0 0.325 0.1"/>
+      <origin rpy=" 0 0 0" xyz="0 0.325 0.01"/>
       <geometry>
-        <box size="1.1 .2 .1"/>
+        <box size="1.1 .2 .025"/>
       </geometry>
     </collision>
     <collision name="chassis_right_collision">
-      <origin rpy=" 0 0 0" xyz="0 -0.325 0.1"/>
+      <origin rpy=" 0 0 0" xyz="0 -0.325 0.01"/>
       <geometry>
-        <box size="1.1 .2 .1"/>
+        <box size="1.1 .2 .025"/>
       </geometry>
     </collision>
     <collision name="back_caster_collision">
@@ -319,7 +319,7 @@
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
     <visual name="camera_visual">
-      <origin rpy="0 0 0" xyz="0 0 0.2"/>
+      <origin rpy="0 0 0" xyz="0 0 0.1"/>
       <geometry>
         <box size="0.05 0.05 0.05"/>
       </geometry>

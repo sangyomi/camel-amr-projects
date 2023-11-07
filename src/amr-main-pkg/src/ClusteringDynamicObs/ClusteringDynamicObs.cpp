@@ -13,9 +13,6 @@ extern pSHM sharedMemory;
 extern DSHM dynamicSharedMemory;
 
 ClusteringDynamicObs::ClusteringDynamicObs()
-        : SavedMatrix(GRID, std::vector<int>(GRID, 0)),
-          DynamicMatrix(GRID, std::vector<int>(GRID, 0)),
-          ClusteringMatrix(GRID, std::vector<int>(GRID, 0))
 {
     ObstacleLabel = 4;
 }
@@ -47,8 +44,8 @@ Dcoordinate ClusteringDynamicObs::LocaltoGlobal(Dcoordinate &LocalPos) {
     return GlobalPos;
 }
 
-coordinate ClusteringDynamicObs::GazebotoGrid(Dcoordinate &Location) {
-    coordinate temp;
+Dcoordinate ClusteringDynamicObs::GazebotoGrid(Dcoordinate &Location) {
+    Dcoordinate temp;
     temp.first = Location.first*5 + 50;
     temp.second = Location.second*5 + 50;
     return temp;
@@ -68,11 +65,11 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
     for (int iter = 0 ; iter < numofScan ; iter++) {
         Dcoordinate temp = ProcessLidarRawtoLocal(scanarray[iter], numofScan, iter, LiDARID);
         temp = LocaltoGlobal(temp);
-        coordinate temp2 = GazebotoGrid(temp);
-        if (temp2.first >= 0 && temp2.first < 100 && temp2.second >= 0 && temp2.second < 100) {
+        temp = GazebotoGrid(temp);
+        if (temp.first >= 0 && temp.first < 100 && temp.second >= 0 && temp.second < 100) {
             Point tempP;
-            tempP.x = temp2.first;
-            tempP.y = temp2.second;
+            tempP.x = temp.first;
+            tempP.y = temp.second;
             tempP.z = 0;
             tempP.clusterID = UNCLASSIFIED;
             Points.push_back(tempP);
@@ -97,8 +94,8 @@ Dcoordinate ClusteringDynamicObs::GlobaltoLocal(Dcoordinate &GlobalPos) {
     return LocalPos;
 }
 Dcoordinate ClusteringDynamicObs::ObsCenterCalc(std::vector<Dcoordinate> Data) {
-    double x1 = Data.front().first;
-    double y1 = Data.front().second;
+    double x1 = Data[0].first;
+    double y1 = Data[0].second;
     double x2 = Data[1].first;
     double y2 = Data[1].second;
     double x3 = Data.back().first;
@@ -107,15 +104,19 @@ Dcoordinate ClusteringDynamicObs::ObsCenterCalc(std::vector<Dcoordinate> Data) {
     double dx2 = x3-x1;
     double dy1 = y2-y1;
     double dy2 = y3-y1;
-    double length;
-    double cosin;
     double xCenter;
     double yCenter;
-    std::make_pair(length, cosin) = DotProduct(dx1, dx2, dy1, dy2);
+    Dcoordinate t;
+    t = DotProduct(dx1, dx2, dy1, dy2);
+    double length = t.first;
+    double cosin = t.second;
+
     if(cosin > cos(PI/10)){ // 일자 상황
-        double xMid;
-        double yMid;
-        std::make_pair(xMid, yMid) = GetMidPoint(x1,x3,y1,y3);
+        std::cout << "일자\n";
+        Dcoordinate a= GetMidPoint(x1,x3,y1,y3);;
+        double xMid = a.first;
+        double yMid = a.second;
+
         double distance = std::sqrt(std::pow(xMid,2) + std::pow(yMid,2));
         if(std::abs(length - 0.8) < std::abs(length-1.1)){
             xCenter = xMid *((distance + 0.55)/distance);
@@ -127,11 +128,17 @@ Dcoordinate ClusteringDynamicObs::ObsCenterCalc(std::vector<Dcoordinate> Data) {
         }
     }
     else if(cosin > cos(PI/3)){ // ㄴ자 상황
-        std::make_pair(xCenter,yCenter) = GetMidPoint(x1, x3, y1, y3);
+        std::cout << "ㄴ자\n";
+        Dcoordinate temp = GetMidPoint(x1, x3, y1, y3);
+        xCenter = temp.first;
+        yCenter = temp.second;
     }
     else { // ㄷ자 상황
+        std::cout << "ㄷ자\n";
         double distance = std::sqrt(std::pow(dx2,2) + std::pow(dy2,2));
-        std::make_pair(xCenter,yCenter) = GetMidPoint(x1, x3, y1, y3);
+        Dcoordinate temp = GetMidPoint(x1, x3, y1, y3);
+        xCenter = temp.first;
+        yCenter = temp.second;
     }
     return std::make_pair(xCenter,yCenter);
 
@@ -139,18 +146,18 @@ Dcoordinate ClusteringDynamicObs::ObsCenterCalc(std::vector<Dcoordinate> Data) {
 void ClusteringDynamicObs::FindObsCenter(){
     int ID = ClusteredPoint.front().first;
     std::vector<Dcoordinate> temp;
-    for(int i = 0 ;ClusteredPoint.size(); i++){
+    for(int i = 0; i < ClusteredPoint.size(); i++){
         if(ID == ClusteredPoint[i].first){
             temp.push_back(ClusteredPoint[i].second);
         }
         else{
-            CenterPoint.push_back(ObsCenterCalc(temp));
+            CenterPoint.push_back(std::make_pair(ID,ObsCenterCalc(temp)));
             temp.clear();
             ID = ClusteredPoint[i].first;
             temp.push_back(ClusteredPoint[i].second);
         }
     }
-    CenterPoint.push_back(ObsCenterCalc(temp));
+    CenterPoint.push_back(std::make_pair(ID,ObsCenterCalc(temp)));
 }
 Dcoordinate ClusteringDynamicObs::GetMidPoint(double x1, double x2, double y1, double y2){
     Dcoordinate temp;
@@ -161,17 +168,22 @@ Dcoordinate ClusteringDynamicObs::GetMidPoint(double x1, double x2, double y1, d
 
 Dcoordinate ClusteringDynamicObs::DotProduct(double dx1, double dx2, double dy1, double dy2) {
     double length = std::sqrt((std::pow(dx1,2) + std::pow(dy1,2)) + (std::pow(dx2,2)+std::pow(dy2,2)));
-    double cosin = (dx1*dx2 + dy1*dy2)/length;
-    return std::make_pair(length,cosin);
+    double cosin = (dx1*dx2 + dy1*dy2)/(std::sqrt(std::pow(dx1,2) + std::pow(dy1,2))*std::sqrt(std::pow(dx2,2) + std::pow(dy2,2)));
+    Dcoordinate temp;
+    temp.first = length;
+    temp. second = cosin;
+    return temp;
 }
 
 void ClusteringDynamicObs::ClusteringData() {
     DBSCAN ds(MINIMUM_POINTS, EPSILON, Points);
+    dynamicSharedMemory.LabelingArray.clear();
     ds.run();
     ClusteredPoint.clear();
+    CenterPoint.clear();
     for(int i = 0; i < ds.m_points.size(); i++){
         Dcoordinate temp = std::make_pair(ds.m_points[i].x, ds.m_points[i].y);
-        temp = GazebotoGrid(temp);
+        temp = GridtoGazebo(temp);
         temp = GlobaltoLocal(temp);
         if(ds.m_points[i].clusterID != -1){
             ClusteredPoint.push_back(std::make_pair(ds.m_points[i].clusterID,temp));
@@ -179,127 +191,53 @@ void ClusteringDynamicObs::ClusteringData() {
     }
     Points.clear();
     if(!ClusteredPoint.empty()) FindObsCenter();
-//    for(int i = 0; i < CenterPoint.size(); i++){
-//        CenterPoint[i] = LocaltoGlobal(CenterPoint[i]);
-//        CenterPoint[i] = GazebotoGrid(CenterPoint[i]);
-//        std::cout << "Clustered_Center_point: " << CenterPoint[i].first << ", " << CenterPoint[i].second << "\n";
-//    }
-}
-
-void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)
-{
-    int ChangeObstacle = 5;
-    for (int i = 0; i < GRID; ++i)
-    {
-        for (int j = 0; j < GRID; ++j)
-        {
-            if(DynamicMatrix[i][j] == 1)
-            {
-                int SizeCount = 0;
-                std::vector<std::pair<int, int>> ClusteringInfo;
-
-                CheckObstacle(i,j,ChangeObstacle,SizeCount, ClusteringInfo);
-
-                if (SizeCount > 5)
-                {
-                    int sumX = 0;
-                    int sumY = 0;
-                    int numPoints = ClusteringInfo.size();
-
-                    for (const std::pair<int, int>& point : ClusteringInfo) {
-                        sumX += point.first;
-                        sumY += point.second;
-                    }
-                    if (numPoints > 0) {
-                        sumX = sumX / numPoints;
-                        sumY = sumY / numPoints;
-                    }
-
-                    double rad = std::atan2(sumY - yPos, sumX - xPos);
-
-                    sumX = sumX + int((SizeCount * 0.01)*(std::cos(rad)));
-                    sumY = sumY + int((SizeCount * 0.01)*(std::sin(rad)));
-
-                    ConnectObs(sumX, sumY);
+    for(int i = 0; i < CenterPoint.size(); i++) {
+        CenterPoint[i].second = LocaltoGlobal(CenterPoint[i].second);
+        CenterPoint[i].second = GazebotoGrid(CenterPoint[i].second);
+    }
+    if(LastObsPoint.empty()){
+        for(int i = 0; i < CenterPoint.size(); i++) {
+            dynamicSharedMemory.LabelingArray.push_back(std::make_pair(std::make_pair(CenterPoint[i].first, 0),
+                                                                       std::make_pair(int(CenterPoint[i].second.first),
+                                                                                      int(CenterPoint[i].second.second))));
+            LastObsPoint.push_back(CenterPoint[i]);
+        }
+    }
+    else{
+        std::vector<Point> PPPoints;
+        for(int i =0; i < LastObsPoint.size(); i++){
+            Point tempP;
+            tempP.x = LastObsPoint[i].second.first;
+            tempP.y = LastObsPoint[i].second.second;
+            tempP.z = 0;
+            tempP.clusterID = LastObsPoint[i].first;
+            PPPoints.push_back(tempP);
+        }
+        for(int i = 0; i < CenterPoint.size(); i++){
+            Point tempP;
+            tempP.x = CenterPoint[i].second.first;
+            tempP.y = CenterPoint[i].second.second;
+            tempP.z = 0;
+            tempP.clusterID = UNCLASSIFIED;
+            PPPoints.push_back(tempP);
+        }
+        DBSCAN dds(1, EPSILON, PPPoints);
+        dds.run();
+        for(int i = 0; i < dds.m_points.size(); i++){
+            for(int j = 0; j < CenterPoint.size(); j++){
+                if(dds.m_points[i].x == CenterPoint[j].second.first && dds.m_points[i].y == CenterPoint[j].second.second){
+                    CenterPoint[j].first = dds.m_points[i].clusterID;
                 }
             }
         }
-    }
-    for (int i = 0 ; i < LabelingStack.size() ; i++)
-    {
-        if(LabelingStack[i] == dynamicSharedMemory.LabelingArray[i].first.second)
-        {
-            dynamicSharedMemory.LabelingArray.erase(dynamicSharedMemory.LabelingArray.begin() + i);
+        for(int i = 0; i < CenterPoint.size(); i++) {
+            dynamicSharedMemory.LabelingArray.push_back(std::make_pair(std::make_pair(CenterPoint[i].first, 0),
+                                                                       std::make_pair(int(CenterPoint[i].second.first),
+                                                                                      int(CenterPoint[i].second.second))));
+            LastObsPoint.push_back(CenterPoint[i]);
         }
     }
-    LabelingStack.clear();
-    for (int i = 0 ; i < dynamicSharedMemory.LabelingArray.size() ; i++)
-    {
-        LabelingStack.push_back(dynamicSharedMemory.LabelingArray[i].first.second);
-    }
 }
-
-void ClusteringDynamicObs::CheckObstacle(int i, int j, int ChangeObstacle, int& SizeCount, std::vector<std::pair<int, int>>& ClusteringInfo)
-{
-    if(( 0<=i && i<GRID ) && ( 0<=j && j<GRID ) && (DynamicMatrix[i][j] == 1))
-    {
-        SizeCount++;
-        DynamicMatrix[i][j] = ChangeObstacle;
-        ClusteringInfo.push_back(std::make_pair(i,j));
-        CheckObstacle(i-1,j,ChangeObstacle,SizeCount,ClusteringInfo);
-        CheckObstacle(i+1,j,ChangeObstacle,SizeCount,ClusteringInfo);
-        CheckObstacle(i,j-1,ChangeObstacle,SizeCount,ClusteringInfo);
-        CheckObstacle(i,j+1,ChangeObstacle,SizeCount,ClusteringInfo);
-    }
-    else
-    {
-        return;
-    }
-}
-
-void ClusteringDynamicObs::ConnectObs(int avgX, int avgY)
-{
-    double distance = 7;
-    int temp = -1;
-
-    for (int i = 0 ; i < dynamicSharedMemory.LabelingArray.size() ; i++)
-    {
-        int t = std::sqrt(std::pow(avgX-dynamicSharedMemory.LabelingArray[i].second.first,2) + std::pow(avgY-dynamicSharedMemory.LabelingArray[i].second.second,2));
-
-        if(distance > t)
-        {
-            distance = t;
-            ClusteringMatrix[avgX][avgY] = dynamicSharedMemory.LabelingArray[i].first.first;
-            temp = i;
-        }
-    }
-
-    if (temp != -1) // 기존 노드 업데이트
-    {
-        dynamicSharedMemory.LabelingArray[temp] = std::make_pair(std::make_pair(dynamicSharedMemory.LabelingArray[temp].first.first, dynamicSharedMemory.
-                LabelingArray[temp].first.second + 1), std::make_pair(avgX, avgY));
-    }
-    else // 새로운 노드 생성
-    {
-        ObstacleLabel++;
-        ClusteringMatrix[avgX][avgY] = ObstacleLabel;
-        dynamicSharedMemory.LabelingArray.push_back(std::make_pair(std::make_pair(ObstacleLabel, 1), std::make_pair(avgX, avgY)));
-    }
-}
-
-void ClusteringDynamicObs::PrintMap()
-{
-    std::cout<< "\n";
-    for (int i = 0; i < GRID; ++i) {
-        for (int j = 0; j < GRID; ++j) {
-            std::cout << ClusteringMatrix[i][j];
-//            std::cout << SavedMatrix[i][j];
-//            std::cout << DynamicMatrix[i][j];
-        }
-        std::cout << '\n';
-    }
-}
-
 ClusteringDynamicObs::~ClusteringDynamicObs()
 {
 

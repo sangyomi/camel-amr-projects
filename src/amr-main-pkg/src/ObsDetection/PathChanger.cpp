@@ -54,7 +54,7 @@ void PathChanger::EvaluatePoint() {
             coordinate p = dynamicSharedMemory.obsLog[i].obsPredLoc[j].second;
             double timeinterval = dynamicSharedMemory.obsLog[i].obsPredLoc[j].first - sharedMemory->duration;
             double distance = GetDistance(p,AmrLoc);
-            if(abs(distance - timeinterval/1000 * sharedMemory->AMRVelocity) <= SafeDistance){
+            if(abs(distance - timeinterval/1000 * sharedMemory->AMRVelocity) <= SafeDistance + 5){
                 MadeCostMap(p, dynamicSharedMemory.obsLog[i].loss);
             }
             if(dynamicSharedMemory.obsLog[i].loss >= 3){

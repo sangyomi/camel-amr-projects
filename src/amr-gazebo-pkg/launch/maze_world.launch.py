@@ -34,7 +34,7 @@ def generate_launch_description():
 
     # 90 degree rotation for initial robot pose
     orientation = "{ orientation : { x : 0.0, y: 0.0, z: 0.707, w: 0.707 } }"
-    position = "{ position : { x : 0.0, y : 0.0, z: 0.01 } }"
+    position = "{ position : { x : -9.0, y : 9.0, z: 0.01 } }"
     # this is argument format for spwan_entity service
     spwan_args = '{name: "diffbot", xml: "' + xml + '", initial_pose :' + position + '}'
 

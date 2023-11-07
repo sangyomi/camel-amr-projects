@@ -20,6 +20,9 @@
 using Time = std::chrono::high_resolution_clock::time_point;
 
 class ClusteringDynamicObs {
+    struct ClustPoint{
+        std::vector<Dcoordinate> Clusterpoint;
+    };
 private:
     int x_spot[720];
     int y_spot[720];
@@ -33,10 +36,11 @@ private:
     void ClearClustringMatrix();
     std::vector<Point> Points;
     std::vector<std::pair<int,Dcoordinate>> ClusteredPoint;
-    std::vector<Dcoordinate> CenterPoint;
+    std::vector<std::pair<int,Dcoordinate>> CenterPoint;
+    std::vector<std::pair<int,Dcoordinate>> LastObsPoint;
     Dcoordinate ProcessLidarRawtoLocal(float &scannedlength, int &numofScan, int iter, bool ID);
     Dcoordinate LocaltoGlobal(Dcoordinate &LocalPos);
-    coordinate GazebotoGrid(Dcoordinate &Location);
+    Dcoordinate GazebotoGrid(Dcoordinate &Location);
     Dcoordinate GridtoGazebo(Dcoordinate &Location);
     Dcoordinate GlobaltoLocal(Dcoordinate &GlobalPos);
     Dcoordinate ObsCenterCalc(std::vector<Dcoordinate> Data);
@@ -47,10 +51,6 @@ public:
     double timer_cycle;
     ClusteringDynamicObs();
     void UpdateDynamicObstacle(std::vector<float> &scanarray,bool LiDARID);
-    void ClusteringDynamicObstacle(int xPos, int yPos);
-    void CheckObstacle(int i, int j, int ChangeObstacle, int& SizeCount, std::vector<std::pair<int, int>>& ClusteringInfo);
-    void ConnectObs(int avgX, int avgY);
-    void PrintMap();
     void ClusteringData();
     ~ClusteringDynamicObs();
 };
