@@ -36,7 +36,6 @@ void MainWindow::paintEvent(QPaintEvent* event)
 
     drawcoordinates(painter);
 
-
     pen.setColor(Qt::red);  // 파란색으로 점 그리기
     pen.setWidth(2);
     painter.setPen(pen);
@@ -59,7 +58,7 @@ void MainWindow::updatePoints()
 
 void MainWindow::drawcoordinates(QPainter& painter)
 {
-    pen.setColor(Qt::black);
+    pen.setColor(Qt::yellow);
     pen.setWidth(3);
     painter.setPen(pen);
 
