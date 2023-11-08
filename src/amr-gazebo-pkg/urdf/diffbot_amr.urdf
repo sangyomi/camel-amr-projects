@@ -167,7 +167,7 @@
       <geometry>
         <!-- <box size=".4 .2 .1"/> -->
         <!-- <mesh filename="$(find gcamp_gazebo)/meshes/base_link.STL" /> -->
-        <mesh filename="/home/dongju/camel-amr-projects/src/amr-gazebo-pkg/meshes/base_link.STL"/>
+        <mesh filename="/home/percy/camel-amr-projects/src/amr-gazebo-pkg/meshes/base_link.STL"/>
       </geometry>
     </visual>
     <!-- <visual name="chassis_middle_visual">
@@ -403,13 +403,13 @@
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
   <joint name="hokuyo_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.455 -0.325 0.175"/>
+    <origin rpy="0 0 0" xyz="0.55 -0.45 0.171"/>
     <child link="hokuyo"/>
     <parent link="chassis"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
   <joint name="hokuyo2_joint" type="fixed">
-    <origin rpy="0 0 3.141592" xyz="-0.455 0.325 0.175"/>
+    <origin rpy="0 0 3.141592" xyz="-0.55 0.45 0.171"/>
     <child link="hokuyo2"/>
     <parent link="chassis"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>

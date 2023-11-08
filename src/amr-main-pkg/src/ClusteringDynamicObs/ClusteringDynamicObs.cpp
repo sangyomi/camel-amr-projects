@@ -87,6 +87,7 @@ void ClusteringDynamicObs::UpdateDynamicObstacle(std::vector<float> &scanarray, 
         temp = LocaltoGlobal(temp);
         temp = GazebotoGrid(temp);
         if (temp.first >= 0 && temp.first < 100 && temp.second >= 0 && temp.second < 100) {
+            Point tempP1;
             temp = GridtoGazebo(temp);
             temp = GlobaltoLocal(temp);
             Point tempP;
@@ -104,6 +105,7 @@ void ClusteringDynamicObs::ClusteringData() {
     ds.run();
     Points.clear();
     dynamicSharedMemory.Clustered_point = ds.m_points;
+    dynamicSharedMemory.Clustered_Global_point;
 }
 
 void ClusteringDynamicObs::ClusteringDynamicObstacle(int xPos, int yPos)

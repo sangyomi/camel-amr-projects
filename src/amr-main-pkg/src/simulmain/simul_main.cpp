@@ -60,8 +60,8 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
         Dcoordinate temp = Cluster.GridtoGazebo(ObsRealPos);
         Dcoordinate ObsLocalPos = Cluster.GlobaltoLocal(temp);
 
-        sharedMemory->Dynamicobstacle_x = ObsLocalPos.first;
-        sharedMemory->Dynamicobstacle_y = ObsLocalPos.second;
+        sharedMemory->Dynamicobstacle_x = ObsRealPos.first;
+        sharedMemory->Dynamicobstacle_y = ObsRealPos.second;
 
         if(int(sharedMemory->duration/500)-printcount > 0){
             printcount++;

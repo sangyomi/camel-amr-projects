@@ -9,7 +9,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8d93f3a-e934-4d4d-b7c5-0346cd94b83c" name="Changes" comment="ui_add" />
+    <list default="true" id="c8d93f3a-e934-4d4d-b7c5-0346cd94b83c" name="Changes" comment="ui_add">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/include/Variables/SharedMemory.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/include/Variables/SharedMemory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/amr_example_qt.pro.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/simulmain/simul_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/simulmain/simul_main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,25 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "develop/for-Learning",
-    "last_opened_file_path": "/home/dongju/camel-amr-projects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop/for-Learning&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dongju/camel-amr-projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI" />
@@ -115,6 +126,8 @@
       <workItem from="1699161594262" duration="1336000" />
       <workItem from="1699162992590" duration="4507000" />
       <workItem from="1699269279648" duration="9635000" />
+      <workItem from="1699384362838" duration="12167000" />
+      <workItem from="1699446810362" duration="3042000" />
     </task>
     <task id="LOCAL-00001" summary="ui_add">
       <option name="closed" value="true" />

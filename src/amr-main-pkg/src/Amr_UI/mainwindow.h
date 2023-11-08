@@ -49,9 +49,14 @@ private:
     QVector<QPoint> dotDataset;
     QLabel* label;
     QSize frameSize;
+    QSize frame3Size;
+    QSize textEdit_2Size;
     double scaling_x;
     double scaling_y;
+    double scaling_x_obs;
+    double scaling_y_obs;
     double add_x, add_y;
+    double add_x_obs, add_y_obs;
 
 
 };

@@ -15,11 +15,19 @@ MainWindow::MainWindow(QWidget* parent)
 {
     ui->setupUi(this);
     frameSize = ui->frame->size();
+    frame3Size = ui->frame_3->size();
+    textEdit_2Size = ui->textEdit_2->size();
     scaling_x = frameSize.width()/20;
     scaling_y = frameSize.height()/20;
 
+    scaling_x_obs = frameSize.width()/100;
+    scaling_y_obs = frameSize.height()/100;
+
     add_x = ui->frame->x()+frameSize.width()/2;
     add_y = ui->frame->y()+frameSize.height()/2;
+
+    add_x_obs = ui->frame->x();
+    add_y_obs = ui->frame->y()+frameSize.height();
 
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updatePoints()));
@@ -38,13 +46,9 @@ void MainWindow::paintEvent(QPaintEvent* event)
 
     drawcoordinates(painter);
 
-
-
     pen.setColor(Qt::blue);  // 파란색으로 점 그리기
-
-    pen.setWidth(2);
+    pen.setWidth(3);
     painter.setPen(pen);
-
 
     for (int i=2;i<points.size();i++)
     {
@@ -60,25 +64,17 @@ void MainWindow::paintEvent(QPaintEvent* event)
         painter.drawPoint(point);
     }
 
-
 }
 
 
 void MainWindow::updatePoints()
 {
-
-//    QPoint newPoint((sharedMemory->xpos)*scaling_x+add_x, (sharedMemory->ypos)*(-scaling_y)+add_y); // 임의의 점 생성
-    QPoint newPoint((sharedMemory->Dynamicobstacle_y)*scaling_x+add_x, (sharedMemory->Dynamicobstacle_x)*(-scaling_y)+add_y); // 임의의 점 생성
-    QPoint newPoint2((sharedMemory->Dynamicobstacle_x)*scaling_x+add_x, (sharedMemory->Dynamicobstacle_y)*(-scaling_y)+add_y);
-
-
+    QPoint newPoint((sharedMemory->xpos)*scaling_x+add_x, (sharedMemory->ypos)*(-scaling_y)+add_y); // 임의의 점 생성
+    QPoint newPoint2((sharedMemory->Dynamicobstacle_x)*scaling_x_obs+add_x_obs, (sharedMemory->Dynamicobstacle_y)*(-scaling_y_obs)+add_y_obs);
 
     points.append(newPoint);
-
     points2.clear();
     points2.append(newPoint2);
-
-
 
     update();
 }
@@ -92,10 +88,7 @@ void MainWindow::updateDotDataset()
         dotDataset.append(newDataPoint);
     }
 
-
     update();
-
-
 }
 
 
@@ -103,14 +96,19 @@ void MainWindow::drawcoordinates(QPainter& painter)
 {
     pen.setColor(Qt::red);
     pen.setWidth(3);
-    painter.setPen(pen);
+    painter.setPen(QPen(Qt::yellow, 6));
 
     // x 축 그리기 (가로선)
     painter.drawLine(ui->frame->x(), ui->frame->y()+frameSize.height()/2, ui->frame->x()+(frameSize.width()), (frameSize.height())/2 + ui->frame->y());
+    painter.drawLine(ui->frame_3->x(), ui->frame_3->y()+(frame3Size.height()+textEdit_2Size.height())/2, ui->frame_3->x()+frame3Size.width(), ui->frame_3->y()+(frame3Size.height()+textEdit_2Size.height())/2);
 
+    pen.setColor(Qt::green);
+    pen.setWidth(10);
+    painter.setPen(pen);
 
     // y 축 그리기 (세로선)
     painter.drawLine(ui->frame->x()+frameSize.width()/2, ui->frame->y(), ui->frame->x()+frameSize.width()/2, ui->frame->y()+frameSize.height());
+    painter.drawLine(ui->frame_3->x()+frame3Size.width()/2, ui->frame_3->y()+textEdit_2Size.height()/2, ui->frame_3->x()+frame3Size.width()/2, ui->frame_3->y()+frame3Size.height());
 
 
     for(int i=1;i<20;i++)
@@ -127,7 +125,6 @@ void MainWindow::drawcoordinates(QPainter& painter)
 
 MainWindow::~MainWindow()
 {
-
     delete timer;
     delete ui;
     free(sharedMemory);
@@ -137,10 +134,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::updateLabel()
 {
-
-//    QString labelText = "AMR 현재위치: ( " + QString::number(sharedMemory->xpos) + ", " + QString::number(sharedMemory->ypos) + ")";
-    QString labelText = "AMR 현재위치: ( " + QString::number(sharedMemory->Dynamicobstacle_x) + ", " + QString::number(sharedMemory->Dynamicobstacle_y) + ")";
+    QString labelText = "AMR 현재위치: ( " + QString::number(sharedMemory->xpos) + ", " + QString::number(sharedMemory->ypos) + ")";
+    QString labelText_2 = "Obstacle 현재위치: ( " + QString::number(sharedMemory->Dynamicobstacle_x/5-10) + ", " + QString::number(sharedMemory->Dynamicobstacle_y/5-10) + ")";
     ui->label->setText(labelText);
+    ui->label_2->setText(labelText_2);
 }
 
 
