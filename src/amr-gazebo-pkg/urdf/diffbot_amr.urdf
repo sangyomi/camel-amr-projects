@@ -137,7 +137,7 @@
       <plugin filename="libgazebo_ros_ray_sensor.so" name="gazebo_ros_tail_hokuyo_controller">
         <ros>
           <namespace>/diffbot_amr</namespace>
-          <argument>~/out:=scan2</argument>
+          <argument>~/out:=scan</argument>
         </ros>
         <output_type>sensor_msgs/LaserScan</output_type>
       </plugin>
@@ -179,13 +179,13 @@
     <collision name="chassis_middle_collision">
       <origin rpy=" 0 0 0" xyz="0 0 0.1"/>
       <geometry>
-        <box size="1.1 0.2 0.05"/>
+        <box size="1.1 0.2 0.1"/>
       </geometry>
     </collision>
     <collision name="chassis_top_collision">
-      <origin rpy=" 0 0 0" xyz="0 0 0.5"/>
+      <origin rpy=" 0 0 0" xyz="0 0 0.3"/>
       <geometry>
-        <box size="1.1 .85 .01"/>
+        <box size="1.1 .85 0.2"/>
       </geometry>
     </collision>
     <!-- <visual name="chassis_top_visual">
@@ -207,15 +207,15 @@
       </geometry>
     </visual> -->
     <collision name="chassis_left_collision">
-      <origin rpy=" 0 0 0" xyz="0 0.325 0.01"/>
+      <origin rpy=" 0 0 0" xyz="0 0.325 0.1"/>
       <geometry>
-        <box size="1.1 .2 .025"/>
+        <box size="1.1 .2 .1"/>
       </geometry>
     </collision>
     <collision name="chassis_right_collision">
-      <origin rpy=" 0 0 0" xyz="0 -0.325 0.01"/>
+      <origin rpy=" 0 0 0" xyz="0 -0.325 0.1"/>
       <geometry>
-        <box size="1.1 .2 .025"/>
+        <box size="1.1 .2 .1"/>
       </geometry>
     </collision>
     <collision name="back_caster_collision">
@@ -319,7 +319,7 @@
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
     </inertial>
     <visual name="camera_visual">
-      <origin rpy="0 0 0" xyz="0 0 0.1"/>
+      <origin rpy="0 0 0" xyz="0 0 0.2"/>
       <geometry>
         <box size="0.05 0.05 0.05"/>
       </geometry>
@@ -403,13 +403,13 @@
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
   <joint name="hokuyo_joint" type="fixed">
-    <origin rpy="0 0 0" xyz="0.455 -0.325 0.175"/>
+    <origin rpy="0 0 0" xyz="0.55 -0.45 0.171"/>
     <child link="hokuyo"/>
     <parent link="chassis"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
   <joint name="hokuyo2_joint" type="fixed">
-    <origin rpy="0 0 3.141592" xyz="-0.455 0.325 0.175"/>
+    <origin rpy="0 0 3.141592" xyz="-0.55 0.45 0.171"/>
     <child link="hokuyo2"/>
     <parent link="chassis"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>

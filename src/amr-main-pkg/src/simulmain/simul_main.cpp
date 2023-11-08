@@ -55,10 +55,10 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
         std::cout << "ABSTime: " << sharedMemory->duration << std::endl;
         std::cout << "ObsRealPosition: " << ObsRealPos.first << ", " << ObsRealPos.second << "\n";
         ClearPresentMatrix();// 장애물 인식한거 출력
-        if(!dynamicSharedMemory.LabelingArray.empty()){
-            dynamicSharedMemory.LabelingArray.front().second.first = int(ObsRealPos.first);
-            dynamicSharedMemory.LabelingArray.front().second.second = int(ObsRealPos.second);
-        }
+//        if(!dynamicSharedMemory.LabelingArray.empty()){
+//            dynamicSharedMemory.LabelingArray.front().second.first = int(ObsRealPos.first);
+//            dynamicSharedMemory.LabelingArray.front().second.second = int(ObsRealPos.second);
+//        }
         for(int i = 0; i < dynamicSharedMemory.LabelingArray.size(); i++){
             std::cout << "LabeledCenterPos[" << dynamicSharedMemory.LabelingArray[i].first.first <<"]: " << dynamicSharedMemory.LabelingArray[i].second.first << ", " << dynamicSharedMemory.LabelingArray[i].second.second << "\n";
         }
