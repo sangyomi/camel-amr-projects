@@ -85,7 +85,7 @@ void ParkingNode::odom_callback(const Odometry::SharedPtr msg)
         {
             ASTAR.traj.pop();
         }
-        P_C.PrintCostMap();
+//        P_C.PrintCostMap();
 //        ObsDec.Pred_Print();
 //        ASTAR.PrintMap(); // 맵 상의 경로 출력
     }
