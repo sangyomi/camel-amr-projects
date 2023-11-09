@@ -40,14 +40,12 @@ void MainWindow::paintEvent(QPaintEvent* event)
 {
     Q_UNUSED(event);
     QPainter painter(this);
-    QPainter painter2(this);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter2.setRenderHint(QPainter::Antialiasing);
 
     drawcoordinates(painter);
 
-    pen.setColor(Qt::blue);  // 파란색으로 점 그리기
-    pen.setWidth(3);
+    pen.setColor(Qt::blue);
+    pen.setWidth(1);
     painter.setPen(pen);
 
     for (int i=2;i<points.size();i++)
@@ -55,13 +53,18 @@ void MainWindow::paintEvent(QPaintEvent* event)
         painter.drawLine(points[i-1],points[i]);
     }
 
+    pen.setColor(Qt::blue);
+    pen.setWidth(5);
+    painter.setPen(pen);
 
-    painter.drawPoint(points2.first());
+    painter.drawPoint(points2.first()); // obstacle's center point plot
+
+    pen.setWidth(1);
+    painter.setPen(pen);
 
     for(const QPoint& point : dotDataset)
     {
-        painter.setPen(Qt::red);
-        painter.drawPoint(point);
+        painter.drawPoint(point); // obstacle's Chassis points
     }
 
 }
@@ -94,29 +97,25 @@ void MainWindow::updateDotDataset()
 
 void MainWindow::drawcoordinates(QPainter& painter)
 {
-    pen.setColor(Qt::red);
-    pen.setWidth(3);
-    painter.setPen(QPen(Qt::yellow, 6));
+    pen.setColor(Qt::black);
+    pen.setWidth(1);
+    painter.setPen(pen);
 
     // x 축 그리기 (가로선)
     painter.drawLine(ui->frame->x(), ui->frame->y()+frameSize.height()/2, ui->frame->x()+(frameSize.width()), (frameSize.height())/2 + ui->frame->y());
     painter.drawLine(ui->frame_3->x(), ui->frame_3->y()+(frame3Size.height()+textEdit_2Size.height())/2, ui->frame_3->x()+frame3Size.width(), ui->frame_3->y()+(frame3Size.height()+textEdit_2Size.height())/2);
 
-    pen.setColor(Qt::green);
-    pen.setWidth(10);
-    painter.setPen(pen);
-
     // y 축 그리기 (세로선)
     painter.drawLine(ui->frame->x()+frameSize.width()/2, ui->frame->y(), ui->frame->x()+frameSize.width()/2, ui->frame->y()+frameSize.height());
     painter.drawLine(ui->frame_3->x()+frame3Size.width()/2, ui->frame_3->y()+textEdit_2Size.height()/2, ui->frame_3->x()+frame3Size.width()/2, ui->frame_3->y()+frame3Size.height());
-
 
     for(int i=1;i<20;i++)
     {
         //x축 좌표 그리기
         painter.drawLine(ui->frame->x()+(frameSize.width()/20)*i,ui->frame->y()+frameSize.height()/2-2,ui->frame->x()+(frameSize.width()/20)*i,ui->frame->y()+frameSize.height()/2+2);
+        painter.drawLine(ui->frame_3->x()+(frame3Size.width()/20)*i,ui->frame_3->y()+(frame3Size.height()+textEdit_2Size.height())/2-2,ui->frame_3->x()+(frame3Size.width()/20)*i,ui->frame_3->y()+(frame3Size.height()+textEdit_2Size.height())/2+2);
         painter.drawLine(ui->frame->x()+frameSize.width()/2-2,ui->frame->y()+frameSize.height()/20*i,ui->frame->x()+frameSize.width()/2+2,ui->frame->y()+frameSize.height()/20*i);
-
+        painter.drawLine(ui->frame_3->x()+frame3Size.width()/2-2,ui->frame_3->y()+(frame3Size.height()-textEdit_2Size.height())/20*i+30,ui->frame_3->x()+frame3Size.width()/2+2,ui->frame_3->y()+(frame3Size.height()-textEdit_2Size.height())/20*i+30);
     }
 
 

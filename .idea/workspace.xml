@@ -9,17 +9,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8d93f3a-e934-4d4d-b7c5-0346cd94b83c" name="Changes" comment="ui_add">
+    <list default="true" id="c8d93f3a-e934-4d4d-b7c5-0346cd94b83c" name="Changes" comment="changed to yellow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr.urdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-gazebo-pkg/urdf/diffbot_amr_obstacle.urdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/include/Variables/SharedMemory.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/include/Variables/SharedMemory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/amr_example_qt.pro.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/amr_example_qt.pro.user" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/amr_example_qt.pro.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/Amr_UI/mainwindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/ClusteringDynamicObs/ClusteringDynamicObs.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/amr-main-pkg/src/simulmain/simul_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/amr-main-pkg/src/simulmain/simul_main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +178,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ui_add" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui_add" />
+    <MESSAGE value="changed to yellow" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to yellow" />
   </component>
 </project>
